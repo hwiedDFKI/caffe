@@ -1,0 +1,62 @@
+name: "TicTacToe"
+layer {
+  name: "data"
+  type: "MemoryData"
+  top: "fulldata"
+  top: "fakelabel"
+  memory_data_param 
+  {
+    batch_size: 64 
+    channels: 1 
+    height: 1
+    width: 18 
+  }
+}
+layer {
+  name: "slice_labels"
+  type: "Slice"
+  bottom: "fulldata"
+  top: "data"
+  top: "label"
+  slice_param {
+    slice_dim: 3
+    slice_point: 9
+  }
+}
+layer {
+  name: "fc6"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "fc6"
+  inner_product_param {
+    num_output: 9
+  }
+}
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "fc6"
+  top: "fc6"
+}
+layer {
+  name: "fc7"
+  type: "InnerProduct"
+  bottom: "fc6"
+  top: "fc7"
+  inner_product_param {
+    num_output: 9
+  }
+}
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc7"
+  top: "fc7"
+}
+layer {
+  name: "loss"
+  type: "EuclideanLoss"
+  bottom: "fc7"
+  bottom: "label"
+  top: "loss"
+}

@@ -1,0 +1,30 @@
+name: "TicTacToe"
+layer {
+  name: "fuck"
+  type: "MemoryData"
+  top: "fulldata"
+  top: "fakelabel"
+  memory_data_param 
+  {
+    batch_size: 1 
+    channels: 1 
+    height: 1
+    width: 2 
+  }
+}
+layer {
+  name: "fc6"
+  type: "InnerProduct"
+  bottom: "fulldata"
+  top: "fc6"
+  inner_product_param {
+    num_output: 1
+    }
+}
+layer {
+  name: "loss"
+  type: "SigmoidCrossEntropyLoss"
+  bottom: "fc6"
+  bottom: "fakelabel"
+  top: "loss"
+}
