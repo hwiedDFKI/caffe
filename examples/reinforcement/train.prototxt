@@ -6,7 +6,7 @@ layer {
   top: "fakelabel"
   memory_data_param 
   {
-    batch_size: 1 
+    batch_size: 64 
     channels: 1 
     height: 1
     width: 2 
@@ -18,7 +18,7 @@ layer {
   bottom: "fulldata"
   top: "fc6"
   inner_product_param {
-    num_output: 1
+    num_output: 2
     weight_filler {
       type: "xavier"
     }
@@ -29,9 +29,32 @@ layer {
 
 }
 layer {
+  name: "fc6sig"
+  bottom: "fc6"
+  top: "fc6"
+  type: "Sigmoid"
+}
+layer {
+  name: "fc7"
+  type: "InnerProduct"
+  bottom: "fc6"
+  top: "fc7"
+  inner_product_param {
+    num_output: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+
+}
+
+layer {
   name: "loss"
   type: "SigmoidCrossEntropyLoss"
-  bottom: "fc6"
+  bottom: "fc7"
   bottom: "fakelabel"
   top: "loss"
 }
