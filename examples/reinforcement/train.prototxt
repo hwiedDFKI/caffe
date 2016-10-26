@@ -19,7 +19,14 @@ layer {
   top: "fc6"
   inner_product_param {
     num_output: 1
+    weight_filler {
+      type: "xavier"
     }
+    bias_filler {
+      type: "constant"
+    }
+  }
+
 }
 layer {
   name: "loss"

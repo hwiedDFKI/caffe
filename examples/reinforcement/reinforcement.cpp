@@ -30,7 +30,7 @@ int main()
 
 
     caffe::SolverParameter solver_param;
-    caffe::ReadSolverParamsFromTextFileOrDie("/Users/shiyan/caffe/examples/reinforcement/solver.prototxt", &solver_param);
+    caffe::ReadSolverParamsFromTextFileOrDie("/home/shiy/caffe/examples/reinforcement/solver.prototxt", &solver_param);
 
     std::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
     caffe::MemoryDataLayer<float> *dataLayer_trainnet = (caffe::MemoryDataLayer<float> *) (solver->net()->layer_by_name("fuck").get());

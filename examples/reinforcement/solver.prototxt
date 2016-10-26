@@ -1,4 +1,4 @@
-net: "/Users/shiyan/caffe/examples/reinforcement/train.prototxt"
+net: "/home/shiy/caffe/examples/reinforcement/train.prototxt"
 base_lr: 0.02
 lr_policy: "step"
 gamma: 0.5
