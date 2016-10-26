@@ -1,12 +1,31 @@
-name: "TicTacToe"
+name: "XOR"
 layer {
-  name: "fuck"
+  name: "inputdata"
   type: "MemoryData"
   top: "fulldata"
   top: "fakelabel"
+  include {
+    phase: TRAIN
+  }
   memory_data_param 
   {
     batch_size: 64 
+    channels: 1 
+    height: 1
+    width: 2 
+  }
+}
+layer {
+  name: "test_inputdata"
+  type: "MemoryData"
+  top: "fulldata"
+  top: "fakelabel"
+  include {
+    phase: TEST
+  }
+  memory_data_param 
+  {
+    batch_size: 4 
     channels: 1 
     height: 1
     width: 2 
@@ -28,12 +47,14 @@ layer {
   }
 
 }
+
 layer {
   name: "fc6sig"
   bottom: "fc6"
   top: "fc6"
   type: "Sigmoid"
 }
+
 layer {
   name: "fc7"
   type: "InnerProduct"
@@ -50,7 +71,15 @@ layer {
   }
 
 }
-
+layer {
+  name: "output"
+  bottom: "fc7"
+  top: "output"
+  type: "Sigmoid"
+  include {
+    phase: TEST
+  }
+}
 layer {
   name: "loss"
   type: "SigmoidCrossEntropyLoss"
