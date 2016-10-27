@@ -25,7 +25,7 @@ static bool isWin(int position[9], int side)
     }
 }
 
-void getReward(std::shared_ptr<caffe::Net<float> > &testnet, std::vector<float> &position, std::vector<float> &label)
+void getReward(boost::shared_ptr<caffe::Net<float> > &testnet, std::vector<float> &position, std::vector<float> &label)
 {
     caffe::MemoryDataLayer<float> *dataLayer_testnet = (caffe::MemoryDataLayer<float> *) (testnet->layer_by_name("test_inputdata").get());
     dataLayer_testnet->Reset(&position[0], &label[0], 5477);
@@ -335,13 +335,14 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
 
 int main()
 {
+    caffe::Caffe::set_mode(caffe::Caffe::GPU);
     caffe::SolverParameter solver_param;
     caffe::ReadSolverParamsFromTextFileOrDie("./solver.prototxt", &solver_param);
 
-    std::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
+    boost::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
     caffe::MemoryDataLayer<float> *dataLayer_trainnet = (caffe::MemoryDataLayer<float> *) (solver->net()->layer_by_name("inputdata").get());
 
-    std::shared_ptr<caffe::Net<float> > testnet;
+    boost::shared_ptr<caffe::Net<float> > testnet;
 
     testnet.reset(new caffe::Net<float>("./model.prototxt", caffe::TEST));
     testnet->ShareTrainedLayersWith(solver->net().get());
@@ -375,6 +376,10 @@ int main()
 
         solver->Step(1);
     }
+
+    getReward(testnet, data, oldLabel);
+    experiment(hash, oldLabel);
+
  //   float testab[] = {0, 0, 0, 1, 1, 0, 1, 1};
  //   float testc[] = {0, 1, 1, 0};
 

@@ -21,7 +21,7 @@ int main()
     caffe::SolverParameter solver_param;
     caffe::ReadSolverParamsFromTextFileOrDie("./solver.prototxt", &solver_param);
 
-    std::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
+    boost::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
     caffe::MemoryDataLayer<float> *dataLayer_trainnet = (caffe::MemoryDataLayer<float> *) (solver->net()->layer_by_name("inputdata").get());
     caffe::MemoryDataLayer<float> *dataLayer_testnet_ = (caffe::MemoryDataLayer<float> *) (solver->test_nets()[0]->layer_by_name("test_inputdata").get());
 
@@ -34,7 +34,7 @@ int main()
 
     solver->Solve();
 
-    std::shared_ptr<caffe::Net<float> > testnet;
+    boost::shared_ptr<caffe::Net<float> > testnet;
 
     testnet.reset(new caffe::Net<float>("./model.prototxt", caffe::TEST));
     //testnet->CopyTrainedLayersFrom("XOR_iter_5000000.caffemodel");
