@@ -1,4 +1,4 @@
-name: "XOR"
+name: "TicTacToe"
 layer {
   name: "inputdata"
   type: "MemoryData"
@@ -9,10 +9,10 @@ layer {
   }
   memory_data_param 
   {
-    batch_size: 64 
+    batch_size: 549945 
     channels: 1 
     height: 1
-    width: 2 
+    width: 9 
   }
 }
 layer {
@@ -25,10 +25,10 @@ layer {
   }
   memory_data_param 
   {
-    batch_size: 4 
+    batch_size: 1 
     channels: 1 
     height: 1
-    width: 2 
+    width: 9 
   }
 }
 layer {
@@ -37,7 +37,7 @@ layer {
   bottom: "fulldata"
   top: "fc6"
   inner_product_param {
-    num_output: 2
+    num_output: 9
     weight_filler {
       type: "xavier"
     }

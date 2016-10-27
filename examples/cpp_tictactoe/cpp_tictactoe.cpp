@@ -24,15 +24,23 @@ static bool isWin(int position[9], int side)
     }
 }
 
-float getReward(NeuralNetwork<double> &network, std::vector<double> &position, int side, int depth)
+float getReward(std::shared_ptr<caffe::Net<float> > &testnet, std::vector<float> &position, int side, int depth)
 {
-    std::vector<double> outputs;
-    network.getResult(position, outputs);
-    float q = outputs[0];
-    return q;
+    caffe::MemoryDataLayer<float> *dataLayer_testnet = (caffe::MemoryDataLayer<float> *) (testnet->layer_by_name("test_inputdata").get());
+    float fakelabel = 0.0f;
+    dataLayer_testnet->Reset(&position[0], &fakelabel, 1);
+
+    testnet->Forward();
+
+    boost::shared_ptr<caffe::Blob<float> > output_layer = testnet->blob_by_name("output");
+
+    const float* q = output_layer->cpu_data();
+    
+    return *q;
 }
 
-void recursiveTrain(NeuralNetwork<double> &network, NeuralNetwork<double>::MiniBatch &miniBatch, int position[9], int side, int depth)
+
+void recursiveTrain(std::shared_ptr<caffe::Net<float> > &testnet, std::vector<float> &data, std::vector<float> &label, int position[9], int side, int depth)
 {
     for(int i = 0;i<9;++i)
     {
@@ -64,7 +72,7 @@ void recursiveTrain(NeuralNetwork<double> &network, NeuralNetwork<double>::MiniB
                     {
                         continue;
                     }
-                    std::vector<double> inputs;
+                    std::vector<float> inputs;
 
                     for(int e = 0;e<9;++e)
                     {
@@ -72,7 +80,7 @@ void recursiveTrain(NeuralNetwork<double> &network, NeuralNetwork<double>::MiniB
                     }
                     inputs[k] = -side;
 
-                    float q = getReward(network, inputs, -side, depth + 1);
+                    float q = getReward(testnet, inputs, -side, depth + 1);
 
                     if (notset)
                     {
@@ -99,26 +107,20 @@ void recursiveTrain(NeuralNetwork<double> &network, NeuralNetwork<double>::MiniB
 
             //reward = (reward + 2.0 ) * 0.5
 
-            std::vector<double> labelVector;
-            labelVector.push_back(reward);
-            std::vector<double> inputVector;
-            inputVector.push_back(position[0]);
-            inputVector.push_back(position[1]);
-            inputVector.push_back(position[2]);
-            inputVector.push_back(position[3]);
-            inputVector.push_back(position[4]);
-            inputVector.push_back(position[5]);
-            inputVector.push_back(position[6]);
-            inputVector.push_back(position[7]);
-            inputVector.push_back(position[8]);
-
-            NeuralNetwork<double>::TrainingData d(inputVector, labelVector);
-
-            miniBatch.push_back(d);
+            label.push_back(reward);
+            data.push_back(position[0]);
+            data.push_back(position[1]);
+            data.push_back(position[2]);
+            data.push_back(position[3]);
+            data.push_back(position[4]);
+            data.push_back(position[5]);
+            data.push_back(position[6]);
+            data.push_back(position[7]);
+            data.push_back(position[8]);
 
             if (!hasWon)
             {
-                recursiveTrain(network, miniBatch, position, -side, depth +1);
+                recursiveTrain(testnet, data, label, position, -side, depth +1);
             }
             position[i] = 0;
         }
@@ -127,33 +129,41 @@ void recursiveTrain(NeuralNetwork<double> &network, NeuralNetwork<double>::MiniB
 
 int main()
 {
-	float *data = new float[64*1*1*3*400];
-	float *label = new float[64*1*1*1*400];
-
-
-	for(int i = 0; i<64*1*1*400; ++i)
-	{
-		int a = rand() % 2;
-        int b = rand() % 2;
-        int c = a ^ b;
-		data[i*2 + 0] = a;
-		data[i*2 + 1] = b;
-		label[i] = c;
-	}
-
     caffe::SolverParameter solver_param;
     caffe::ReadSolverParamsFromTextFileOrDie("./solver.prototxt", &solver_param);
 
     std::shared_ptr<caffe::Solver<float> > solver(caffe::SolverRegistry<float>::CreateSolver(solver_param));
     caffe::MemoryDataLayer<float> *dataLayer_trainnet = (caffe::MemoryDataLayer<float> *) (solver->net()->layer_by_name("inputdata").get());
-    
-    float testab[] = {0, 0, 0, 1, 1, 0, 1, 1};
-    float testc[] = {0, 1, 1, 0};
 
-    dataLayer_trainnet->Reset(data, label, 25600);
+    std::shared_ptr<caffe::Net<float> > testnet;
 
-    solver->Solve();
+    testnet.reset(new caffe::Net<float>("./model.prototxt", caffe::TEST));
+    testnet->ShareTrainedLayersWith(solver->net().get());
 
+
+    for(int i = 0; i < 5000000; ++i)
+    {
+        std::vector<float> data;
+        data.reserve(549945 * 9);
+        std::vector<float> label;
+        label.reserve(549945);
+        int position[9] = {0};
+
+        recursiveTrain(testnet, data, label, position, 1, 1);
+
+        printf("%d data_size: %d, label_size: %d\n",i, data.size(), label.size());
+
+        dataLayer_trainnet->Reset(&data[0], &label[0], 549945);
+
+        solver->Step(1);
+    }
+ //   float testab[] = {0, 0, 0, 1, 1, 0, 1, 1};
+ //   float testc[] = {0, 1, 1, 0};
+
+    //dataLayer_trainnet->Reset(data, label, 25600);
+
+    //solver->Solve();
+/*
     std::shared_ptr<caffe::Net<float> > testnet;
 
     testnet.reset(new caffe::Net<float>("./model.prototxt", caffe::TEST));
@@ -176,6 +186,7 @@ int main()
     {
     	printf("input: %d xor %d,  truth: %f result by nn: %f\n", (int)testab[i*2 + 0], (int)testab[i*2+1], testc[i], result[i]);
     }
+    */
 
 	return 0;
 }
