@@ -102,6 +102,149 @@ void preGeneratePermutations(unsigned int &id, std::vector<float> &data, std::ve
     }
 }
 
+int getSide(int position[9])
+{
+    int posC = 0;
+    for(int e = 0;e<9;++e)
+    {
+        if (position[e] == 1)
+        {
+            posC ++;
+        }
+        else if (position[e] == -1)
+        {
+            posC --;
+        }
+    }
+
+    int side = -1;
+
+    if (posC > 0)
+        side = 1;
+
+    return side;
+}
+
+int getBest(std::map<unsigned int, unsigned int> &hash, 
+                    std::vector<float> &oldLabel, 
+                    int position[9], int side)
+{
+    int bestId = -1;
+    float reward = 0.0;
+    bool notset = true;
+    for(int k=0; k<9; ++k)
+    {
+        if (position[k] !=0)
+        {
+            continue;
+        }
+    
+        int inputs[9];
+        memcpy(inputs, position, sizeof(int) * 9);
+
+        inputs[k] = -side;
+
+        unsigned int inputKey = keyForPosition(&inputs[0]);
+        unsigned int id = hash[inputKey];
+        float q = oldLabel[id];
+
+        if (notset)
+        {
+            notset = false;
+            reward = q;
+            bestId = k;
+        }
+        else if (side == 1)
+        {
+            if (q < reward)
+            {
+                reward = q;
+                bestId = k;
+            }
+        }
+        else
+        {
+            if (q > reward)
+            {
+                reward = q;
+                bestId = k;
+            }
+        }
+    }
+
+    return bestId;
+}
+
+void displayPosition(int position[9])
+{
+    for(int i = 0; i<9;++i)
+    {
+        if (i % 3 == 0)
+        {
+            printf("\n");
+        }    
+
+        if (position[i] == 1)
+        {
+            printf("O");
+        }
+        else if(position[i] == -1)
+        {
+            printf("X");
+        }
+        else if(position[i] == 0)
+        {
+            printf("_");
+        }
+    }
+}
+
+void experiment(std::map<unsigned int, unsigned int> &hash, 
+                    std::vector<float> &oldLabel)
+{
+    {
+        int position[9] = {0};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        displayPosition(position);
+        position[bestId] = -side;
+        printf("\n");
+        displayPosition(position);
+        printf("\n--- ---- ---:\n\n");
+    }
+
+    {
+        int position[9] = {0, 0, 0,
+                           1, 1, -1,
+                           0, 0, -1};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        displayPosition(position);
+        position[bestId] = -side;
+        printf("\n");
+        displayPosition(position);
+        printf("\n--- ---- ---:\n\n");
+    }
+
+    {
+        int position[9] = {0, 0, -1,
+                           0, 1, 0,
+                           1, 0, -1};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        displayPosition(position);
+        position[bestId] = -side;
+        printf("\n");
+        displayPosition(position);
+        printf("\n--- ---- ---:\n\n");
+    }    
+}
 
 void getTrainingData(std::map<unsigned int, unsigned int> &hash, 
                     std::vector<float> &oldLabel, 
@@ -220,6 +363,11 @@ int main()
     {
 
         getReward(testnet, data, oldLabel);
+
+        if (i%5000 == 0)
+        {
+            experiment(hash, oldLabel);
+        }
 
         getTrainingData(hash, oldLabel, data, label);
 
