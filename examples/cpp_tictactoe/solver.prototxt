@@ -7,4 +7,4 @@ display: 5000
 max_iter: 10000000
 snapshot: 5000
 snapshot_prefix: "TicTacToe"
-solver_mode: GPU
+solver_mode: CPU

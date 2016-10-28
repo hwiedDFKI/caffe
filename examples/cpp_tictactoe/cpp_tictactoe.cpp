@@ -207,6 +207,8 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
                     std::vector<float> &oldLabel)
 {
     FILE *fp = fopen("test.txt", "w");
+    int rightCount = 0;
+    int allCount = 0;
     {
         int position[9] = {0};
         int side = getSide(position);
@@ -219,8 +221,24 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
         printf("\n");
         fprintf(fp, "\n");
         displayPosition(fp, position);
-        printf("\n--- ---- ---:\n\n");
-        fprintf(fp, "\n--- --- ---:\n\n");
+        int expected[9] = {0, 0, 0,
+                           0, 1, 0,
+                           0, 0, 0};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
     }
 
     {
@@ -237,8 +255,24 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
         printf("\n");
         fprintf(fp, "\n");
         displayPosition(fp, position);
-        printf("\n--- ---- ---:\n\n");
-        fprintf(fp,"\n--- --- ---:\n\n");
+        int expected[9] = {0, 0, 1,
+                           1, 1,  -1,
+                           0, 0, -1};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
     }
 
     {
@@ -255,9 +289,210 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
         printf("\n");
         fprintf(fp, "\n");
         displayPosition(fp, position);
-        printf("\n--- ---- ---:\n\n");
-        fprintf(fp, "\n--- --- ---:\n\n");
+        int expected[9] = {0, 0, -1,
+                           0, 1,  1,
+                           1, 0, -1};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
     }    
+
+    {
+        int position[9] = {0, 0, -1,
+                           0, 0, 0,
+                           1, 1, -1};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
+        position[bestId] = -side;
+        printf("\n");
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
+        int expected[9] = {0, 0, -1,
+                           0, 0,  1,
+                           1, 1, -1};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
+    }  
+
+    {
+        int position[9] = {0, 0, -1,
+                           0, 1, 0,
+                           0, 1, -1};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
+        position[bestId] = -side;
+        printf("\n");
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
+        int expected[9] = {0, 1, -1,
+                           0, 1,  0,
+                           0, 1, -1};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
+    }  
+
+    {
+        int position[9] = {-1, -1, 0,
+                           0, 1, 0,
+                           0, 1, 0};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
+        position[bestId] = -side;
+        printf("\n");
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
+        int expected[9] = {-1, -1, 1,
+                           0, 1,  0,
+                           0, 1, 0};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
+    } 
+
+    {
+        int position[9] = {0, 0, -1,
+                           0, 1, 1,
+                           -1, 1, -1};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
+        position[bestId] = -side;
+        printf("\n");
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
+        int expected_1[9] = {0, 0, -1,
+                           1, 1,  1,
+                           -1, 1, -1};
+        int expected_2[9] = {0, 1, -1,
+                           0, 1,  1,
+                           -1, 1, -1};
+        bool result1 = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected_1[i])
+            {
+                result1 = false;
+            }
+        }
+
+        bool result2 = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected_2[i])
+            {
+                result2 = false;
+            }
+        }
+
+        printf("\n--- ---- ---:%s\n\n", (result1||result2)?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", (result1||result2)?"right":"wrong");
+        if((result1||result2) == true)
+        {
+            rightCount++;
+        }
+        allCount++;
+    } 
+
+    {
+        int position[9] = {1, -1, -1,
+                           0, 1,  0,
+                           -1, 1, 0};
+        int side = getSide(position);
+        int bestId = getBest(hash, oldLabel, position, side);
+
+        printf("--- Test ---:");
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
+        position[bestId] = -side;
+        printf("\n");
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
+        int expected[9] = {1, -1, -1,
+                           0, 1,  0,
+                           -1, 1, 1};
+        bool result = true;
+        for(int i=0;i<9;++i)
+        {
+            if (position[i] != expected[i])
+            {
+                result = false;
+            }
+        }
+        printf("\n--- ---- ---:%s\n\n", result?"right":"wrong");
+        fprintf(fp, "\n--- --- ---:%s\n\n", result?"right":"wrong");
+        if(result == true)
+        {
+            rightCount++;
+        }
+        allCount++;
+    } 
+    printf("\nOverall result:%d / %d\n", rightCount, allCount);
+    fprintf(fp, "\nOverall result:%d / %d\n", rightCount, allCount);
     fclose(fp);
 }
 
@@ -305,6 +540,7 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
         }
         else
         {
+            int count = 0;
             for(int k=0; k<9; ++k)
             {
                 if (position[k] !=0)
@@ -321,7 +557,7 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
                 unsigned int id = hash[inputKey];
                 float q = oldLabel[id];
 
-                if (notset)
+                /*if (notset)
                 {
                     notset = false;
                     reward = q;
@@ -339,9 +575,15 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
                     {
                         reward = q;
                     }
-                }
+                }*/
+
+                reward += q;
+                count ++;
             }
-            reward = 0.9 * reward;
+            if (count)
+            {
+                reward = 0.7 * reward / count;
+            }
         }
 
         label[i] = reward;
@@ -357,6 +599,18 @@ void testResult()
     unsigned int id = 0;
     int position[9] = {0};
 
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    data.push_back(0);
+    label.push_back(0);
+    hash[0] = 0;
     preGeneratePermutations(id, data, label, hash, position, 1, 1);
     oldLabel.resize(label.size(), 0);
 
@@ -375,7 +629,11 @@ int main()
     //testResult();
     //return 0;
 
-    caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#ifdef CPU_ONLY
+   caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+   caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
     caffe::SolverParameter solver_param;
     caffe::ReadSolverParamsFromTextFileOrDie("./solver.prototxt", &solver_param);
 
