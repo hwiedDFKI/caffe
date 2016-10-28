@@ -154,9 +154,9 @@ int getBest(std::map<unsigned int, unsigned int> &hash,
             reward = q;
             bestId = k;
         }
-        else if (side == 1)
+        else if (-side == 1)
         {
-            if (q < reward)
+            if (q > reward)
             {
                 reward = q;
                 bestId = k;
@@ -164,7 +164,7 @@ int getBest(std::map<unsigned int, unsigned int> &hash,
         }
         else
         {
-            if (q > reward)
+            if (q < reward)
             {
                 reward = q;
                 bestId = k;
@@ -328,14 +328,14 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
                 }
                 else if (side == 1)
                 {
-                    if (q < reward)
+                    if (q > reward)
                     {
                         reward = q;
                     }
                 }
                 else
                 {
-                    if (q > reward)
+                    if (q < reward)
                     {
                         reward = q;
                     }
@@ -350,7 +350,6 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
 
 void testResult()
 {
-
     std::vector<float> data;
     std::vector<float> label;
     std::vector<float> oldLabel;
@@ -373,8 +372,8 @@ void testResult()
 
 int main()
 {
-    testResult();
-    return 0;
+    //testResult();
+    //return 0;
 
     caffe::Caffe::set_mode(caffe::Caffe::GPU);
     caffe::SolverParameter solver_param;
