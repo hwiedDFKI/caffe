@@ -175,26 +175,30 @@ int getBest(std::map<unsigned int, unsigned int> &hash,
     return bestId;
 }
 
-void displayPosition(int position[9])
+void displayPosition(FILE *fp, int position[9])
 {
     for(int i = 0; i<9;++i)
     {
         if (i % 3 == 0)
         {
             printf("\n");
+            fprintf(fp, "\n");
         }    
 
         if (position[i] == 1)
         {
             printf("O");
+            fprintf(fp, "O");
         }
         else if(position[i] == -1)
         {
             printf("X");
+            fprintf(fp, "X");
         }
         else if(position[i] == 0)
         {
             printf("_");
+            fprintf(fp, "_");
         }
     }
 }
@@ -202,17 +206,21 @@ void displayPosition(int position[9])
 void experiment(std::map<unsigned int, unsigned int> &hash, 
                     std::vector<float> &oldLabel)
 {
+    FILE *fp = fopen("test.txt", "w");
     {
         int position[9] = {0};
         int side = getSide(position);
         int bestId = getBest(hash, oldLabel, position, side);
 
         printf("--- Test ---:");
-        displayPosition(position);
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
         position[bestId] = -side;
         printf("\n");
-        displayPosition(position);
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
         printf("\n--- ---- ---:\n\n");
+        fprintf(fp, "\n--- --- ---:\n\n");
     }
 
     {
@@ -223,11 +231,14 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
         int bestId = getBest(hash, oldLabel, position, side);
 
         printf("--- Test ---:");
-        displayPosition(position);
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
         position[bestId] = -side;
         printf("\n");
-        displayPosition(position);
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
         printf("\n--- ---- ---:\n\n");
+        fprintf(fp,"\n--- --- ---:\n\n");
     }
 
     {
@@ -238,12 +249,16 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
         int bestId = getBest(hash, oldLabel, position, side);
 
         printf("--- Test ---:");
-        displayPosition(position);
+        fprintf(fp, "--- Test ---:");
+        displayPosition(fp, position);
         position[bestId] = -side;
         printf("\n");
-        displayPosition(position);
+        fprintf(fp, "\n");
+        displayPosition(fp, position);
         printf("\n--- ---- ---:\n\n");
+        fprintf(fp, "\n--- --- ---:\n\n");
     }    
+    fclose(fp);
 }
 
 void getTrainingData(std::map<unsigned int, unsigned int> &hash, 
@@ -333,8 +348,34 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
     }
 }
 
+void testResult()
+{
+
+    std::vector<float> data;
+    std::vector<float> label;
+    std::vector<float> oldLabel;
+    std::map<unsigned int, unsigned int> hash;
+    unsigned int id = 0;
+    int position[9] = {0};
+
+    preGeneratePermutations(id, data, label, hash, position, 1, 1);
+    oldLabel.resize(label.size(), 0);
+
+    boost::shared_ptr<caffe::Net<float> > testnet;
+
+    testnet.reset(new caffe::Net<float>("./model.prototxt", caffe::TEST));
+
+    testnet->CopyTrainedLayersFrom("./TicTacToe_iter_995000.caffemodel");
+    getReward(testnet, data, oldLabel);
+           
+    experiment(hash, oldLabel);
+}
+
 int main()
 {
+    testResult();
+    return 0;
+
     caffe::Caffe::set_mode(caffe::Caffe::GPU);
     caffe::SolverParameter solver_param;
     caffe::ReadSolverParamsFromTextFileOrDie("./solver.prototxt", &solver_param);
@@ -360,9 +401,8 @@ int main()
     printf("data size: %d label size: %d hash size: %d\n", data.size(), label.size(), hash.size());
 
 
-    for(int i = 0; i < 5000000; ++i)
+    for(int i = 0; i < 10000000; ++i)
     {
-
         getReward(testnet, data, oldLabel);
 
         if (i%5000 == 0)
