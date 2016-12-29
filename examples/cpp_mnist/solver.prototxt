@@ -1,0 +1,10 @@
+net: "model.prototxt"
+base_lr: 0.01
+lr_policy: "step"
+gamma: 0.5
+stepsize: 60000
+display: 20000
+max_iter: 3600000
+snapshot: 100000
+snapshot_prefix: "MNIST"
+solver_mode: CPU
