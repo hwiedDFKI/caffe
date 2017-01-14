@@ -70,8 +70,10 @@ void closeData()
 
 int main()
 {
-    caffe::set_mode(caffe::GPU);
-	/*float *data = new float[64*1*1*3*400];
+    caffe::Caffe::set_mode(caffe::Caffe::GPU);
+
+    
+    /*float *data = new float[64*1*1*3*400];
 	float *label = new float[64*1*1*1*400];
 
 
