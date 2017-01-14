@@ -557,32 +557,32 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
                 unsigned int id = hash[inputKey];
                 float q = oldLabel[id];
 
-                /*if (notset)
+                if (notset)
                 {
                     notset = false;
                     reward = q;
                 }
                 else if (side == 1)
                 {
-                    if (q > reward)
+                    if (q < reward)
                     {
                         reward = q;
                     }
                 }
                 else
                 {
-                    if (q < reward)
+                    if (q > reward)
                     {
                         reward = q;
                     }
-                }*/
+                }
 
-                reward += q;
-                count ++;
+                //reward += q;
+                //count ++;
             }
-            if (count)
+            //if (count)
             {
-                reward = 0.7 * reward / count;
+                reward = 0.7 * reward; // count;
             }
         }
 
