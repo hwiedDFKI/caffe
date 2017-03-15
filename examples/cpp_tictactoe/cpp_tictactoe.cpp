@@ -6,6 +6,10 @@
 static double rate = 0.1;
 static unsigned int count = 0;
 
+
+// a helper function to tell if one side wins
+// when side == 1 means black wins
+// when side == -1 means white wins
 static bool isWin(int position[9], int side)
 {
     if( (position[0] == side && position[1] == side && position[2] == side) ||
@@ -25,20 +29,30 @@ static bool isWin(int position[9], int side)
     }
 }
 
+// given a position, this function returns a reward. a number close to 1 means black will likely win
+// a number close to -1 means white will likely win
 void getReward(boost::shared_ptr<caffe::Net<float> > &testnet, std::vector<float> &position, std::vector<float> &label)
 {
+    //get the input layer of the neural network
     caffe::MemoryDataLayer<float> *dataLayer_testnet = (caffe::MemoryDataLayer<float> *) (testnet->layer_by_name("test_inputdata").get());
+    // assign the current position to the input of the neural network
     dataLayer_testnet->Reset(&position[0], &label[0], 5477);
 
+    // do a forward pass
     testnet->Forward();
 
+    //get the output
     boost::shared_ptr<caffe::Blob<float> > output_layer = testnet->blob_by_name("output");
 
     const float* q = output_layer->cpu_data();
 
+    //copy the output to label. the output is a reward.
     memcpy(&label[0], q, sizeof(float) * 5477);
 }
 
+// given a position, this function generates a hash key for the position.
+// the hash key is a 32bit integer. This purpose of this hash key is to 
+// rull out duplicated position.
 unsigned int keyForPosition(int position[9])
 {
     unsigned int result = 0;
@@ -56,28 +70,41 @@ unsigned int keyForPosition(int position[9])
     return result;
 }
 
-void preGeneratePermutations(unsigned int &id, std::vector<float> &data, std::vector<float> &label, std::map<unsigned int, unsigned int> &hash, int position[0], int side, int depth)
+// this function generates all possible positions of tic tac toe
+void preGeneratePermutations(unsigned int &id, std::vector<float> &data, 
+        std::vector<float> &label, std::map<unsigned int, unsigned int> &hash, int position[0], int side, int depth)
 {
+    // travel through all 9 locations
     for(int i = 0; i < 9; ++i)
     {
+        // if this location is empty
         if (position[i] == 0)
         {
+            // occupy the current location with the current side.
+            // 1 means black
+            // -1 means white
+            // the game always start with black
+
             position[i] = side;
             float reward = 0.0;
             bool notset = true;
             bool hasWon = false;
             
+            // decide if the current side wins the game
             if (isWin(position,  side))
             {
                 hasWon = true;
             }
 
+            // generate hash key for the current position
             unsigned int key = keyForPosition(position);
 
             //printf("key:%d\n", key);
 
+            // if the current location has not seen before.
             if (hash.find(key) == hash.end())
             {
+                // save the current position in the hash map for training.
                 hash[key] = id;
                 label.push_back(reward);
                 data.push_back(position[0]);
@@ -92,16 +119,21 @@ void preGeneratePermutations(unsigned int &id, std::vector<float> &data, std::ve
                 id ++;
             }
 
+            // if no one has won, recursively generate the next position.
             if (!hasWon)
             {
                 preGeneratePermutations(id, data, label, hash,position, -side, depth +1);
             }
 
+            // recover the current location to "empty"
             position[i] = 0;
         }
     }
 }
 
+//given a position, this function tells you who should be the side to put a stone.
+// basically this function counts the number of stones of each side and 
+// figure out who should be the current side to put a stone
 int getSide(int position[9])
 {
     int posC = 0;
@@ -124,6 +156,8 @@ int getSide(int position[9])
 
     return side;
 }
+
+
 
 int getBest(std::map<unsigned int, unsigned int> &hash, 
                     std::vector<float> &oldLabel, 
@@ -174,6 +208,8 @@ int getBest(std::map<unsigned int, unsigned int> &hash,
 
     return bestId;
 }
+
+
 
 void displayPosition(FILE *fp, int position[9])
 {
@@ -496,11 +532,26 @@ void experiment(std::map<unsigned int, unsigned int> &hash,
     fclose(fp);
 }
 
+
+// this function generates training data for one epoch
+// hash is a tabel mapping from the key of a position to the index of the position in "data"
+// there are 5477 positions in total (only unique positions are countered)
+// each training data is formed by 1 position and 1 label
+// 1 position is formed by 9 locaitons. if a location is 1, means a black stone,
+// if a location is 0, means empty
+// if a location is -1, means a white stone.
+// a label is a reward number. 1 means black wins, -1 means white wins.
+// a number closer to 1 means black is likely to win.
+// a number closer to -1 means white is likely to win.
 void getTrainingData(std::map<unsigned int, unsigned int> &hash, 
                     std::vector<float> &oldLabel, 
                     std::vector<float> &data, std::vector<float> &label)
 {
+    //start with an empty board, all 9 locations are empty
     int position[9] = {0};
+
+    //overall, there are 5477 positions
+    //loop for all of them
     for(int i = 5477-1; i>=0; i--)
     {
         float reward = 0.0;
@@ -509,6 +560,8 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
 
         int posC = 0;
 
+        // this for loop counts the number of stones on each side, 
+        // and figure out who should the be current side to lay a stone
         for(int e = 0;e<9;++e)
         {
 
@@ -527,36 +580,53 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
 
         if (posC > 0)
             side = 1;
+
+        // if black is the current side, side == 1
+        // if white is the current side, side == -1
             
+        // if the black wins the game with the current position
         if (isWin(position,  1))
         {
+            // set reward to 1
             hasWon = true;
             reward = 1.0; //std::min(1.0, 0.5 + 0.05 * (18-depth));
         }
         else if(isWin(position, -1))
         {
+            // if the white wins the game with the current position
+            // set the reward to -1
             hasWon = true;
             reward = -1.0; //std::max(0.0, 0.5 - 0.05 * (18-depth));
         }
         else
         {
+            // if no one wins the position
             int count = 0;
+            // loop over all locations on the board
             for(int k=0; k<9; ++k)
             {
+                // if the current location is not empty, skip the current location
                 if (position[k] !=0)
                 {
                     continue;
                 }
     
+                // if the current location is empty,
+                // first, copy the current position into a buffer inputs
                 int inputs[9];
                 memcpy(inputs, position, sizeof(int) * 9);
 
+                //put a stone of the enemy side at the current location
                 inputs[k] = -side;
 
+                // generate the hash key for the current position (with the enemy stone)
                 unsigned int inputKey = keyForPosition(&inputs[0]);
                 unsigned int id = hash[inputKey];
+                // get the probability of enemy winning the game
                 float q = oldLabel[id];
 
+                // if current side == 1 (black), find the smallest reward, (white win)
+                // if current side == -1 (white), find the largest reward, (black win)
                 if (notset)
                 {
                     notset = false;
@@ -582,10 +652,13 @@ void getTrainingData(std::map<unsigned int, unsigned int> &hash,
             }
             //if (count)
             {
+                // so far, the reward is for the next step
+                // here we multiply the reward of the next step with a decay number 0.7 (should be 0.9 for DQN)
                 reward = 0.7 * reward; // count;
             }
         }
 
+        // assign the reward to the current position.
         label[i] = reward;
     }
 }
