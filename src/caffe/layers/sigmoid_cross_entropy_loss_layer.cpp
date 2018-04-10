@@ -76,8 +76,8 @@ Dtype SigmoidCrossEntropyLossLayer<Dtype>::get_normalizer(
 }
 
 template <typename Dtype>
-void SigmoidCrossEntropyLossLayer<Dtype>::Forward_cpu(
-    const vector<Blob<Dtype>*>& bottom, const vector<Blob<Dtype>*>& top) {
+void SigmoidCrossEntropyLossLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom, const vector<Blob<Dtype>*>& top) 
+{
   // The forward pass computes the sigmoid outputs.
   sigmoid_bottom_vec_[0] = bottom[0];
   sigmoid_layer_->Forward(sigmoid_bottom_vec_, sigmoid_top_vec_);
@@ -101,14 +101,14 @@ void SigmoidCrossEntropyLossLayer<Dtype>::Forward_cpu(
 }
 
 template <typename Dtype>
-void SigmoidCrossEntropyLossLayer<Dtype>::Backward_cpu(
-    const vector<Blob<Dtype>*>& top, const vector<bool>& propagate_down,
-    const vector<Blob<Dtype>*>& bottom) {
-  if (propagate_down[1]) {
+void SigmoidCrossEntropyLossLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top, const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom) {
+  if (propagate_down[1]) 
+  {
     LOG(FATAL) << this->type()
                << " Layer cannot backpropagate to label inputs.";
   }
-  if (propagate_down[0]) {
+  if (propagate_down[0]) 
+  {
     // First, compute the diff
     const int count = bottom[0]->count();
     const Dtype* sigmoid_output_data = sigmoid_output_->cpu_data();

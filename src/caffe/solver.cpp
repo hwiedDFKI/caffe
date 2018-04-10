@@ -233,9 +233,8 @@ void Solver<Dtype>::Step(int iters) {
     loss /= param_.iter_size();
     // average the loss across iterations for smoothed reporting
     UpdateSmoothedLoss(loss, start_iter, average_loss);
-    if (display) {
-      float lapse = iteration_timer_.Seconds();
-      float per_s = (iter_ - iterations_last_) / (lapse ? lapse : 1);
+    if (display) 
+    {
       LOG_IF(INFO, Caffe::root_solver()) << "Iteration " << iter_
           << " (" << per_s << " iter/s, " << lapse << "s/"
           << param_.display() << " iters), loss = " << smoothed_loss_;
