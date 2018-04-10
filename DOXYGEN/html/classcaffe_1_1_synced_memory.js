@@ -1,0 +1,47 @@
+var classcaffe_1_1_synced_memory =
+[
+    [ "SyncedHead", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1", [
+      [ "UNINITIALIZED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a27847e3605e542e61c15156303d553b2", null ],
+      [ "HEAD_AT_CPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a7c066947165f4eae6e85dee45f2d1633", null ],
+      [ "HEAD_AT_GPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a9e9787d66089bb9db37afb251a4842b7", null ],
+      [ "SYNCED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a57c7c9c84775cc9303076ef5bf97e7a5", null ],
+      [ "UNINITIALIZED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a27847e3605e542e61c15156303d553b2", null ],
+      [ "HEAD_AT_CPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a7c066947165f4eae6e85dee45f2d1633", null ],
+      [ "HEAD_AT_GPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a9e9787d66089bb9db37afb251a4842b7", null ],
+      [ "SYNCED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a57c7c9c84775cc9303076ef5bf97e7a5", null ]
+    ] ],
+    [ "SyncedHead", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1", [
+      [ "UNINITIALIZED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a27847e3605e542e61c15156303d553b2", null ],
+      [ "HEAD_AT_CPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a7c066947165f4eae6e85dee45f2d1633", null ],
+      [ "HEAD_AT_GPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a9e9787d66089bb9db37afb251a4842b7", null ],
+      [ "SYNCED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a57c7c9c84775cc9303076ef5bf97e7a5", null ],
+      [ "UNINITIALIZED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a27847e3605e542e61c15156303d553b2", null ],
+      [ "HEAD_AT_CPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a7c066947165f4eae6e85dee45f2d1633", null ],
+      [ "HEAD_AT_GPU", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a9e9787d66089bb9db37afb251a4842b7", null ],
+      [ "SYNCED", "classcaffe_1_1_synced_memory.html#aa9d505f04322f6e521a57b8fc51dfba1a57c7c9c84775cc9303076ef5bf97e7a5", null ]
+    ] ],
+    [ "SyncedMemory", "classcaffe_1_1_synced_memory.html#a1554c965fa580eee8d425c9cc14ac264", null ],
+    [ "SyncedMemory", "classcaffe_1_1_synced_memory.html#a858ddd33252ddfd6e8bb2dc59ab7691b", null ],
+    [ "~SyncedMemory", "classcaffe_1_1_synced_memory.html#a0f9e02554b59ba5357ac1d0c9256560a", null ],
+    [ "SyncedMemory", "classcaffe_1_1_synced_memory.html#a1554c965fa580eee8d425c9cc14ac264", null ],
+    [ "SyncedMemory", "classcaffe_1_1_synced_memory.html#a858ddd33252ddfd6e8bb2dc59ab7691b", null ],
+    [ "~SyncedMemory", "classcaffe_1_1_synced_memory.html#a0f9e02554b59ba5357ac1d0c9256560a", null ],
+    [ "async_gpu_push", "classcaffe_1_1_synced_memory.html#a16308ac4986b99fb62303c4f4c1d118b", null ],
+    [ "async_gpu_push", "classcaffe_1_1_synced_memory.html#a16308ac4986b99fb62303c4f4c1d118b", null ],
+    [ "cpu_data", "classcaffe_1_1_synced_memory.html#a5ffa0255e243f223e1af064fb7322ae4", null ],
+    [ "cpu_data", "classcaffe_1_1_synced_memory.html#a3ab3c836c1d118efd357b7a42ec53a91", null ],
+    [ "gpu_data", "classcaffe_1_1_synced_memory.html#acf04d9fabcde73902bdad08672696933", null ],
+    [ "gpu_data", "classcaffe_1_1_synced_memory.html#a078df87b8bbbd8032f920f40ae79e561", null ],
+    [ "head", "classcaffe_1_1_synced_memory.html#abd3e8f08d0186d3460fcce1378a2dc4c", null ],
+    [ "head", "classcaffe_1_1_synced_memory.html#abd3e8f08d0186d3460fcce1378a2dc4c", null ],
+    [ "mutable_cpu_data", "classcaffe_1_1_synced_memory.html#ab32cd46d7f0cf524d79e4ba7da7449dd", null ],
+    [ "mutable_cpu_data", "classcaffe_1_1_synced_memory.html#a494df0c6dc52ff9509aad48bd7fb6665", null ],
+    [ "mutable_gpu_data", "classcaffe_1_1_synced_memory.html#ab411a39b9e9dac1a0355a1f5f389e7a2", null ],
+    [ "mutable_gpu_data", "classcaffe_1_1_synced_memory.html#ab6ca4faa7233c8ac2319acb72ba0441e", null ],
+    [ "set_cpu_data", "classcaffe_1_1_synced_memory.html#a4118cdf888d8663c4f88c037ce3e3b8e", null ],
+    [ "set_cpu_data", "classcaffe_1_1_synced_memory.html#a4118cdf888d8663c4f88c037ce3e3b8e", null ],
+    [ "set_gpu_data", "classcaffe_1_1_synced_memory.html#a9d3831fe6c03370890d76dc8a82f4ca1", null ],
+    [ "set_gpu_data", "classcaffe_1_1_synced_memory.html#a9d3831fe6c03370890d76dc8a82f4ca1", null ],
+    [ "size", "classcaffe_1_1_synced_memory.html#ae181c18b137d62de33bc91501aabb841", null ],
+    [ "size", "classcaffe_1_1_synced_memory.html#ae181c18b137d62de33bc91501aabb841", null ]
+];

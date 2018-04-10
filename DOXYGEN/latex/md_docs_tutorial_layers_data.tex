@@ -1,0 +1,40 @@
+
+
+ \subsection*{title\+: Database Layer }
+
+\section*{Database Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Data}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1DataLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/data_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/data\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/data_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/data\+\_\+layer.cpp}}
+\end{DoxyItemize}
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Data\+Parameter data\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}})\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Data\+Parameter.\+txt \%\} \{\% endhighlight \%\}
+
+
+\begin{DoxyItemize}
+\item Parameters
+\begin{DoxyItemize}
+\item Required
+\begin{DoxyItemize}
+\item {\ttfamily source}\+: the name of the directory containing the database
+\item {\ttfamily batch\+\_\+size}\+: the number of inputs to process at one time
+\end{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily rand\+\_\+skip}\+: skip up to this number of inputs at the beginning; useful for asynchronous sgd
+\item {\ttfamily backend} \mbox{[}default {\ttfamily L\+E\+V\+E\+L\+DB}\mbox{]}\+: choose whether to use a {\ttfamily L\+E\+V\+E\+L\+DB} or {\ttfamily L\+M\+DB} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

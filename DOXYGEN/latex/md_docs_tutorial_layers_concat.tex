@@ -1,0 +1,53 @@
+
+
+ \subsection*{title\+: Concat Layer }
+
+\section*{Concat Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Concat}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1ConcatLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/concat_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/concat\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/concat_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/concat\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/concat_layer.cu}{\tt {\ttfamily ./src/caffe/layers/concat\+\_\+layer.cu}}
+\item Input
+\begin{DoxyItemize}
+\item {\ttfamily n\+\_\+i $\ast$ c\+\_\+i $\ast$ h $\ast$ w} for each input blob i from 1 to K.
+\end{DoxyItemize}
+\item Output
+\begin{DoxyItemize}
+\item if {\ttfamily axis = 0}\+: {\ttfamily (n\+\_\+1 + n\+\_\+2 + ... + n\+\_\+K) $\ast$ c\+\_\+1 $\ast$ h $\ast$ w}, and all input {\ttfamily c\+\_\+i} should be the same.
+\item if {\ttfamily axis = 1}\+: {\ttfamily n\+\_\+1 $\ast$ (c\+\_\+1 + c\+\_\+2 + ... + c\+\_\+K) $\ast$ h $\ast$ w}, and all input {\ttfamily n\+\_\+i} should be the same.
+\end{DoxyItemize}
+\item Sample \begin{DoxyVerb}layer {
+  name: "concat"
+  bottom: "in1"
+  bottom: "in2"
+  top: "out"
+  type: "Concat"
+  concat_param {
+    axis: 1
+  }
+}
+\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+The {\ttfamily Concat} layer is a utility layer that concatenates its multiple input blobs to one single output blob.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Concat\+Parameter concat\+\_\+param})
+\begin{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily axis} \mbox{[}default 1\mbox{]}\+: 0 for concatenation along num and 1 for channels.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}})\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Concat\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

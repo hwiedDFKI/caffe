@@ -1,0 +1,496 @@
+\hypertarget{classcaffe_1_1_recurrent_layer}{}\section{caffe\+:\+:Recurrent\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_recurrent_layer}\index{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$@{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}
+
+
+An abstract class for implementing recurrent behavior inside of an unrolled network. This \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}} type cannot be instantiated -- instead, you should use one of its implementations which defines the recurrent architecture, such as \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} or \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}}.  
+
+
+
+
+{\ttfamily \#include $<$recurrent\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Recurrent\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a3f02919dbb32c07c89bfda4ea68c09df}\label{classcaffe_1_1_recurrent_layer_a3f02919dbb32c07c89bfda4ea68c09df}} 
+{\bfseries Recurrent\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4eec13bfbe23b1e3eb2bbc4652bd6952}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aba6011a9cbb18e38a8596aa5dbb44723}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a9f0bf24a571da40f490b9b78a51d9393}\label{classcaffe_1_1_recurrent_layer_a9f0bf24a571da40f490b9b78a51d9393}} 
+virtual void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}\label{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{Max\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return whether to allow force\+\_\+backward for a given bottom blob index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a3f02919dbb32c07c89bfda4ea68c09df}\label{classcaffe_1_1_recurrent_layer_a3f02919dbb32c07c89bfda4ea68c09df}} 
+{\bfseries Recurrent\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8e4537f7dd87a9cce60096e8ab04e843}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aea7d9f8a75896b5bff438c6cdc966b6b}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a7ba1993aeddd6b0a13b875381945aee9}\label{classcaffe_1_1_recurrent_layer_a7ba1993aeddd6b0a13b875381945aee9}} 
+virtual void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}\label{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_afc0b925b8bf94a795c9ff84f411e70a3}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{Max\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return whether to allow force\+\_\+backward for a given bottom blob index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}\label{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}{Fill\+Unrolled\+Net}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$net\+\_\+param) const =0
+\begin{DoxyCompactList}\small\item\em Fills net\+\_\+param with the recurrent network architecture. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}\label{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}{Recurrent\+Input\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the 0th timestep recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}\label{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}{Recurrent\+Input\+Shapes}} (vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob_shape}{Blob\+Shape}} $>$ $\ast$shapes) const =0
+\begin{DoxyCompactList}\small\item\em Fills shapes with the shapes of the recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}\label{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}{Recurrent\+Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the Tth timestep recurrent output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}\label{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}{Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the output blobs, concatenated across all timesteps. Should return a name for each top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a9f0e34d7534fac027c640e66f55a18d2}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}\label{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a9f0e34d7534fac027c640e66f55a18d2}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a634f73d33c81cc8f8486659998ed45c6}\label{classcaffe_1_1_recurrent_layer_a634f73d33c81cc8f8486659998ed45c6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a634f73d33c81cc8f8486659998ed45c6}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}\label{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a04a3a032c4d0be559d88865a13a2d927}{Fill\+Unrolled\+Net}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$net\+\_\+param) const =0
+\begin{DoxyCompactList}\small\item\em Fills net\+\_\+param with the recurrent network architecture. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}\label{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a9d9dab800f838e38651678718adfbbf6}{Recurrent\+Input\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the 0th timestep recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}\label{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ad2c2427c11960e0b8961c31ff2f74c03}{Recurrent\+Input\+Shapes}} (vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob_shape}{Blob\+Shape}} $>$ $\ast$shapes) const =0
+\begin{DoxyCompactList}\small\item\em Fills shapes with the shapes of the recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}\label{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a5fd43ae201c4284a1cc3d93f72702bbe}{Recurrent\+Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the Tth timestep recurrent output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}\label{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_af0b87f8e9a422338243ffeb7f16121fa}{Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const =0
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the output blobs, concatenated across all timesteps. Should return a name for each top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a1dffda3073cd6f93a80c73b27c4dd0ba}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}\label{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_afb4cdbb38b24d2a2ccb14cebc4e1018b}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a9f0e34d7534fac027c640e66f55a18d2}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a931f71a51255e488b45c407d5298871d}\label{classcaffe_1_1_recurrent_layer_a931f71a51255e488b45c407d5298871d}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a931f71a51255e488b45c407d5298871d}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a59fcff0e560f96a0b175d601aca1b373}\label{classcaffe_1_1_recurrent_layer_a59fcff0e560f96a0b175d601aca1b373}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_net}{Net}}$<$ Dtype $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a59fcff0e560f96a0b175d601aca1b373}{unrolled\+\_\+net\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classcaffe_1_1_net}{Net}} to implement the Recurrent functionality. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a4bf3c3a87b2a740987aec46e40717907}\label{classcaffe_1_1_recurrent_layer_a4bf3c3a87b2a740987aec46e40717907}} 
+int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4bf3c3a87b2a740987aec46e40717907}{N\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The number of independent streams to process simultaneously. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a02f79bca0ccde7543ecf172b328c860f}\label{classcaffe_1_1_recurrent_layer_a02f79bca0ccde7543ecf172b328c860f}} 
+int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a02f79bca0ccde7543ecf172b328c860f}{T\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The number of timesteps in the layer\textquotesingle{}s input, and the number of timesteps over which to backpropagate through time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a7da45d2f90a99fe6e4250ffa6a533d97}\label{classcaffe_1_1_recurrent_layer_a7da45d2f90a99fe6e4250ffa6a533d97}} 
+bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a7da45d2f90a99fe6e4250ffa6a533d97}{static\+\_\+input\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether the layer has a \char`\"{}static\char`\"{} input copied across all timesteps. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a0a7a7d94ed74d4199b9d7b8445d5aadb}\label{classcaffe_1_1_recurrent_layer_a0a7a7d94ed74d4199b9d7b8445d5aadb}} 
+int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a0a7a7d94ed74d4199b9d7b8445d5aadb}{last\+\_\+layer\+\_\+index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The last layer to run in the network. (Any later layers are losses added to force the recurrent net to do backprop.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_abfafaacb1fece0309e750e0d307fb76e}\label{classcaffe_1_1_recurrent_layer_abfafaacb1fece0309e750e0d307fb76e}} 
+bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_abfafaacb1fece0309e750e0d307fb76e}{expose\+\_\+hidden\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether the layer\textquotesingle{}s hidden state at the first and last timesteps are layer inputs and outputs, respectively. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a7d3778cc65bce4817268fbe9b3b0738f}\label{classcaffe_1_1_recurrent_layer_a7d3778cc65bce4817268fbe9b3b0738f}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ {\bfseries recur\+\_\+input\+\_\+blobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_ac7d6de4a87f3b3fdaecc8a28f038b15d}\label{classcaffe_1_1_recurrent_layer_ac7d6de4a87f3b3fdaecc8a28f038b15d}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ {\bfseries recur\+\_\+output\+\_\+blobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a91612f30f7425d584603ba896c742287}\label{classcaffe_1_1_recurrent_layer_a91612f30f7425d584603ba896c742287}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ {\bfseries output\+\_\+blobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_afe9594bd3feeed60c3cfa6f0f5a44e79}\label{classcaffe_1_1_recurrent_layer_afe9594bd3feeed60c3cfa6f0f5a44e79}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ {\bfseries x\+\_\+input\+\_\+blob\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a3506d1843897f8e639106a112ca2ae3d}\label{classcaffe_1_1_recurrent_layer_a3506d1843897f8e639106a112ca2ae3d}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ {\bfseries x\+\_\+static\+\_\+input\+\_\+blob\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a0d006627af470fedb6f1fc5c66c68390}\label{classcaffe_1_1_recurrent_layer_a0d006627af470fedb6f1fc5c66c68390}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ {\bfseries cont\+\_\+input\+\_\+blob\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}
+
+An abstract class for implementing recurrent behavior inside of an unrolled network. This \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}} type cannot be instantiated -- instead, you should use one of its implementations which defines the recurrent architecture, such as \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} or \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}\label{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether to allow force\+\_\+backward for a given bottom blob index. 
+
+If Allow\+Force\+Backward(i) == false, we will ignore the force\+\_\+backward setting and backpropagate to blob i only if it needs gradient information (as is done when force\+\_\+backward == false). 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}\label{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether to allow force\+\_\+backward for a given bottom blob index. 
+
+If Allow\+Force\+Backward(i) == false, we will ignore the force\+\_\+backward setting and backpropagate to blob i only if it needs gradient information (as is done when force\+\_\+backward == false). 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}\label{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}\label{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a9f0e34d7534fac027c640e66f55a18d2}\label{classcaffe_1_1_recurrent_layer_a9f0e34d7534fac027c640e66f55a18d2}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2-\/3)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item $ (T \times N \times ...) $ the time-\/varying input $ x $. After the first two axes, whose dimensions must correspond to the number of timesteps $ T $ and the number of independent streams $ N $, respectively, its dimensions may be arbitrary. Note that the ordering of dimensions -- $ (T \times N \times ...) $, rather than $ (N \times T \times ...) $ -- means that the $ N $ independent input streams must be \char`\"{}interleaved\char`\"{}.
+\item $ (T \times N) $ the sequence continuation indicators $ \delta $. These inputs should be binary (0 or 1) indicators, where $ \delta_{t,n} = 0 $ means that timestep $ t $ of stream $ n $ is the beginning of a new sequence, and hence the previous hidden state $ h_{t-1} $ is multiplied by $ \delta_t = 0 $ and has no effect on the cell\textquotesingle{}s output at timestep $ t $, and a value of $ \delta_{t,n} = 1 $ means that timestep $ t $ of stream $ n $ is a continuation from the previous timestep $ t-1 $, and the previous hidden state $ h_{t-1} $ affects the updated hidden state and output.
+\item $ (N \times ...) $ (optional) the static (non-\/time-\/varying) input $ x_{static} $. After the first axis, whose dimension must be the number of independent streams, its dimensions may be arbitrary. This is mathematically equivalent to using a time-\/varying input of $ x'_t = [x_t; x_{static}] $ -- i.\+e., tiling the static input across the $ T $ timesteps and concatenating with the time-\/varying input. Note that if this input is used, all timesteps in a single batch within a particular one of the $ N $ streams must share the same static input, even if the sequence continuation indicators suggest that difference sequences are ending and beginning within a single batch. This may require padding and/or truncation for uniform length.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (T \times N \times D) $ the time-\/varying output $ y $, where $ D $ is {\ttfamily recurrent\+\_\+param.\+num\+\_\+output()}. Refer to documentation for particular \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{Recurrent\+Layer}} implementations (such as \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}}) for the definition of $ y $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a1dffda3073cd6f93a80c73b27c4dd0ba}\label{classcaffe_1_1_recurrent_layer_a1dffda3073cd6f93a80c73b27c4dd0ba}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2-\/3)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item $ (T \times N \times ...) $ the time-\/varying input $ x $. After the first two axes, whose dimensions must correspond to the number of timesteps $ T $ and the number of independent streams $ N $, respectively, its dimensions may be arbitrary. Note that the ordering of dimensions -- $ (T \times N \times ...) $, rather than $ (N \times T \times ...) $ -- means that the $ N $ independent input streams must be \char`\"{}interleaved\char`\"{}.
+\item $ (T \times N) $ the sequence continuation indicators $ \delta $. These inputs should be binary (0 or 1) indicators, where $ \delta_{t,n} = 0 $ means that timestep $ t $ of stream $ n $ is the beginning of a new sequence, and hence the previous hidden state $ h_{t-1} $ is multiplied by $ \delta_t = 0 $ and has no effect on the cell\textquotesingle{}s output at timestep $ t $, and a value of $ \delta_{t,n} = 1 $ means that timestep $ t $ of stream $ n $ is a continuation from the previous timestep $ t-1 $, and the previous hidden state $ h_{t-1} $ affects the updated hidden state and output.
+\item $ (N \times ...) $ (optional) the static (non-\/time-\/varying) input $ x_{static} $. After the first axis, whose dimension must be the number of independent streams, its dimensions may be arbitrary. This is mathematically equivalent to using a time-\/varying input of $ x'_t = [x_t; x_{static}] $ -- i.\+e., tiling the static input across the $ T $ timesteps and concatenating with the time-\/varying input. Note that if this input is used, all timesteps in a single batch within a particular one of the $ N $ streams must share the same static input, even if the sequence continuation indicators suggest that difference sequences are ending and beginning within a single batch. This may require padding and/or truncation for uniform length.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (T \times N \times D) $ the time-\/varying output $ y $, where $ D $ is {\ttfamily recurrent\+\_\+param.\+num\+\_\+output()}. Refer to documentation for particular \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{Recurrent\+Layer}} implementations (such as \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}}) for the definition of $ y $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a4eec13bfbe23b1e3eb2bbc4652bd6952}\label{classcaffe_1_1_recurrent_layer_a4eec13bfbe23b1e3eb2bbc4652bd6952}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a8e4537f7dd87a9cce60096e8ab04e843}\label{classcaffe_1_1_recurrent_layer_a8e4537f7dd87a9cce60096e8ab04e843}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}\label{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}}
+\index{Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Bottom\+Blobs()}{MaxBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Max\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}\label{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}}
+\index{Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Bottom\+Blobs()}{MaxBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Max\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}\label{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}\label{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_aba6011a9cbb18e38a8596aa5dbb44723}\label{classcaffe_1_1_recurrent_layer_aba6011a9cbb18e38a8596aa5dbb44723}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_recurrent_layer_aea7d9f8a75896b5bff438c6cdc966b6b}\label{classcaffe_1_1_recurrent_layer_aea7d9f8a75896b5bff438c6cdc966b6b}} 
+\index{caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Recurrent\+Layer@{caffe\+::\+Recurrent\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/lstm\+\_\+layer.\+hpp\item 
+build/install/include/caffe/layers/recurrent\+\_\+layer.\+hpp\item 
+src/caffe/layers/recurrent\+\_\+layer.\+cpp\end{DoxyCompactItemize}

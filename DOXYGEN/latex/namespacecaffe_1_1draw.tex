@@ -1,0 +1,307 @@
+\hypertarget{namespacecaffe_1_1draw}{}\section{caffe.\+draw Namespace Reference}
+\label{namespacecaffe_1_1draw}\index{caffe.\+draw@{caffe.\+draw}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_a18df1acb5bad222d90e8873375367ef1}{get\+\_\+pooling\+\_\+types\+\_\+dict}} ()
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_a672545af1643af2c11e6b19226eaf6c4}{get\+\_\+edge\+\_\+label}} (layer)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_ac1df68579f91acefee36f75ac5b0de1d}{get\+\_\+layer\+\_\+lr\+\_\+mult}} (layer)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_a1ab4383ec4e16ed4e8f0e027c25c682a}{get\+\_\+layer\+\_\+label}} (layer, rankdir, display\+\_\+lrm=False)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_ab06e25fd2bbb0166d3c3ff19d9854828}{choose\+\_\+color\+\_\+by\+\_\+layertype}} (layertype)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_a679642bc8af6fb5382480cfad0c27111}{get\+\_\+pydot\+\_\+graph}} (caffe\+\_\+net, rankdir, label\+\_\+edges=True, phase=None, display\+\_\+lrm=False)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_af1c2f41e9d66bae6814590e8c59f64c6}{draw\+\_\+net}} (caffe\+\_\+net, rankdir, ext=\textquotesingle{}png\textquotesingle{}, phase=None, display\+\_\+lrm=False)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1draw_a1955d119b9b325ea2ad20254b3dc80e3}{draw\+\_\+net\+\_\+to\+\_\+file}} (caffe\+\_\+net, filename, rankdir=\textquotesingle{}LR\textquotesingle{}, phase=None, display\+\_\+lrm=False)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary {\bfseries L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT}
+\item 
+dictionary {\bfseries N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE}
+\item 
+dictionary {\bfseries B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Caffe network visualization: draw the NetParameter protobuffer.
+
+
+.. note::
+
+    This requires pydot>=1.0.2, which is not included in requirements.txt since
+    it requires graphviz and other prerequisites outside the scope of the
+    Caffe.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_ab06e25fd2bbb0166d3c3ff19d9854828}\label{namespacecaffe_1_1draw_ab06e25fd2bbb0166d3c3ff19d9854828}} 
+\index{caffe\+::draw@{caffe\+::draw}!choose\+\_\+color\+\_\+by\+\_\+layertype@{choose\+\_\+color\+\_\+by\+\_\+layertype}}
+\index{choose\+\_\+color\+\_\+by\+\_\+layertype@{choose\+\_\+color\+\_\+by\+\_\+layertype}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{choose\+\_\+color\+\_\+by\+\_\+layertype()}{choose\_color\_by\_layertype()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+choose\+\_\+color\+\_\+by\+\_\+layertype (\begin{DoxyParamCaption}\item[{}]{layertype }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define colors for nodes based on the layer type.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_ab06e25fd2bbb0166d3c3ff19d9854828_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_af1c2f41e9d66bae6814590e8c59f64c6}\label{namespacecaffe_1_1draw_af1c2f41e9d66bae6814590e8c59f64c6}} 
+\index{caffe\+::draw@{caffe\+::draw}!draw\+\_\+net@{draw\+\_\+net}}
+\index{draw\+\_\+net@{draw\+\_\+net}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{draw\+\_\+net()}{draw\_net()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+draw\+\_\+net (\begin{DoxyParamCaption}\item[{}]{caffe\+\_\+net,  }\item[{}]{rankdir,  }\item[{}]{ext = {\ttfamily \textquotesingle{}png\textquotesingle{}},  }\item[{}]{phase = {\ttfamily None},  }\item[{}]{display\+\_\+lrm = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draws a caffe net and returns the image string encoded using the given
+extension.
+
+Parameters
+----------
+caffe_net : a caffe.proto.caffe_pb2.NetParameter protocol buffer.
+ext : string, optional
+    The image extension (the default is 'png').
+phase : {caffe_pb2.Phase.TRAIN, caffe_pb2.Phase.TEST, None} optional
+    Include layers from this network phase.  If None, include all layers.
+    (the default is None)
+display_lrm : boolean, optional
+    If True display the learning rate multipliers for the learning layers
+    (default is False).
+
+Returns
+-------
+string :
+    Postscript representation of the graph.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_af1c2f41e9d66bae6814590e8c59f64c6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a1955d119b9b325ea2ad20254b3dc80e3}\label{namespacecaffe_1_1draw_a1955d119b9b325ea2ad20254b3dc80e3}} 
+\index{caffe\+::draw@{caffe\+::draw}!draw\+\_\+net\+\_\+to\+\_\+file@{draw\+\_\+net\+\_\+to\+\_\+file}}
+\index{draw\+\_\+net\+\_\+to\+\_\+file@{draw\+\_\+net\+\_\+to\+\_\+file}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{draw\+\_\+net\+\_\+to\+\_\+file()}{draw\_net\_to\_file()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+draw\+\_\+net\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{}]{caffe\+\_\+net,  }\item[{}]{filename,  }\item[{}]{rankdir = {\ttfamily \textquotesingle{}LR\textquotesingle{}},  }\item[{}]{phase = {\ttfamily None},  }\item[{}]{display\+\_\+lrm = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Draws a caffe net, and saves it to file using the format given as the
+file extension. Use '.raw' to output raw text that you can manually feed
+to graphviz to draw graphs.
+
+Parameters
+----------
+caffe_net : a caffe.proto.caffe_pb2.NetParameter protocol buffer.
+filename : string
+    The path to a file where the networks visualization will be stored.
+rankdir : {'LR', 'TB', 'BT'}
+    Direction of graph layout.
+phase : {caffe_pb2.Phase.TRAIN, caffe_pb2.Phase.TEST, None} optional
+    Include layers from this network phase.  If None, include all layers.
+    (the default is None)
+display_lrm : boolean, optional
+    If True display the learning rate multipliers for the learning layers
+    (default is False).
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{namespacecaffe_1_1draw_a1955d119b9b325ea2ad20254b3dc80e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a672545af1643af2c11e6b19226eaf6c4}\label{namespacecaffe_1_1draw_a672545af1643af2c11e6b19226eaf6c4}} 
+\index{caffe\+::draw@{caffe\+::draw}!get\+\_\+edge\+\_\+label@{get\+\_\+edge\+\_\+label}}
+\index{get\+\_\+edge\+\_\+label@{get\+\_\+edge\+\_\+label}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{get\+\_\+edge\+\_\+label()}{get\_edge\_label()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+get\+\_\+edge\+\_\+label (\begin{DoxyParamCaption}\item[{}]{layer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define edge label based on layer type.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_a672545af1643af2c11e6b19226eaf6c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a1ab4383ec4e16ed4e8f0e027c25c682a}\label{namespacecaffe_1_1draw_a1ab4383ec4e16ed4e8f0e027c25c682a}} 
+\index{caffe\+::draw@{caffe\+::draw}!get\+\_\+layer\+\_\+label@{get\+\_\+layer\+\_\+label}}
+\index{get\+\_\+layer\+\_\+label@{get\+\_\+layer\+\_\+label}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{get\+\_\+layer\+\_\+label()}{get\_layer\_label()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+get\+\_\+layer\+\_\+label (\begin{DoxyParamCaption}\item[{}]{layer,  }\item[{}]{rankdir,  }\item[{}]{display\+\_\+lrm = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define node label based on layer type.
+
+Parameters
+----------
+layer : caffe_pb2.LayerParameter
+rankdir : {'LR', 'TB', 'BT'}
+    Direction of graph layout.
+display_lrm : boolean, optional
+    If True include the learning rate multipliers in the label (default is
+    False).
+
+Returns
+-------
+node_label : string
+    A label for the current layer
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespacecaffe_1_1draw_a1ab4383ec4e16ed4e8f0e027c25c682a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_a1ab4383ec4e16ed4e8f0e027c25c682a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_ac1df68579f91acefee36f75ac5b0de1d}\label{namespacecaffe_1_1draw_ac1df68579f91acefee36f75ac5b0de1d}} 
+\index{caffe\+::draw@{caffe\+::draw}!get\+\_\+layer\+\_\+lr\+\_\+mult@{get\+\_\+layer\+\_\+lr\+\_\+mult}}
+\index{get\+\_\+layer\+\_\+lr\+\_\+mult@{get\+\_\+layer\+\_\+lr\+\_\+mult}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{get\+\_\+layer\+\_\+lr\+\_\+mult()}{get\_layer\_lr\_mult()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+get\+\_\+layer\+\_\+lr\+\_\+mult (\begin{DoxyParamCaption}\item[{}]{layer }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get the learning rate multipliers.
+
+Get the learning rate multipliers for the given layer. Assumes a
+Convolution/Deconvolution/InnerProduct layer.
+
+Parameters
+----------
+layer : caffe_pb2.LayerParameter
+    A Convolution, Deconvolution, or InnerProduct layer.
+
+Returns
+-------
+learning_rates : tuple of floats
+    the learning rate multipliers for the weights and biases.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_ac1df68579f91acefee36f75ac5b0de1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a18df1acb5bad222d90e8873375367ef1}\label{namespacecaffe_1_1draw_a18df1acb5bad222d90e8873375367ef1}} 
+\index{caffe\+::draw@{caffe\+::draw}!get\+\_\+pooling\+\_\+types\+\_\+dict@{get\+\_\+pooling\+\_\+types\+\_\+dict}}
+\index{get\+\_\+pooling\+\_\+types\+\_\+dict@{get\+\_\+pooling\+\_\+types\+\_\+dict}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{get\+\_\+pooling\+\_\+types\+\_\+dict()}{get\_pooling\_types\_dict()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+get\+\_\+pooling\+\_\+types\+\_\+dict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get dictionary mapping pooling type number to type name
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_a18df1acb5bad222d90e8873375367ef1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a679642bc8af6fb5382480cfad0c27111}\label{namespacecaffe_1_1draw_a679642bc8af6fb5382480cfad0c27111}} 
+\index{caffe\+::draw@{caffe\+::draw}!get\+\_\+pydot\+\_\+graph@{get\+\_\+pydot\+\_\+graph}}
+\index{get\+\_\+pydot\+\_\+graph@{get\+\_\+pydot\+\_\+graph}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{get\+\_\+pydot\+\_\+graph()}{get\_pydot\_graph()}}
+{\footnotesize\ttfamily def caffe.\+draw.\+get\+\_\+pydot\+\_\+graph (\begin{DoxyParamCaption}\item[{}]{caffe\+\_\+net,  }\item[{}]{rankdir,  }\item[{}]{label\+\_\+edges = {\ttfamily True},  }\item[{}]{phase = {\ttfamily None},  }\item[{}]{display\+\_\+lrm = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a data structure which represents the `caffe_net`.
+
+Parameters
+----------
+caffe_net : object
+rankdir : {'LR', 'TB', 'BT'}
+    Direction of graph layout.
+label_edges : boolean, optional
+    Label the edges (default is True).
+phase : {caffe_pb2.Phase.TRAIN, caffe_pb2.Phase.TEST, None} optional
+    Include layers from this network phase.  If None, include all layers.
+    (the default is None)
+display_lrm : boolean, optional
+    If True display the learning rate multipliers when relevant (default is
+    False).
+
+Returns
+-------
+pydot graph object
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1draw_a679642bc8af6fb5382480cfad0c27111_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{namespacecaffe_1_1draw_a679642bc8af6fb5382480cfad0c27111_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_ab9680300b4ad475d87181a74cdad3d7f}\label{namespacecaffe_1_1draw_ab9680300b4ad475d87181a74cdad3d7f}} 
+\index{caffe\+::draw@{caffe\+::draw}!B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE@{B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE}}
+\index{B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE@{B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE}{BLOB\_STYLE}}
+{\footnotesize\ttfamily dictionary caffe.\+draw.\+B\+L\+O\+B\+\_\+\+S\+T\+Y\+LE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{\textcolor{stringliteral}{'shape'}: \textcolor{stringliteral}{'octagon'},
+2               \textcolor{stringliteral}{'fillcolor'}: \textcolor{stringliteral}{'\#E0E0E0'},
+3               \textcolor{stringliteral}{'style'}: \textcolor{stringliteral}{'filled'}\}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a1756d7ea83bb874451506563fc3b0876}\label{namespacecaffe_1_1draw_a1756d7ea83bb874451506563fc3b0876}} 
+\index{caffe\+::draw@{caffe\+::draw}!L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT}}
+\index{L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT}{LAYER\_STYLE\_DEFAULT}}
+{\footnotesize\ttfamily dictionary caffe.\+draw.\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+L\+E\+\_\+\+D\+E\+F\+A\+U\+LT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{\textcolor{stringliteral}{'shape'}: \textcolor{stringliteral}{'record'},
+2                        \textcolor{stringliteral}{'fillcolor'}: \textcolor{stringliteral}{'\#6495ED'},
+3                        \textcolor{stringliteral}{'style'}: \textcolor{stringliteral}{'filled'}\}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecaffe_1_1draw_a2fb7a9809c0cf095bfdd8e4549db9c0d}\label{namespacecaffe_1_1draw_a2fb7a9809c0cf095bfdd8e4549db9c0d}} 
+\index{caffe\+::draw@{caffe\+::draw}!N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE@{N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE}}
+\index{N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE@{N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE}!caffe\+::draw@{caffe\+::draw}}
+\subsubsection{\texorpdfstring{N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE}{NEURON\_LAYER\_STYLE}}
+{\footnotesize\ttfamily dictionary caffe.\+draw.\+N\+E\+U\+R\+O\+N\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+S\+T\+Y\+LE}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{\textcolor{stringliteral}{'shape'}: \textcolor{stringliteral}{'record'},
+2                       \textcolor{stringliteral}{'fillcolor'}: \textcolor{stringliteral}{'\#90EE90'},
+3                       \textcolor{stringliteral}{'style'}: \textcolor{stringliteral}{'filled'}\}
+\end{DoxyCode}

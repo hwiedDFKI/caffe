@@ -1,0 +1,4 @@
+<map id="caffe::SoftmaxWithLossLayer&lt; Dtype &gt;" name="caffe::SoftmaxWithLossLayer&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_loss_layer.html" title="An interface for Layers that take two Blobs as input – usually (1) predictions and (2) ground&#45;truth ..." alt="" coords="13,80,192,107"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="27,5,178,32"/>
+</map>

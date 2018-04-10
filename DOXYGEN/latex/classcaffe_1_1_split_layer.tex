@@ -1,0 +1,202 @@
+\hypertarget{classcaffe_1_1_split_layer}{}\section{caffe\+:\+:Split\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_split_layer}\index{caffe\+::\+Split\+Layer$<$ Dtype $>$@{caffe\+::\+Split\+Layer$<$ Dtype $>$}}
+
+
+Creates a \char`\"{}split\char`\"{} path in the network by copying the bottom \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} into multiple top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s to be used by multiple consuming layers.  
+
+
+
+
+{\ttfamily \#include $<$split\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Split\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_split_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a784222a81f1921b68bf814fc9dc5d1aa}\label{classcaffe_1_1_split_layer_a784222a81f1921b68bf814fc9dc5d1aa}} 
+{\bfseries Split\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a4e978965461dedcc2fbb905e4910c0b1}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}\label{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a784222a81f1921b68bf814fc9dc5d1aa}\label{classcaffe_1_1_split_layer_a784222a81f1921b68bf814fc9dc5d1aa}} 
+{\bfseries Split\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a1064977331e5bfcf5d75590d14986e1f}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}\label{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_split_layer_a69113b39e1f3f1ad83b5765496fcdb35}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_af8acf13304b849d888510470a76f9e76}\label{classcaffe_1_1_split_layer_af8acf13304b849d888510470a76f9e76}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_af8acf13304b849d888510470a76f9e76}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}\label{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_split_layer_af8acf13304b849d888510470a76f9e76}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a8a4a5231eafdf8c35596de50cac9185c}\label{classcaffe_1_1_split_layer_a8a4a5231eafdf8c35596de50cac9185c}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a8a4a5231eafdf8c35596de50cac9185c}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}\label{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_split_layer_a8a4a5231eafdf8c35596de50cac9185c}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_abdcbf838333563ff53eda96c1ec05481}\label{classcaffe_1_1_split_layer_abdcbf838333563ff53eda96c1ec05481}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_abdcbf838333563ff53eda96c1ec05481}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}\label{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a14f3583f574d20b4169d3859b32f5c0c}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_split_layer_af8acf13304b849d888510470a76f9e76}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a8beb05b4c929f6a48b88c4e6bcda458d}\label{classcaffe_1_1_split_layer_a8beb05b4c929f6a48b88c4e6bcda458d}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_a8beb05b4c929f6a48b88c4e6bcda458d}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}\label{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer_adfdd98a92c7e0eed33c1fa77d2852a33}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_split_layer_a8a4a5231eafdf8c35596de50cac9185c}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a61d5ab69fcee07756a4a4655b33f3f75}\label{classcaffe_1_1_split_layer_a61d5ab69fcee07756a4a4655b33f3f75}} 
+int {\bfseries count\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Split\+Layer$<$ Dtype $>$}
+
+Creates a \char`\"{}split\char`\"{} path in the network by copying the bottom \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} into multiple top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s to be used by multiple consuming layers. 
+
+T\+O\+D\+O(dox)\+: thorough documentation for Forward, Backward, and proto params. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}\label{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}\label{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}\label{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}\label{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a1064977331e5bfcf5d75590d14986e1f}\label{classcaffe_1_1_split_layer_a1064977331e5bfcf5d75590d14986e1f}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_split_layer_a4e978965461dedcc2fbb905e4910c0b1}\label{classcaffe_1_1_split_layer_a4e978965461dedcc2fbb905e4910c0b1}} 
+\index{caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Split\+Layer@{caffe\+::\+Split\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/split\+\_\+layer.\+hpp\item 
+src/caffe/layers/split\+\_\+layer.\+cpp\end{DoxyCompactItemize}

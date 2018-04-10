@@ -1,0 +1,10 @@
+<map id="caffe::GradientBasedSolverTest&lt; TypeParam &gt;" name="caffe::GradientBasedSolverTest&lt; TypeParam &gt;">
+<area shape="rect" id="node4" href="$classcaffe_1_1_ada_delta_solver_test.html" title="caffe::AdaDeltaSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="583,5,759,47"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_ada_grad_solver_test.html" title="caffe::AdaGradSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="584,71,757,112"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_adam_solver_test.html" title="caffe::AdamSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="593,136,749,177"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_nesterov_solver_test.html" title="caffe::NesterovSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="583,201,758,243"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_r_m_s_prop_solver_test.html" title="caffe::RMSPropSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="581,267,760,308"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_s_g_d_solver_test.html" title="caffe::SGDSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="595,332,746,373"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; TypeParam \&gt;" alt="" coords="148,169,303,211"/>
+<area shape="rect" id="node3" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="5,177,100,203"/>
+</map>

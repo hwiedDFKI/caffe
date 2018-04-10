@@ -1,0 +1,166 @@
+
+
+ \subsection*{title\+: \char`\"{}\+Installation\+: Debian\char`\"{} }
+
+\section*{Debian Installation}
+
+Caffe packages are available for several Debian versions, as shown in the following chart\+:
+
+
+\begin{DoxyCode}
+Your Distro     |  CPU\_ONLY  |  CUDA  | Codename
+----------------+------------+--------+-------------------
+Debian/oldstable|     ✘      |   ✘    | Jessie (8.0)
+Debian/stable   |     ✔      |   ✔    | Stretch (9.0)
+Debian/testing  |     ✔      |   ✔    | Buster
+Debian/unstable |     ✔      |   ✔    | Buster
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily ✘} You should take a look at \href{install_apt.html}{\tt Ubuntu installation instruction}.
+\item {\ttfamily ✔} You can install caffe with a single command line following this guide.
+\item \href{https://tracker.debian.org/pkg/caffe}{\tt Package status of C\+P\+U-\/only version}
+\item \href{https://tracker.debian.org/pkg/caffe-contrib}{\tt Package status of C\+U\+DA version}
+\end{DoxyItemize}
+
+Last update\+: 2017-\/07-\/08
+
+\subsection*{Binary installation with A\+PT}
+
+Apart from the installation methods based on source, Debian users can install pre-\/compiled Caffe packages from the official archive with A\+PT.
+
+Make sure that your {\ttfamily /etc/apt/sources.list} contains {\ttfamily contrib} and {\ttfamily non-\/free} sections if you want to install the C\+U\+DA version, for instance\+:
+
+
+\begin{DoxyCode}
+deb http://ftp2.cn.debian.org/debian sid main contrib non-free
+\end{DoxyCode}
+
+
+Then we update A\+PT cache and directly install Caffe. Note, the cpu version and the cuda version cannot coexist.
+
+
+\begin{DoxyCode}
+\$ sudo apt update
+\$ sudo apt install [ caffe-cpu | caffe-cuda ]
+\$ caffe                                              \# command line interface working
+\$ python3 -c 'import caffe; print(caffe.\_\_path\_\_)'   \# python3 interface working
+\end{DoxyCode}
+
+
+These Caffe packages should work for you out of box. However, the C\+U\+DA version may break if your N\+V\+I\+D\+IA driver and C\+U\+DA toolkit are not installed with A\+PT.
+
+\paragraph*{Customizing caffe packages}
+
+Some users may need to customize the Caffe package. The way to customize the package is beyond this guide. Here is only a brief guide of producing the customized {\ttfamily .deb} packages.
+
+Make sure that there is a {\ttfamily dec-\/src} source in your {\ttfamily /etc/apt/sources.list}, for instance\+:
+
+
+\begin{DoxyCode}
+deb http://ftp2.cn.debian.org/debian sid main contrib non-free
+deb-src http://ftp2.cn.debian.org/debian sid main contrib non-free
+\end{DoxyCode}
+
+
+Then we build caffe deb files with the following commands\+:
+
+
+\begin{DoxyCode}
+\$ sudo apt update
+\$ sudo apt install build-essential debhelper devscripts  \# standard package building tools
+\$ sudo apt build-dep [ caffe-cpu | caffe-cuda ]          \# the most elegant way to pull caffe build
+       dependencies
+\$ apt source [ caffe-cpu | caffe-cuda ]                  \# download the source tarball and extract
+\$ cd caffe-XXXX
+[ ... optional, customizing caffe code/build ... ]
+\$ dch --local "Modified XXX"                             \# bump package version and write changelog
+\$ debuild -B -j4                                         \# build caffe with 4 parallel jobs (similar to
+       make -j4)
+[ ... building ...]
+\$ debc                                                   \# optional, if you want to check the package
+       contents
+\$ sudo debi                                              \# optional, install the generated packages
+\$ ls ../                                                 \# optional, you will see the resulting packages
+\end{DoxyCode}
+
+
+It is a B\+UG if the package failed to build without any change. The changelog will be installed at e.\+g. {\ttfamily /usr/share/doc/caffe-\/cpu/changelog.Debian.\+gz}.
+
+\subsection*{Source installation}
+
+Source installation under Debian/unstable and Debian/testing is similar to that of Ubuntu, but here is a more elegant way to pull caffe build dependencies\+:
+
+
+\begin{DoxyCode}
+\$ sudo apt build-dep [ caffe-cpu | caffe-cuda ]
+\end{DoxyCode}
+
+
+Note, this requires a {\ttfamily deb-\/src} entry in your {\ttfamily /etc/apt/sources.list}.
+
+\paragraph*{Compiler Combinations}
+
+Some users may find their favorate compiler doesn\textquotesingle{}t work with C\+U\+DA.
+
+
+\begin{DoxyCode}
+CXX compiler |  CUDA 7.5  |  CUDA 8.0  |  CUDA 9.0  |
+-------------+------------+------------+------------+
+GCC-8        |     ?      |     ?      |     ?      |
+GCC-7        |     ?      |     ?      |     ?      |
+GCC-6        |     ✘      |     ✘      |     ✔      |
+GCC-5        |     ✔ [1]  |     ✔      |     ✔      |
+-------------+------------+------------+------------+
+CLANG-4.0    |     ?      |     ?      |     ?      |
+CLANG-3.9    |     ✘      |     ✘      |     ✔      |
+CLANG-3.8    |     ?      |     ✔      |     ✔      |
+\end{DoxyCode}
+
+
+{\ttfamily \mbox{[}1\mbox{]}} C\+U\+DA 7.\+5 \textquotesingle{}s {\ttfamily host\+\_\+config.\+h} must be patched before working with G\+C\+C-\/5.
+
+{\ttfamily \mbox{[}2\mbox{]}} C\+U\+DA 9.\+0\+: \href{https://devblogs.nvidia.com/parallelforall/cuda-9-features-revealed/}{\tt https\+://devblogs.\+nvidia.\+com/parallelforall/cuda-\/9-\/features-\/revealed/}
+
+B\+TW, please forget the G\+C\+C-\/4.\+X series, since its {\ttfamily libstdc++} A\+BI is not compatible with G\+C\+C-\/5\textquotesingle{}s. You may encounter failure linking G\+C\+C-\/4.\+X object files against G\+C\+C-\/5 libraries. (See \href{https://wiki.debian.org/GCC5}{\tt https\+://wiki.\+debian.\+org/\+G\+C\+C5} )
+
+\subsection*{Notes}
+
+
+\begin{DoxyItemize}
+\item Consider re-\/compiling Open\+B\+L\+AS locally with optimization flags for sake of performance. This is highly recommended for any kind of production use, including academic research.
+\item If you are installing {\ttfamily caffe-\/cuda}, A\+PT will automatically pull some of the C\+U\+DA packages and the nvidia driver packages. Please be careful if you have manually installed or hacked nvidia driver or C\+U\+DA toolkit or any other related stuff, because in this case A\+PT may fail.
+\item Additionally, a manpage ({\ttfamily man caffe}) and a bash complementation script ({\ttfamily caffe $<$T\+AB$>$$<$T\+AB$>$}, {\ttfamily caffe train $<$T\+AB$>$$<$T\+AB$>$}) are provided. Both of the two files are still not merged into caffe master.
+\item The python interface is Python 3 version\+: {\ttfamily python3-\/caffe-\/\{cpu,cuda\}}. No plan to support python2.
+\item If you encountered any problem related to the packaging system (e.\+g. failed to install {\ttfamily caffe-\/$\ast$}), please report bug to Debian via Debian\textquotesingle{}s bug tracking system. See \href{https://www.debian.org/Bugs/}{\tt https\+://www.\+debian.\+org/\+Bugs/} . Patches and suggestions are also welcome.
+\end{DoxyItemize}
+
+\subsection*{F\+AQ}
+
+
+\begin{DoxyItemize}
+\item where is caffe-\/cudnn?
+\end{DoxyItemize}
+
+C\+U\+D\+NN library seems not redistributable currently. If you really want the caffe-\/cudnn deb packages, the workaround is to install cudnn by yourself, and hack the packaging scripts, then build your customized package.
+
+
+\begin{DoxyItemize}
+\item I installed the C\+PU version. How can I switch to the C\+U\+DA version?
+\end{DoxyItemize}
+
+{\ttfamily sudo apt install caffe-\/cuda}, apt\textquotesingle{}s dependency resolver is smart enough to deal with this.
+
+
+\begin{DoxyItemize}
+\item Where are the examples, the models and other documentation stuff?
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+\$ sudo apt install caffe-doc
+\$ dpkg -L caffe-doc
+\end{DoxyCode}
+ 

@@ -1,0 +1,32 @@
+
+
+ title\+: Web demo description\+: Image classification demo running as a Flask web server. category\+: example include\+\_\+in\+\_\+docs\+: true \subsection*{priority\+: 10 }
+
+\section*{Web Demo}
+
+\subsection*{Requirements}
+
+The demo server requires Python with some dependencies. To make sure you have the dependencies, please run {\ttfamily pip install -\/r examples/web\+\_\+demo/requirements.\+txt}, and also make sure that you\textquotesingle{}ve compiled the Python Caffe interface and that it is on your {\ttfamily P\+Y\+T\+H\+O\+N\+P\+A\+TH} (see \href{http://caffe.berkeleyvision.org/installation.html}{\tt installation instructions}).
+
+Make sure that you have obtained the Reference Caffe\+Net Model and the Image\+Net Auxiliary Data\+: \begin{DoxyVerb}./scripts/download_model_binary.py models/bvlc_reference_caffenet
+./data/ilsvrc12/get_ilsvrc_aux.sh
+\end{DoxyVerb}
+
+
+N\+O\+TE\+: if you run into trouble, try re-\/downloading the auxiliary files.
+
+\subsection*{Run}
+
+Running {\ttfamily python examples/web\+\_\+demo/app.\+py} will bring up the demo server, accessible at {\ttfamily \href{http://0.0.0.0:5000}{\tt http\+://0.\+0.\+0.\+0\+:5000}}. You can enable debug mode of the web server, or switch to a different port\+: \begin{DoxyVerb}% python examples/web_demo/app.py -h
+Usage: app.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -d, --debug           enable debug mode
+  -p PORT, --port=PORT  which port to serve content on
+\end{DoxyVerb}
+
+
+\subsection*{How are the \char`\"{}maximally accurate\char`\"{} results generated?}
+
+In a nutshell\+: Image\+Net predictions are made at the leaf nodes, but the organization of the project allows leaf nodes to be united via more general parent nodes, with \textquotesingle{}entity\textquotesingle{} at the very top. To give \char`\"{}maximally accurate\char`\"{} results, we \char`\"{}back off\char`\"{} from maximally specific predictions to maintain a high accuracy. The {\ttfamily bet\+\_\+file} that is loaded in the demo provides the graph structure and names of all relevant Image\+Net nodes as well as measures of information gain between them. Please see the \char`\"{}\+Hedging your bets\char`\"{} paper from \href{http://www.image-net.org/projects/hedging/}{\tt C\+V\+PR 2012} for further information. 

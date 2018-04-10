@@ -1,0 +1,7 @@
+<map id="caffe::CPUDeviceTest&lt; Dtype &gt;" name="caffe::CPUDeviceTest&lt; Dtype &gt;">
+<area shape="rect" id="node4" href="$classcaffe_1_1_arg_max_layer_test.html" title="caffe::ArgMaxLayerTest\l\&lt; Dtype \&gt;" alt="" coords="587,5,750,47"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_dummy_data_layer_test.html" title="caffe::DummyDataLayerTest\l\&lt; Dtype \&gt;" alt="" coords="573,71,764,112"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_multinomial_logistic_loss_layer_test.html" title="caffe::MultinomialLogistic\lLossLayerTest\&lt; Dtype \&gt;" alt="" coords="583,136,754,177"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; CPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="148,71,323,112"/>
+<area shape="rect" id="node3" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="5,78,100,105"/>
+</map>

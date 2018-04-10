@@ -1,0 +1,330 @@
+\hypertarget{classcaffe_1_1_abs_val_layer}{}\section{caffe\+:\+:Abs\+Val\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_abs_val_layer}\index{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$@{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}
+
+
+Computes $ y = |x| $.  
+
+
+
+
+{\ttfamily \#include $<$absval\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Abs\+Val\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_abs_val_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a513c13552694e5860b85986b94793eb0}\label{classcaffe_1_1_abs_val_layer_a513c13552694e5860b85986b94793eb0}} 
+{\bfseries Abs\+Val\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}\label{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a513c13552694e5860b85986b94793eb0}\label{classcaffe_1_1_abs_val_layer_a513c13552694e5860b85986b94793eb0}} 
+{\bfseries Abs\+Val\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a5bc321f94f7d13e938e31131fc55487b}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}\label{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aae782c69f757eacf4cec30131726e29d}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a094d7da8c6d6eeebc7db189f4cd258f9}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes $ y = |x| $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}\label{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a094d7da8c6d6eeebc7db189f4cd258f9}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_abac024a0ee583ecc7d83311363bcfa72}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the absolute value inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}\label{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_abac024a0ee583ecc7d83311363bcfa72}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a1d63991d879fef0806b63eb65f275a2b}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes $ y = |x| $. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}\label{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a12283057a144e9ff648a583de36b7fbd}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a094d7da8c6d6eeebc7db189f4cd258f9}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a3def7ff434a338e0cb15baaa80fa23cd}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the absolute value inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}\label{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aff44062e9eb243c195285bee25b1eefb}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_abac024a0ee583ecc7d83311363bcfa72}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}
+
+Computes $ y = |x| $. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = |x| $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_abac024a0ee583ecc7d83311363bcfa72}\label{classcaffe_1_1_abs_val_layer_abac024a0ee583ecc7d83311363bcfa72}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the absolute value inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \mathrm{sign}(x) \frac{\partial E}{\partial y} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a3def7ff434a338e0cb15baaa80fa23cd}\label{classcaffe_1_1_abs_val_layer_a3def7ff434a338e0cb15baaa80fa23cd}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the absolute value inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \mathrm{sign}(x) \frac{\partial E}{\partial y} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}\label{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}\label{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}\label{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}\label{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a1d63991d879fef0806b63eb65f275a2b}\label{classcaffe_1_1_abs_val_layer_a1d63991d879fef0806b63eb65f275a2b}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes $ y = |x| $. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = |x| $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a094d7da8c6d6eeebc7db189f4cd258f9}\label{classcaffe_1_1_abs_val_layer_a094d7da8c6d6eeebc7db189f4cd258f9}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes $ y = |x| $. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = |x| $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a5bc321f94f7d13e938e31131fc55487b}\label{classcaffe_1_1_abs_val_layer_a5bc321f94f7d13e938e31131fc55487b}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84}\label{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84}} 
+\index{caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Abs\+Val\+Layer@{caffe\+::\+Abs\+Val\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_abs_val_layer}{caffe\+::\+Abs\+Val\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/absval\+\_\+layer.\+hpp\item 
+src/caffe/layers/absval\+\_\+layer.\+cpp\end{DoxyCompactItemize}

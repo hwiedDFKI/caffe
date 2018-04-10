@@ -1,0 +1,42 @@
+\hypertarget{namespaceexifutil}{}\section{exifutil Namespace Reference}
+\label{namespaceexifutil}\index{exifutil@{exifutil}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceexifutil_ae6019994ff716ec7bba97215b2131705}\label{namespaceexifutil_ae6019994ff716ec7bba97215b2131705}} 
+def {\bfseries open\+\_\+oriented\+\_\+im} (im\+\_\+path)
+\item 
+\mbox{\Hypertarget{namespaceexifutil_a580f148516d4ae537df39ae625297a88}\label{namespaceexifutil_a580f148516d4ae537df39ae625297a88}} 
+def {\bfseries apply\+\_\+orientation} (im, orientation)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary {\bfseries O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This script handles the skimage exif problem.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceexifutil_a3a9af3bec6523588f629cca64bda0913}\label{namespaceexifutil_a3a9af3bec6523588f629cca64bda0913}} 
+\index{exifutil@{exifutil}!O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS@{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}}
+\index{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS@{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}!exifutil@{exifutil}}
+\subsubsection{\texorpdfstring{O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}{ORIENTATIONS}}
+{\footnotesize\ttfamily dictionary exifutil.\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+NS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  \{   \textcolor{comment}{\# used in apply\_orientation}
+2     2: (Image.FLIP\_LEFT\_RIGHT,),
+3     3: (Image.ROTATE\_180,),
+4     4: (Image.FLIP\_TOP\_BOTTOM,),
+5     5: (Image.FLIP\_LEFT\_RIGHT, Image.ROTATE\_90),
+6     6: (Image.ROTATE\_270,),
+7     7: (Image.FLIP\_LEFT\_RIGHT, Image.ROTATE\_270),
+8     8: (Image.ROTATE\_90,)
+9 \}
+\end{DoxyCode}

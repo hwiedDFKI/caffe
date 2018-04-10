@@ -1,0 +1,75 @@
+\hypertarget{classcaffe_1_1_net_test}{}\section{caffe\+:\+:Net\+Test$<$ Type\+Param $>$ Class Template Reference}
+\label{classcaffe_1_1_net_test}\index{caffe\+::\+Net\+Test$<$ Type\+Param $>$@{caffe\+::\+Net\+Test$<$ Type\+Param $>$}}
+
+
+Inheritance diagram for caffe\+:\+:Net\+Test$<$ Type\+Param $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classcaffe_1_1_net_test__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a1e6efb4248f80a93f8d09f0718326002}\label{classcaffe_1_1_net_test_a1e6efb4248f80a93f8d09f0718326002}} 
+virtual void {\bfseries Init\+Net\+From\+Proto\+String} (const string \&proto)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a9576bacbf921b7283758223d023c8196}\label{classcaffe_1_1_net_test_a9576bacbf921b7283758223d023c8196}} 
+virtual void {\bfseries Init\+Net\+From\+Proto\+File\+With\+State} (const string \&proto, Phase phase=caffe\+::\+T\+R\+A\+IN, const int level=0, const vector$<$ string $>$ $\ast$stages=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_ab0ab79e8aeca300995ba77eabfd7d6d5}\label{classcaffe_1_1_net_test_ab0ab79e8aeca300995ba77eabfd7d6d5}} 
+virtual void {\bfseries Copy\+Net\+Blobs} (const bool copy\+\_\+diff, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ $\ast$blobs\+\_\+copy)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_ada51b1768cf6fa03921d519dbd845a0d}\label{classcaffe_1_1_net_test_ada51b1768cf6fa03921d519dbd845a0d}} 
+virtual void {\bfseries Copy\+Net\+Params} (const bool copy\+\_\+diff, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ $\ast$params\+\_\+copy)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_ab5212e82c2faeb26876331f148398744}\label{classcaffe_1_1_net_test_ab5212e82c2faeb26876331f148398744}} 
+virtual void {\bfseries Init\+Tiny\+Net} (const bool force\+\_\+backward=false, const bool accuracy\+\_\+layer=false)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a3b17b3f055a157ca5319574e6ce07984}\label{classcaffe_1_1_net_test_a3b17b3f055a157ca5319574e6ce07984}} 
+virtual void {\bfseries Init\+Tiny\+Net\+Euclidean} (const bool force\+\_\+backward=false)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a1130cfc530e944a69d56e883a5501f1d}\label{classcaffe_1_1_net_test_a1130cfc530e944a69d56e883a5501f1d}} 
+virtual void {\bfseries Init\+Tricky\+Net} (Dtype $\ast$loss\+\_\+weight=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a5e6af59162dda1d59814d0f80d99179d}\label{classcaffe_1_1_net_test_a5e6af59162dda1d59814d0f80d99179d}} 
+virtual void {\bfseries Init\+Unshared\+Weights\+Net} (const Dtype $\ast$loss\+\_\+weight=N\+U\+LL, const Dtype $\ast$midnet\+\_\+loss\+\_\+weight=N\+U\+LL, const bool force\+\_\+backward=false, const bool bias\+\_\+term=false, const Dtype blobs\+\_\+lr\+\_\+w1=1, const Dtype blobs\+\_\+lr\+\_\+b1=2, const Dtype blobs\+\_\+lr\+\_\+w2=1, const Dtype blobs\+\_\+lr\+\_\+b2=2)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a14c3354c87bb018f7a97aae77c897bda}\label{classcaffe_1_1_net_test_a14c3354c87bb018f7a97aae77c897bda}} 
+virtual void {\bfseries Init\+Shared\+Weights\+Net} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a2146df0bbac525db9c786ae499fa413d}\label{classcaffe_1_1_net_test_a2146df0bbac525db9c786ae499fa413d}} 
+virtual void {\bfseries Init\+Diff\+Data\+Unshared\+Weights\+Net} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a4c5af2e3284dd7649fb22510b2300dbf}\label{classcaffe_1_1_net_test_a4c5af2e3284dd7649fb22510b2300dbf}} 
+virtual void {\bfseries Init\+Diff\+Data\+Shared\+Weights\+Net} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_acb60954c3aafc1b360f55eb4e02b109c}\label{classcaffe_1_1_net_test_acb60954c3aafc1b360f55eb4e02b109c}} 
+virtual void {\bfseries Init\+Reshapable\+Net} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a0e535c55673656e0702809b3a753913a}\label{classcaffe_1_1_net_test_a0e535c55673656e0702809b3a753913a}} 
+virtual void {\bfseries Init\+Skip\+Prop\+Net} (bool test\+\_\+skip\+\_\+true)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a8bc850a5f4fad600667eea2c5cbaae21}\label{classcaffe_1_1_net_test_a8bc850a5f4fad600667eea2c5cbaae21}} 
+virtual void {\bfseries Init\+Force\+Prop\+Net} (bool test\+\_\+force\+\_\+true)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_afea0798571c656bc349a5248e7d4e6ef}\label{classcaffe_1_1_net_test_afea0798571c656bc349a5248e7d4e6ef}} 
+virtual void {\bfseries Init\+All\+In\+One\+Net} (Phase phase=caffe\+::\+T\+R\+A\+IN, const int level=0, const vector$<$ string $>$ $\ast$stages=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_aecbf750bb8772da0e10b50df01866132}\label{classcaffe_1_1_net_test_aecbf750bb8772da0e10b50df01866132}} 
+int {\bfseries seed\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_test_a817fffa6ceeef1beed3e07b75f57fa9c}\label{classcaffe_1_1_net_test_a817fffa6ceeef1beed3e07b75f57fa9c}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_net}{Net}}$<$ Dtype $>$ $>$ {\bfseries net\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/caffe/test/test\+\_\+net.\+cpp\end{DoxyCompactItemize}

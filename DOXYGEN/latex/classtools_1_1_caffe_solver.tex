@@ -1,0 +1,51 @@
+\hypertarget{classtools_1_1_caffe_solver}{}\section{tools.\+Caffe\+Solver Class Reference}
+\label{classtools_1_1_caffe_solver}\index{tools.\+Caffe\+Solver@{tools.\+Caffe\+Solver}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtools_1_1_caffe_solver_addf3361fddfe682affb3fd33ccaa0f53}\label{classtools_1_1_caffe_solver_addf3361fddfe682affb3fd33ccaa0f53}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, testnet\+\_\+prototxt\+\_\+path=\char`\"{}testnet.\+prototxt\char`\"{}, trainnet\+\_\+prototxt\+\_\+path=\char`\"{}trainnet.\+prototxt\char`\"{}, debug=False)
+\item 
+def \mbox{\hyperlink{classtools_1_1_caffe_solver_a3268e1dfe7af05cce13fef529353e99a}{add\+\_\+from\+\_\+file}} (self, filepath)
+\item 
+def \mbox{\hyperlink{classtools_1_1_caffe_solver_abad47d0b093c19b5ffa754f58cc62300}{write}} (self, filepath)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtools_1_1_caffe_solver_a3112fb8053036e924e9bae333428a455}\label{classtools_1_1_caffe_solver_a3112fb8053036e924e9bae333428a455}} 
+{\bfseries sp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Caffesolver is a class for creating a solver.prototxt file. It sets default
+values and can export a solver parameter file.
+Note that all parameters are stored as strings. Strings variables are
+stored as strings in strings.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1_caffe_solver_a3268e1dfe7af05cce13fef529353e99a}\label{classtools_1_1_caffe_solver_a3268e1dfe7af05cce13fef529353e99a}} 
+\index{tools\+::\+Caffe\+Solver@{tools\+::\+Caffe\+Solver}!add\+\_\+from\+\_\+file@{add\+\_\+from\+\_\+file}}
+\index{add\+\_\+from\+\_\+file@{add\+\_\+from\+\_\+file}!tools\+::\+Caffe\+Solver@{tools\+::\+Caffe\+Solver}}
+\subsubsection{\texorpdfstring{add\+\_\+from\+\_\+file()}{add\_from\_file()}}
+{\footnotesize\ttfamily def tools.\+Caffe\+Solver.\+add\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filepath }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reads a caffe solver prototxt file and updates the Caffesolver
+instance parameters.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classtools_1_1_caffe_solver_abad47d0b093c19b5ffa754f58cc62300}\label{classtools_1_1_caffe_solver_abad47d0b093c19b5ffa754f58cc62300}} 
+\index{tools\+::\+Caffe\+Solver@{tools\+::\+Caffe\+Solver}!write@{write}}
+\index{write@{write}!tools\+::\+Caffe\+Solver@{tools\+::\+Caffe\+Solver}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily def tools.\+Caffe\+Solver.\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filepath }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Export solver parameters to INPUT "filepath". Sorted alphabetically.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/pycaffe/tools.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,346 @@
+\hypertarget{classcaffe_1_1_swish_layer}{}\section{caffe\+:\+:Swish\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_swish_layer}\index{caffe\+::\+Swish\+Layer$<$ Dtype $>$@{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}
+
+
+Swish non-\/linearity $ y = x \sigma (\beta x) $. A novel activation function that tends to work better than Re\+LU \mbox{[}1\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$swish\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Swish\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_swish_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}{Swish\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}\label{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}{Swish\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a04035cc9ca9be4b99aba41197b16f2e4}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_aecf840a1202549b60742eb11a2f188ee}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}\label{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_af38fb1a508cda2e5ae86b67fd27ce16c}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a8a4567761bcce6d0283d305922d586cc}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}\label{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_swish_layer_a8a4567761bcce6d0283d305922d586cc}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a4e6fe81fa5ed75a96ab58a07d2ff9e6c}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the sigmoid inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}\label{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_swish_layer_a4e6fe81fa5ed75a96ab58a07d2ff9e6c}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a45c7ad77dc4b23382aadeb5ed10846b1}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}\label{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a18c43fba532e5dc22f5142e9a13f0a95}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_swish_layer_a8a4567761bcce6d0283d305922d586cc}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a97405f98f47ca7fb6eb3d92e6f8c0536}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the sigmoid inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}\label{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer_a697212bb125b153d7fa1cdb02dfbe942}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_swish_layer_a4e6fe81fa5ed75a96ab58a07d2ff9e6c}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_ae86bd67afa95fcf3f53d4ffbdfe94222}\label{classcaffe_1_1_swish_layer_ae86bd67afa95fcf3f53d4ffbdfe94222}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_sigmoid_layer}{Sigmoid\+Layer}}$<$ Dtype $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_ae86bd67afa95fcf3f53d4ffbdfe94222}{sigmoid\+\_\+layer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The internal \mbox{\hyperlink{classcaffe_1_1_sigmoid_layer}{Sigmoid\+Layer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a7f881eaa4ae3172f57966e22ceae4d74}\label{classcaffe_1_1_swish_layer_a7f881eaa4ae3172f57966e22ceae4d74}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_a7f881eaa4ae3172f57966e22ceae4d74}{sigmoid\+\_\+input\+\_\+}}
+\begin{DoxyCompactList}\small\item\em sigmoid\+\_\+input\+\_\+ stores the input of the \mbox{\hyperlink{classcaffe_1_1_sigmoid_layer}{Sigmoid\+Layer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_afe86e1e22452f989b2f88cd5be7b0c3e}\label{classcaffe_1_1_swish_layer_afe86e1e22452f989b2f88cd5be7b0c3e}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_afe86e1e22452f989b2f88cd5be7b0c3e}{sigmoid\+\_\+output\+\_\+}}
+\begin{DoxyCompactList}\small\item\em sigmoid\+\_\+output\+\_\+ stores the output of the \mbox{\hyperlink{classcaffe_1_1_sigmoid_layer}{Sigmoid\+Layer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_ac93aea3039bec39fe6a200fde0d17ab1}\label{classcaffe_1_1_swish_layer_ac93aea3039bec39fe6a200fde0d17ab1}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_ac93aea3039bec39fe6a200fde0d17ab1}{sigmoid\+\_\+bottom\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em bottom vector holder to call the underlying \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Sigmoid\+Layer\+::\+Forward}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a7135f11a76498b41b0fffa0cf025cf99}\label{classcaffe_1_1_swish_layer_a7135f11a76498b41b0fffa0cf025cf99}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \mbox{\hyperlink{classcaffe_1_1_swish_layer_a7135f11a76498b41b0fffa0cf025cf99}{sigmoid\+\_\+top\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em top vector holder to call the underlying \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Sigmoid\+Layer\+::\+Forward}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Swish\+Layer$<$ Dtype $>$}
+
+Swish non-\/linearity $ y = x \sigma (\beta x) $. A novel activation function that tends to work better than Re\+LU \mbox{[}1\mbox{]}. 
+
+\mbox{[}1\mbox{]} Prajit Ramachandran, Barret Zoph, Quoc V. Le. \char`\"{}\+Searching for
+    Activation Functions\char`\"{}. ar\+Xiv preprint ar\+Xiv\+:1710.\+05941v2 (2017). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}\label{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Swish\+Layer@{Swish\+Layer}}
+\index{Swish\+Layer@{Swish\+Layer}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Swish\+Layer()}{SwishLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+\mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_swish_layer}{Swish\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_swish_parameter}{Swish\+Parameter}} swish\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_swish_layer}{Swish\+Layer}} options\+:
+\begin{DoxyItemize}
+\item beta ({\bfseries optional}, default 1). the value $ \beta $ in the $ y = x \sigma (\beta x) $. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}\label{classcaffe_1_1_swish_layer_afd59cd91314ef60acef0d3ba80500818}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Swish\+Layer@{Swish\+Layer}}
+\index{Swish\+Layer@{Swish\+Layer}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Swish\+Layer()}{SwishLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+\mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_swish_layer}{Swish\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_swish_parameter}{Swish\+Parameter}} swish\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_swish_layer}{Swish\+Layer}} options\+:
+\begin{DoxyItemize}
+\item beta ({\bfseries optional}, default 1). the value $ \beta $ in the $ y = x \sigma (\beta x) $. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a4e6fe81fa5ed75a96ab58a07d2ff9e6c}\label{classcaffe_1_1_swish_layer_a4e6fe81fa5ed75a96ab58a07d2ff9e6c}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the sigmoid inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y}(\beta y + \sigma (\beta x)(1 - \beta y)) $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a97405f98f47ca7fb6eb3d92e6f8c0536}\label{classcaffe_1_1_swish_layer_a97405f98f47ca7fb6eb3d92e6f8c0536}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the sigmoid inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y}(\beta y + \sigma (\beta x)(1 - \beta y)) $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a45c7ad77dc4b23382aadeb5ed10846b1}\label{classcaffe_1_1_swish_layer_a45c7ad77dc4b23382aadeb5ed10846b1}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = x \sigma (\beta x) $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a8a4567761bcce6d0283d305922d586cc}\label{classcaffe_1_1_swish_layer_a8a4567761bcce6d0283d305922d586cc}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = x \sigma (\beta x) $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a04035cc9ca9be4b99aba41197b16f2e4}\label{classcaffe_1_1_swish_layer_a04035cc9ca9be4b99aba41197b16f2e4}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820}\label{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_aecf840a1202549b60742eb11a2f188ee}\label{classcaffe_1_1_swish_layer_aecf840a1202549b60742eb11a2f188ee}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e}\label{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e}} 
+\index{caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Swish\+Layer@{caffe\+::\+Swish\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_swish_layer}{caffe\+::\+Swish\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/swish\+\_\+layer.\+hpp\item 
+src/caffe/layers/swish\+\_\+layer.\+cpp\end{DoxyCompactItemize}

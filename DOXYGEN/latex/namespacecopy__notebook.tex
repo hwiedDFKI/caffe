@@ -1,0 +1,35 @@
+\hypertarget{namespacecopy__notebook}{}\section{copy\+\_\+notebook Namespace Reference}
+\label{namespacecopy__notebook}\index{copy\+\_\+notebook@{copy\+\_\+notebook}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_aecdf1179125f225ad7678368c02d98bf}\label{namespacecopy__notebook_aecdf1179125f225ad7678368c02d98bf}} 
+{\bfseries filename} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_a7c11205b390d1d65d69aec904cbb0581}\label{namespacecopy__notebook_a7c11205b390d1d65d69aec904cbb0581}} 
+{\bfseries output\+\_\+filename} = sys.\+argv\mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_adeec43d805206b9c6964e575f45d0f82}\label{namespacecopy__notebook_adeec43d805206b9c6964e575f45d0f82}} 
+{\bfseries content} = json.\+load(open(filename))
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_a4c01519e389736c49fc23a3d72e7585a}\label{namespacecopy__notebook_a4c01519e389736c49fc23a3d72e7585a}} 
+list {\bfseries yaml\+\_\+frontmatter} = \mbox{[}\textquotesingle{}-\/-\/-\/\textquotesingle{}\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_a76937c5a8aefdc396e0afbb5fbd7c5e7}\label{namespacecopy__notebook_a76937c5a8aefdc396e0afbb5fbd7c5e7}} 
+string {\bfseries key} = \textquotesingle{}title\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespacecopy__notebook_ab3ff76041f10cb5346cb9757b50f4964}\label{namespacecopy__notebook_ab3ff76041f10cb5346cb9757b50f4964}} 
+{\bfseries val} = os.\+path.\+basename(filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Takes as arguments:
+1. the path to a JSON file (such as an IPython notebook).
+2. the path to output file
+
+If 'metadata' dict in the JSON file contains 'include_in_docs': true,
+then copies the file to output file, appending the 'metadata' property
+as YAML front-matter, adding the field 'category' with value 'notebook'.
+\end{DoxyVerb}
+ 

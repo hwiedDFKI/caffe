@@ -1,0 +1,4 @@
+<map id="caffe.detector.Detector.crop" name="caffe.detector.Detector.crop">
+<area shape="rect" id="node2" href="$classcaffe_1_1detector_1_1_detector.html#a7ddd403050bacd8fcccc62705f2405ff" title="caffe.detector.Detector.detect\l_windows" alt="" coords="239,29,435,71"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1detector_1_1_detector.html#a2d96c53701abd37152c5f078a18ebf08" title="caffe.detector.Detector.detect\l_selective_search" alt="" coords="483,29,679,71"/>
+</map>

@@ -1,0 +1,137 @@
+\hypertarget{classcaffe_1_1_convolution_layer}{}\section{caffe\+:\+:Convolution\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_convolution_layer}\index{caffe\+::\+Convolution\+Layer$<$ Dtype $>$@{caffe\+::\+Convolution\+Layer$<$ Dtype $>$}}
+
+
+Convolves the input image with a bank of learned filters, and (optionally) adds biases.  
+
+
+
+
+{\ttfamily \#include $<$conv\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Convolution\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classcaffe_1_1_convolution_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}{Convolution\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}\label{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}{Convolution\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}\label{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a43668ecdc0a579dd44fd9efbdfa076a9}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_aee44e1abace0f8827db48632b62efc22}\label{classcaffe_1_1_convolution_layer_aee44e1abace0f8827db48632b62efc22}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_aee44e1abace0f8827db48632b62efc22}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}\label{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_convolution_layer_aee44e1abace0f8827db48632b62efc22}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a11279ea7bea3843a776a766b93e27e50}\label{classcaffe_1_1_convolution_layer_a11279ea7bea3843a776a766b93e27e50}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a11279ea7bea3843a776a766b93e27e50}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}\label{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a11279ea7bea3843a776a766b93e27e50}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_aad2f350240e3e97220230d7b4ceb9bf7}\label{classcaffe_1_1_convolution_layer_aad2f350240e3e97220230d7b4ceb9bf7}} 
+virtual bool {\bfseries reverse\+\_\+dimensions} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ae6c1466c758151bf24215a06a6517cbe}\label{classcaffe_1_1_convolution_layer_ae6c1466c758151bf24215a06a6517cbe}} 
+virtual void {\bfseries compute\+\_\+output\+\_\+shape} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a50775af3d7d13356b06241bde364591d}\label{classcaffe_1_1_convolution_layer_a50775af3d7d13356b06241bde364591d}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a50775af3d7d13356b06241bde364591d}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}\label{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_ae144ebb7d760ed4cfef8ec7bcb8fde22}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_convolution_layer_aee44e1abace0f8827db48632b62efc22}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_abc5856be2ccd0435f245ca7cbd5c00ef}\label{classcaffe_1_1_convolution_layer_abc5856be2ccd0435f245ca7cbd5c00ef}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_abc5856be2ccd0435f245ca7cbd5c00ef}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}\label{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a2584d7e32e5bb3a9f959aed8e5086575}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_convolution_layer_a11279ea7bea3843a776a766b93e27e50}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_aad2f350240e3e97220230d7b4ceb9bf7}\label{classcaffe_1_1_convolution_layer_aad2f350240e3e97220230d7b4ceb9bf7}} 
+virtual bool {\bfseries reverse\+\_\+dimensions} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ae9dc86f7b0136b80751afff7446076d5}\label{classcaffe_1_1_convolution_layer_ae9dc86f7b0136b80751afff7446076d5}} 
+virtual void {\bfseries compute\+\_\+output\+\_\+shape} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Convolution\+Layer$<$ Dtype $>$}
+
+Convolves the input image with a bank of learned filters, and (optionally) adds biases. 
+
+\mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}} convolves by reduction to matrix multiplication. This achieves high-\/throughput and generality of input and filter dimensions but comes at the cost of memory for matrices. This makes use of efficiency in B\+L\+AS.
+
+The input is \char`\"{}im2col\char`\"{} transformed to a channel K\textquotesingle{} x H x W data matrix for multiplication with the N x K\textquotesingle{} x H x W filter matrix to yield a N\textquotesingle{} x H x W output matrix that is then \char`\"{}col2im\char`\"{} restored. K\textquotesingle{} is the input channel $\ast$ kernel height $\ast$ kernel width dimension of the unrolled inputs so that the im2col matrix has a column for each input region to be filtered. col2im restores the output spatial structure by rolling up the output channel N\textquotesingle{} columns of the output matrix. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}\label{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}} 
+\index{caffe\+::\+Convolution\+Layer@{caffe\+::\+Convolution\+Layer}!Convolution\+Layer@{Convolution\+Layer}}
+\index{Convolution\+Layer@{Convolution\+Layer}!caffe\+::\+Convolution\+Layer@{caffe\+::\+Convolution\+Layer}}
+\subsubsection{\texorpdfstring{Convolution\+Layer()}{ConvolutionLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+\mbox{\hyperlink{classcaffe_1_1_convolution_layer}{caffe\+::\+Convolution\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_convolution_layer}{Convolution\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_convolution_parameter}{Convolution\+Parameter}} convolution\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_convolution_layer}{Convolution\+Layer}} options\+:
+\begin{DoxyItemize}
+\item num\+\_\+output. The number of filters.
+\item kernel\+\_\+size / kernel\+\_\+h / kernel\+\_\+w. The filter dimensions, given by kernel\+\_\+size for square filters or kernel\+\_\+h and kernel\+\_\+w for rectangular filters.
+\item stride / stride\+\_\+h / stride\+\_\+w ({\bfseries optional}, default 1). The filter stride, given by stride\+\_\+size for equal dimensions or stride\+\_\+h and stride\+\_\+w for different strides. By default the convolution is dense with stride 1.
+\item pad / pad\+\_\+h / pad\+\_\+w ({\bfseries optional}, default 0). The zero-\/padding for convolution, given by pad for equal dimensions or pad\+\_\+h and pad\+\_\+w for different padding. Input padding is computed implicitly instead of actually padding.
+\item dilation ({\bfseries optional}, default 1). The filter dilation, given by dilation\+\_\+size for equal dimensions for different dilation. By default the convolution has dilation 1.
+\item group ({\bfseries optional}, default 1). The number of filter groups. Group convolution is a method for reducing parameterization by selectively connecting input and output channels. The input and output channel dimensions must be divisible by the number of groups. For group $ \geq 1 $, the convolutional filters\textquotesingle{} input and output channels are separated s.\+t. each group takes 1 / group of the input channels and makes 1 / group of the output channels. Concretely 4 input channels, 8 output channels, and 2 groups separate input channels 1-\/2 and output channels 1-\/4 into the first group and input channels 3-\/4 and output channels 5-\/8 into the second group.
+\item bias\+\_\+term ({\bfseries optional}, default true). Whether to have a bias.
+\item engine\+: convolution has C\+A\+F\+FE (matrix multiplication) and C\+U\+D\+NN (library kernels + stream parallelism) engines. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}\label{classcaffe_1_1_convolution_layer_ad27360afd7729001b9e4f1d8c8401866}} 
+\index{caffe\+::\+Convolution\+Layer@{caffe\+::\+Convolution\+Layer}!Convolution\+Layer@{Convolution\+Layer}}
+\index{Convolution\+Layer@{Convolution\+Layer}!caffe\+::\+Convolution\+Layer@{caffe\+::\+Convolution\+Layer}}
+\subsubsection{\texorpdfstring{Convolution\+Layer()}{ConvolutionLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+\mbox{\hyperlink{classcaffe_1_1_convolution_layer}{caffe\+::\+Convolution\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_convolution_layer}{Convolution\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_convolution_parameter}{Convolution\+Parameter}} convolution\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_convolution_layer}{Convolution\+Layer}} options\+:
+\begin{DoxyItemize}
+\item num\+\_\+output. The number of filters.
+\item kernel\+\_\+size / kernel\+\_\+h / kernel\+\_\+w. The filter dimensions, given by kernel\+\_\+size for square filters or kernel\+\_\+h and kernel\+\_\+w for rectangular filters.
+\item stride / stride\+\_\+h / stride\+\_\+w ({\bfseries optional}, default 1). The filter stride, given by stride\+\_\+size for equal dimensions or stride\+\_\+h and stride\+\_\+w for different strides. By default the convolution is dense with stride 1.
+\item pad / pad\+\_\+h / pad\+\_\+w ({\bfseries optional}, default 0). The zero-\/padding for convolution, given by pad for equal dimensions or pad\+\_\+h and pad\+\_\+w for different padding. Input padding is computed implicitly instead of actually padding.
+\item dilation ({\bfseries optional}, default 1). The filter dilation, given by dilation\+\_\+size for equal dimensions for different dilation. By default the convolution has dilation 1.
+\item group ({\bfseries optional}, default 1). The number of filter groups. Group convolution is a method for reducing parameterization by selectively connecting input and output channels. The input and output channel dimensions must be divisible by the number of groups. For group $ \geq 1 $, the convolutional filters\textquotesingle{} input and output channels are separated s.\+t. each group takes 1 / group of the input channels and makes 1 / group of the output channels. Concretely 4 input channels, 8 output channels, and 2 groups separate input channels 1-\/2 and output channels 1-\/4 into the first group and input channels 3-\/4 and output channels 5-\/8 into the second group.
+\item bias\+\_\+term ({\bfseries optional}, default true). Whether to have a bias.
+\item engine\+: convolution has C\+A\+F\+FE (matrix multiplication) and C\+U\+D\+NN (library kernels + stream parallelism) engines. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/conv\+\_\+layer.\+hpp\item 
+src/caffe/layers/conv\+\_\+layer.\+cpp\end{DoxyCompactItemize}

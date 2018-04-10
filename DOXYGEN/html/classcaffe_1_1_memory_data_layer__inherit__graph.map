@@ -1,0 +1,4 @@
+<map id="caffe::MemoryDataLayer&lt; Dtype &gt;" name="caffe::MemoryDataLayer&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_base_data_layer.html" title="Provides base for data layers that feed blobs to the Net. " alt="" coords="14,80,163,121"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="13,5,164,32"/>
+</map>

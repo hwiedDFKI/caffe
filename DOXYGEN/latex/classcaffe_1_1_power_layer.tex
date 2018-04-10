@@ -1,0 +1,288 @@
+\hypertarget{classcaffe_1_1_power_layer}{}\section{caffe\+:\+:Power\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_power_layer}\index{caffe\+::\+Power\+Layer$<$ Dtype $>$@{caffe\+::\+Power\+Layer$<$ Dtype $>$}}
+
+
+Computes $ y = (\alpha x + \beta) ^ \gamma $, as specified by the scale $ \alpha $, shift $ \beta $, and power $ \gamma $.  
+
+
+
+
+{\ttfamily \#include $<$power\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Power\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_power_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}{Power\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}\label{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}{Power\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a0adeb5a6bdf1e5e437eaae801236fecc}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}\label{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_power_layer_ac6d6a562dc64397092a1216bc20d92d5}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a3f0196eab7b1f374a4705426d42b0711}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}\label{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_power_layer_a3f0196eab7b1f374a4705426d42b0711}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a98e5481671ca13339f888cad61b3d515}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the power inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}\label{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_power_layer_a98e5481671ca13339f888cad61b3d515}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_abf30de2198baa2aa76ee85924feffa19}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}\label{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a0b68dfd6ade0964fcfa58c0997c59db0}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_power_layer_a3f0196eab7b1f374a4705426d42b0711}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_aa4c46da44e3e26f15c579351b7f54c5e}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the power inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}\label{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer_a72c15e7b1a1907746bf74db86435d181}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_power_layer_a98e5481671ca13339f888cad61b3d515}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a882ce133988e4dd72a10d87fec4c04c3}\label{classcaffe_1_1_power_layer_a882ce133988e4dd72a10d87fec4c04c3}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_power_layer_a882ce133988e4dd72a10d87fec4c04c3}{power\+\_\+}}
+\begin{DoxyCompactList}\small\item\em $ \gamma $ from layer\+\_\+param\+\_\+.\+power\+\_\+param() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a6684b2c6c2b2047d58c9d2809b86c39c}\label{classcaffe_1_1_power_layer_a6684b2c6c2b2047d58c9d2809b86c39c}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_power_layer_a6684b2c6c2b2047d58c9d2809b86c39c}{scale\+\_\+}}
+\begin{DoxyCompactList}\small\item\em $ \alpha $ from layer\+\_\+param\+\_\+.\+power\+\_\+param() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a3a3143c4d6735d12cb5a41b1cb623bc9}\label{classcaffe_1_1_power_layer_a3a3143c4d6735d12cb5a41b1cb623bc9}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_power_layer_a3a3143c4d6735d12cb5a41b1cb623bc9}{shift\+\_\+}}
+\begin{DoxyCompactList}\small\item\em $ \beta $ from layer\+\_\+param\+\_\+.\+power\+\_\+param() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_aa83169eaa1b573137aa6ed2b526879f0}\label{classcaffe_1_1_power_layer_aa83169eaa1b573137aa6ed2b526879f0}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_power_layer_aa83169eaa1b573137aa6ed2b526879f0}{diff\+\_\+scale\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Result of $ \alpha \gamma $. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Power\+Layer$<$ Dtype $>$}
+
+Computes $ y = (\alpha x + \beta) ^ \gamma $, as specified by the scale $ \alpha $, shift $ \beta $, and power $ \gamma $. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}\label{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Power\+Layer@{Power\+Layer}}
+\index{Power\+Layer@{Power\+Layer}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Power\+Layer()}{PowerLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_power_layer}{Power\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_power_parameter}{Power\+Parameter}} power\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_power_layer}{Power\+Layer}} options\+:
+\begin{DoxyItemize}
+\item scale ({\bfseries optional}, default 1) the scale $ \alpha $
+\item shift ({\bfseries optional}, default 0) the shift $ \beta $
+\item power ({\bfseries optional}, default 1) the power $ \gamma $ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}\label{classcaffe_1_1_power_layer_ab008c03c36436e1a0dac0fe1faa53c6d}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Power\+Layer@{Power\+Layer}}
+\index{Power\+Layer@{Power\+Layer}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Power\+Layer()}{PowerLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_power_layer}{Power\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_power_parameter}{Power\+Parameter}} power\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_power_layer}{Power\+Layer}} options\+:
+\begin{DoxyItemize}
+\item scale ({\bfseries optional}, default 1) the scale $ \alpha $
+\item shift ({\bfseries optional}, default 0) the shift $ \beta $
+\item power ({\bfseries optional}, default 1) the power $ \gamma $ 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a98e5481671ca13339f888cad61b3d515}\label{classcaffe_1_1_power_layer_a98e5481671ca13339f888cad61b3d515}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the power inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} \alpha \gamma (\alpha x + \beta) ^ {\gamma - 1} = \frac{\partial E}{\partial y} \frac{\alpha \gamma y}{\alpha x + \beta} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_aa4c46da44e3e26f15c579351b7f54c5e}\label{classcaffe_1_1_power_layer_aa4c46da44e3e26f15c579351b7f54c5e}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the power inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} \alpha \gamma (\alpha x + \beta) ^ {\gamma - 1} = \frac{\partial E}{\partial y} \frac{\alpha \gamma y}{\alpha x + \beta} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_abf30de2198baa2aa76ee85924feffa19}\label{classcaffe_1_1_power_layer_abf30de2198baa2aa76ee85924feffa19}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = (\alpha x + \beta) ^ \gamma $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a3f0196eab7b1f374a4705426d42b0711}\label{classcaffe_1_1_power_layer_a3f0196eab7b1f374a4705426d42b0711}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = (\alpha x + \beta) ^ \gamma $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796}\label{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_power_layer_a0adeb5a6bdf1e5e437eaae801236fecc}\label{classcaffe_1_1_power_layer_a0adeb5a6bdf1e5e437eaae801236fecc}} 
+\index{caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Power\+Layer@{caffe\+::\+Power\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_power_layer}{caffe\+::\+Power\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/power\+\_\+layer.\+hpp\item 
+src/caffe/layers/power\+\_\+layer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+You can run one of the automatic \href{https://hub.docker.com/r/bvlc/caffe}{\tt builds}. E.\+g. for the C\+PU version\+:
+
+{\ttfamily docker run -\/ti bvlc/caffe\+:cpu caffe -\/-\/version}
+
+or for G\+PU support (You need a C\+U\+DA 8.\+0 capable driver and \href{https://github.com/NVIDIA/nvidia-docker}{\tt nvidia-\/docker})\+:
+
+{\ttfamily nvidia-\/docker run -\/ti bvlc/caffe\+:gpu caffe -\/-\/version}
+
+You might see an error about libdc1394, ignore it.
+
+\subsubsection*{Docker run options}
+
+By default caffe runs as root, thus any output files, e.\+g. snapshots, will be owned by root. It also runs by default in a container-\/private folder.
+
+You can change this using flags, like user (-\/u), current directory, and volumes (-\/w and -\/v). E.\+g. this behaves like the usual caffe executable\+:
+
+{\ttfamily docker run -\/-\/rm -\/u \$(id -\/u)\+:\$(id -\/g) -\/v \+: -\/w  bvlc/caffe\+:cpu caffe train -\/-\/solver=example\+\_\+solver.\+prototxt}
+
+Containers can also be used interactively, specifying e.\+g. {\ttfamily bash} or {\ttfamily ipython} instead of {\ttfamily caffe}.
+
+
+\begin{DoxyCode}
+docker run -ti bvlc/caffe:cpu ipython
+import caffe
+...
+\end{DoxyCode}
+
+
+The caffe build requirements are included in the container, so this can be used to build and run custom versions of caffe. Also, {\ttfamily caffe/python} is in P\+A\+TH, so python utilities can be used directly, e.\+g. {\ttfamily draw\+\_\+net.\+py}, {\ttfamily classify.\+py}, or {\ttfamily detect.\+py}.
+
+\subsubsection*{Building images yourself}
+
+Examples\+:
+
+{\ttfamily docker build -\/t caffe\+:cpu cpu}
+
+{\ttfamily docker build -\/t caffe\+:gpu gpu}
+
+You can also build Caffe and run the tests in the image\+:
+
+{\ttfamily docker run -\/ti caffe\+:cpu bash -\/c \char`\"{}cd /opt/caffe/build; make runtest\char`\"{}} 

@@ -1,0 +1,102 @@
+\hypertarget{namespacecaffe_1_1net__spec}{}\section{caffe.\+net\+\_\+spec Namespace Reference}
+\label{namespacecaffe_1_1net__spec}\index{caffe.\+net\+\_\+spec@{caffe.\+net\+\_\+spec}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_function}{Function}}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_layers}{Layers}}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_net_spec}{Net\+Spec}}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_parameters}{Parameters}}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_top}{Top}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1net__spec_a743950197e4a2ce816bcc4ec5bb04968}{param\+\_\+name\+\_\+dict}} ()
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1net__spec_a8d5d3cab109867ec42e5e7c2b957e630}{to\+\_\+proto}} (tops)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1net__spec_a823515c8ca21e9562ea594546e167da2}{assign\+\_\+proto}} (proto, name, val)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacecaffe_1_1net__spec_aa112f911444ddd4d57694e65b650f944}\label{namespacecaffe_1_1net__spec_aa112f911444ddd4d57694e65b650f944}} 
+{\bfseries layers} = \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_layers}{Layers}}()
+\item 
+\mbox{\Hypertarget{namespacecaffe_1_1net__spec_a1c4f03ff588b04506ce806eaa7e038b3}\label{namespacecaffe_1_1net__spec_a1c4f03ff588b04506ce806eaa7e038b3}} 
+{\bfseries params} = \mbox{\hyperlink{classcaffe_1_1net__spec_1_1_parameters}{Parameters}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Python net specification.
+
+This module provides a way to write nets directly in Python, using a natural,
+functional style. See examples/pycaffe/caffenet.py for an example.
+
+Currently this works as a thin wrapper around the Python protobuf interface,
+with layers and parameters automatically generated for the "layers" and
+"params" pseudo-modules, which are actually objects using __getattr__ magic
+to generate protobuf messages.
+
+Note that when using to_proto or Top.to_proto, names of intermediate blobs will
+be automatically generated. To explicitly specify blob names, use the NetSpec
+class -- assign to its attributes directly to name layers, and call
+NetSpec.to_proto to serialize all assigned layers.
+
+This interface is expected to continue to evolve as Caffe gains new capabilities
+for specifying nets. In particular, the automatically generated layer names
+are not guaranteed to be forward-compatible.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacecaffe_1_1net__spec_a823515c8ca21e9562ea594546e167da2}\label{namespacecaffe_1_1net__spec_a823515c8ca21e9562ea594546e167da2}} 
+\index{caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}!assign\+\_\+proto@{assign\+\_\+proto}}
+\index{assign\+\_\+proto@{assign\+\_\+proto}!caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}}
+\subsubsection{\texorpdfstring{assign\+\_\+proto()}{assign\_proto()}}
+{\footnotesize\ttfamily def caffe.\+net\+\_\+spec.\+assign\+\_\+proto (\begin{DoxyParamCaption}\item[{}]{proto,  }\item[{}]{name,  }\item[{}]{val }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Assign a Python object to a protobuf message, based on the Python
+type (in recursive fashion). Lists become repeated fields/messages, dicts
+become messages, and other types are assigned directly. For convenience,
+repeated fields whose values are not lists are converted to single-element
+lists; e.g., `my_repeated_int_field=3` is converted to
+`my_repeated_int_field=[3]`.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{namespacecaffe_1_1net__spec_a823515c8ca21e9562ea594546e167da2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1net__spec_a743950197e4a2ce816bcc4ec5bb04968}\label{namespacecaffe_1_1net__spec_a743950197e4a2ce816bcc4ec5bb04968}} 
+\index{caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}!param\+\_\+name\+\_\+dict@{param\+\_\+name\+\_\+dict}}
+\index{param\+\_\+name\+\_\+dict@{param\+\_\+name\+\_\+dict}!caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}}
+\subsubsection{\texorpdfstring{param\+\_\+name\+\_\+dict()}{param\_name\_dict()}}
+{\footnotesize\ttfamily def caffe.\+net\+\_\+spec.\+param\+\_\+name\+\_\+dict (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find out the correspondence between layer names and parameter names.\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{namespacecaffe_1_1net__spec_a743950197e4a2ce816bcc4ec5bb04968_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1net__spec_a8d5d3cab109867ec42e5e7c2b957e630}\label{namespacecaffe_1_1net__spec_a8d5d3cab109867ec42e5e7c2b957e630}} 
+\index{caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}!to\+\_\+proto@{to\+\_\+proto}}
+\index{to\+\_\+proto@{to\+\_\+proto}!caffe\+::net\+\_\+spec@{caffe\+::net\+\_\+spec}}
+\subsubsection{\texorpdfstring{to\+\_\+proto()}{to\_proto()}}
+{\footnotesize\ttfamily def caffe.\+net\+\_\+spec.\+to\+\_\+proto (\begin{DoxyParamCaption}\item[{}]{tops }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate a NetParameter that contains all layers needed to compute
+all arguments.\end{DoxyVerb}
+ 

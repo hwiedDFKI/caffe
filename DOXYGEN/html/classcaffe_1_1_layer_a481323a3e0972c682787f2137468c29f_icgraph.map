@@ -1,0 +1,10 @@
+<map id="caffe::Layer::LayerSetUp" name="caffe::Layer::LayerSetUp">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a18d6bfdb535ab8e96a971dec4ae39a84" title="Implements common layer setup functionality. " alt="" coords="249,5,385,32"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_abs_val_layer.html#a4ef25e7d0cbe06404948d7e763bf0f84" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="250,57,383,98"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_dropout_layer.html#addcfd0822c1c5e3591bc7001a034b167" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="248,122,385,163"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_exp_layer.html#a45ec267bdfd48e8aa34490e146405b9e" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="221,188,412,215"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_log_layer.html#a87e062000908b474ac4cda3b2f3c6f1e" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="222,239,411,265"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_power_layer.html#a954ad3da9a5fd54665de1181b6165796" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="249,290,385,331"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_swish_layer.html#a35bd01fae515cb064107c621a3c12820" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="249,355,384,397"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_threshold_layer.html#a14e3782a6bea7bba511f3d6f23344037" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="243,421,391,462"/>
+</map>

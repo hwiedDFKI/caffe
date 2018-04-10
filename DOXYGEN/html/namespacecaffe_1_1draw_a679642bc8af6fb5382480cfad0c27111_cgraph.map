@@ -1,0 +1,7 @@
+<map id="caffe.draw.get_pydot_graph" name="caffe.draw.get_pydot_graph">
+<area shape="rect" id="node2" href="$namespacecaffe_1_1draw.html#a1ab4383ec4e16ed4e8f0e027c25c682a" title="caffe.draw.get_layer\l_label" alt="" coords="209,37,349,79"/>
+<area shape="rect" id="node5" href="$namespacecaffe_1_1draw.html#ab06e25fd2bbb0166d3c3ff19d9854828" title="caffe.draw.choose_color\l_by_layertype" alt="" coords="197,103,361,144"/>
+<area shape="rect" id="node6" href="$namespacecaffe_1_1draw.html#a672545af1643af2c11e6b19226eaf6c4" title="caffe.draw.get_edge\l_label" alt="" coords="209,168,349,209"/>
+<area shape="rect" id="node3" href="$namespacecaffe_1_1draw.html#a18df1acb5bad222d90e8873375367ef1" title="caffe.draw.get_pooling\l_types_dict" alt="" coords="409,5,563,47"/>
+<area shape="rect" id="node4" href="$namespacecaffe_1_1draw.html#ac1df68579f91acefee36f75ac5b0de1d" title="caffe.draw.get_layer\l_lr_mult" alt="" coords="416,71,556,112"/>
+</map>

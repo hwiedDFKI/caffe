@@ -1,0 +1,57 @@
+
+
+ \subsection*{title\+: Power Layer }
+
+\section*{Power Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Power}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1PowerLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/power_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/power\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/power_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/power\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/power_layer.cu}{\tt {\ttfamily ./src/caffe/layers/power\+\_\+layer.cu}}
+\end{DoxyItemize}
+
+The {\ttfamily Power} layer computes the output as (shift + scale $\ast$ x) $^\wedge$ power for each input element x.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Power\+Parameter power\+\_\+param})
+\begin{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily power} \mbox{[}default 1\mbox{]}
+\item {\ttfamily scale} \mbox{[}default 1\mbox{]}
+\item {\ttfamily shift} \mbox{[}default 0\mbox{]}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Power\+Parameter.\+txt \%\} \{\% endhighlight \%\}
+
+\subsection*{Sample}
+
+\begin{DoxyVerb}  layer {
+    name: "layer"
+    bottom: "in"
+    top: "out"
+    type: "Power"
+    power_param {
+      power: 1
+      scale: 1
+      shift: 0
+    }
+  }
+\end{DoxyVerb}
+
+
+\subsection*{See also}
+
+
+\begin{DoxyItemize}
+\item \href{exp.html}{\tt Exponential layer} 
+\end{DoxyItemize}

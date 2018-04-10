@@ -1,0 +1,50 @@
+\hypertarget{namespacegenerate__sample__data}{}\section{generate\+\_\+sample\+\_\+data Namespace Reference}
+\label{namespacegenerate__sample__data}\index{generate\+\_\+sample\+\_\+data@{generate\+\_\+sample\+\_\+data}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_ae100a26d88fb69bbc7f2b757bba788d8}\label{namespacegenerate__sample__data_ae100a26d88fb69bbc7f2b757bba788d8}} 
+{\bfseries script\+\_\+dir} = os.\+path.\+dirname(os.\+path.\+abspath(\+\_\+\+\_\+file\+\_\+\+\_\+))
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_ae385e421659f38a5027eca2e6f52ff84}\label{namespacegenerate__sample__data_ae385e421659f38a5027eca2e6f52ff84}} 
+int {\bfseries num\+\_\+cols} = 8
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a7891bb56736b704a38633c52ea18fa63}\label{namespacegenerate__sample__data_a7891bb56736b704a38633c52ea18fa63}} 
+int {\bfseries num\+\_\+rows} = 10
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a020eed012863e9dd0581a34c737b0939}\label{namespacegenerate__sample__data_a020eed012863e9dd0581a34c737b0939}} 
+int {\bfseries height} = 6
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a136d420fd3b8bc01fe652575f65210f9}\label{namespacegenerate__sample__data_a136d420fd3b8bc01fe652575f65210f9}} 
+int {\bfseries width} = 5
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_ae56c773eb88ec9b0140edbba179bcb06}\label{namespacegenerate__sample__data_ae56c773eb88ec9b0140edbba179bcb06}} 
+int {\bfseries total\+\_\+size} = num\+\_\+cols $\ast$ num\+\_\+rows $\ast$ height $\ast$ width
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a4d17760544ae427f4982b979686ae4f8}\label{namespacegenerate__sample__data_a4d17760544ae427f4982b979686ae4f8}} 
+{\bfseries data} = np.\+arange(total\+\_\+size)
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a35a6940d8b9aff2fc92b84db11b9dd6b}\label{namespacegenerate__sample__data_a35a6940d8b9aff2fc92b84db11b9dd6b}} 
+int {\bfseries label} = 1 + np.\+arange(num\+\_\+rows)\mbox{[}\+:, np.\+newaxis\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_ad6ecf36c3dac6140a30b04fee35da3f2}\label{namespacegenerate__sample__data_ad6ecf36c3dac6140a30b04fee35da3f2}} 
+int {\bfseries label2} = label + 1
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_aa357f9fa404423f5df718d8ba7bb6af7}\label{namespacegenerate__sample__data_aa357f9fa404423f5df718d8ba7bb6af7}} 
+{\bfseries compression}
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a0f69c96856d7c4622a38b86687e8fa5e}\label{namespacegenerate__sample__data_a0f69c96856d7c4622a38b86687e8fa5e}} 
+{\bfseries compression\+\_\+opts}
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_a891ff21b3ec3fa799d70c71e543e3f12}\label{namespacegenerate__sample__data_a891ff21b3ec3fa799d70c71e543e3f12}} 
+{\bfseries dtype}
+\item 
+\mbox{\Hypertarget{namespacegenerate__sample__data_acb1ad2725591b770129e26512a718963}\label{namespacegenerate__sample__data_acb1ad2725591b770129e26512a718963}} 
+{\bfseries targets} = np.\+random.\+randn(num\+\_\+rows, 1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Generate data used in the HDF5DataLayer and GradientBasedSolver tests.
+\end{DoxyVerb}
+ 

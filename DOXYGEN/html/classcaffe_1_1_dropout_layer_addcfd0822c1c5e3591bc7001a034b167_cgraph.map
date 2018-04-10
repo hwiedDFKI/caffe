@@ -1,0 +1,3 @@
+<map id="caffe::DropoutLayer::LayerSetUp" name="caffe::DropoutLayer::LayerSetUp">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a481323a3e0972c682787f2137468c29f" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="191,13,359,39"/>
+</map>

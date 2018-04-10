@@ -1,0 +1,551 @@
+\documentclass{article}
+\usepackage{epsfig}
+\pagestyle{empty}
+\begin{document}
+$ x = 0 $
+\pagebreak
+
+$ x\sim U(a, b) $
+\pagebreak
+
+$ x = a $
+\pagebreak
+
+$ x \in [0, 1] $
+\pagebreak
+
+$ \forall i \sum_j x_{ij} = 1 $
+\pagebreak
+
+$ x \sim U(-a, +a) $
+\pagebreak
+
+$ a $
+\pagebreak
+
+$ x \sim N(0, \sigma^2) $
+\pagebreak
+
+$ \sigma^2 $
+\pagebreak
+
+$ y = |x| $
+\pagebreak
+
+$ (N \times C \times H \times W) $
+\pagebreak
+
+$ x $
+\pagebreak
+
+$ \frac{\partial E}{\partial y} $
+\pagebreak
+
+$ y $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \mathrm{sign}(x) \frac{\partial E}{\partial y} $
+\pagebreak
+
+$ k $
+\pagebreak
+
+$ k = 5 $
+\pagebreak
+
+$ [-\infty, +\infty] $
+\pagebreak
+
+$ K = CHW $
+\pagebreak
+
+$ x_n $
+\pagebreak
+
+$ \hat{l}_n $
+\pagebreak
+
+$ \hat{l}_n = \arg\max\limits_k x_{nk} $
+\pagebreak
+
+$ (N \times 1 \times 1 \times 1) $
+\pagebreak
+
+$ l $
+\pagebreak
+
+$ l_n \in [0, 1, 2, ..., K - 1] $
+\pagebreak
+
+$ K $
+\pagebreak
+
+$ (1 \times 1 \times 1 \times 1) $
+\pagebreak
+
+$ \frac{1}{N} \sum\limits_{n=1}^N \delta\{ \hat{l}_n = l_n \} $
+\pagebreak
+
+$ \delta\{\mathrm{condition}\} = \left\{ \begin{array}{lr} 1 & \mbox{if condition} \\ 0 & \mbox{otherwise} \end{array} \right. $
+\pagebreak
+
+$ (C \times H \times W) $
+\pagebreak
+
+$ (N \times 1 \times K) $
+\pagebreak
+
+$ (N \times 2 \times K) $
+\pagebreak
+
+$ (N \times K \times H \times W) $
+\pagebreak
+
+$ y_n = \arg\max\limits_i x_{ni} $
+\pagebreak
+
+$ K = 1 $
+\pagebreak
+
+$ (N \times ...) $
+\pagebreak
+
+$ x_1 $
+\pagebreak
+
+$ (M) $
+\pagebreak
+
+$ x_2 $
+\pagebreak
+
+$ (M \times ...) $
+\pagebreak
+
+$ y = x_1[x_2] $
+\pagebreak
+
+$ y = x + \log(1 + \exp(-x)) $
+\pagebreak
+
+$ x > 0 $
+\pagebreak
+
+$ y = \log(1 + \exp(x)) $
+\pagebreak
+
+$ y = \left\{ \begin{array}{ll} x + \log(1 + \exp(-x)) & \mbox{if } x > 0 \\ \log(1 + \exp(x)) & \mbox{otherwise} \end{array} \right. $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} $
+\pagebreak
+
+$ x_K $
+\pagebreak
+
+$ (KN \times C \times H \times W) $
+\pagebreak
+
+$ (N \times KC \times H \times W) $
+\pagebreak
+
+$ y = [\begin{array}{cccc} x_1 & x_2 & ... & x_K \end{array}] $
+\pagebreak
+
+$ \left[ \begin{array}{cccc} \frac{\partial E}{\partial x_1} & \frac{\partial E}{\partial x_2} & ... & \frac{\partial E}{\partial x_K} \end{array} \right] = \frac{\partial E}{\partial y} $
+\pagebreak
+
+$ E = \frac{1}{2N} \sum\limits_{n=1}^N \left(y\right) d^2 + \left(1-y\right) \max \left(margin-d, 0\right)^2 $
+\pagebreak
+
+$ d = \left| \left| a_n - b_n \right| \right|_2 $
+\pagebreak
+
+$ (N \times C \times 1 \times 1) $
+\pagebreak
+
+$ a \in [-\infty, +\infty]$
+\pagebreak
+
+$ b \in [-\infty, +\infty]$
+\pagebreak
+
+$ s \in [0, 1]$
+\pagebreak
+
+$ \lambda $
+\pagebreak
+
+$\ell_i$
+\pagebreak
+
+$ E = \lambda_i \ell_i + \mbox{other loss terms}$
+\pagebreak
+
+$ \frac{\partial E}{\partial \ell_i} = \lambda_i $
+\pagebreak
+
+$a$
+\pagebreak
+
+$b$
+\pagebreak
+
+$ \geq 1 $
+\pagebreak
+
+$x$
+\pagebreak
+
+$ p $
+\pagebreak
+
+$ y_{\mbox{train}} = \left\{ \begin{array}{ll} \frac{x}{1 - p} & \mbox{if } u > p \\ 0 & \mbox{otherwise} \end{array} \right. $
+\pagebreak
+
+$ u \sim U(0, 1)$
+\pagebreak
+
+$ y_{\mbox{test}} = \mathbb{E}[y_{\mbox{train}}] = x $
+\pagebreak
+
+$u\sim U(0,1)$
+\pagebreak
+
+$ 1 / (1 - p) $
+\pagebreak
+
+$ y = \left\{ \begin{array}{lr} x & \mathrm{if} \; x > 0 \\ \alpha (\exp(x)-1) & \mathrm{if} \; x \le 0 \end{array} \right. $
+\pagebreak
+
+$ \alpha $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \left\{ \begin{array}{lr} 1 & \mathrm{if} \; x > 0 \\ y + \alpha & \mathrm{if} \; x \le 0 \end{array} \right. $
+\pagebreak
+
+$ E = \frac{1}{2N} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\pagebreak
+
+$ \hat{y} \in [-\infty, +\infty]$
+\pagebreak
+
+$ y \in [-\infty, +\infty]$
+\pagebreak
+
+$ E = \frac{1}{2n} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\pagebreak
+
+$\hat{y}$
+\pagebreak
+
+$ \frac{\partial E}{\partial \hat{y}} = \frac{1}{n} \sum\limits_{n=1}^N (\hat{y}_n - y_n) $
+\pagebreak
+
+$y$
+\pagebreak
+
+$ \frac{\partial E}{\partial y} = \frac{1}{n} \sum\limits_{n=1}^N (y_n - \hat{y}_n) $
+\pagebreak
+
+$ y = \gamma ^ {\alpha x + \beta} $
+\pagebreak
+
+$ \beta $
+\pagebreak
+
+$ \gamma $
+\pagebreak
+
+$ e \approx 2.718 $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} y \alpha \log_e(gamma) $
+\pagebreak
+
+$ (S \times C \times H \times W) $
+\pagebreak
+
+$ (N \times CHW \times 1 \times 1) $
+\pagebreak
+
+$ t $
+\pagebreak
+
+$ X^T W $
+\pagebreak
+
+$ X \in \mathcal{R}^{D \times N} $
+\pagebreak
+
+$ W \in \mathcal{R}^{D \times K} $
+\pagebreak
+
+$ E = \frac{1}{N} \sum\limits_{n=1}^N \sum\limits_{k=1}^K [\max(0, 1 - \delta\{l_n = k\} t_{nk})] ^ p $
+\pagebreak
+
+$ L^p $
+\pagebreak
+
+$ p = 1 $
+\pagebreak
+
+$ \delta\{\mathrm{condition}\} = \left\{ \begin{array}{lr} 1 & \mbox{if condition} \\ -1 & \mbox{otherwise} \end{array} \right. $
+\pagebreak
+
+$ t \in \mathcal{R}^{N \times K} $
+\pagebreak
+
+$k$
+\pagebreak
+
+$t$
+\pagebreak
+
+$ \frac{\partial E}{\partial t} $
+\pagebreak
+
+$ \hat{p}_{nk} = \exp(x_{nk}) / \left[\sum_{k'} \exp(x_{nk'})\right] $
+\pagebreak
+
+$ (1 \times 1 \times K \times K) $
+\pagebreak
+
+$ H $
+\pagebreak
+
+$ H = I $
+\pagebreak
+
+$ E = \frac{-1}{N} \sum\limits_{n=1}^N H_{l_n} \log(\hat{p}_n) = \frac{-1}{N} \sum\limits_{n=1}^N \sum\limits_{k=1}^{K} H_{l_n,k} \log(\hat{p}_{n,k}) $
+\pagebreak
+
+$ H_{l_n} $
+\pagebreak
+
+$l_n$
+\pagebreak
+
+$H$
+\pagebreak
+
+$ y = log_{\gamma}(\alpha x + \beta) $
+\pagebreak
+
+$ (1 \times N \times D) $
+\pagebreak
+
+$ c_{t-1} $
+\pagebreak
+
+$ (1 \times N \times 4D) $
+\pagebreak
+
+$ [i_t', f_t', o_t', g_t'] $
+\pagebreak
+
+$ (1 \times N) $
+\pagebreak
+
+$ \delta_t $
+\pagebreak
+
+$ c_t $
+\pagebreak
+
+$ h_t $
+\pagebreak
+
+$ \frac{\partial E}{\partial c_t} $
+\pagebreak
+
+$ \frac{\partial E}{\partial h_t} $
+\pagebreak
+
+$ [ \frac{\partial E}{\partial i_t} \frac{\partial E}{\partial f_t} \frac{\partial E}{\partial o_t} \frac{\partial E}{\partial g_t} ] $
+\pagebreak
+
+$ (1 \times 1 \times N) $
+\pagebreak
+
+$ \hat{p} $
+\pagebreak
+
+$ [0, 1] $
+\pagebreak
+
+$ \hat{p}_n $
+\pagebreak
+
+$ \forall n \sum\limits_{k=1}^K \hat{p}_{nk} = 1 $
+\pagebreak
+
+$ E = \frac{-1}{N} \sum\limits_{n=1}^N \log(\hat{p}_{n,l_n}) $
+\pagebreak
+
+$ \frac{\partial E}{\partial \hat{p}} $
+\pagebreak
+
+$ y = (\alpha x + \beta) ^ \gamma $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} \alpha \gamma (\alpha x + \beta) ^ {\gamma - 1} = \frac{\partial E}{\partial y} \frac{\alpha \gamma y}{\alpha x + \beta} $
+\pagebreak
+
+$ \alpha \gamma $
+\pagebreak
+
+$ y_i = \max(0, x_i) + a_i \min(0, x_i) $
+\pagebreak
+
+$ (N \times C \times ...) $
+\pagebreak
+
+$i$
+\pagebreak
+
+$ \frac{\partial E}{\partial x_i} = \left\{ \begin{array}{lr} a_i \frac{\partial E}{\partial y_i} & \mathrm{if} \; x_i \le 0 \\ \frac{\partial E}{\partial y_i} & \mathrm{if} \; x_i > 0 \end{array} \right. $
+\pagebreak
+
+$ \frac{\partial E}{\partial a_i} = \left\{ \begin{array}{lr} \sum_{x_i} x_i \frac{\partial E}{\partial y_i} & \mathrm{if} \; x_i \le 0 \\ 0 & \mathrm{if} \; x_i > 0 \end{array} \right. $
+\pagebreak
+
+$ (T \times N \times ...) $
+\pagebreak
+
+$ T $
+\pagebreak
+
+$ N $
+\pagebreak
+
+$ (N \times T \times ...) $
+\pagebreak
+
+$ (T \times N) $
+\pagebreak
+
+$ \delta $
+\pagebreak
+
+$ \delta_{t,n} = 0 $
+\pagebreak
+
+$ n $
+\pagebreak
+
+$ h_{t-1} $
+\pagebreak
+
+$ \delta_t = 0 $
+\pagebreak
+
+$ \delta_{t,n} = 1 $
+\pagebreak
+
+$ t-1 $
+\pagebreak
+
+$ x_{static} $
+\pagebreak
+
+$ x'_t = [x_t; x_{static}] $
+\pagebreak
+
+$ (T \times N \times D) $
+\pagebreak
+
+$ D $
+\pagebreak
+
+$ y = \max(0, x) $
+\pagebreak
+
+$ \nu $
+\pagebreak
+
+$ y = \max(0, x) + \nu \min(0, x) $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \left\{ \begin{array}{lr} 0 & \mathrm{if} \; x \le 0 \\ \frac{\partial E}{\partial y} & \mathrm{if} \; x > 0 \end{array} \right. $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \left\{ \begin{array}{lr} \nu \frac{\partial E}{\partial y} & \mathrm{if} \; x \le 0 \\ \frac{\partial E}{\partial y} & \mathrm{if} \; x > 0 \end{array} \right. $
+\pagebreak
+
+$ x_t $
+\pagebreak
+
+$ h_t := \tanh[ W_{hh} h_{t_1} + W_{xh} x_t + b_h ] $
+\pagebreak
+
+$ o_t := \tanh[ W_{ho} h_t + b_o ] $
+\pagebreak
+
+$ i $
+\pagebreak
+
+$ (d_0 \times ... \times d_i \times ... \times d_j \times ... \times d_n) $
+\pagebreak
+
+$ (d_i \times ... \times d_j) $
+\pagebreak
+
+$ z = x y $
+\pagebreak
+
+$ E = \frac{-1}{n} \sum\limits_{n=1}^N \left[ p_n \log \hat{p}_n + (1 - p_n) \log(1 - \hat{p}_n) \right] $
+\pagebreak
+
+$ x \in [-\infty, +\infty]$
+\pagebreak
+
+$ \hat{p}_n = \sigma(x_n) \in [0, 1] $
+\pagebreak
+
+$ \sigma(.) $
+\pagebreak
+
+$ y \in [0, 1] $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{1}{n} \sum\limits_{n=1}^N (\hat{p}_n - p_n) $
+\pagebreak
+
+$ y = (1 + \exp(-x))^{-1} $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} y (1 - y) $
+\pagebreak
+
+$ y = x \sigma (\beta x) $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y}(\beta y + \sigma (\beta x)(1 - \beta y)) $
+\pagebreak
+
+$ y = \frac{\exp(2x) - 1}{\exp(2x) + 1} $
+\pagebreak
+
+$ \frac{\partial E}{\partial x} = \frac{\partial E}{\partial y} \left(1 - \left[\frac{\exp(2x) - 1}{exp(2x) + 1} \right]^2 \right) = \frac{\partial E}{\partial y} (1 - y^2) $
+\pagebreak
+
+$ y = \left\{ \begin{array}{lr} 0 & \mathrm{if} \; x \le t \\ 1 & \mathrm{if} \; x > t \end{array} \right. $
+\pagebreak
+
+$ E = \frac{1}{2N} \sum\limits_{n=1}^N w_n \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\pagebreak
+
+$ w \in [0, +\infty] $
+\pagebreak
+
+$ E = \frac{1}{2n} \sum\limits_{n=1}^N \w_n \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\pagebreak
+
+$ \frac{\partial E}{\partial \hat{y}} = \frac{1}{n} \sum\limits_{n=1}^N w_n (\hat{y}_n - y_n) $
+\pagebreak
+
+$ \frac{\partial E}{\partial y} = \frac{1}{n} \sum\limits_{n=1}^N w_n (y_n - \hat{y}_n) $
+\pagebreak
+
+\end{document}

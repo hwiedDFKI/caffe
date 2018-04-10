@@ -1,0 +1,71 @@
+
+
+ \subsection*{title\+: Inner Product / Fully Connected Layer }
+
+\section*{Inner Product / Fully Connected Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Inner\+Product}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1InnerProductLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/inner_product_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/inner\+\_\+product\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/inner_product_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/inner\+\_\+product\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/inner_product_layer.cu}{\tt {\ttfamily ./src/caffe/layers/inner\+\_\+product\+\_\+layer.cu}}
+\item Input
+\begin{DoxyItemize}
+\item {\ttfamily n $\ast$ c\+\_\+i $\ast$ h\+\_\+i $\ast$ w\+\_\+i}
+\end{DoxyItemize}
+\item Output
+\begin{DoxyItemize}
+\item {\ttfamily n $\ast$ c\+\_\+o $\ast$ 1 $\ast$ 1}
+\end{DoxyItemize}
+\item Sample \begin{DoxyVerb}layer {
+  name: "fc8"
+  type: "InnerProduct"
+  # learning rate and decay multipliers for the weights
+  param { lr_mult: 1 decay_mult: 1 }
+  # learning rate and decay multipliers for the biases
+  param { lr_mult: 2 decay_mult: 0 }
+  inner_product_param {
+    num_output: 1000
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+  bottom: "fc7"
+  top: "fc8"
+}
+\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+The {\ttfamily Inner\+Product} layer (also usually referred to as the fully connected layer) treats the input as a simple vector and produces an output in the form of a single vector (with the blob\textquotesingle{}s height and width set to 1).
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Inner\+Product\+Parameter inner\+\_\+product\+\_\+param})
+\begin{DoxyItemize}
+\item Required
+\begin{DoxyItemize}
+\item {\ttfamily num\+\_\+output} ({\ttfamily c\+\_\+o})\+: the number of filters
+\end{DoxyItemize}
+\item Strongly recommended
+\begin{DoxyItemize}
+\item {\ttfamily weight\+\_\+filler} \mbox{[}default `type\+: \textquotesingle{}constant' value\+: 0\`{}\mbox{]}
+\end{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily bias\+\_\+filler} \mbox{[}default `type\+: \textquotesingle{}constant' value\+: 0{\ttfamily \mbox{]} -\/}bias\+\_\+term{\ttfamily \mbox{[}default}true{\ttfamily \mbox{]}\+: specifies whether to learn and apply a set of additive biases to the filter outputs}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item {\ttfamily From \mbox{[}}./src/caffe/proto/caffe.proto\`{}\mbox{]}(\href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt https\+://github.\+com/\+B\+V\+L\+C/caffe/blob/master/src/caffe/proto/caffe.\+proto})\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Inner\+Product\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

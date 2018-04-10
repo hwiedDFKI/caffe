@@ -1,0 +1,70 @@
+\hypertarget{namespacesummarize}{}\section{summarize Namespace Reference}
+\label{namespacesummarize}\index{summarize@{summarize}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacesummarize_a7bd4a84cdbad8884ad92a7806ae1422a}\label{namespacesummarize_a7bd4a84cdbad8884ad92a7806ae1422a}} 
+def {\bfseries read\+\_\+net} (filename)
+\item 
+\mbox{\Hypertarget{namespacesummarize_a6f8438960969506f79fa91c85d889c4e}\label{namespacesummarize_a6f8438960969506f79fa91c85d889c4e}} 
+def {\bfseries format\+\_\+param} (param)
+\item 
+\mbox{\Hypertarget{namespacesummarize_a3416c5ed12285b7cb8b442b25f7ad649}\label{namespacesummarize_a3416c5ed12285b7cb8b442b25f7ad649}} 
+def {\bfseries printed\+\_\+len} (s)
+\item 
+def \mbox{\hyperlink{namespacesummarize_aed3c88b7cc0075038238f0a5d153cd65}{print\+\_\+table}} (table, max\+\_\+width)
+\item 
+\mbox{\Hypertarget{namespacesummarize_a135dc4de9b7d18e58bca4357664ff403}\label{namespacesummarize_a135dc4de9b7d18e58bca4357664ff403}} 
+def {\bfseries summarize\+\_\+net} (net)
+\item 
+\mbox{\Hypertarget{namespacesummarize_a3828636c21757fdc63ccc87b52a78427}\label{namespacesummarize_a3828636c21757fdc63ccc87b52a78427}} 
+def {\bfseries main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list {\bfseries C\+O\+L\+O\+RS}
+\item 
+\mbox{\Hypertarget{namespacesummarize_a975fa6c4a1b9d23b8aa63ef584be23c9}\label{namespacesummarize_a975fa6c4a1b9d23b8aa63ef584be23c9}} 
+string {\bfseries D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+E\+D\+\_\+\+C\+O\+L\+OR} = \textquotesingle{}41\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Net summarization tool.
+
+This tool summarizes the structure of a net in a concise but comprehensive
+tabular listing, taking a prototxt file as input.
+
+Use this tool to check at a glance that the computation you've specified is the
+computation you expect.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesummarize_aed3c88b7cc0075038238f0a5d153cd65}\label{namespacesummarize_aed3c88b7cc0075038238f0a5d153cd65}} 
+\index{summarize@{summarize}!print\+\_\+table@{print\+\_\+table}}
+\index{print\+\_\+table@{print\+\_\+table}!summarize@{summarize}}
+\subsubsection{\texorpdfstring{print\+\_\+table()}{print\_table()}}
+{\footnotesize\ttfamily def summarize.\+print\+\_\+table (\begin{DoxyParamCaption}\item[{}]{table,  }\item[{}]{max\+\_\+width }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Print a simple nicely-aligned table.
+
+table must be a list of (equal-length) lists. Columns are space-separated,
+and as narrow as possible, but no wider than max_width. Text may overflow
+columns; note that unlike string.format, this will not affect subsequent
+columns, if possible.\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesummarize_ace787d530d7719206a169bca48236bb3}\label{namespacesummarize_ace787d530d7719206a169bca48236bb3}} 
+\index{summarize@{summarize}!C\+O\+L\+O\+RS@{C\+O\+L\+O\+RS}}
+\index{C\+O\+L\+O\+RS@{C\+O\+L\+O\+RS}!summarize@{summarize}}
+\subsubsection{\texorpdfstring{C\+O\+L\+O\+RS}{COLORS}}
+{\footnotesize\ttfamily list summarize.\+C\+O\+L\+O\+RS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [\textcolor{stringliteral}{'92'}, \textcolor{stringliteral}{'93'}, \textcolor{stringliteral}{'94'}, \textcolor{stringliteral}{'95'}, \textcolor{stringliteral}{'97'}, \textcolor{stringliteral}{'96'}, \textcolor{stringliteral}{'42'}, \textcolor{stringliteral}{'43;30'}, \textcolor{stringliteral}{'100'},
+2           \textcolor{stringliteral}{'444'}, \textcolor{stringliteral}{'103;30'}, \textcolor{stringliteral}{'107;30'}]
+\end{DoxyCode}

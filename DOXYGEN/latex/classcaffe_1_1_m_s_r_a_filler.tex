@@ -1,0 +1,54 @@
+\hypertarget{classcaffe_1_1_m_s_r_a_filler}{}\section{caffe\+:\+:M\+S\+R\+A\+Filler$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_m_s_r_a_filler}\index{caffe\+::\+M\+S\+R\+A\+Filler$<$ Dtype $>$@{caffe\+::\+M\+S\+R\+A\+Filler$<$ Dtype $>$}}
+
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values $ x \sim N(0, \sigma^2) $ where $ \sigma^2 $ is set inversely proportional to number of incoming nodes, outgoing nodes, or their average.  
+
+
+
+
+{\ttfamily \#include $<$filler.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:M\+S\+R\+A\+Filler$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classcaffe_1_1_m_s_r_a_filler__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_m_s_r_a_filler_a68b0367c462b9cfce5379074105282c9}\label{classcaffe_1_1_m_s_r_a_filler_a68b0367c462b9cfce5379074105282c9}} 
+{\bfseries M\+S\+R\+A\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_m_s_r_a_filler_a174e9fab9be5c0c598680bebc621ab8f}\label{classcaffe_1_1_m_s_r_a_filler_a174e9fab9be5c0c598680bebc621ab8f}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_m_s_r_a_filler_a68b0367c462b9cfce5379074105282c9}\label{classcaffe_1_1_m_s_r_a_filler_a68b0367c462b9cfce5379074105282c9}} 
+{\bfseries M\+S\+R\+A\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_m_s_r_a_filler_a174e9fab9be5c0c598680bebc621ab8f}\label{classcaffe_1_1_m_s_r_a_filler_a174e9fab9be5c0c598680bebc621ab8f}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+M\+S\+R\+A\+Filler$<$ Dtype $>$}
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values $ x \sim N(0, \sigma^2) $ where $ \sigma^2 $ is set inversely proportional to number of incoming nodes, outgoing nodes, or their average. 
+
+A \mbox{\hyperlink{classcaffe_1_1_filler}{Filler}} based on the paper \mbox{[}He, Zhang, Ren and Sun 2015\mbox{]}\+: Specifically accounts for Re\+LU nonlinearities.
+
+Aside\+: for another perspective on the scaling factor, see the derivation of \mbox{[}Saxe, Mc\+Clelland, and Ganguli 2013 (v3)\mbox{]}.
+
+It fills the incoming matrix by randomly sampling Gaussian data with std = sqrt(2 / n) where n is the fan\+\_\+in, fan\+\_\+out, or their average, depending on the variance\+\_\+norm option. You should make sure the input blob has shape (num, a, b, c) where a $\ast$ b $\ast$ c = fan\+\_\+in and num $\ast$ b $\ast$ c = fan\+\_\+out. Note that this is currently not the case for inner product layers. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/filler.\+hpp\end{DoxyCompactItemize}

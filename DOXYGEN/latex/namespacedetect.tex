@@ -1,0 +1,36 @@
+\hypertarget{namespacedetect}{}\section{detect Namespace Reference}
+\label{namespacedetect}\index{detect@{detect}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedetect_ade939dea8191a0c98a07c8caf288297f}\label{namespacedetect_ade939dea8191a0c98a07c8caf288297f}} 
+def {\bfseries main} (argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedetect_ad4e9d92af2f0578c7449fe0da36617bb}\label{namespacedetect_ad4e9d92af2f0578c7449fe0da36617bb}} 
+list {\bfseries C\+R\+O\+P\+\_\+\+M\+O\+D\+ES} = \mbox{[}\textquotesingle{}list\textquotesingle{}, \textquotesingle{}selective\+\_\+search\textquotesingle{}\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacedetect_a38e99af2c5095af52fc75d78c10592bf}\label{namespacedetect_a38e99af2c5095af52fc75d78c10592bf}} 
+list {\bfseries C\+O\+O\+R\+D\+\_\+\+C\+O\+LS} = \mbox{[}\textquotesingle{}ymin\textquotesingle{}, \textquotesingle{}xmin\textquotesingle{}, \textquotesingle{}ymax\textquotesingle{}, \textquotesingle{}xmax\textquotesingle{}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}detector.py is an out-of-the-box windowed detector
+callable from the command line.
+
+By default it configures and runs the Caffe reference ImageNet model.
+Note that this model was trained for image classification and not detection,
+and finetuning for detection can be expected to improve results.
+
+The selective_search_ijcv_with_python code required for the selective search
+proposal mode is available at
+https://github.com/sergeyk/selective_search_ijcv_with_python
+
+TODO:
+- batch up image filenames as well: don't want to load all of them into memory
+- come up with a batching scheme that preserved order / keeps a unique ID
+\end{DoxyVerb}
+ 

@@ -1,0 +1,78 @@
+\hypertarget{classcaffe_1_1_adam_solver}{}\section{caffe\+:\+:Adam\+Solver$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_adam_solver}\index{caffe\+::\+Adam\+Solver$<$ Dtype $>$@{caffe\+::\+Adam\+Solver$<$ Dtype $>$}}
+
+
+\mbox{\hyperlink{classcaffe_1_1_adam_solver}{Adam\+Solver}}, an algorithm for first-\/order gradient-\/based optimization of stochastic objective functions, based on adaptive estimates of lower-\/order moments. Described in \mbox{[}1\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$sgd\+\_\+solvers.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Adam\+Solver$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classcaffe_1_1_adam_solver__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a2591a6002658a955d8df6a2bf1a28f1e}\label{classcaffe_1_1_adam_solver_a2591a6002658a955d8df6a2bf1a28f1e}} 
+{\bfseries Adam\+Solver} (const \mbox{\hyperlink{classcaffe_1_1_solver_parameter}{Solver\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_adfd87b65ecd4c57591eefc24ac16e292}\label{classcaffe_1_1_adam_solver_adfd87b65ecd4c57591eefc24ac16e292}} 
+{\bfseries Adam\+Solver} (const string \&param\+\_\+file)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}\label{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the solver type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a2591a6002658a955d8df6a2bf1a28f1e}\label{classcaffe_1_1_adam_solver_a2591a6002658a955d8df6a2bf1a28f1e}} 
+{\bfseries Adam\+Solver} (const \mbox{\hyperlink{classcaffe_1_1_solver_parameter}{Solver\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_adfd87b65ecd4c57591eefc24ac16e292}\label{classcaffe_1_1_adam_solver_adfd87b65ecd4c57591eefc24ac16e292}} 
+{\bfseries Adam\+Solver} (const string \&param\+\_\+file)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}\label{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_adam_solver_a3ad927ab9d19ebf2fe2b8a2e9101cb3e}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the solver type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a72bbfc1fb2ec2194b183fa65f77ef1fb}\label{classcaffe_1_1_adam_solver_a72bbfc1fb2ec2194b183fa65f77ef1fb}} 
+void {\bfseries Adam\+Pre\+Solve} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a11f2c48ead67c91ba9e871acdbda1af8}\label{classcaffe_1_1_adam_solver_a11f2c48ead67c91ba9e871acdbda1af8}} 
+virtual void {\bfseries Compute\+Update\+Value} (int param\+\_\+id, Dtype rate)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a5f192e195185ab841f083415333f5147}\label{classcaffe_1_1_adam_solver_a5f192e195185ab841f083415333f5147}} 
+{\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN} (\mbox{\hyperlink{classcaffe_1_1_adam_solver}{Adam\+Solver}})
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a72bbfc1fb2ec2194b183fa65f77ef1fb}\label{classcaffe_1_1_adam_solver_a72bbfc1fb2ec2194b183fa65f77ef1fb}} 
+void {\bfseries Adam\+Pre\+Solve} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_ab502b325cb0d36f48c19c7b97268ca1a}\label{classcaffe_1_1_adam_solver_ab502b325cb0d36f48c19c7b97268ca1a}} 
+virtual void {\bfseries Compute\+Update\+Value} (int param\+\_\+id, Dtype rate)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_adam_solver_a5f192e195185ab841f083415333f5147}\label{classcaffe_1_1_adam_solver_a5f192e195185ab841f083415333f5147}} 
+{\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN} (\mbox{\hyperlink{classcaffe_1_1_adam_solver}{Adam\+Solver}})
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Adam\+Solver$<$ Dtype $>$}
+
+\mbox{\hyperlink{classcaffe_1_1_adam_solver}{Adam\+Solver}}, an algorithm for first-\/order gradient-\/based optimization of stochastic objective functions, based on adaptive estimates of lower-\/order moments. Described in \mbox{[}1\mbox{]}. 
+
+\mbox{[}1\mbox{]} D. P. Kingma and J. L. Ba, \char`\"{}\+A\+D\+A\+M\+: A Method for Stochastic Optimization.\char`\"{} ar\+Xiv preprint ar\+Xiv\+:1412.\+6980v8 (2014). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/sgd\+\_\+solvers.\+hpp\item 
+src/caffe/solvers/adam\+\_\+solver.\+cpp\end{DoxyCompactItemize}

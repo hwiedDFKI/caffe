@@ -1,0 +1,279 @@
+
+
+ title\+: Le\+Net M\+N\+I\+ST Tutorial description\+: Train and test \char`\"{}\+Le\+Net\char`\"{} on the M\+N\+I\+ST handwritten digit data. category\+: example include\+\_\+in\+\_\+docs\+: true \subsection*{priority\+: 1 }
+
+\section*{Training Le\+Net on M\+N\+I\+ST with Caffe}
+
+We will assume that you have Caffe successfully compiled. If not, please refer to the \href{/installation.html}{\tt Installation page}. In this tutorial, we will assume that your Caffe installation is located at {\ttfamily C\+A\+F\+F\+E\+\_\+\+R\+O\+OT}.
+
+\subsection*{Prepare Datasets}
+
+You will first need to download and convert the data format from the M\+N\+I\+ST website. To do this, simply run the following commands\+: \begin{DoxyVerb}cd $CAFFE_ROOT
+./data/mnist/get_mnist.sh
+./examples/mnist/create_mnist.sh
+\end{DoxyVerb}
+
+
+If it complains that {\ttfamily wget} or {\ttfamily gunzip} are not installed, you need to install them respectively. After running the script there should be two datasets, {\ttfamily mnist\+\_\+train\+\_\+lmdb}, and {\ttfamily mnist\+\_\+test\+\_\+lmdb}.
+
+\subsection*{Le\+Net\+: the M\+N\+I\+ST Classification Model}
+
+Before we actually run the training program, let\textquotesingle{}s explain what will happen. We will use the \href{http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf}{\tt Le\+Net} network, which is known to work well on digit classification tasks. We will use a slightly different version from the original Le\+Net implementation, replacing the sigmoid activations with Rectified Linear Unit (Re\+LU) activations for the neurons.
+
+The design of Le\+Net contains the essence of C\+N\+Ns that are still used in larger models such as the ones in Image\+Net. In general, it consists of a convolutional layer followed by a pooling layer, another convolution layer followed by a pooling layer, and then two fully connected layers similar to the conventional multilayer perceptrons. We have defined the layers in {\ttfamily \$\+C\+A\+F\+F\+E\+\_\+\+R\+O\+OT/examples/mnist/lenet\+\_\+train\+\_\+test.prototxt}.
+
+\subsection*{Define the M\+N\+I\+ST Network}
+
+This section explains the {\ttfamily lenet\+\_\+train\+\_\+test.\+prototxt} model definition that specifies the Le\+Net model for M\+N\+I\+ST handwritten digit classification. We assume that you are familiar with \href{https://developers.google.com/protocol-buffers/docs/overview}{\tt Google Protobuf}, and assume that you have read the protobuf definitions used by Caffe, which can be found at {\ttfamily \$\+C\+A\+F\+F\+E\+\_\+\+R\+O\+OT/src/caffe/proto/caffe.proto}.
+
+Specifically, we will write a {\ttfamily \mbox{\hyperlink{classcaffe_1_1_net_parameter}{caffe\+::\+Net\+Parameter}}} (or in python, {\ttfamily caffe.\+proto.\+caffe\+\_\+pb2.\+Net\+Parameter}) protobuf. We will start by giving the network a name\+: \begin{DoxyVerb}name: "LeNet"
+\end{DoxyVerb}
+
+
+\subsubsection*{Writing the Data Layer}
+
+Currently, we will read the M\+N\+I\+ST data from the lmdb we created earlier in the demo. This is defined by a data layer\+: \begin{DoxyVerb}layer {
+  name: "mnist"
+  type: "Data"
+  transform_param {
+    scale: 0.00390625
+  }
+  data_param {
+    source: "mnist_train_lmdb"
+    backend: LMDB
+    batch_size: 64
+  }
+  top: "data"
+  top: "label"
+}
+\end{DoxyVerb}
+
+
+Specifically, this layer has name {\ttfamily mnist}, type {\ttfamily data}, and it reads the data from the given lmdb source. We will use a batch size of 64, and scale the incoming pixels so that they are in the range \mbox{[}0,1). Why 0.\+00390625? It is 1 divided by 256. And finally, this layer produces two blobs, one is the {\ttfamily data} blob, and one is the {\ttfamily label} blob.
+
+\subsubsection*{Writing the Convolution Layer}
+
+Let\textquotesingle{}s define the first convolution layer\+: \begin{DoxyVerb}layer {
+  name: "conv1"
+  type: "Convolution"
+  param { lr_mult: 1 }
+  param { lr_mult: 2 }
+  convolution_param {
+    num_output: 20
+    kernel_size: 5
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  bottom: "data"
+  top: "conv1"
+}
+\end{DoxyVerb}
+
+
+This layer takes the {\ttfamily data} blob (it is provided by the data layer), and produces the {\ttfamily conv1} layer. It produces outputs of 20 channels, with the convolutional kernel size 5 and carried out with stride 1.
+
+The fillers allow us to randomly initialize the value of the weights and bias. For the weight filler, we will use the {\ttfamily xavier} algorithm that automatically determines the scale of initialization based on the number of input and output neurons. For the bias filler, we will simply initialize it as constant, with the default filling value 0.
+
+{\ttfamily lr\+\_\+mult}s are the learning rate adjustments for the layer\textquotesingle{}s learnable parameters. In this case, we will set the weight learning rate to be the same as the learning rate given by the solver during runtime, and the bias learning rate to be twice as large as that -\/ this usually leads to better convergence rates.
+
+\subsubsection*{Writing the Pooling Layer}
+
+Phew. Pooling layers are actually much easier to define\+: \begin{DoxyVerb}layer {
+  name: "pool1"
+  type: "Pooling"
+  pooling_param {
+    kernel_size: 2
+    stride: 2
+    pool: MAX
+  }
+  bottom: "conv1"
+  top: "pool1"
+}
+\end{DoxyVerb}
+
+
+This says we will perform max pooling with a pool kernel size 2 and a stride of 2 (so no overlapping between neighboring pooling regions).
+
+Similarly, you can write up the second convolution and pooling layers. Check {\ttfamily \$\+C\+A\+F\+F\+E\+\_\+\+R\+O\+OT/examples/mnist/lenet\+\_\+train\+\_\+test.prototxt} for details.
+
+\subsubsection*{Writing the Fully Connected Layer}
+
+Writing a fully connected layer is also simple\+: \begin{DoxyVerb}layer {
+  name: "ip1"
+  type: "InnerProduct"
+  param { lr_mult: 1 }
+  param { lr_mult: 2 }
+  inner_product_param {
+    num_output: 500
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  bottom: "pool2"
+  top: "ip1"
+}
+\end{DoxyVerb}
+
+
+This defines a fully connected layer (known in Caffe as an {\ttfamily Inner\+Product} layer) with 500 outputs. All other lines look familiar, right?
+
+\subsubsection*{Writing the Re\+LU Layer}
+
+A Re\+LU Layer is also simple\+: \begin{DoxyVerb}layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "ip1"
+  top: "ip1"
+}
+\end{DoxyVerb}
+
+
+Since Re\+LU is an element-\/wise operation, we can do {\itshape in-\/place} operations to save some memory. This is achieved by simply giving the same name to the bottom and top blobs. Of course, do N\+OT use duplicated blob names for other layer types!
+
+After the Re\+LU layer, we will write another innerproduct layer\+: \begin{DoxyVerb}layer {
+  name: "ip2"
+  type: "InnerProduct"
+  param { lr_mult: 1 }
+  param { lr_mult: 2 }
+  inner_product_param {
+    num_output: 10
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+  bottom: "ip1"
+  top: "ip2"
+}
+\end{DoxyVerb}
+
+
+\subsubsection*{Writing the Loss Layer}
+
+Finally, we will write the loss! \begin{DoxyVerb}layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "ip2"
+  bottom: "label"
+}
+\end{DoxyVerb}
+
+
+The {\ttfamily softmax\+\_\+loss} layer implements both the softmax and the multinomial logistic loss (that saves time and improves numerical stability). It takes two blobs, the first one being the prediction and the second one being the {\ttfamily label} provided by the data layer (remember it?). It does not produce any outputs -\/ all it does is to compute the loss function value, report it when backpropagation starts, and initiates the gradient with respect to {\ttfamily ip2}. This is where all magic starts.
+
+\subsubsection*{Additional Notes\+: Writing Layer Rules}
+
+Layer definitions can include rules for whether and when they are included in the network definition, like the one below\+: \begin{DoxyVerb}layer {
+  // ...layer definition...
+  include: { phase: TRAIN }
+}
+\end{DoxyVerb}
+
+
+This is a rule, which controls layer inclusion in the network, based on current network\textquotesingle{}s state. You can refer to {\ttfamily \$\+C\+A\+F\+F\+E\+\_\+\+R\+O\+OT/src/caffe/proto/caffe.proto} for more information about layer rules and model schema.
+
+In the above example, this layer will be included only in {\ttfamily T\+R\+A\+IN} phase. If we change {\ttfamily T\+R\+A\+IN} with {\ttfamily T\+E\+ST}, then this layer will be used only in test phase. By default, that is without layer rules, a layer is always included in the network. Thus, {\ttfamily lenet\+\_\+train\+\_\+test.\+prototxt} has two {\ttfamily D\+A\+TA} layers defined (with different {\ttfamily batch\+\_\+size}), one for the training phase and one for the testing phase. Also, there is an {\ttfamily Accuracy} layer which is included only in {\ttfamily T\+E\+ST} phase for reporting the model accuracy every 100 iteration, as defined in {\ttfamily lenet\+\_\+solver.\+prototxt}.
+
+\subsection*{Define the M\+N\+I\+ST Solver}
+
+Check out the comments explaining each line in the prototxt {\ttfamily \$\+C\+A\+F\+F\+E\+\_\+\+R\+O\+OT/examples/mnist/lenet\+\_\+solver.prototxt}\+: \begin{DoxyVerb}# The train/test net protocol buffer definition
+net: "examples/mnist/lenet_train_test.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+# In the case of MNIST, we have test batch size 100 and 100 test iterations,
+# covering the full 10,000 testing images.
+test_iter: 100
+# Carry out testing every 500 training iterations.
+test_interval: 500
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+momentum: 0.9
+weight_decay: 0.0005
+# The learning rate policy
+lr_policy: "inv"
+gamma: 0.0001
+power: 0.75
+# Display every 100 iterations
+display: 100
+# The maximum number of iterations
+max_iter: 10000
+# snapshot intermediate results
+snapshot: 5000
+snapshot_prefix: "examples/mnist/lenet"
+# solver mode: CPU or GPU
+solver_mode: GPU
+\end{DoxyVerb}
+
+
+\subsection*{Training and Testing the Model}
+
+Training the model is simple after you have written the network definition protobuf and solver protobuf files. Simply run {\ttfamily train\+\_\+lenet.\+sh}, or the following command directly\+: \begin{DoxyVerb}cd $CAFFE_ROOT
+./examples/mnist/train_lenet.sh
+\end{DoxyVerb}
+
+
+{\ttfamily train\+\_\+lenet.\+sh} is a simple script, but here is a quick explanation\+: the main tool for training is {\ttfamily caffe} with action {\ttfamily train} and the solver protobuf text file as its argument.
+
+When you run the code, you will see a lot of messages flying by like this\+: \begin{DoxyVerb}I1203 net.cpp:66] Creating Layer conv1
+I1203 net.cpp:76] conv1 <- data
+I1203 net.cpp:101] conv1 -> conv1
+I1203 net.cpp:116] Top shape: 20 24 24
+I1203 net.cpp:127] conv1 needs backward computation.
+\end{DoxyVerb}
+
+
+These messages tell you the details about each layer, its connections and its output shape, which may be helpful in debugging. After the initialization, the training will start\+: \begin{DoxyVerb}I1203 net.cpp:142] Network initialization done.
+I1203 solver.cpp:36] Solver scaffolding done.
+I1203 solver.cpp:44] Solving LeNet
+\end{DoxyVerb}
+
+
+Based on the solver setting, we will print the training loss function every 100 iterations, and test the network every 500 iterations. You will see messages like this\+: \begin{DoxyVerb}I1203 solver.cpp:204] Iteration 100, lr = 0.00992565
+I1203 solver.cpp:66] Iteration 100, loss = 0.26044
+...
+I1203 solver.cpp:84] Testing net
+I1203 solver.cpp:111] Test score #0: 0.9785
+I1203 solver.cpp:111] Test score #1: 0.0606671
+\end{DoxyVerb}
+
+
+For each training iteration, {\ttfamily lr} is the learning rate of that iteration, and {\ttfamily loss} is the training function. For the output of the testing phase, score 0 is the accuracy, and score 1 is the testing loss function.
+
+And after a few minutes, you are done! \begin{DoxyVerb}I1203 solver.cpp:84] Testing net
+I1203 solver.cpp:111] Test score #0: 0.9897
+I1203 solver.cpp:111] Test score #1: 0.0324599
+I1203 solver.cpp:126] Snapshotting to lenet_iter_10000
+I1203 solver.cpp:133] Snapshotting solver state to lenet_iter_10000.solverstate
+I1203 solver.cpp:78] Optimization Done.
+\end{DoxyVerb}
+
+
+The final model, stored as a binary protobuf file, is stored at \begin{DoxyVerb}lenet_iter_10000
+\end{DoxyVerb}
+
+
+which you can deploy as a trained model in your application, if you are training on a real-\/world application dataset.
+
+\subsubsection*{Um... How about G\+PU training?}
+
+You just did! All the training was carried out on the G\+PU. In fact, if you would like to do training on C\+PU, you can simply change one line in {\ttfamily lenet\+\_\+solver.\+prototxt}\+: \begin{DoxyVerb}# solver mode: CPU or GPU
+solver_mode: CPU
+\end{DoxyVerb}
+
+
+and you will be using C\+PU for training. Isn\textquotesingle{}t that easy?
+
+M\+N\+I\+ST is a small dataset, so training with G\+PU does not really introduce too much benefit due to communication overheads. On larger datasets with more complex models, such as Image\+Net, the computation speed difference will be more significant.
+
+\subsubsection*{How to reduce the learning rate at fixed steps?}
+
+Look at lenet\+\_\+multistep\+\_\+solver.\+prototxt 

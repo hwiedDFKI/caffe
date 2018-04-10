@@ -1,0 +1,4 @@
+<map id="caffe::Layer::MaxBottomBlobs" name="caffe::Layer::MaxBottomBlobs">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a55c8036130225fbc874a986bdf4b27e2" title="caffe::Layer::CheckBlobCounts" alt="" coords="252,5,457,32"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html#a18d6bfdb535ab8e96a971dec4ae39a84" title="Implements common layer setup functionality. " alt="" coords="505,5,641,32"/>
+</map>

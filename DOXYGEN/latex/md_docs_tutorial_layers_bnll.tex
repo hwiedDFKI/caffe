@@ -1,0 +1,30 @@
+
+
+ \subsection*{title\+: B\+N\+LL Layer }
+
+\section*{B\+N\+LL Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily B\+N\+LL}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1BNLLLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/bnll_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/bnll\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/bnll_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/bnll\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/bnll_layer.cu}{\tt {\ttfamily ./src/caffe/layers/bnll\+\_\+layer.cu}}
+\end{DoxyItemize}
+
+The {\ttfamily B\+N\+LL} (binomial normal log likelihood) layer computes the output as log(1 + exp(x)) for each input element x.
+
+\subsection*{Parameters}
+
+No parameters.
+
+\subsection*{Sample}
+
+\begin{DoxyVerb}  layer {
+    name: "layer"
+    bottom: "in"
+    top: "out"
+    type: BNLL
+  }\end{DoxyVerb}
+ 

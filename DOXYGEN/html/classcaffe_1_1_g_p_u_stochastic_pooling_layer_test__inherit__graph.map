@@ -1,0 +1,5 @@
+<map id="caffe::GPUStochasticPoolingLayerTest&lt; Dtype &gt;" name="caffe::GPUStochasticPoolingLayerTest&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_stochastic_pooling_layer_test.html" title="caffe::StochasticPooling\lLayerTest\&lt; GPUDevice\&lt;\l Dtype \&gt; \&gt;" alt="" coords="17,169,187,225"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; GPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="15,80,189,121"/>
+<area shape="rect" id="node4" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="55,5,149,32"/>
+</map>

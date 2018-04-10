@@ -1,0 +1,4 @@
+<map id="caffe::RecurrentLayer::MaxBottomBlobs" name="caffe::RecurrentLayer::MaxBottomBlobs">
+<area shape="rect" id="node2" href="$classcaffe_1_1_recurrent_layer.html#ac31b705bc02d333ae768f7c2184fbfae" title="Returns the minimum number of bottom blobs required by the layer, or &#45;1 if no minimum number is requi..." alt="" coords="201,5,349,47"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_recurrent_layer.html#a9d9dab800f838e38651678718adfbbf6" title="Fills names with the names of the 0th timestep recurrent input Blob&amp;s. Subclasses should define this ..." alt="" coords="397,5,581,47"/>
+</map>

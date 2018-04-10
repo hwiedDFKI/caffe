@@ -1,0 +1,78 @@
+
+
+ \subsection*{title\+: Model Zoo }
+
+\section*{Caffe Model Zoo}
+
+Lots of researchers and engineers have made Caffe models for different tasks with all kinds of architectures and data\+: check out the \href{https://github.com/BVLC/caffe/wiki/Model-Zoo}{\tt model zoo}! These models are learned and applied for problems ranging from simple regression, to large-\/scale visual classification, to Siamese networks for image similarity, to speech and robotics applications.
+
+To help share these models, we introduce the model zoo framework\+:
+
+
+\begin{DoxyItemize}
+\item A standard format for packaging Caffe model info.
+\item Tools to upload/download model info to/from Github Gists, and to download trained {\ttfamily .caffemodel} binaries.
+\item A central wiki page for sharing model info Gists.
+\end{DoxyItemize}
+
+\subsection*{Where to get trained models}
+
+First of all, we bundle B\+A\+I\+R-\/trained models for unrestricted, out of the box use. ~\newline
+ See the \href{#bair-model-license}{\tt B\+A\+IR model license} for details. Each one of these can be downloaded by running {\ttfamily scripts/download\+\_\+model\+\_\+binary.\+py $<$dirname$>$} where {\ttfamily $<$dirname$>$} is specified below\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+A\+IR Reference Caffe\+Net} in {\ttfamily models/bvlc\+\_\+reference\+\_\+caffenet}\+: Alex\+Net trained on I\+L\+S\+V\+RC 2012, with a minor variation from the version as described in \href{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks}{\tt Image\+Net classification with deep convolutional neural networks} by Krizhevsky et al. in N\+I\+PS 2012. (Trained by Jeff Donahue )
+\item {\bfseries B\+A\+IR Alex\+Net} in {\ttfamily models/bvlc\+\_\+alexnet}\+: Alex\+Net trained on I\+L\+S\+V\+RC 2012, almost exactly as described in \href{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks}{\tt Image\+Net classification with deep convolutional neural networks} by Krizhevsky et al. in N\+I\+PS 2012. (Trained by Evan Shelhamer )
+\item {\bfseries B\+A\+IR Reference R-\/\+C\+NN I\+L\+S\+V\+R\+C-\/2013} in {\ttfamily models/bvlc\+\_\+reference\+\_\+rcnn\+\_\+ilsvrc13}\+: pure Caffe implementation of \href{https://github.com/rbgirshick/rcnn}{\tt R-\/\+C\+NN} as described by Girshick et al. in C\+V\+PR 2014. (Trained by Ross Girshick )
+\item {\bfseries B\+A\+IR Goog\+Le\+Net} in {\ttfamily models/bvlc\+\_\+googlenet}\+: Goog\+Le\+Net trained on I\+L\+S\+V\+RC 2012, almost exactly as described in \href{http://arxiv.org/abs/1409.4842}{\tt Going Deeper with Convolutions} by Szegedy et al. in I\+L\+S\+V\+RC 2014. (Trained by Sergio Guadarrama )
+\end{DoxyItemize}
+
+{\bfseries Community models} made by Caffe users are posted to a publicly editable \href{https://github.com/BVLC/caffe/wiki/Model-Zoo}{\tt model zoo wiki page}. These models are subject to conditions of their respective authors such as citation and license. Thank you for sharing your models!
+
+\subsection*{Model info format}
+
+A caffe model is distributed as a directory containing\+:
+
+
+\begin{DoxyItemize}
+\item Solver/model prototxt(s)
+\item {\ttfamily readme.\+md} containing
+\begin{DoxyItemize}
+\item Y\+A\+ML frontmatter
+\begin{DoxyItemize}
+\item Caffe version used to train this model (tagged release or commit hash).
+\item \mbox{[}optional\mbox{]} file U\+RL and S\+H\+A1 of the trained {\ttfamily .caffemodel}.
+\item \mbox{[}optional\mbox{]} github gist id.
+\end{DoxyItemize}
+\item Information about what data the model was trained on, modeling choices, etc.
+\item License information.
+\end{DoxyItemize}
+\item \mbox{[}optional\mbox{]} Other helpful scripts.
+\end{DoxyItemize}
+
+This simple format can be handled through bundled scripts or manually if need be.
+
+\subsubsection*{Hosting model info}
+
+Github Gist is a good format for model info distribution because it can contain multiple files, is versionable, and has in-\/browser syntax highlighting and markdown rendering.
+
+{\ttfamily scripts/upload\+\_\+model\+\_\+to\+\_\+gist.\+sh $<$dirname$>$} uploads non-\/binary files in the model directory as a Github Gist and prints the Gist ID. If {\ttfamily gist\+\_\+id} is already part of the {\ttfamily $<$dirname$>$/readme.md} frontmatter, then updates existing Gist.
+
+Try doing {\ttfamily scripts/upload\+\_\+model\+\_\+to\+\_\+gist.\+sh models/bvlc\+\_\+alexnet} to test the uploading (don\textquotesingle{}t forget to delete the uploaded gist afterward).
+
+Downloading model info is done just as easily with {\ttfamily scripts/download\+\_\+model\+\_\+from\+\_\+gist.\+sh $<$gist\+\_\+id$>$ $<$dirname$>$}.
+
+\subsubsection*{Hosting trained models}
+
+It is up to the user where to host the {\ttfamily .caffemodel} file. We host our B\+A\+I\+R-\/provided models on our own server. Dropbox also works fine (tip\+: make sure that {\ttfamily ?dl=1} is appended to the end of the U\+RL).
+
+{\ttfamily scripts/download\+\_\+model\+\_\+binary.\+py $<$dirname$>$} downloads the {\ttfamily .caffemodel} from the U\+RL specified in the {\ttfamily $<$dirname$>$/readme.md} frontmatter and confirms S\+H\+A1.
+
+\subsection*{B\+A\+IR model license}
+
+The Caffe models bundled by the B\+A\+IR are released for unrestricted use.
+
+These models are trained on data from the \href{http://www.image-net.org/}{\tt Image\+Net project} and training data includes internet photos that may be subject to copyright.
+
+Our present understanding as researchers is that there is no restriction placed on the open release of these learned model weights, since none of the original images are distributed in whole or in part. To the extent that the interpretation arises that weights are derivative works of the original copyright holder and they assert such a copyright, UC Berkeley makes no representations as to what use is allowed other than to consider our present release in the spirit of fair use in the academic mission of the university to disseminate knowledge and tools as broadly as possible without restriction. 

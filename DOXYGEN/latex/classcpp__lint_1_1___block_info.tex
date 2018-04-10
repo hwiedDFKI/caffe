@@ -1,0 +1,80 @@
+\hypertarget{classcpp__lint_1_1___block_info}{}\section{cpp\+\_\+lint.\+\_\+\+Block\+Info Class Reference}
+\label{classcpp__lint_1_1___block_info}\index{cpp\+\_\+lint.\+\_\+\+Block\+Info@{cpp\+\_\+lint.\+\_\+\+Block\+Info}}
+
+
+Inheritance diagram for cpp\+\_\+lint.\+\_\+\+Block\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classcpp__lint_1_1___block_info__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___block_info_a32861c4229ec1a33e077b77a63d5e619}\label{classcpp__lint_1_1___block_info_a32861c4229ec1a33e077b77a63d5e619}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, seen\+\_\+open\+\_\+brace)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___block_info_a69357fb2efabae1dd77aab9942b90560}{Check\+Begin}} (self, filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___block_info_abc44459ea5e04d6a9a4d816e85998bfc}{Check\+End}} (self, filename, clean\+\_\+lines, linenum, error)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___block_info_a7629061e1d7dbc7d15cdd521239a29ad}\label{classcpp__lint_1_1___block_info_a7629061e1d7dbc7d15cdd521239a29ad}} 
+{\bfseries seen\+\_\+open\+\_\+brace}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___block_info_a5b86c27ea6a6641fcb0d242dfed898b6}\label{classcpp__lint_1_1___block_info_a5b86c27ea6a6641fcb0d242dfed898b6}} 
+{\bfseries open\+\_\+parentheses}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___block_info_a7577f54a4359d9979e8765934b988187}\label{classcpp__lint_1_1___block_info_a7577f54a4359d9979e8765934b988187}} 
+{\bfseries inline\+\_\+asm}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Stores information about a generic block of code.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpp__lint_1_1___block_info_a69357fb2efabae1dd77aab9942b90560}\label{classcpp__lint_1_1___block_info_a69357fb2efabae1dd77aab9942b90560}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Block\+Info@{cpp\+\_\+lint\+::\+\_\+\+Block\+Info}!Check\+Begin@{Check\+Begin}}
+\index{Check\+Begin@{Check\+Begin}!cpp\+\_\+lint\+::\+\_\+\+Block\+Info@{cpp\+\_\+lint\+::\+\_\+\+Block\+Info}}
+\subsubsection{\texorpdfstring{Check\+Begin()}{CheckBegin()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Block\+Info.\+Check\+Begin (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{clean\+\_\+lines,  }\item[{}]{linenum,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run checks that applies to text up to the opening brace.
+
+This is mostly for checking the text after the class identifier
+and the "{", usually where the base class is specified.  For other
+blocks, there isn't much to check, so we always pass.
+
+Args:
+  filename: The name of the current file.
+  clean_lines: A CleansedLines instance containing the file.
+  linenum: The number of the line to check.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classcpp__lint_1_1___block_info_abc44459ea5e04d6a9a4d816e85998bfc}\label{classcpp__lint_1_1___block_info_abc44459ea5e04d6a9a4d816e85998bfc}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Block\+Info@{cpp\+\_\+lint\+::\+\_\+\+Block\+Info}!Check\+End@{Check\+End}}
+\index{Check\+End@{Check\+End}!cpp\+\_\+lint\+::\+\_\+\+Block\+Info@{cpp\+\_\+lint\+::\+\_\+\+Block\+Info}}
+\subsubsection{\texorpdfstring{Check\+End()}{CheckEnd()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Block\+Info.\+Check\+End (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{clean\+\_\+lines,  }\item[{}]{linenum,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run checks that applies to text after the closing brace.
+
+This is mostly used for checking end of namespace comments.
+
+Args:
+  filename: The name of the current file.
+  clean_lines: A CleansedLines instance containing the file.
+  linenum: The number of the line to check.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/cpp\+\_\+lint.\+py\end{DoxyCompactItemize}

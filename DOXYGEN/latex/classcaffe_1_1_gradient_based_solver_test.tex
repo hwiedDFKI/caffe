@@ -1,0 +1,78 @@
+\hypertarget{classcaffe_1_1_gradient_based_solver_test}{}\section{caffe\+:\+:Gradient\+Based\+Solver\+Test$<$ Type\+Param $>$ Class Template Reference}
+\label{classcaffe_1_1_gradient_based_solver_test}\index{caffe\+::\+Gradient\+Based\+Solver\+Test$<$ Type\+Param $>$@{caffe\+::\+Gradient\+Based\+Solver\+Test$<$ Type\+Param $>$}}
+
+
+Inheritance diagram for caffe\+:\+:Gradient\+Based\+Solver\+Test$<$ Type\+Param $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_gradient_based_solver_test__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a4bec85e24cc8c2803b5d85ed424e4b84}\label{classcaffe_1_1_gradient_based_solver_test_a4bec85e24cc8c2803b5d85ed424e4b84}} 
+virtual void {\bfseries Init\+Solver} (const \mbox{\hyperlink{classcaffe_1_1_solver_parameter}{Solver\+Parameter}} \&param)=0
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_ae770f26cc56cd77771209e3b333c8b5d}\label{classcaffe_1_1_gradient_based_solver_test_ae770f26cc56cd77771209e3b333c8b5d}} 
+virtual void {\bfseries Init\+Solver\+From\+Proto\+String} (const string \&proto)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a25e92cac3dff8b359ea16ef29ec05013}\label{classcaffe_1_1_gradient_based_solver_test_a25e92cac3dff8b359ea16ef29ec05013}} 
+string {\bfseries Run\+Least\+Squares\+Solver} (const Dtype learning\+\_\+rate, const Dtype weight\+\_\+decay, const Dtype momentum, const int num\+\_\+iters, const int iter\+\_\+size=1, const int devices=1, const bool snapshot=false, const char $\ast$from\+\_\+snapshot=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_ac578855938156dd5287abfcd16c323b2}\label{classcaffe_1_1_gradient_based_solver_test_ac578855938156dd5287abfcd16c323b2}} 
+void {\bfseries Compute\+Least\+Squares\+Update} (const Dtype learning\+\_\+rate, const Dtype weight\+\_\+decay, const Dtype momentum, const int num\+\_\+iters, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ $\ast$updated\+\_\+params)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a86b866f20fb6fcf8118b9bf668d8ef38}\label{classcaffe_1_1_gradient_based_solver_test_a86b866f20fb6fcf8118b9bf668d8ef38}} 
+void {\bfseries Check\+Least\+Squares\+Update} (const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \&updated\+\_\+params)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a88e6a5c3d61c996a560017235b1ac725}\label{classcaffe_1_1_gradient_based_solver_test_a88e6a5c3d61c996a560017235b1ac725}} 
+void {\bfseries Check\+Accumulation} (const Dtype k\+Learning\+Rate, const Dtype k\+Weight\+Decay, const Dtype k\+Momentum, const int k\+Num\+Iters, const int k\+Iter\+Size)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a7e07c64187e9fce79624b0edde1d5742}\label{classcaffe_1_1_gradient_based_solver_test_a7e07c64187e9fce79624b0edde1d5742}} 
+void {\bfseries Test\+Least\+Squares\+Update} (const Dtype learning\+\_\+rate=1.\+0, const Dtype weight\+\_\+decay=0.\+0, const Dtype momentum=0.\+0, const int iter\+\_\+to\+\_\+check=0)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a953965f50d4420c466ed88e4c42f3f1a}\label{classcaffe_1_1_gradient_based_solver_test_a953965f50d4420c466ed88e4c42f3f1a}} 
+void {\bfseries Test\+Snapshot} (const Dtype learning\+\_\+rate=1.\+0, const Dtype weight\+\_\+decay=0.\+0, const Dtype momentum=0.\+0, const int num\+\_\+iters=1)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a5610510dade22efa65d065081c099cbc}\label{classcaffe_1_1_gradient_based_solver_test_a5610510dade22efa65d065081c099cbc}} 
+string {\bfseries snapshot\+\_\+prefix\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a33bd6f33358c8bcea3826cc5f09c139a}\label{classcaffe_1_1_gradient_based_solver_test_a33bd6f33358c8bcea3826cc5f09c139a}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_s_g_d_solver}{S\+G\+D\+Solver}}$<$ Dtype $>$ $>$ {\bfseries solver\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_ac71b2e895e3ca573d7292205fd1a25a3}\label{classcaffe_1_1_gradient_based_solver_test_ac71b2e895e3ca573d7292205fd1a25a3}} 
+int {\bfseries seed\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a84b19cc4631220ac8790cbc5afec5ac2}\label{classcaffe_1_1_gradient_based_solver_test_a84b19cc4631220ac8790cbc5afec5ac2}} 
+int {\bfseries num\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a44602b930f62febb3c2c13dbfe07a46e}\label{classcaffe_1_1_gradient_based_solver_test_a44602b930f62febb3c2c13dbfe07a46e}} 
+int {\bfseries channels\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a11c43c781e8360f7f9fa7f8bedb6021f}\label{classcaffe_1_1_gradient_based_solver_test_a11c43c781e8360f7f9fa7f8bedb6021f}} 
+int {\bfseries height\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_afb5938b535a7169302c89b58786ff3d5}\label{classcaffe_1_1_gradient_based_solver_test_afb5938b535a7169302c89b58786ff3d5}} 
+int {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_adaf3640d0810ae85d10cdce1caf1b47b}\label{classcaffe_1_1_gradient_based_solver_test_adaf3640d0810ae85d10cdce1caf1b47b}} 
+bool {\bfseries share\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a4b583aff0c7608520dc15ae0d7e5503a}\label{classcaffe_1_1_gradient_based_solver_test_a4b583aff0c7608520dc15ae0d7e5503a}} 
+Dtype {\bfseries delta\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_based_solver_test_a104e0b565e11e969d80c624f85da6106}\label{classcaffe_1_1_gradient_based_solver_test_a104e0b565e11e969d80c624f85da6106}} 
+string $\ast$ {\bfseries input\+\_\+file\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/caffe/test/test\+\_\+gradient\+\_\+based\+\_\+solver.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+
+
+ \subsection*{title\+: Deep Learning Framework }
+
+\section*{Caffe}
+
+Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by Berkeley AI Research (\href{http://bair.berkeley.edu}{\tt B\+A\+IR}) and by community contributors. \href{http://daggerfs.com}{\tt Yangqing Jia} created the project during his PhD at UC Berkeley. Caffe is released under the \href{https://github.com/BVLC/caffe/blob/master/LICENSE}{\tt B\+SD 2-\/\+Clause license}.
+
+Check out our web image classification \href{http://demo.caffe.berkeleyvision.org}{\tt demo}!
+
+\subsection*{Why Caffe?}
+
+{\bfseries Expressive architecture} encourages application and innovation. Models and optimization are defined by configuration without hard-\/coding. Switch between C\+PU and G\+PU by setting a single flag to train on a G\+PU machine then deploy to commodity clusters or mobile devices.
+
+{\bfseries Extensible code} fosters active development. In Caffe\textquotesingle{}s first year, it has been forked by over 1,000 developers and had many significant changes contributed back. Thanks to these contributors the framework tracks the state-\/of-\/the-\/art in both code and models.
+
+{\bfseries Speed} makes Caffe perfect for research experiments and industry deployment. Caffe can process {\bfseries over 60M images per day} with a single N\+V\+I\+D\+IA K40 G\+P\+U$\ast$. That\textquotesingle{}s 1 ms/image for inference and 4 ms/image for learning and more recent library versions and hardware are faster still. We believe that Caffe is among the fastest convnet implementations available.
+
+{\bfseries Community}\+: Caffe already powers academic research projects, startup prototypes, and even large-\/scale industrial applications in vision, speech, and multimedia. Join our community of brewers on the \href{https://groups.google.com/forum/#!forum/caffe-users}{\tt caffe-\/users group} and \href{https://github.com/BVLC/caffe/}{\tt Github}.
+
+
+\begin{DoxyItemize}
+\item With the I\+L\+S\+V\+R\+C2012-\/winning \href{http://www.image-net.org/challenges/LSVRC/2012/supervision.pdf}{\tt Super\+Vision} model and prefetching IO. 
+\end{DoxyItemize}
+
+\subsection*{Documentation}
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.google.com/presentation/d/1UeKXVgRvvxg9OUdh_UiC5G71UMscNPlvArsWER41PsU/edit#slide=id.p}{\tt D\+IY Deep Learning for Vision with Caffe} and \href{https://docs.google.com/presentation/d/1HxGdeq8MPktHaPb-rlmYYQ723iWzq9ur6Gjo71YiG0Y/edit#slide=id.gc2fcdcce7_216_0}{\tt Caffe in a Day}~\newline
+ Tutorial presentation of the framework and a full-\/day crash course.
+\item \href{/tutorial}{\tt Tutorial Documentation}~\newline
+ Practical guide and framework reference.
+\item \href{http://arxiv.org/abs/1408.5093}{\tt ar\+Xiv / A\+CM MM \textquotesingle{}14 paper}~\newline
+ A 4-\/page report for the A\+CM Multimedia Open Source competition (ar\+Xiv\+:1408.\+5093v1).
+\item \href{/installation.html}{\tt Installation instructions}~\newline
+ Tested on Ubuntu, Red Hat, OS X.
+\item \href{/model_zoo.html}{\tt Model Zoo}~\newline
+ B\+A\+IR suggests a standard distribution format for Caffe models, and provides trained models.
+\item \href{/development.html}{\tt Developing \& Contributing}~\newline
+ Guidelines for development and contributing to Caffe.
+\item \href{/doxygen/annotated.html}{\tt A\+PI Documentation}~\newline
+ Developer documentation automagically generated from code comments.
+\item \href{https://docs.google.com/spreadsheets/d/1Yp4rqHpT7mKxOPbpzYeUfEFLnELDAgxSSBQKp5uKDGQ/edit#gid=0}{\tt Benchmarking}~\newline
+ Comparison of inference and learning for different networks and G\+P\+Us.
+\end{DoxyItemize}
+
+\subsubsection*{Notebook Examples}
+
+\{\% assign notebooks = site.\+pages $\vert$ where\+:\textquotesingle{}category\textquotesingle{},\textquotesingle{}notebook\textquotesingle{} $\vert$ sort\+: \textquotesingle{}priority\textquotesingle{} \%\} \{\% for page in notebooks \%\}
+\begin{DoxyItemize}
+\item \href{http://nbviewer.ipython.org/github/BVLC/caffe/blob/master/{{page.original_path}}}{\tt \{\{page.\+title\}\}}~\newline
+\{\{page.\+description\}\} \{\% endfor \%\}
+\end{DoxyItemize}
+
+\subsubsection*{Command Line Examples}
+
+\{\% assign examples = site.\+pages $\vert$ where\+:\textquotesingle{}category\textquotesingle{},\textquotesingle{}example\textquotesingle{} $\vert$ sort\+: \textquotesingle{}priority\textquotesingle{} \%\} \{\% for page in examples \%\}
+\begin{DoxyItemize}
+\item \href{{{page.url}}}{\tt \{\{page.\+title\}\}}~\newline
+\{\{page.\+description\}\} \{\% endfor \%\}
+\end{DoxyItemize}
+
+\subsection*{Citing Caffe}
+
+Please cite Caffe in your publications if it helps your research\+: \begin{DoxyVerb}@article{jia2014caffe,
+  Author = {Jia, Yangqing and Shelhamer, Evan and Donahue, Jeff and Karayev, Sergey and Long, Jonathan and Girshick, Ross and Guadarrama, Sergio and Darrell, Trevor},
+  Journal = {arXiv preprint arXiv:1408.5093},
+  Title = {Caffe: Convolutional Architecture for Fast Feature Embedding},
+  Year = {2014}
+}
+\end{DoxyVerb}
+
+
+If you do publish a paper where Caffe helped your research, we encourage you to cite the framework for tracking by \href{https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=-ltRSM0AAAAJ:u5HHmVD_uO8C}{\tt Google Scholar}.
+
+\subsection*{Contacting Us}
+
+Join the \href{https://groups.google.com/forum/#!forum/caffe-users}{\tt caffe-\/users group} to ask questions and discuss methods and models. This is where we talk about usage, installation, and applications.
+
+Framework development discussions and thorough bug reports are collected on \href{https://github.com/BVLC/caffe/issues}{\tt Issues}.
+
+\subsection*{Acknowledgements}
+
+The B\+A\+IR Caffe developers would like to thank N\+V\+I\+D\+IA for G\+PU donation, A9 and Amazon Web Services for a research grant in support of Caffe development and reproducible research in deep learning, and B\+A\+IR PI \href{http://www.eecs.berkeley.edu/~trevor/}{\tt Trevor Darrell} for guidance.
+
+The B\+A\+IR members who have contributed to Caffe are (alphabetical by first name)\+: \href{http://www.carldoersch.com/}{\tt Carl Doersch}, \href{https://github.com/erictzeng}{\tt Eric Tzeng}, \href{http://imaginarynumber.net/}{\tt Evan Shelhamer}, \href{http://jeffdonahue.com/}{\tt Jeff Donahue}, \href{https://github.com/longjon}{\tt Jon Long}, \href{http://www.philkr.net/}{\tt Philipp Krähenbühl}, \href{http://ronghanghu.com/}{\tt Ronghang Hu}, \href{http://www.cs.berkeley.edu/~rbg/}{\tt Ross Girshick}, \href{http://sergeykarayev.com/}{\tt Sergey Karayev}, \href{http://www.eecs.berkeley.edu/~sguada/}{\tt Sergio Guadarrama}, \href{https://github.com/tnarihi}{\tt Takuya Narihira}, and \href{http://daggerfs.com/}{\tt Yangqing Jia}.
+
+The open-\/source community plays an important and growing role in Caffe\textquotesingle{}s development. Check out the Github \href{https://github.com/BVLC/caffe/pulse}{\tt project pulse} for recent activity and the \href{https://github.com/BVLC/caffe/graphs/contributors}{\tt contributors} for the full list.
+
+We sincerely appreciate your interest and contributions! If you\textquotesingle{}d like to contribute, please read the \href{development.html}{\tt developing \& contributing} guide.
+
+Yangqing would like to give a personal thanks to the N\+V\+I\+D\+IA Academic program for providing G\+P\+Us, \href{http://www1.icsi.berkeley.edu/~vinyals/}{\tt Oriol Vinyals} for discussions along the journey, and B\+A\+IR PI \href{http://www.eecs.berkeley.edu/~trevor/}{\tt Trevor Darrell} for advice. 

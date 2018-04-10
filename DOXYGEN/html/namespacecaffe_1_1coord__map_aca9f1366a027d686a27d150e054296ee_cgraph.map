@@ -1,0 +1,6 @@
+<map id="caffe.coord_map.crop" name="caffe.coord_map.crop">
+<area shape="rect" id="node2" href="$namespacecaffe_1_1coord__map.html#abf9ba4c31e6e4f0bcd3130ea9001514b" title="caffe.coord_map.coord\l_map_from_to" alt="" coords="201,49,356,90"/>
+<area shape="rect" id="node3" href="$namespacecaffe_1_1coord__map.html#a06830f75738dcbc0b29bfeb30ae4f990" title="caffe.coord_map.compose" alt="" coords="409,5,585,32"/>
+<area shape="rect" id="node4" href="$namespacecaffe_1_1coord__map.html#a0f5ba2053a2fd10038360dea8b2e5b9b" title="caffe.coord_map.coord_map" alt="" coords="404,56,591,83"/>
+<area shape="rect" id="node5" href="$namespacecaffe_1_1coord__map.html#ad03646b133a0a44eb1062c6acf677c8c" title="caffe.coord_map.inverse" alt="" coords="415,107,580,133"/>
+</map>

@@ -1,0 +1,155 @@
+
+
+ \subsection*{title\+: Layer Catalogue }
+
+\section*{Layers}
+
+To create a Caffe model you need to define the model architecture in a protocol buffer definition file (prototxt).
+
+Caffe layers and their parameters are defined in the protocol buffer definitions for the project in \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt caffe.\+proto}.
+
+\subsection*{Data Layers}
+
+Data enters Caffe through data layers\+: they lie at the bottom of nets. Data can come from efficient databases (Level\+DB or L\+M\+DB), directly from memory, or, when efficiency is not critical, from files on disk in H\+D\+F5 or common image formats.
+
+Common input preprocessing (mean subtraction, scaling, random cropping, and mirroring) is available by specifying {\ttfamily Transformation\+Parameter}s by some of the layers. The \href{layers/bias.html}{\tt bias}, \href{layers/scale.html}{\tt scale}, and \href{layers/crop.html}{\tt crop} layers can be helpful with transforming the inputs, when {\ttfamily Transformation\+Parameter} isn\textquotesingle{}t available.
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/imagedata.html}{\tt Image Data} -\/ read raw images.
+\item \href{layers/data.html}{\tt Database} -\/ read data from L\+E\+V\+E\+L\+DB or L\+M\+DB.
+\item \href{layers/hdf5data.html}{\tt H\+D\+F5 Input} -\/ read H\+D\+F5 data, allows data of arbitrary dimensions.
+\item \href{layers/hdf5output.html}{\tt H\+D\+F5 Output} -\/ write data as H\+D\+F5.
+\item \href{layers/input.html}{\tt Input} -\/ typically used for networks that are being deployed.
+\item \href{layers/windowdata.html}{\tt Window Data} -\/ read window data file.
+\item \href{layers/memorydata.html}{\tt Memory Data} -\/ read data directly from memory.
+\item \href{layers/dummydata.html}{\tt Dummy Data} -\/ for static data and debugging.
+\end{DoxyItemize}
+
+Note that the \href{layers/python.html}{\tt Python} Layer can be useful for create custom data layers.
+
+\subsection*{Vision Layers}
+
+Vision layers usually take {\itshape images} as input and produce other {\itshape images} as output, although they can take data of other types and dimensions. A typical \char`\"{}image\char`\"{} in the real-\/world may have one color channel (\$\$c = 1\$\$), as in a grayscale image, or three color channels (\$\$c = 3\$\$) as in an R\+GB (red, green, blue) image. But in this context, the distinguishing characteristic of an image is its spatial structure\+: usually an image has some non-\/trivial height \$\$h $>$ 1\$\$ and width \$\$w $>$ 1\$\$. This 2D geometry naturally lends itself to certain decisions about how to process the input. In particular, most of the vision layers work by applying a particular operation to some region of the input to produce a corresponding region of the output. In contrast, other layers (with few exceptions) ignore the spatial structure of the input, effectively treating it as \char`\"{}one big vector\char`\"{} with dimension \$\$chw\$\$.
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/convolution.html}{\tt Convolution Layer} -\/ convolves the input image with a set of learnable filters, each producing one feature map in the output image.
+\item \href{layers/pooling.html}{\tt Pooling Layer} -\/ max, average, or stochastic pooling.
+\item \href{layers/spp.html}{\tt Spatial Pyramid Pooling (S\+PP)}
+\item \href{layers/crop.html}{\tt Crop} -\/ perform cropping transformation.
+\item \href{layers/deconvolution.html}{\tt Deconvolution Layer} -\/ transposed convolution.
+\item \href{layers/im2col.html}{\tt Im2\+Col} -\/ relic helper layer that is not used much anymore.
+\end{DoxyItemize}
+
+\subsection*{Recurrent Layers}
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/recurrent.html}{\tt Recurrent}
+\item \href{layers/rnn.html}{\tt R\+NN}
+\item \href{layers/lstm.html}{\tt Long-\/\+Short Term Memory (L\+S\+TM)}
+\end{DoxyItemize}
+
+\subsection*{Common Layers}
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/innerproduct.html}{\tt Inner Product} -\/ fully connected layer.
+\item \href{layers/dropout.html}{\tt Dropout}
+\item \href{layers/embed.html}{\tt Embed} -\/ for learning embeddings of one-\/hot encoded vector (takes index as input).
+\end{DoxyItemize}
+
+\subsection*{Normalization Layers}
+
+
+\begin{DoxyItemize}
+\item \href{layers/lrn.html}{\tt Local Response Normalization (L\+RN)} -\/ performs a kind of \char`\"{}lateral inhibition\char`\"{} by normalizing over local input regions.
+\item \href{layers/mvn.html}{\tt Mean Variance Normalization (M\+VN)} -\/ performs contrast normalization / instance normalization.
+\item \href{layers/batchnorm.html}{\tt Batch Normalization} -\/ performs normalization over mini-\/batches.
+\end{DoxyItemize}
+
+The \href{layers/bias.html}{\tt bias} and \href{layers/scale.html}{\tt scale} layers can be helpful in combination with normalization.
+
+\subsection*{Activation / Neuron Layers}
+
+In general, activation / Neuron layers are element-\/wise operators, taking one bottom blob and producing one top blob of the same size. In the layers below, we will ignore the input and out sizes as they are identical\+:
+
+
+\begin{DoxyItemize}
+\item Input
+\begin{DoxyItemize}
+\item n $\ast$ c $\ast$ h $\ast$ w
+\end{DoxyItemize}
+\item Output
+\begin{DoxyItemize}
+\item n $\ast$ c $\ast$ h $\ast$ w
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/relu.html}{\tt Re\+LU / Rectified-\/\+Linear and Leaky-\/\+Re\+LU} -\/ Re\+LU and Leaky-\/\+Re\+LU rectification.
+\item \href{layers/prelu.html}{\tt P\+Re\+LU} -\/ parametric Re\+LU.
+\item \href{layers/elu.html}{\tt E\+LU} -\/ exponential linear rectification.
+\item \href{layers/sigmoid.html}{\tt Sigmoid}
+\item \href{layers/tanh.html}{\tt TanH}
+\item \href{layers/absval.html}{\tt Absolute Value}
+\item \href{layers/power.html}{\tt Power} -\/ f(x) = (shift + scale $\ast$ x) $^\wedge$ power.
+\item \href{layers/exp.html}{\tt Exp} -\/ f(x) = base $^\wedge$ (shift + scale $\ast$ x).
+\item \href{layers/log.html}{\tt Log} -\/ f(x) = log(x).
+\item \href{layers/bnll.html}{\tt B\+N\+LL} -\/ f(x) = log(1 + exp(x)).
+\item \href{layers/threshold.html}{\tt Threshold} -\/ performs step function at user defined threshold.
+\item \href{layers/bias.html}{\tt Bias} -\/ adds a bias to a blob that can either be learned or fixed.
+\item \href{layers/scale.html}{\tt Scale} -\/ scales a blob by an amount that can either be learned or fixed.
+\end{DoxyItemize}
+
+\subsection*{Utility Layers}
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/flatten.html}{\tt Flatten}
+\item \href{layers/reshape.html}{\tt Reshape}
+\item \href{layers/batchreindex.html}{\tt Batch Reindex}
+\item \href{layers/split.html}{\tt Split}
+\item \href{layers/concat.html}{\tt Concat}
+\item \href{layers/slice.html}{\tt Slicing}
+\item \href{layers/eltwise.html}{\tt Eltwise} -\/ element-\/wise operations such as product or sum between two blobs.
+\item \href{layers/filter.html}{\tt Filter / Mask} -\/ mask or select output using last blob.
+\item \href{layers/parameter.html}{\tt Parameter} -\/ enable parameters to be shared between layers.
+\item \href{layers/reduction.html}{\tt Reduction} -\/ reduce input blob to scalar blob using operations such as sum or mean.
+\item \href{layers/silence.html}{\tt Silence} -\/ prevent top-\/level blobs from being printed during training.
+\item \href{layers/argmax.html}{\tt Arg\+Max}
+\item \href{layers/softmax.html}{\tt Softmax}
+\item \href{layers/python.html}{\tt Python} -\/ allows custom Python layers.
+\end{DoxyItemize}
+
+\subsection*{Loss Layers}
+
+Loss drives learning by comparing an output to a target and assigning cost to minimize. The loss itself is computed by the forward pass and the gradient w.\+r.\+t. to the loss is computed by the backward pass.
+
+Layers\+:
+
+
+\begin{DoxyItemize}
+\item \href{layers/multinomiallogisticloss.html}{\tt Multinomial Logistic Loss}
+\item \href{layers/infogainloss.html}{\tt Infogain Loss} -\/ a generalization of Multinomial\+Logistic\+Loss\+Layer.
+\item \href{layers/softmaxwithloss.html}{\tt Softmax with Loss} -\/ computes the multinomial logistic loss of the softmax of its inputs. It\textquotesingle{}s conceptually identical to a softmax layer followed by a multinomial logistic loss layer, but provides a more numerically stable gradient.
+\item \href{layers/euclideanloss.html}{\tt Sum-\/of-\/\+Squares / Euclidean} -\/ computes the sum of squares of differences of its two inputs, \$\$ 1 \{2N\} \{i=1\}$^\wedge$N $|$ x$^\wedge$1\+\_\+i -\/ x$^\wedge$2\+\_\+i $|$\+\_\+2$^\wedge$2\$\$.
+\item \href{layers/hingeloss.html}{\tt Hinge / Margin} -\/ The hinge loss layer computes a one-\/vs-\/all hinge (L1) or squared hinge loss (L2).
+\item \href{layers/sigmoidcrossentropyloss.html}{\tt Sigmoid Cross-\/\+Entropy Loss} -\/ computes the cross-\/entropy (logistic) loss, often used for predicting targets interpreted as probabilities.
+\item \href{layers/accuracy.html}{\tt Accuracy / Top-\/k layer} -\/ scores the output as an accuracy with respect to target -- it is not actually a loss and has no backward step.
+\item \href{layers/contrastiveloss.html}{\tt Contrastive Loss} 
+\end{DoxyItemize}

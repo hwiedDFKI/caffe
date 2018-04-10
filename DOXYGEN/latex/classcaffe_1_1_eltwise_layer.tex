@@ -1,0 +1,259 @@
+\hypertarget{classcaffe_1_1_eltwise_layer}{}\section{caffe\+:\+:Eltwise\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_eltwise_layer}\index{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$@{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}
+
+
+Compute elementwise operations, such as product and sum, along multiple input Blobs.  
+
+
+
+
+{\ttfamily \#include $<$eltwise\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Eltwise\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_eltwise_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a896ae6914a6358a90e3e67621a6fe082}\label{classcaffe_1_1_eltwise_layer_a896ae6914a6358a90e3e67621a6fe082}} 
+{\bfseries Eltwise\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a02516b6e7b1b0d032e586785687bcabc}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a17b4cb0842a154224bab9733e77e07b9}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}\label{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a896ae6914a6358a90e3e67621a6fe082}\label{classcaffe_1_1_eltwise_layer_a896ae6914a6358a90e3e67621a6fe082}} 
+{\bfseries Eltwise\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a31bdf9cf9a45105610a85cd82a96e0bf}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a3f9e26946868f6249af1d4f57fc8259f}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}\label{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a2942edf636e0a740d718781325912693}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_aea612d32d1e61df7f7e9bfa2965c0ac4}\label{classcaffe_1_1_eltwise_layer_aea612d32d1e61df7f7e9bfa2965c0ac4}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_aea612d32d1e61df7f7e9bfa2965c0ac4}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}\label{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_aea612d32d1e61df7f7e9bfa2965c0ac4}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a4d2c0401680daae53654aeb2cc6983a4}\label{classcaffe_1_1_eltwise_layer_a4d2c0401680daae53654aeb2cc6983a4}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a4d2c0401680daae53654aeb2cc6983a4}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}\label{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a4d2c0401680daae53654aeb2cc6983a4}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a1903e0c88c0aaab4bff0e3fe7d5fdd01}\label{classcaffe_1_1_eltwise_layer_a1903e0c88c0aaab4bff0e3fe7d5fdd01}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a1903e0c88c0aaab4bff0e3fe7d5fdd01}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}\label{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a28e5d5d4c96b091dae743cac1bdded96}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_aea612d32d1e61df7f7e9bfa2965c0ac4}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a14e354bfdd30081be31b02b79797b243}\label{classcaffe_1_1_eltwise_layer_a14e354bfdd30081be31b02b79797b243}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a14e354bfdd30081be31b02b79797b243}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}\label{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a105035776ca3c3d81957e86eff6a54b0}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a4d2c0401680daae53654aeb2cc6983a4}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a31a6111895a4ba616da848bde583f843}\label{classcaffe_1_1_eltwise_layer_a31a6111895a4ba616da848bde583f843}} 
+Eltwise\+Parameter\+\_\+\+Eltwise\+Op {\bfseries op\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a6e7381feb3aa1c329890d8ba4accd726}\label{classcaffe_1_1_eltwise_layer_a6e7381feb3aa1c329890d8ba4accd726}} 
+vector$<$ Dtype $>$ {\bfseries coeffs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a78bfc2935ecc0ff3bdfef865afd4b7b5}\label{classcaffe_1_1_eltwise_layer_a78bfc2935ecc0ff3bdfef865afd4b7b5}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ int $>$ {\bfseries max\+\_\+idx\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a94a93d8257e6b36431e83cc3a030e904}\label{classcaffe_1_1_eltwise_layer_a94a93d8257e6b36431e83cc3a030e904}} 
+bool {\bfseries stable\+\_\+prod\+\_\+grad\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}
+
+Compute elementwise operations, such as product and sum, along multiple input Blobs. 
+
+T\+O\+D\+O(dox)\+: thorough documentation for Forward, Backward, and proto params. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}\label{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}\label{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a02516b6e7b1b0d032e586785687bcabc}\label{classcaffe_1_1_eltwise_layer_a02516b6e7b1b0d032e586785687bcabc}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a31bdf9cf9a45105610a85cd82a96e0bf}\label{classcaffe_1_1_eltwise_layer_a31bdf9cf9a45105610a85cd82a96e0bf}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}\label{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}\label{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a17b4cb0842a154224bab9733e77e07b9}\label{classcaffe_1_1_eltwise_layer_a17b4cb0842a154224bab9733e77e07b9}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_eltwise_layer_a3f9e26946868f6249af1d4f57fc8259f}\label{classcaffe_1_1_eltwise_layer_a3f9e26946868f6249af1d4f57fc8259f}} 
+\index{caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Eltwise\+Layer@{caffe\+::\+Eltwise\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/eltwise\+\_\+layer.\+hpp\item 
+src/caffe/layers/eltwise\+\_\+layer.\+cpp\end{DoxyCompactItemize}

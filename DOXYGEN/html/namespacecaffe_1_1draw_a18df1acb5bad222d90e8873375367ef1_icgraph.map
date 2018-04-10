@@ -1,0 +1,5 @@
+<map id="caffe.draw.get_pooling_types_dict" name="caffe.draw.get_pooling_types_dict">
+<area shape="rect" id="node2" href="$namespacecaffe_1_1draw.html#a1ab4383ec4e16ed4e8f0e027c25c682a" title="caffe.draw.get_layer\l_label" alt="" coords="207,5,347,47"/>
+<area shape="rect" id="node3" href="$namespacecaffe_1_1draw.html#a679642bc8af6fb5382480cfad0c27111" title="caffe.draw.get_pydot\l_graph" alt="" coords="395,5,539,47"/>
+<area shape="rect" id="node4" href="$namespacecaffe_1_1draw.html#af1c2f41e9d66bae6814590e8c59f64c6" title="caffe.draw.draw_net" alt="" coords="587,13,727,39"/>
+</map>

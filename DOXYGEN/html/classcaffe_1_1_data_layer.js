@@ -1,0 +1,26 @@
+var classcaffe_1_1_data_layer =
+[
+    [ "DataLayer", "classcaffe_1_1_data_layer.html#a55d92ba6737e695551eca610868f1fae", null ],
+    [ "~DataLayer", "classcaffe_1_1_data_layer.html#a18ef8c19cd098d7cb58e8a805bbccb31", null ],
+    [ "DataLayer", "classcaffe_1_1_data_layer.html#a55d92ba6737e695551eca610868f1fae", null ],
+    [ "~DataLayer", "classcaffe_1_1_data_layer.html#ab01317f30d044d1c4281050b284ddc66", null ],
+    [ "DataLayerSetUp", "classcaffe_1_1_data_layer.html#acac617f0f29b3b6eb3e3ae4a470c915e", null ],
+    [ "DataLayerSetUp", "classcaffe_1_1_data_layer.html#ae9ef80ae5a4925ea4362b22ae878e828", null ],
+    [ "ExactNumBottomBlobs", "classcaffe_1_1_data_layer.html#a2b6fa99ededf0863d8bab4a7a46addae", null ],
+    [ "ExactNumBottomBlobs", "classcaffe_1_1_data_layer.html#a2b6fa99ededf0863d8bab4a7a46addae", null ],
+    [ "load_batch", "classcaffe_1_1_data_layer.html#a5f14e385399a658476642d225a2827f9", null ],
+    [ "load_batch", "classcaffe_1_1_data_layer.html#adbf71834c88664241b85f939a145bcd2", null ],
+    [ "MaxTopBlobs", "classcaffe_1_1_data_layer.html#ac47e9f3bff3db9d7364f6c392427745c", null ],
+    [ "MaxTopBlobs", "classcaffe_1_1_data_layer.html#ac47e9f3bff3db9d7364f6c392427745c", null ],
+    [ "MinTopBlobs", "classcaffe_1_1_data_layer.html#ab0c5a7504085a6699272cdcfa8611887", null ],
+    [ "MinTopBlobs", "classcaffe_1_1_data_layer.html#ab0c5a7504085a6699272cdcfa8611887", null ],
+    [ "Next", "classcaffe_1_1_data_layer.html#a16238c3e219f4215faa4da08f670551f", null ],
+    [ "Next", "classcaffe_1_1_data_layer.html#a16238c3e219f4215faa4da08f670551f", null ],
+    [ "Skip", "classcaffe_1_1_data_layer.html#a230e84eafe73df8e7da3c41b2e3430e1", null ],
+    [ "Skip", "classcaffe_1_1_data_layer.html#a230e84eafe73df8e7da3c41b2e3430e1", null ],
+    [ "type", "classcaffe_1_1_data_layer.html#a6a5198f51cb51854be3d2d1e7891eeae", null ],
+    [ "type", "classcaffe_1_1_data_layer.html#a6a5198f51cb51854be3d2d1e7891eeae", null ],
+    [ "cursor_", "classcaffe_1_1_data_layer.html#ada8eafe2b61db9e157b4393edf449d3f", null ],
+    [ "db_", "classcaffe_1_1_data_layer.html#ab7dfcf76d49ab2a03fa6e751f5499b3a", null ],
+    [ "offset_", "classcaffe_1_1_data_layer.html#a1af404785922d764270d7d5a195d90df", null ]
+];

@@ -1,0 +1,165 @@
+\hypertarget{classcaffe_1_1_caffe}{}\section{caffe\+:\+:Caffe Class Reference}
+\label{classcaffe_1_1_caffe}\index{caffe\+::\+Caffe@{caffe\+::\+Caffe}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1_caffe_1_1_r_n_g}{R\+NG}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_af8f607248c1f212be1f6f1c988d80e4e}\label{classcaffe_1_1_caffe_af8f607248c1f212be1f6f1c988d80e4e}} 
+enum {\bfseries Brew} \{ {\bfseries C\+PU}, 
+{\bfseries G\+PU}, 
+{\bfseries C\+PU}, 
+{\bfseries G\+PU}
+ \}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_af8f607248c1f212be1f6f1c988d80e4e}\label{classcaffe_1_1_caffe_af8f607248c1f212be1f6f1c988d80e4e}} 
+enum {\bfseries Brew} \{ {\bfseries C\+PU}, 
+{\bfseries G\+PU}, 
+{\bfseries C\+PU}, 
+{\bfseries G\+PU}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a169632a1735728f6bdaacbbe77b81804}\label{classcaffe_1_1_caffe_a169632a1735728f6bdaacbbe77b81804}} 
+static \mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}} \& {\bfseries Get} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aff31f4285d99f4254e2af4e40678bf5e}\label{classcaffe_1_1_caffe_aff31f4285d99f4254e2af4e40678bf5e}} 
+static \mbox{\hyperlink{classcaffe_1_1_caffe_1_1_r_n_g}{R\+NG}} \& {\bfseries rng\+\_\+stream} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_afbba8bb2af70b628eca89269b81c915f}\label{classcaffe_1_1_caffe_afbba8bb2af70b628eca89269b81c915f}} 
+static cublas\+Handle\+\_\+t {\bfseries cublas\+\_\+handle} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a659f92f48f20d95c46c6629574a26c0f}\label{classcaffe_1_1_caffe_a659f92f48f20d95c46c6629574a26c0f}} 
+static curand\+Generator\+\_\+t {\bfseries curand\+\_\+generator} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aa45214769b727ecd971e0d5ed8ffe96a}\label{classcaffe_1_1_caffe_aa45214769b727ecd971e0d5ed8ffe96a}} 
+static Brew {\bfseries mode} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a025008ff5854ba15e62138c81b7a140d}\label{classcaffe_1_1_caffe_a025008ff5854ba15e62138c81b7a140d}} 
+static void {\bfseries set\+\_\+mode} (Brew mode)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a1f6f560b0f9f73a596284908ee44ecc7}\label{classcaffe_1_1_caffe_a1f6f560b0f9f73a596284908ee44ecc7}} 
+static void {\bfseries set\+\_\+random\+\_\+seed} (const unsigned int seed)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ac95c04832bf528acb3ae8f1ffa5b6c11}\label{classcaffe_1_1_caffe_ac95c04832bf528acb3ae8f1ffa5b6c11}} 
+static void {\bfseries Set\+Device} (const int device\+\_\+id)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a4af30f25dc929f2b9c1f195e1683a411}\label{classcaffe_1_1_caffe_a4af30f25dc929f2b9c1f195e1683a411}} 
+static void {\bfseries Device\+Query} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ae910c49602d48889673dd614d2aea014}\label{classcaffe_1_1_caffe_ae910c49602d48889673dd614d2aea014}} 
+static bool {\bfseries Check\+Device} (const int device\+\_\+id)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a7ef45036fc831ca416fd1695fc749ea3}\label{classcaffe_1_1_caffe_a7ef45036fc831ca416fd1695fc749ea3}} 
+static int {\bfseries Find\+Device} (const int start\+\_\+id=0)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a69e125ae1d6bfa3618fa4d0418d97468}\label{classcaffe_1_1_caffe_a69e125ae1d6bfa3618fa4d0418d97468}} 
+static int {\bfseries solver\+\_\+count} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ae66753e0dd783b50bbc61c40c89a43f3}\label{classcaffe_1_1_caffe_ae66753e0dd783b50bbc61c40c89a43f3}} 
+static void {\bfseries set\+\_\+solver\+\_\+count} (int val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_abdd6522457e7ac94463d26408620f4c9}\label{classcaffe_1_1_caffe_abdd6522457e7ac94463d26408620f4c9}} 
+static int {\bfseries solver\+\_\+rank} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a2ec5a171e837fc106e7d1987e3c9a45d}\label{classcaffe_1_1_caffe_a2ec5a171e837fc106e7d1987e3c9a45d}} 
+static void {\bfseries set\+\_\+solver\+\_\+rank} (int val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a181e979bf7f7f2fe4a6c5fbbc4d703ac}\label{classcaffe_1_1_caffe_a181e979bf7f7f2fe4a6c5fbbc4d703ac}} 
+static bool {\bfseries multiprocess} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aea8888baaabfc41014eba175a2538b7b}\label{classcaffe_1_1_caffe_aea8888baaabfc41014eba175a2538b7b}} 
+static void {\bfseries set\+\_\+multiprocess} (bool val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a87775a1589a6e1b6e53d9bdbb013b8d8}\label{classcaffe_1_1_caffe_a87775a1589a6e1b6e53d9bdbb013b8d8}} 
+static bool {\bfseries root\+\_\+solver} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a6a0a8e4ff537a038707f50f28f6ca65d}\label{classcaffe_1_1_caffe_a6a0a8e4ff537a038707f50f28f6ca65d}} 
+static \mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}} \& {\bfseries Get} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aff31f4285d99f4254e2af4e40678bf5e}\label{classcaffe_1_1_caffe_aff31f4285d99f4254e2af4e40678bf5e}} 
+static \mbox{\hyperlink{classcaffe_1_1_caffe_1_1_r_n_g}{R\+NG}} \& {\bfseries rng\+\_\+stream} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_afbba8bb2af70b628eca89269b81c915f}\label{classcaffe_1_1_caffe_afbba8bb2af70b628eca89269b81c915f}} 
+static cublas\+Handle\+\_\+t {\bfseries cublas\+\_\+handle} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a659f92f48f20d95c46c6629574a26c0f}\label{classcaffe_1_1_caffe_a659f92f48f20d95c46c6629574a26c0f}} 
+static curand\+Generator\+\_\+t {\bfseries curand\+\_\+generator} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aa45214769b727ecd971e0d5ed8ffe96a}\label{classcaffe_1_1_caffe_aa45214769b727ecd971e0d5ed8ffe96a}} 
+static Brew {\bfseries mode} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a025008ff5854ba15e62138c81b7a140d}\label{classcaffe_1_1_caffe_a025008ff5854ba15e62138c81b7a140d}} 
+static void {\bfseries set\+\_\+mode} (Brew mode)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a97f10f9bb79e2d8d5ccd6ba6f5d127b4}\label{classcaffe_1_1_caffe_a97f10f9bb79e2d8d5ccd6ba6f5d127b4}} 
+static void {\bfseries set\+\_\+random\+\_\+seed} (const unsigned int seed)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ad1d32cc591f230e448e62bbfd91a5510}\label{classcaffe_1_1_caffe_ad1d32cc591f230e448e62bbfd91a5510}} 
+static void {\bfseries Set\+Device} (const int device\+\_\+id)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ae5d9fb78572c71b463e10c5375ff4de9}\label{classcaffe_1_1_caffe_ae5d9fb78572c71b463e10c5375ff4de9}} 
+static void {\bfseries Device\+Query} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a36885ad76366f80c00a2a23d7823b06a}\label{classcaffe_1_1_caffe_a36885ad76366f80c00a2a23d7823b06a}} 
+static bool {\bfseries Check\+Device} (const int device\+\_\+id)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ab65de929dd1266f884c259725e31c629}\label{classcaffe_1_1_caffe_ab65de929dd1266f884c259725e31c629}} 
+static int {\bfseries Find\+Device} (const int start\+\_\+id=0)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a69e125ae1d6bfa3618fa4d0418d97468}\label{classcaffe_1_1_caffe_a69e125ae1d6bfa3618fa4d0418d97468}} 
+static int {\bfseries solver\+\_\+count} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_ae66753e0dd783b50bbc61c40c89a43f3}\label{classcaffe_1_1_caffe_ae66753e0dd783b50bbc61c40c89a43f3}} 
+static void {\bfseries set\+\_\+solver\+\_\+count} (int val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_abdd6522457e7ac94463d26408620f4c9}\label{classcaffe_1_1_caffe_abdd6522457e7ac94463d26408620f4c9}} 
+static int {\bfseries solver\+\_\+rank} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a2ec5a171e837fc106e7d1987e3c9a45d}\label{classcaffe_1_1_caffe_a2ec5a171e837fc106e7d1987e3c9a45d}} 
+static void {\bfseries set\+\_\+solver\+\_\+rank} (int val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a181e979bf7f7f2fe4a6c5fbbc4d703ac}\label{classcaffe_1_1_caffe_a181e979bf7f7f2fe4a6c5fbbc4d703ac}} 
+static bool {\bfseries multiprocess} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aea8888baaabfc41014eba175a2538b7b}\label{classcaffe_1_1_caffe_aea8888baaabfc41014eba175a2538b7b}} 
+static void {\bfseries set\+\_\+multiprocess} (bool val)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a87775a1589a6e1b6e53d9bdbb013b8d8}\label{classcaffe_1_1_caffe_a87775a1589a6e1b6e53d9bdbb013b8d8}} 
+static bool {\bfseries root\+\_\+solver} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a5fb5298203759722a061644b508ddaeb}\label{classcaffe_1_1_caffe_a5fb5298203759722a061644b508ddaeb}} 
+cublas\+Handle\+\_\+t {\bfseries cublas\+\_\+handle\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a0d920ccea7282d5d88335847c0e9ca9e}\label{classcaffe_1_1_caffe_a0d920ccea7282d5d88335847c0e9ca9e}} 
+curand\+Generator\+\_\+t {\bfseries curand\+\_\+generator\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aac795e2853c8ac826b3571bba9642474}\label{classcaffe_1_1_caffe_aac795e2853c8ac826b3571bba9642474}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_caffe_1_1_r_n_g}{R\+NG}} $>$ {\bfseries random\+\_\+generator\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_aef998c6b69827060630e21a8ccf8884e}\label{classcaffe_1_1_caffe_aef998c6b69827060630e21a8ccf8884e}} 
+Brew {\bfseries mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_afc26b38d30812df267645c4a94135a74}\label{classcaffe_1_1_caffe_afc26b38d30812df267645c4a94135a74}} 
+int {\bfseries solver\+\_\+count\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a00152204105cd59b691d8bda828664b5}\label{classcaffe_1_1_caffe_a00152204105cd59b691d8bda828664b5}} 
+int {\bfseries solver\+\_\+rank\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_caffe_a25bdfb72baf0bfc5fca31579b08d2b6f}\label{classcaffe_1_1_caffe_a25bdfb72baf0bfc5fca31579b08d2b6f}} 
+bool {\bfseries multiprocess\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/common.\+hpp\item 
+src/caffe/common.\+cpp\end{DoxyCompactItemize}

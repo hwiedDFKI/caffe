@@ -1,0 +1,11 @@
+<map id="caffe.net_spec.Top.to_proto" name="caffe.net_spec.Top.to_proto">
+<area shape="rect" id="node2" href="$classcaffe_1_1_net.html#a4df30bbef7db3a6069d4ab3d9238cb40" title="returns the parameters " alt="" coords="229,5,359,32"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1net__spec_1_1_function.html#a58d286125a371c6e2679f9f1b1988866" title="caffe.net_spec.Function.\l_get_top_name" alt="" coords="211,57,377,98"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1net__spec_1_1_function.html#a7c38db88518764cfd23e6a6967660e77" title="caffe.net_spec.Function.\l_get_name" alt="" coords="211,122,377,163"/>
+<area shape="rect" id="node5" href="$namespacecaffe_1_1net__spec.html#a823515c8ca21e9562ea594546e167da2" title="caffe.net_spec.assign\l_proto" alt="" coords="219,187,369,229"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1net__spec_1_1_net_spec.html#a4f0b752e6be6d8e843f369166f02787d" title="caffe.net_spec.NetSpec.\l__setattr__" alt="" coords="211,253,377,294"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1net__spec_1_1_net_spec.html#aae261d307ad112c6e8f2e6cbcbf8db35" title="caffe.net_spec.NetSpec.\l__getattr__" alt="" coords="211,318,377,359"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1net__spec_1_1_layers.html#ab69afc2690f9b12582dbfd93bdc4faa5" title="caffe.net_spec.Layers.\l__getattr__" alt="" coords="217,383,371,425"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1net__spec_1_1_parameters.html#a043d287f2900307d6b95e49d7388fb16" title="caffe.net_spec.Parameters.\l__getattr__" alt="" coords="203,449,385,490"/>
+<area shape="rect" id="node10" href="$namespacecaffe_1_1net__spec.html#a743950197e4a2ce816bcc4ec5bb04968" title="caffe.net_spec.param\l_name_dict" alt="" coords="220,514,368,555"/>
+</map>

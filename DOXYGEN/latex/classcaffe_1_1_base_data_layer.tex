@@ -1,0 +1,190 @@
+\hypertarget{classcaffe_1_1_base_data_layer}{}\section{caffe\+:\+:Base\+Data\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_base_data_layer}\index{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$@{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}
+
+
+Provides base for data layers that feed blobs to the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.  
+
+
+
+
+{\ttfamily \#include $<$base\+\_\+data\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Base\+Data\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_base_data_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_abf8b0153155bc04864ebeeb4c117d7a1}\label{classcaffe_1_1_base_data_layer_abf8b0153155bc04864ebeeb4c117d7a1}} 
+{\bfseries Base\+Data\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a7477b54323c917eda218e21ac43ac2f4}\label{classcaffe_1_1_base_data_layer_a7477b54323c917eda218e21ac43ac2f4}} 
+virtual void {\bfseries Data\+Layer\+Set\+Up} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}\label{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}\label{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_abf8b0153155bc04864ebeeb4c117d7a1}\label{classcaffe_1_1_base_data_layer_abf8b0153155bc04864ebeeb4c117d7a1}} 
+{\bfseries Base\+Data\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a72276185eb4e5495de2d0e0d34bc8eda}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a7477b54323c917eda218e21ac43ac2f4}\label{classcaffe_1_1_base_data_layer_a7477b54323c917eda218e21ac43ac2f4}} 
+virtual void {\bfseries Data\+Layer\+Set\+Up} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}\label{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}\label{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a537656c76260c7f669c713506a5f4651}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a9d2c7a18383ff7625d80806ede1d9e3b}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a325727e5c4f305a3ffa5c8efc211a1c9}\label{classcaffe_1_1_base_data_layer_a325727e5c4f305a3ffa5c8efc211a1c9}} 
+\mbox{\hyperlink{classcaffe_1_1_transformation_parameter}{Transformation\+Parameter}} {\bfseries transform\+\_\+param\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_ab2a13e43b3de81cc97df8496cfc632b1}\label{classcaffe_1_1_base_data_layer_ab2a13e43b3de81cc97df8496cfc632b1}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_data_transformer}{Data\+Transformer}}$<$ Dtype $>$ $>$ {\bfseries data\+\_\+transformer\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a802076913164842d1f698014b489ca2e}\label{classcaffe_1_1_base_data_layer_a802076913164842d1f698014b489ca2e}} 
+bool {\bfseries output\+\_\+labels\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}
+
+Provides base for data layers that feed blobs to the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. 
+
+T\+O\+D\+O(dox)\+: thorough documentation for Forward and proto params. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927}\label{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927}} 
+\index{caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a72276185eb4e5495de2d0e0d34bc8eda}\label{classcaffe_1_1_base_data_layer_a72276185eb4e5495de2d0e0d34bc8eda}} 
+\index{caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}\label{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}} 
+\index{caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}\label{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}} 
+\index{caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Base\+Data\+Layer@{caffe\+::\+Base\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/base\+\_\+data\+\_\+layer.\+hpp\item 
+src/caffe/layers/base\+\_\+data\+\_\+layer.\+cpp\end{DoxyCompactItemize}

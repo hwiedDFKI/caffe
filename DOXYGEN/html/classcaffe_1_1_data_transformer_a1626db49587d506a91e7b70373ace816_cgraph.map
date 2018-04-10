@@ -1,0 +1,6 @@
+<map id="caffe::DataTransformer::Transform" name="caffe::DataTransformer::Transform">
+<area shape="rect" id="node2" href="$classcaffe_1_1_blob.html#ae48c8e9f0a0b66b041e47bf37ed04471" title="Deprecated legacy shape accessor channels: use shape(1) instead. " alt="" coords="211,5,356,32"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_blob.html#a18af535af43f4e9f85bd1e520886276f" title="Deprecated legacy shape accessor height: use shape(2) instead. " alt="" coords="219,56,347,83"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_blob.html#afbdc067c69e6b9bd6880a73c13db2ec6" title="Deprecated legacy shape accessor width: use shape(3) instead. " alt="" coords="221,107,345,133"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_blob.html#a80ed3eddf98ffd408e9a627b1a7c2a9e" title="Deprecated legacy shape accessor num: use shape(0) instead. " alt="" coords="224,157,343,184"/>
+</map>

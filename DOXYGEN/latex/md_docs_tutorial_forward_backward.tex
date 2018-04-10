@@ -1,0 +1,35 @@
+
+
+ \subsection*{title\+: Forward and Backward for Inference and Learning }
+
+\section*{Forward and Backward}
+
+The forward and backward passes are the essential computations of a \href{net_layer_blob.html}{\tt Net}.
+
+
+
+Let\textquotesingle{}s consider a simple logistic regression classifier.
+
+The {\bfseries forward} pass computes the output given the input for inference. In forward Caffe composes the computation of each layer to compute the \char`\"{}function\char`\"{} represented by the model. This pass goes from bottom to top.
+
+
+
+The data \$\$x\$\$ is passed through an inner product layer for \$\$g(x)\$\$ then through a softmax for \$\$h(g(x))\$\$ and softmax loss to give \$\$f\+\_\+\+W(x)\$\$.
+
+The {\bfseries backward} pass computes the gradient given the loss for learning. In backward Caffe reverse-\/composes the gradient of each layer to compute the gradient of the whole model by automatic differentiation. This is back-\/propagation. This pass goes from top to bottom.
+
+
+
+The backward pass begins with the loss and computes the gradient with respect to the output \$\$\{ f\+\_\+W\}\{ h\}\$\$. The gradient with respect to the rest of the model is computed layer-\/by-\/layer through the chain rule. Layers with parameters, like the {\ttfamily I\+N\+N\+E\+R\+\_\+\+P\+R\+O\+D\+U\+CT} layer, compute the gradient with respect to their parameters \$\$\{ f\+\_\+W\}\{ W\+\_\+\{\{ip\}\}\}\$\$ during the backward step.
+
+These computations follow immediately from defining the model\+: Caffe plans and carries out the forward and backward passes for you.
+
+
+\begin{DoxyItemize}
+\item The {\ttfamily Net\+::\+Forward()} and {\ttfamily Net\+::\+Backward()} methods carry out the respective passes while {\ttfamily Layer\+::\+Forward()} and {\ttfamily Layer\+::\+Backward()} compute each step.
+\item Every layer type has {\ttfamily forward\+\_\+\{cpu,gpu\}()} and {\ttfamily backward\+\_\+\{cpu,gpu\}()} methods to compute its steps according to the mode of computation. A layer may only implement C\+PU or G\+PU mode due to constraints or convenience.
+\end{DoxyItemize}
+
+The \href{solver.html}{\tt Solver} optimizes a model by first calling forward to yield the output and loss, then calling backward to generate the gradient of the model, and then incorporating the gradient into a weight update that attempts to minimize the loss. Division of labor between the Solver, Net, and Layer keep Caffe modular and open to development.
+
+For the details of the forward and backward steps of Caffe\textquotesingle{}s layer types, refer to the \href{layers.html}{\tt layer catalogue}. 

@@ -1,0 +1,307 @@
+\hypertarget{classcaffe_1_1detector_1_1_detector}{}\section{caffe.\+detector.\+Detector Class Reference}
+\label{classcaffe_1_1detector_1_1_detector}\index{caffe.\+detector.\+Detector@{caffe.\+detector.\+Detector}}
+
+
+Inheritance diagram for caffe.\+detector.\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classcaffe_1_1detector_1_1_detector__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_ad66493aa5af7401b00e9c3c840373d20}\label{classcaffe_1_1detector_1_1_detector_ad66493aa5af7401b00e9c3c840373d20}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+file, pretrained\+\_\+file, mean=None, input\+\_\+scale=None, raw\+\_\+scale=None, channel\+\_\+swap=None, context\+\_\+pad=None)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}{detect\+\_\+windows}} (self, images\+\_\+windows)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}{detect\+\_\+selective\+\_\+search}} (self, image\+\_\+fnames)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}{crop}} (self, im, window)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}{configure\+\_\+crop}} (self, context\+\_\+pad)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_ad66493aa5af7401b00e9c3c840373d20}\label{classcaffe_1_1detector_1_1_detector_ad66493aa5af7401b00e9c3c840373d20}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+file, pretrained\+\_\+file, mean=None, input\+\_\+scale=None, raw\+\_\+scale=None, channel\+\_\+swap=None, context\+\_\+pad=None)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}{detect\+\_\+windows}} (self, images\+\_\+windows)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}{detect\+\_\+selective\+\_\+search}} (self, image\+\_\+fnames)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}{crop}} (self, im, window)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}{configure\+\_\+crop}} (self, context\+\_\+pad)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a6ab029f8b9627cd96f11b935e263549f}\label{classcaffe_1_1detector_1_1_detector_a6ab029f8b9627cd96f11b935e263549f}} 
+{\bfseries transformer}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a6e914f9d5071a3d5a41f7542f216e6d9}\label{classcaffe_1_1detector_1_1_detector_a6e914f9d5071a3d5a41f7542f216e6d9}} 
+{\bfseries crop\+\_\+dims}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a25b10b7dedec3c75c589cfbffa1271af}\label{classcaffe_1_1detector_1_1_detector_a25b10b7dedec3c75c589cfbffa1271af}} 
+{\bfseries context\+\_\+pad}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a2caeb79b367cfca8577c4fddc53ac956}\label{classcaffe_1_1detector_1_1_detector_a2caeb79b367cfca8577c4fddc53ac956}} 
+{\bfseries crop\+\_\+mean}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Detector extends Net for windowed detection by a list of crops or
+selective search proposals.
+
+Parameters
+----------
+mean, input_scale, raw_scale, channel_swap : params for preprocessing
+    options.
+context_pad : amount of surrounding context to take s.t. a `context_pad`
+    sized border of pixels in the network input image is context, as in
+    R-CNN feature extraction.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}\label{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!configure\+\_\+crop@{configure\+\_\+crop}}
+\index{configure\+\_\+crop@{configure\+\_\+crop}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{configure\+\_\+crop()}{configure\_crop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+configure\+\_\+crop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context\+\_\+pad }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Configure crop dimensions and amount of context for cropping.
+If context is included, make the special input mean for context padding.
+
+Parameters
+----------
+context_pad : amount of context for cropping.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}\label{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!configure\+\_\+crop@{configure\+\_\+crop}}
+\index{configure\+\_\+crop@{configure\+\_\+crop}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{configure\+\_\+crop()}{configure\_crop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+configure\+\_\+crop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{context\+\_\+pad }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Configure crop dimensions and amount of context for cropping.
+If context is included, make the special input mean for context padding.
+
+Parameters
+----------
+context_pad : amount of context for cropping.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a3706bb8bcd04387c065f7bb6b34f4875_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}\label{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!crop@{crop}}
+\index{crop@{crop}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{crop()}{crop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+crop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{im,  }\item[{}]{window }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Crop a window from the image for detection. Include surrounding context
+according to the `context_pad` configuration.
+
+Parameters
+----------
+im: H x W x K image ndarray to crop.
+window: bounding box coordinates as ymin, xmin, ymax, xmax.
+
+Returns
+-------
+crop: cropped window.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}\label{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!crop@{crop}}
+\index{crop@{crop}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{crop()}{crop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+crop (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{im,  }\item[{}]{window }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Crop a window from the image for detection. Include surrounding context
+according to the `context_pad` configuration.
+
+Parameters
+----------
+im: H x W x K image ndarray to crop.
+window: bounding box coordinates as ymin, xmin, ymax, xmax.
+
+Returns
+-------
+crop: cropped window.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_af71bb7e173a228c2e1577b9125310216_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}\label{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!detect\+\_\+selective\+\_\+search@{detect\+\_\+selective\+\_\+search}}
+\index{detect\+\_\+selective\+\_\+search@{detect\+\_\+selective\+\_\+search}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{detect\+\_\+selective\+\_\+search()}{detect\_selective\_search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+detect\+\_\+selective\+\_\+search (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+fnames }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do windowed detection over Selective Search proposals by extracting
+the crop and warping to the input dimensions of the net.
+
+Parameters
+----------
+image_fnames: list
+
+Returns
+-------
+detections: list of {filename: image filename, window: crop coordinates,
+    predictions: prediction vector} dicts.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}\label{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!detect\+\_\+selective\+\_\+search@{detect\+\_\+selective\+\_\+search}}
+\index{detect\+\_\+selective\+\_\+search@{detect\+\_\+selective\+\_\+search}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{detect\+\_\+selective\+\_\+search()}{detect\_selective\_search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+detect\+\_\+selective\+\_\+search (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{image\+\_\+fnames }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do windowed detection over Selective Search proposals by extracting
+the crop and warping to the input dimensions of the net.
+
+Parameters
+----------
+image_fnames: list
+
+Returns
+-------
+detections: list of {filename: image filename, window: crop coordinates,
+    predictions: prediction vector} dicts.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a2d96c53701abd37152c5f078a18ebf08_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}\label{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!detect\+\_\+windows@{detect\+\_\+windows}}
+\index{detect\+\_\+windows@{detect\+\_\+windows}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{detect\+\_\+windows()}{detect\_windows()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+detect\+\_\+windows (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{images\+\_\+windows }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do windowed detection over given images and windows. Windows are
+extracted then warped to the input dimensions of the net.
+
+Parameters
+----------
+images_windows: (image filename, window list) iterable.
+context_crop: size of context border to crop in pixels.
+
+Returns
+-------
+detections: list of {filename: image filename, window: crop coordinates,
+    predictions: prediction vector} dicts.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}\label{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff}} 
+\index{caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}!detect\+\_\+windows@{detect\+\_\+windows}}
+\index{detect\+\_\+windows@{detect\+\_\+windows}!caffe\+::detector\+::\+Detector@{caffe\+::detector\+::\+Detector}}
+\subsubsection{\texorpdfstring{detect\+\_\+windows()}{detect\_windows()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def caffe.\+detector.\+Detector.\+detect\+\_\+windows (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{images\+\_\+windows }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Do windowed detection over given images and windows. Windows are
+extracted then warped to the input dimensions of the net.
+
+Parameters
+----------
+images_windows: (image filename, window list) iterable.
+context_crop: size of context border to crop in pixels.
+
+Returns
+-------
+detections: list of {filename: image filename, window: crop coordinates,
+    predictions: prediction vector} dicts.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1detector_1_1_detector_a7ddd403050bacd8fcccc62705f2405ff_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/python/caffe/detector.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,180 @@
+\hypertarget{namespacecaffe_1_1coord__map}{}\section{caffe.\+coord\+\_\+map Namespace Reference}
+\label{namespacecaffe_1_1coord__map}\index{caffe.\+coord\+\_\+map@{caffe.\+coord\+\_\+map}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1coord__map_1_1_axis_mismatch_exception}{Axis\+Mismatch\+Exception}}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1coord__map_1_1_undefined_map_exception}{Undefined\+Map\+Exception}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_a1683f31b74339c8ac4c4985132fdecfc}{conv\+\_\+params}} (fn)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_ac97591996ede7cfc368c2e472e0d07b6}{crop\+\_\+params}} (fn)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_a0f5ba2053a2fd10038360dea8b2e5b9b}{coord\+\_\+map}} (fn)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_a06830f75738dcbc0b29bfeb30ae4f990}{compose}} (base\+\_\+map, next\+\_\+map)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_ad03646b133a0a44eb1062c6acf677c8c}{inverse}} (\mbox{\hyperlink{namespacecaffe_1_1coord__map_a0f5ba2053a2fd10038360dea8b2e5b9b}{coord\+\_\+map}})
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_abf9ba4c31e6e4f0bcd3130ea9001514b}{coord\+\_\+map\+\_\+from\+\_\+to}} (top\+\_\+from, top\+\_\+to)
+\item 
+def \mbox{\hyperlink{namespacecaffe_1_1coord__map_aca9f1366a027d686a27d150e054296ee}{crop}} (top\+\_\+from, top\+\_\+to)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list {\bfseries P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Determine spatial relationships between layers to relate their coordinates.
+Coordinates are mapped from input-to-output (forward), but can
+be mapped output-to-input (backward) by the inverse mapping too.
+This helps crop and align feature maps among other uses.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_a06830f75738dcbc0b29bfeb30ae4f990}\label{namespacecaffe_1_1coord__map_a06830f75738dcbc0b29bfeb30ae4f990}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!compose@{compose}}
+\index{compose@{compose}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{compose()}{compose()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+compose (\begin{DoxyParamCaption}\item[{}]{base\+\_\+map,  }\item[{}]{next\+\_\+map }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compose a base coord map with scale a1, shift b1 with a further coord map
+with scale a2, shift b2. The scales multiply and the further shift, b2,
+is scaled by base coord scale a1.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1coord__map_a06830f75738dcbc0b29bfeb30ae4f990_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_a1683f31b74339c8ac4c4985132fdecfc}\label{namespacecaffe_1_1coord__map_a1683f31b74339c8ac4c4985132fdecfc}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!conv\+\_\+params@{conv\+\_\+params}}
+\index{conv\+\_\+params@{conv\+\_\+params}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{conv\+\_\+params()}{conv\_params()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+conv\+\_\+params (\begin{DoxyParamCaption}\item[{}]{fn }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extract the spatial parameters that determine the coordinate mapping:
+kernel size, stride, padding, and dilation.
+
+Implementation detail: Convolution, Deconvolution, and Im2col layers
+define these in the convolution_param message, while Pooling has its
+own fields in pooling_param. This method deals with these details to
+extract canonical parameters.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecaffe_1_1coord__map_a0f5ba2053a2fd10038360dea8b2e5b9b}\label{namespacecaffe_1_1coord__map_a0f5ba2053a2fd10038360dea8b2e5b9b}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!coord\+\_\+map@{coord\+\_\+map}}
+\index{coord\+\_\+map@{coord\+\_\+map}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{coord\+\_\+map()}{coord\_map()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+coord\+\_\+map (\begin{DoxyParamCaption}\item[{}]{fn }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define the coordinate mapping by its
+- axis
+- scale: output coord[i * scale] <- input_coord[i]
+- shift: output coord[i] <- output_coord[i + shift]
+s.t. the identity mapping, as for pointwise layers like ReLu, is defined by
+(None, 1, 0) since it is independent of axis and does not transform coords.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1coord__map_a0f5ba2053a2fd10038360dea8b2e5b9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_abf9ba4c31e6e4f0bcd3130ea9001514b}\label{namespacecaffe_1_1coord__map_abf9ba4c31e6e4f0bcd3130ea9001514b}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!coord\+\_\+map\+\_\+from\+\_\+to@{coord\+\_\+map\+\_\+from\+\_\+to}}
+\index{coord\+\_\+map\+\_\+from\+\_\+to@{coord\+\_\+map\+\_\+from\+\_\+to}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{coord\+\_\+map\+\_\+from\+\_\+to()}{coord\_map\_from\_to()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+coord\+\_\+map\+\_\+from\+\_\+to (\begin{DoxyParamCaption}\item[{}]{top\+\_\+from,  }\item[{}]{top\+\_\+to }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determine the coordinate mapping betweeen a top (from) and a top (to).
+Walk the graph to find a common ancestor while composing the coord maps for
+from and to until they meet. As a last step the from map is inverted.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1coord__map_abf9ba4c31e6e4f0bcd3130ea9001514b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{namespacecaffe_1_1coord__map_abf9ba4c31e6e4f0bcd3130ea9001514b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_aca9f1366a027d686a27d150e054296ee}\label{namespacecaffe_1_1coord__map_aca9f1366a027d686a27d150e054296ee}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!crop@{crop}}
+\index{crop@{crop}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{crop()}{crop()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+crop (\begin{DoxyParamCaption}\item[{}]{top\+\_\+from,  }\item[{}]{top\+\_\+to }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Define a Crop layer to crop a top (from) to another top (to) by
+determining the coordinate mapping between the two and net spec'ing
+the axis and shift parameters of the crop.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1coord__map_aca9f1366a027d686a27d150e054296ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_ac97591996ede7cfc368c2e472e0d07b6}\label{namespacecaffe_1_1coord__map_ac97591996ede7cfc368c2e472e0d07b6}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!crop\+\_\+params@{crop\+\_\+params}}
+\index{crop\+\_\+params@{crop\+\_\+params}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{crop\+\_\+params()}{crop\_params()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+crop\+\_\+params (\begin{DoxyParamCaption}\item[{}]{fn }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Extract the crop layer parameters with defaults.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecaffe_1_1coord__map_ad03646b133a0a44eb1062c6acf677c8c}\label{namespacecaffe_1_1coord__map_ad03646b133a0a44eb1062c6acf677c8c}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!inverse@{inverse}}
+\index{inverse@{inverse}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{inverse()}{inverse()}}
+{\footnotesize\ttfamily def caffe.\+coord\+\_\+map.\+inverse (\begin{DoxyParamCaption}\item[{}]{coord\+\_\+map }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Invert a coord map by de-scaling and un-shifting;
+this gives the backward mapping for the gradient.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecaffe_1_1coord__map_ad03646b133a0a44eb1062c6acf677c8c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecaffe_1_1coord__map_a3846a1f9486c7ebe906f163cd50034bc}\label{namespacecaffe_1_1coord__map_a3846a1f9486c7ebe906f163cd50034bc}} 
+\index{caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}!P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS@{P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS}}
+\index{P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS@{P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS}!caffe\+::coord\+\_\+map@{caffe\+::coord\+\_\+map}}
+\subsubsection{\texorpdfstring{P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS}{PASS\_THROUGH\_LAYERS}}
+{\footnotesize\ttfamily list caffe.\+coord\+\_\+map.\+P\+A\+S\+S\+\_\+\+T\+H\+R\+O\+U\+G\+H\+\_\+\+L\+A\+Y\+E\+RS}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  [\textcolor{stringliteral}{'AbsVal'}, \textcolor{stringliteral}{'BatchNorm'}, \textcolor{stringliteral}{'Bias'}, \textcolor{stringliteral}{'BNLL'}, \textcolor{stringliteral}{'Dropout'},
+2                        \textcolor{stringliteral}{'Eltwise'}, \textcolor{stringliteral}{'ELU'}, \textcolor{stringliteral}{'Log'}, \textcolor{stringliteral}{'LRN'}, \textcolor{stringliteral}{'Exp'}, \textcolor{stringliteral}{'MVN'}, \textcolor{stringliteral}{'Power'},
+3                        \textcolor{stringliteral}{'ReLU'}, \textcolor{stringliteral}{'PReLU'}, \textcolor{stringliteral}{'Scale'}, \textcolor{stringliteral}{'Sigmoid'}, \textcolor{stringliteral}{'Split'}, \textcolor{stringliteral}{'TanH'},
+4                        \textcolor{stringliteral}{'Threshold'}]
+\end{DoxyCode}

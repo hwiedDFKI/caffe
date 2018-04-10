@@ -1,0 +1,206 @@
+\hypertarget{classcaffe_1_1_b_n_l_l_layer}{}\section{caffe\+:\+:B\+N\+L\+L\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_b_n_l_l_layer}\index{caffe\+::\+B\+N\+L\+L\+Layer$<$ Dtype $>$@{caffe\+::\+B\+N\+L\+L\+Layer$<$ Dtype $>$}}
+
+
+Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise.  
+
+
+
+
+{\ttfamily \#include $<$bnll\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:B\+N\+L\+L\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classcaffe_1_1_b_n_l_l_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ab30d4b1d22f7489597449e09d74cf4b9}\label{classcaffe_1_1_b_n_l_l_layer_ab30d4b1d22f7489597449e09d74cf4b9}} 
+{\bfseries B\+N\+L\+L\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}\label{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ab30d4b1d22f7489597449e09d74cf4b9}\label{classcaffe_1_1_b_n_l_l_layer_ab30d4b1d22f7489597449e09d74cf4b9}} 
+{\bfseries B\+N\+L\+L\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}\label{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a6a44de21163e4a9bead5bc5b2851d191}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ad85abcd4d6afd609be859f0360525102}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}\label{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ad85abcd4d6afd609be859f0360525102}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a014a52e7ba756d94d2af865dc6c855dc}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the B\+N\+LL inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}\label{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a014a52e7ba756d94d2af865dc6c855dc}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ab1b8dfd185c2d896ede4fa8f9368196b}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}\label{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a1bc9ed3e2ea19df546e070975ddee29b}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ad85abcd4d6afd609be859f0360525102}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_abd8992bfddeca6c9678d912d4264dff1}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the error gradient w.\+r.\+t. the B\+N\+LL inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}\label{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_ac8a7f10b887b59194694f14e887fc6a6}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer_a014a52e7ba756d94d2af865dc6c855dc}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+B\+N\+L\+L\+Layer$<$ Dtype $>$}
+
+Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = \left\{ \begin{array}{ll} x + \log(1 + \exp(-x)) & \mbox{if } x > 0 \\ \log(1 + \exp(x)) & \mbox{otherwise} \end{array} \right. $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_a014a52e7ba756d94d2af865dc6c855dc}\label{classcaffe_1_1_b_n_l_l_layer_a014a52e7ba756d94d2af865dc6c855dc}} 
+\index{caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer}{caffe\+::\+B\+N\+L\+L\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the B\+N\+LL inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_abd8992bfddeca6c9678d912d4264dff1}\label{classcaffe_1_1_b_n_l_l_layer_abd8992bfddeca6c9678d912d4264dff1}} 
+\index{caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer}{caffe\+::\+B\+N\+L\+L\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the error gradient w.\+r.\+t. the B\+N\+LL inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ containing error gradients $ \frac{\partial E}{\partial y} $ with respect to computed outputs $ y $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $; Backward fills their diff with gradients $ \frac{\partial E}{\partial x} $ if propagate\+\_\+down\mbox{[}0\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ad85abcd4d6afd609be859f0360525102}\label{classcaffe_1_1_b_n_l_l_layer_ad85abcd4d6afd609be859f0360525102}} 
+\index{caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer}{caffe\+::\+B\+N\+L\+L\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = \left\{ \begin{array}{ll} x + \log(1 + \exp(-x)) & \mbox{if } x > 0 \\ \log(1 + \exp(x)) & \mbox{otherwise} \end{array} \right. $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_b_n_l_l_layer_ab1b8dfd185c2d896ede4fa8f9368196b}\label{classcaffe_1_1_b_n_l_l_layer_ab1b8dfd185c2d896ede4fa8f9368196b}} 
+\index{caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+B\+N\+L\+L\+Layer@{caffe\+::\+B\+N\+L\+L\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_b_n_l_l_layer}{caffe\+::\+B\+N\+L\+L\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes $ y = x + \log(1 + \exp(-x)) $ if $ x > 0 $; $ y = \log(1 + \exp(x)) $ otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = \left\{ \begin{array}{ll} x + \log(1 + \exp(-x)) & \mbox{if } x > 0 \\ \log(1 + \exp(x)) & \mbox{otherwise} \end{array} \right. $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/bnll\+\_\+layer.\+hpp\item 
+src/caffe/layers/bnll\+\_\+layer.\+cpp\end{DoxyCompactItemize}

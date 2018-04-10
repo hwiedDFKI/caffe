@@ -1,0 +1,11 @@
+<map id="caffe::LossLayer&lt; Dtype &gt;" name="caffe::LossLayer&lt; Dtype &gt;">
+<area shape="rect" id="node3" href="$classcaffe_1_1_contrastive_loss_layer.html" title="Computes the contrastive loss &#160;where . This can be used to train siamese networks. " alt="" coords="435,5,621,47"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_euclidean_loss_layer.html" title="Computes the Euclidean (L2) loss &#160;for real&#45;valued regression tasks. " alt="" coords="440,71,616,112"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_hinge_loss_layer.html" title="Computes the hinge loss for a one&#45;of&#45;many classification task. " alt="" coords="451,136,605,177"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_infogain_loss_layer.html" title="A generalization of SoftmaxWithLossLayer that takes an &quot;information gain&quot; (infogain) matrix specifyin..." alt="" coords="445,201,611,243"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_multinomial_logistic_loss_layer.html" title="Computes the multinomial logistic loss for a one&#45;of&#45;many classification task, directly taking a predi..." alt="" coords="443,267,613,308"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_sigmoid_cross_entropy_loss_layer.html" title="Computes the cross&#45;entropy (logistic) loss , often used for predicting targets interpreted as probabi..." alt="" coords="435,332,621,373"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_softmax_with_loss_layer.html" title="Computes the multinomial logistic loss for a one&#45;of&#45;many classification task, passing real&#45;valued pre..." alt="" coords="431,397,625,439"/>
+<area shape="rect" id="node10" href="$classcaffe_1_1_weighted_euclidean_loss_layer.html" title="Computes weighted Euclidean (L2) loss &#160;for real&#45;valued regression tasks. " alt="" coords="443,463,613,504"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="5,242,156,269"/>
+</map>

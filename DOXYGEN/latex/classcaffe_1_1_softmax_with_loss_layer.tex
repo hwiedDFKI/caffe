@@ -1,0 +1,458 @@
+\hypertarget{classcaffe_1_1_softmax_with_loss_layer}{}\section{caffe\+:\+:Softmax\+With\+Loss\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_softmax_with_loss_layer}\index{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$@{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}
+
+
+Computes the multinomial logistic loss for a one-\/of-\/many classification task, passing real-\/valued predictions through a softmax to get a probability distribution over classes.  
+
+
+
+
+{\ttfamily \#include $<$softmax\+\_\+loss\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Softmax\+With\+Loss\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classcaffe_1_1_softmax_with_loss_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}{Softmax\+With\+Loss\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}\label{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{Max\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}{Softmax\+With\+Loss\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2a3985570178431a4cc3f9b9fd4378c2}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ad8f5d429254deaebe4ea5f14bfa0d4d0}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}\label{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a79aad991f6c56097068ccca031f1288a}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{Max\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a093493e6f87ee7a411e4c468b5fa9f9c}\label{classcaffe_1_1_softmax_with_loss_layer_a093493e6f87ee7a411e4c468b5fa9f9c}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a093493e6f87ee7a411e4c468b5fa9f9c}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}\label{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a093493e6f87ee7a411e4c468b5fa9f9c}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a39d8b7d59f2c951ac2573827f181284f}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the softmax loss error gradient w.\+r.\+t. the predictions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}\label{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a39d8b7d59f2c951ac2573827f181284f}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual Dtype \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_aef4567bafcd7b1665f2a2cc71ea02ff4}{get\+\_\+normalizer}} (Loss\+Parameter\+\_\+\+Normalization\+Mode normalization\+\_\+mode, int valid\+\_\+count)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a3a48a065cea8c42821732005d2601939}\label{classcaffe_1_1_softmax_with_loss_layer_a3a48a065cea8c42821732005d2601939}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a3a48a065cea8c42821732005d2601939}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}\label{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a558fbaaf863070caac03c7566aefdf11}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a093493e6f87ee7a411e4c468b5fa9f9c}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a3d2fa01c50cd9bdef567d0e6b5cfcdc3}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the softmax loss error gradient w.\+r.\+t. the predictions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}\label{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ac6ae6482673cab4933ceb67972f80ee7}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a39d8b7d59f2c951ac2573827f181284f}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual Dtype \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_aeb270fe4b77dfcf49eabd22437242e9f}{get\+\_\+normalizer}} (Loss\+Parameter\+\_\+\+Normalization\+Mode normalization\+\_\+mode, int valid\+\_\+count)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a99288fd74c65097b13fb2c18baf2944a}\label{classcaffe_1_1_softmax_with_loss_layer_a99288fd74c65097b13fb2c18baf2944a}} 
+shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a99288fd74c65097b13fb2c18baf2944a}{softmax\+\_\+layer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The internal \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{Softmax\+Layer}} used to map predictions to a distribution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ac088354702f96c8d63f0d978e314d5dd}\label{classcaffe_1_1_softmax_with_loss_layer_ac088354702f96c8d63f0d978e314d5dd}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ac088354702f96c8d63f0d978e314d5dd}{prob\+\_\+}}
+\begin{DoxyCompactList}\small\item\em prob stores the output probability predictions from the \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{Softmax\+Layer}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a186afeee3669b5b8bc3bcae58238c0a9}\label{classcaffe_1_1_softmax_with_loss_layer_a186afeee3669b5b8bc3bcae58238c0a9}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a186afeee3669b5b8bc3bcae58238c0a9}{softmax\+\_\+bottom\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em bottom vector holder used in call to the underlying \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Softmax\+Layer\+::\+Forward}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_af8c7d82864973c19f3999325e09fd52c}\label{classcaffe_1_1_softmax_with_loss_layer_af8c7d82864973c19f3999325e09fd52c}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_af8c7d82864973c19f3999325e09fd52c}{softmax\+\_\+top\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em top vector holder used in call to the underlying \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Softmax\+Layer\+::\+Forward}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ad77bc32fa576ad025102d29acf79aefb}\label{classcaffe_1_1_softmax_with_loss_layer_ad77bc32fa576ad025102d29acf79aefb}} 
+bool \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ad77bc32fa576ad025102d29acf79aefb}{has\+\_\+ignore\+\_\+label\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether to ignore instances with a certain label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a117d31c7ac538dd7851fb493bfc75d95}\label{classcaffe_1_1_softmax_with_loss_layer_a117d31c7ac538dd7851fb493bfc75d95}} 
+int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a117d31c7ac538dd7851fb493bfc75d95}{ignore\+\_\+label\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The label indicating that an instance should be ignored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a4b1fa348fc885339931f132573467b81}\label{classcaffe_1_1_softmax_with_loss_layer_a4b1fa348fc885339931f132573467b81}} 
+Loss\+Parameter\+\_\+\+Normalization\+Mode \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a4b1fa348fc885339931f132573467b81}{normalization\+\_\+}}
+\begin{DoxyCompactList}\small\item\em How to normalize the output loss. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a700e28793c5b187de36b935744f5785c}\label{classcaffe_1_1_softmax_with_loss_layer_a700e28793c5b187de36b935744f5785c}} 
+int {\bfseries softmax\+\_\+axis\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_aaabb753438f6877c7a61a52b56b19a1d}\label{classcaffe_1_1_softmax_with_loss_layer_aaabb753438f6877c7a61a52b56b19a1d}} 
+int {\bfseries outer\+\_\+num\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a1fb0bb2aa77585f49be951062c82a9fd}\label{classcaffe_1_1_softmax_with_loss_layer_a1fb0bb2aa77585f49be951062c82a9fd}} 
+int {\bfseries inner\+\_\+num\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}
+
+Computes the multinomial logistic loss for a one-\/of-\/many classification task, passing real-\/valued predictions through a softmax to get a probability distribution over classes. 
+
+This layer should be preferred over separate \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{Softmax\+Layer}} + \mbox{\hyperlink{classcaffe_1_1_multinomial_logistic_loss_layer}{Multinomial\+Logistic\+Loss\+Layer}} as its gradient computation is more numerically stable. At test time, this layer can be replaced simply by a \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{Softmax\+Layer}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ x $, a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values in $ [-\infty, +\infty] $ indicating the predicted score for each of the $ K = CHW $ classes. This layer maps these scores to a probability distribution over classes using the softmax function $ \hat{p}_{nk} = \exp(x_{nk}) / \left[\sum_{k'} \exp(x_{nk'})\right] $ (see \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{Softmax\+Layer}}).
+\item $ (N \times 1 \times 1 \times 1) $ the labels $ l $, an integer-\/valued \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values $ l_n \in [0, 1, 2, ..., K - 1] $ indicating the correct class label among the $ K $ classes 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ the computed cross-\/entropy classification loss\+: $ E = \frac{-1}{N} \sum\limits_{n=1}^N \log(\hat{p}_{n,l_n}) $, for softmax output class probabilites $ \hat{p} $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}\label{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Softmax\+With\+Loss\+Layer@{Softmax\+With\+Loss\+Layer}}
+\index{Softmax\+With\+Loss\+Layer@{Softmax\+With\+Loss\+Layer}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Softmax\+With\+Loss\+Layer()}{SoftmaxWithLossLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{Softmax\+With\+Loss\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_loss_parameter}{Loss\+Parameter}} loss\+\_\+param, with options\+:
+\begin{DoxyItemize}
+\item ignore\+\_\+label (optional) Specify a label value that should be ignored when computing the loss.
+\item normalize (optional, default true) If true, the loss is normalized by the number of (nonignored) labels present; otherwise the loss is simply summed over spatial locations. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}\label{classcaffe_1_1_softmax_with_loss_layer_ac3a01d6846a9b62c1790635d53185e81}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Softmax\+With\+Loss\+Layer@{Softmax\+With\+Loss\+Layer}}
+\index{Softmax\+With\+Loss\+Layer@{Softmax\+With\+Loss\+Layer}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Softmax\+With\+Loss\+Layer()}{SoftmaxWithLossLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{Softmax\+With\+Loss\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_loss_parameter}{Loss\+Parameter}} loss\+\_\+param, with options\+:
+\begin{DoxyItemize}
+\item ignore\+\_\+label (optional) Specify a label value that should be ignored when computing the loss.
+\item normalize (optional, default true) If true, the loss is normalized by the number of (nonignored) labels present; otherwise the loss is simply summed over spatial locations. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a39d8b7d59f2c951ac2573827f181284f}\label{classcaffe_1_1_softmax_with_loss_layer_a39d8b7d59f2c951ac2573827f181284f}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the softmax loss error gradient w.\+r.\+t. the predictions. 
+
+Gradients cannot be computed with respect to the label inputs (bottom\mbox{[}1\mbox{]}), so this method ignores bottom\mbox{[}1\mbox{]} and requires !propagate\+\_\+down\mbox{[}1\mbox{]}, crashing if propagate\+\_\+down\mbox{[}1\mbox{]} is set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ This \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\textquotesingle{}s diff will simply contain the loss\+\_\+weight$\ast$ $ \lambda $, as $ \lambda $ is the coefficient of this layer\textquotesingle{}s output $\ell_i$ in the overall \mbox{\hyperlink{classcaffe_1_1_net}{Net}} loss $ E = \lambda_i \ell_i + \mbox{other loss terms}$; hence $ \frac{\partial E}{\partial \ell_i} = \lambda_i $. ($\ast$\+Assuming that this top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} is not used as a bottom (input) by any other layer of the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.) 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. propagate\+\_\+down\mbox{[}1\mbox{]} must be false as we can\textquotesingle{}t compute gradients with respect to the labels. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ x $; Backward computes diff $ \frac{\partial E}{\partial x} $
+\item $ (N \times 1 \times 1 \times 1) $ the labels -- ignored as we can\textquotesingle{}t compute their error gradients 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a3d2fa01c50cd9bdef567d0e6b5cfcdc3}\label{classcaffe_1_1_softmax_with_loss_layer_a3d2fa01c50cd9bdef567d0e6b5cfcdc3}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the softmax loss error gradient w.\+r.\+t. the predictions. 
+
+Gradients cannot be computed with respect to the label inputs (bottom\mbox{[}1\mbox{]}), so this method ignores bottom\mbox{[}1\mbox{]} and requires !propagate\+\_\+down\mbox{[}1\mbox{]}, crashing if propagate\+\_\+down\mbox{[}1\mbox{]} is set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ This \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\textquotesingle{}s diff will simply contain the loss\+\_\+weight$\ast$ $ \lambda $, as $ \lambda $ is the coefficient of this layer\textquotesingle{}s output $\ell_i$ in the overall \mbox{\hyperlink{classcaffe_1_1_net}{Net}} loss $ E = \lambda_i \ell_i + \mbox{other loss terms}$; hence $ \frac{\partial E}{\partial \ell_i} = \lambda_i $. ($\ast$\+Assuming that this top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} is not used as a bottom (input) by any other layer of the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.) 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. propagate\+\_\+down\mbox{[}1\mbox{]} must be false as we can\textquotesingle{}t compute gradients with respect to the labels. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ x $; Backward computes diff $ \frac{\partial E}{\partial x} $
+\item $ (N \times 1 \times 1 \times 1) $ the labels -- ignored as we can\textquotesingle{}t compute their error gradients 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}\label{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}\label{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_aeb270fe4b77dfcf49eabd22437242e9f}\label{classcaffe_1_1_softmax_with_loss_layer_aeb270fe4b77dfcf49eabd22437242e9f}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!get\+\_\+normalizer@{get\+\_\+normalizer}}
+\index{get\+\_\+normalizer@{get\+\_\+normalizer}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{get\+\_\+normalizer()}{get\_normalizer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual Dtype \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::get\+\_\+normalizer (\begin{DoxyParamCaption}\item[{Loss\+Parameter\+\_\+\+Normalization\+Mode}]{normalization\+\_\+mode,  }\item[{int}]{valid\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Read the normalization mode parameter and compute the normalizer based on the blob size. If normalization\+\_\+mode is V\+A\+L\+ID, the count of valid outputs will be read from valid\+\_\+count, unless it is -\/1 in which case all outputs are assumed to be valid. \mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_aef4567bafcd7b1665f2a2cc71ea02ff4}\label{classcaffe_1_1_softmax_with_loss_layer_aef4567bafcd7b1665f2a2cc71ea02ff4}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!get\+\_\+normalizer@{get\+\_\+normalizer}}
+\index{get\+\_\+normalizer@{get\+\_\+normalizer}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{get\+\_\+normalizer()}{get\_normalizer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+Dtype \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::get\+\_\+normalizer (\begin{DoxyParamCaption}\item[{Loss\+Parameter\+\_\+\+Normalization\+Mode}]{normalization\+\_\+mode,  }\item[{int}]{valid\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Read the normalization mode parameter and compute the normalizer based on the blob size. If normalization\+\_\+mode is V\+A\+L\+ID, the count of valid outputs will be read from valid\+\_\+count, unless it is -\/1 in which case all outputs are assumed to be valid. \mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a2a3985570178431a4cc3f9b9fd4378c2}\label{classcaffe_1_1_softmax_with_loss_layer_a2a3985570178431a4cc3f9b9fd4378c2}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa6fc7c2e90be66f1c1f0683637c949da}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10}\label{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa6fc7c2e90be66f1c1f0683637c949da}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}\label{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Max\+Top\+Blobs@{Max\+Top\+Blobs}}
+\index{Max\+Top\+Blobs@{Max\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Top\+Blobs()}{MaxTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Max\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}\label{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Max\+Top\+Blobs@{Max\+Top\+Blobs}}
+\index{Max\+Top\+Blobs@{Max\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Top\+Blobs()}{MaxTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Max\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}\label{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}\label{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b}\label{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_softmax_with_loss_layer_ad8f5d429254deaebe4ea5f14bfa0d4d0}\label{classcaffe_1_1_softmax_with_loss_layer_ad8f5d429254deaebe4ea5f14bfa0d4d0}} 
+\index{caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Softmax\+With\+Loss\+Layer@{caffe\+::\+Softmax\+With\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer}{caffe\+::\+Softmax\+With\+Loss\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/softmax\+\_\+loss\+\_\+layer.\+hpp\item 
+src/caffe/layers/softmax\+\_\+loss\+\_\+layer.\+cpp\end{DoxyCompactItemize}

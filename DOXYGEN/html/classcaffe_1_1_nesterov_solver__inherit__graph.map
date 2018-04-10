@@ -1,0 +1,4 @@
+<map id="caffe::NesterovSolver&lt; Dtype &gt;" name="caffe::NesterovSolver&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_s_g_d_solver.html" title="Optimizes the parameters of a Net using stochastic gradient descent (SGD) with momentum. " alt="" coords="5,80,189,107"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_solver.html" title="An interface for classes that perform optimization on Nets. " alt="" coords="20,5,175,32"/>
+</map>

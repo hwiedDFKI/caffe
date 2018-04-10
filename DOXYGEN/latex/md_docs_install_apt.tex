@@ -1,0 +1,76 @@
+
+
+ \subsection*{title\+: \char`\"{}\+Installation\+: Ubuntu\char`\"{} }
+
+\section*{Ubuntu Installation}
+
+\subsubsection*{For Ubuntu ($>$= 17.\+04)}
+
+{\bfseries Installing pre-\/compiled Caffe}
+
+Everything including caffe itself is packaged in 17.\+04 and higher versions. To install pre-\/compiled Caffe package, just do it by \begin{DoxyVerb}sudo apt install caffe-cpu
+\end{DoxyVerb}
+
+
+for C\+P\+U-\/only version, or \begin{DoxyVerb}sudo apt install caffe-cuda
+\end{DoxyVerb}
+
+
+for C\+U\+DA version. Note, the cuda version may break if your N\+V\+I\+D\+IA driver and C\+U\+DA toolkit are not installed by A\+PT.
+
+\href{https://launchpad.net/ubuntu/+source/caffe}{\tt Package status of C\+P\+U-\/only version}
+
+\href{https://launchpad.net/ubuntu/+source/caffe-contrib}{\tt Package status of C\+U\+DA version}
+
+{\bfseries Installing Caffe from source}
+
+We may install the dependencies by merely one line \begin{DoxyVerb}sudo apt build-dep caffe-cpu        # dependencies for CPU-only version
+sudo apt build-dep caffe-cuda       # dependencies for CUDA version
+\end{DoxyVerb}
+
+
+It requires a {\ttfamily deb-\/src} line in your {\ttfamily sources.\+list}. Continue with \href{installation.html#compilation}{\tt compilation}.
+
+\subsubsection*{For Ubuntu ($<$ 17.\+04)}
+
+{\bfseries General dependencies} \begin{DoxyVerb}sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --no-install-recommends libboost-all-dev
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+\end{DoxyVerb}
+
+
+{\bfseries C\+U\+DA}\+: Install by {\ttfamily apt-\/get} or the N\+V\+I\+D\+IA {\ttfamily .run} package. The N\+V\+I\+D\+IA package tends to follow more recent library and driver versions, but the installation is more manual. If installing from packages, install the library and latest driver separately; the driver bundled with the library is usually out-\/of-\/date. This can be skipped for C\+P\+U-\/only installation.
+
+{\bfseries B\+L\+AS}\+: install A\+T\+L\+AS by {\ttfamily sudo apt-\/get install libatlas-\/base-\/dev} or install Open\+B\+L\+AS by {\ttfamily sudo apt-\/get install libopenblas-\/dev} or M\+KL for better C\+PU performance.
+
+{\bfseries Python} (optional)\+: if you use the default Python you will need to {\ttfamily sudo apt-\/get install} the {\ttfamily python-\/dev} package to have the Python headers for building the pycaffe interface.
+
+{\bfseries Compatibility notes, 16.\+04}
+
+C\+U\+DA 8 is required on Ubuntu 16.\+04.
+
+{\bfseries Remaining dependencies, 12.\+04}
+
+These dependencies need manual installation in 12.\+04. \begin{DoxyVerb}# glog
+wget https://github.com/google/glog/archive/v0.3.3.tar.gz
+tar zxvf v0.3.3.tar.gz
+cd glog-0.3.3
+./configure
+make && make install
+# gflags
+wget https://github.com/schuhschuh/gflags/archive/master.zip
+unzip master.zip
+cd gflags-master
+mkdir build && cd build
+export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
+make && make install
+# lmdb
+git clone https://github.com/LMDB/lmdb
+cd lmdb/libraries/liblmdb
+make && make install
+\end{DoxyVerb}
+
+
+Note that glog does not compile with the most recent gflags version (2.\+1), so before that is resolved you will need to build with glog first.
+
+Continue with \href{installation.html#compilation}{\tt compilation}. 

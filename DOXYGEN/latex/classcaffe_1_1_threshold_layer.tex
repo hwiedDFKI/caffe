@@ -1,0 +1,211 @@
+\hypertarget{classcaffe_1_1_threshold_layer}{}\section{caffe\+:\+:Threshold\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_threshold_layer}\index{caffe\+::\+Threshold\+Layer$<$ Dtype $>$@{caffe\+::\+Threshold\+Layer$<$ Dtype $>$}}
+
+
+Tests whether the input exceeds a threshold\+: outputs 1 for inputs above threshold; 0 otherwise.  
+
+
+
+
+{\ttfamily \#include $<$threshold\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Threshold\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_threshold_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}{Threshold\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}\label{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}{Threshold\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a4902e90735cf20735343705014b4176f}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}\label{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_threshold_layer_ad1be0a529b7f18cc483115afe845ed59}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a7aa846dd532cfeb41b09671bd975d120}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}\label{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a7aa846dd532cfeb41b09671bd975d120}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}\label{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Not implemented (non-\/differentiable function) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_ab4750bfabc48f7bc76721dec81a3d54f}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}\label{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_aded9ca701625d915984c9f5ef754ba66}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a7aa846dd532cfeb41b09671bd975d120}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}\label{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a5df4d0e3da5e80d83c5853da0f018db6}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Not implemented (non-\/differentiable function) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_aacbdfb31f685add4d4c9dbfb5444bcad}\label{classcaffe_1_1_threshold_layer_aacbdfb31f685add4d4c9dbfb5444bcad}} 
+Dtype {\bfseries threshold\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Threshold\+Layer$<$ Dtype $>$}
+
+Tests whether the input exceeds a threshold\+: outputs 1 for inputs above threshold; 0 otherwise. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}\label{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Threshold\+Layer@{Threshold\+Layer}}
+\index{Threshold\+Layer@{Threshold\+Layer}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Threshold\+Layer()}{ThresholdLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_threshold_layer}{Threshold\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_threshold_parameter}{Threshold\+Parameter}} threshold\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{Threshold\+Layer}} options\+:
+\begin{DoxyItemize}
+\item threshold ({\bfseries optional}, default 0). the threshold value $ t $ to which the input values are compared. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}\label{classcaffe_1_1_threshold_layer_a18883bf3cb9c29828acd59b8216ba1de}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Threshold\+Layer@{Threshold\+Layer}}
+\index{Threshold\+Layer@{Threshold\+Layer}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Threshold\+Layer()}{ThresholdLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_threshold_layer}{Threshold\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_threshold_parameter}{Threshold\+Parameter}} threshold\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{Threshold\+Layer}} options\+:
+\begin{DoxyItemize}
+\item threshold ({\bfseries optional}, default 0). the threshold value $ t $ to which the input values are compared. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_ab4750bfabc48f7bc76721dec81a3d54f}\label{classcaffe_1_1_threshold_layer_ab4750bfabc48f7bc76721dec81a3d54f}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = \left\{ \begin{array}{lr} 0 & \mathrm{if} \; x \le t \\ 1 & \mathrm{if} \; x > t \end{array} \right. $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a7aa846dd532cfeb41b09671bd975d120}\label{classcaffe_1_1_threshold_layer_a7aa846dd532cfeb41b09671bd975d120}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = \left\{ \begin{array}{lr} 0 & \mathrm{if} \; x \le t \\ 1 & \mathrm{if} \; x > t \end{array} \right. $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a4902e90735cf20735343705014b4176f}\label{classcaffe_1_1_threshold_layer_a4902e90735cf20735343705014b4176f}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037}\label{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037}} 
+\index{caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Threshold\+Layer@{caffe\+::\+Threshold\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_threshold_layer}{caffe\+::\+Threshold\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/threshold\+\_\+layer.\+hpp\item 
+src/caffe/layers/threshold\+\_\+layer.\+cpp\end{DoxyCompactItemize}

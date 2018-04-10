@@ -1,0 +1,26 @@
+var classcaffe_1_1_m_v_n_layer =
+[
+    [ "MVNLayer", "classcaffe_1_1_m_v_n_layer.html#aebec689ed713a68664980b03454e3506", null ],
+    [ "MVNLayer", "classcaffe_1_1_m_v_n_layer.html#aebec689ed713a68664980b03454e3506", null ],
+    [ "Backward_cpu", "classcaffe_1_1_m_v_n_layer.html#af86a0165418a7623b3aa0dc2d5f29182", null ],
+    [ "Backward_cpu", "classcaffe_1_1_m_v_n_layer.html#a65e0056ef97913568396f9fa6ce8818d", null ],
+    [ "Backward_gpu", "classcaffe_1_1_m_v_n_layer.html#a8fa79d2ac331d8b49d390df3a83d43d4", null ],
+    [ "Backward_gpu", "classcaffe_1_1_m_v_n_layer.html#a8fa79d2ac331d8b49d390df3a83d43d4", null ],
+    [ "ExactNumBottomBlobs", "classcaffe_1_1_m_v_n_layer.html#afd9b078a1bb48de9b91f3766edbbf058", null ],
+    [ "ExactNumBottomBlobs", "classcaffe_1_1_m_v_n_layer.html#afd9b078a1bb48de9b91f3766edbbf058", null ],
+    [ "ExactNumTopBlobs", "classcaffe_1_1_m_v_n_layer.html#ae10d9ef135adf3cd25e86ce06188c814", null ],
+    [ "ExactNumTopBlobs", "classcaffe_1_1_m_v_n_layer.html#ae10d9ef135adf3cd25e86ce06188c814", null ],
+    [ "Forward_cpu", "classcaffe_1_1_m_v_n_layer.html#a1e31d09b5911e14d6fc3ac952cb14ebb", null ],
+    [ "Forward_cpu", "classcaffe_1_1_m_v_n_layer.html#a48344a0a68ba16fb4cc88c13797a65b6", null ],
+    [ "Forward_gpu", "classcaffe_1_1_m_v_n_layer.html#a8a4d8c392e4f559f1ac90387b8039015", null ],
+    [ "Forward_gpu", "classcaffe_1_1_m_v_n_layer.html#a8a4d8c392e4f559f1ac90387b8039015", null ],
+    [ "Reshape", "classcaffe_1_1_m_v_n_layer.html#afcb6c5f28b45496eed1b0ea19705b763", null ],
+    [ "Reshape", "classcaffe_1_1_m_v_n_layer.html#a48aafabe729bb3b22171cfdbda6e6073", null ],
+    [ "type", "classcaffe_1_1_m_v_n_layer.html#af32c09dc68d5a12dd2111ff07b373e8a", null ],
+    [ "type", "classcaffe_1_1_m_v_n_layer.html#af32c09dc68d5a12dd2111ff07b373e8a", null ],
+    [ "eps_", "classcaffe_1_1_m_v_n_layer.html#a76c620f1b61ffcc8bca0e733bc5bb29c", null ],
+    [ "mean_", "classcaffe_1_1_m_v_n_layer.html#a759e8d43de78abc594ac00ab638b0e04", null ],
+    [ "sum_multiplier_", "classcaffe_1_1_m_v_n_layer.html#a69609a88e80bdeb5eaa345eeb5b0a585", null ],
+    [ "temp_", "classcaffe_1_1_m_v_n_layer.html#a3a0ccb267413e296077c889dff469d58", null ],
+    [ "variance_", "classcaffe_1_1_m_v_n_layer.html#a8888bb097cae81f701a6d69cdaa15610", null ]
+];

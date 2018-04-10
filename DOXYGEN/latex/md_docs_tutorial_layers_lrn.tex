@@ -1,0 +1,36 @@
+
+
+ \subsection*{title\+: Local Response Normalization (L\+RN) }
+
+\section*{Local Response Normalization (L\+RN)}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily L\+RN}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1LRNLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/lrn_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/lrn\+\_\+layer.hpp}}
+\item C\+PU Implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/lrn_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/lrn\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU Implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/lrn_layer.cu}{\tt {\ttfamily ./src/caffe/layers/lrn\+\_\+layer.cu}}
+\item Parameters ({\ttfamily L\+R\+N\+Parameter lrn\+\_\+param})
+\begin{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily local\+\_\+size} \mbox{[}default 5\mbox{]}\+: the number of channels to sum over (for cross channel L\+RN) or the side length of the square region to sum over (for within channel L\+RN)
+\item {\ttfamily alpha} \mbox{[}default 1\mbox{]}\+: the scaling parameter (see below)
+\item {\ttfamily beta} \mbox{[}default 5\mbox{]}\+: the exponent (see below)
+\item {\ttfamily norm\+\_\+region} \mbox{[}default {\ttfamily A\+C\+R\+O\+S\+S\+\_\+\+C\+H\+A\+N\+N\+E\+LS}\mbox{]}\+: whether to sum over adjacent channels ({\ttfamily A\+C\+R\+O\+S\+S\+\_\+\+C\+H\+A\+N\+N\+E\+LS}) or nearby spatial locations ({\ttfamily W\+I\+T\+H\+I\+N\+\_\+\+C\+H\+A\+N\+N\+EL})
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The local response normalization layer performs a kind of \char`\"{}lateral inhibition\char`\"{} by normalizing over local input regions. In {\ttfamily A\+C\+R\+O\+S\+S\+\_\+\+C\+H\+A\+N\+N\+E\+LS} mode, the local regions extend across nearby channels, but have no spatial extent (i.\+e., they have shape {\ttfamily local\+\_\+size x 1 x 1}). In {\ttfamily W\+I\+T\+H\+I\+N\+\_\+\+C\+H\+A\+N\+N\+EL} mode, the local regions extend spatially, but are in separate channels (i.\+e., they have shape {\ttfamily 1 x local\+\_\+size x local\+\_\+size}). Each input value is divided by \$\$(1 + (/n)  x\+\_\+i$^\wedge$2)$^\wedge$\$\$, where \$\$n\$\$ is the size of each local region, and the sum is taken over the region centered at that value (zero padding is added where necessary).
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily L\+R\+N\+Parameter lrn\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+L\+R\+N\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

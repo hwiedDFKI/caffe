@@ -1,0 +1,921 @@
+\hypertarget{classcaffe_1_1_layer}{}\section{caffe\+:\+:Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_layer}\index{caffe\+::\+Layer$<$ Dtype $>$@{caffe\+::\+Layer$<$ Dtype $>$}}
+
+
+An interface for the units of computation which can be composed into a \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.  
+
+
+
+
+{\ttfamily \#include $<$layer.\+hpp$>$}
+
+
+
+Inherited by \mbox{\hyperlink{classcaffe_1_1_accuracy_layer}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync}{pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync}}, \mbox{\hyperlink{classpyloss_1_1_euclidean_loss_layer}{pyloss.\+Euclidean\+Loss\+Layer}}, \mbox{\hyperlink{classtest__python__layer_1_1_exception_layer}{test\+\_\+python\+\_\+layer.\+Exception\+Layer}}, \mbox{\hyperlink{classtest__python__layer_1_1_parameter_layer}{test\+\_\+python\+\_\+layer.\+Parameter\+Layer}}, \mbox{\hyperlink{classtest__python__layer_1_1_phase_layer}{test\+\_\+python\+\_\+layer.\+Phase\+Layer}}, \mbox{\hyperlink{classtest__python__layer_1_1_simple_layer}{test\+\_\+python\+\_\+layer.\+Simple\+Layer}}, and \mbox{\hyperlink{classtest__python__layer__with__param__str_1_1_simple_param_layer}{test\+\_\+python\+\_\+layer\+\_\+with\+\_\+param\+\_\+str.\+Simple\+Param\+Layer}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}{Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}{Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Implements common layer setup functionality. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)=0
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Forward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Given the bottom blobs, compute the top blobs and the loss. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Backward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Given the top blob error gradients, compute the bottom blob error gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}\label{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}} 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}{blobs}} ()
+\begin{DoxyCompactList}\small\item\em Returns the vector of learnable parameter blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}\label{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}} 
+const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \& \mbox{\hyperlink{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}{layer\+\_\+param}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a4a1754828dda22cc8daa2f63377f3579}\label{classcaffe_1_1_layer_a4a1754828dda22cc8daa2f63377f3579}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a4a1754828dda22cc8daa2f63377f3579}{To\+Proto}} (\mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} $\ast$param, bool write\+\_\+diff=false)
+\begin{DoxyCompactList}\small\item\em Writes the layer parameter to a protocol buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}\label{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}{loss}} (const int top\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Returns the scalar loss associated with a top blob at a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}\label{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}} 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}{set\+\_\+loss}} (const int top\+\_\+index, const Dtype value)
+\begin{DoxyCompactList}\small\item\em Sets the loss associated with a top blob at a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}\label{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}{Max\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}{Max\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}{Equal\+Num\+Bottom\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the layer requires an equal number of bottom and top blobs. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}{Auto\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Return whether \char`\"{}anonymous\char`\"{} top blobs are created automatically by the layer. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return whether to allow force\+\_\+backward for a given bottom blob index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}{param\+\_\+propagate\+\_\+down}} (const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Specifies whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}\label{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}} 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}{set\+\_\+param\+\_\+propagate\+\_\+down}} (const int param\+\_\+id, const bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}{Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}{Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Implements common layer setup functionality. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)=0
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}{Forward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Given the bottom blobs, compute the top blobs and the loss. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Backward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Given the top blob error gradients, compute the bottom blob error gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}\label{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}} 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_layer_aaf4524ce8641a30a8a4784aee1b2b4c8}{blobs}} ()
+\begin{DoxyCompactList}\small\item\em Returns the vector of learnable parameter blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}\label{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}} 
+const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \& \mbox{\hyperlink{classcaffe_1_1_layer_adff82274f146e2b6922d0ebac2aaf215}{layer\+\_\+param}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_ab2badafa974783cee8ecc8f666769a0e}\label{classcaffe_1_1_layer_ab2badafa974783cee8ecc8f666769a0e}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_ab2badafa974783cee8ecc8f666769a0e}{To\+Proto}} (\mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} $\ast$param, bool write\+\_\+diff=false)
+\begin{DoxyCompactList}\small\item\em Writes the layer parameter to a protocol buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}\label{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer_a899410336f30821644c8bd6c69a070c9}{loss}} (const int top\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Returns the scalar loss associated with a top blob at a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}\label{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}} 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a899b09f4b91ada8545b3a43ee91e0d69}{set\+\_\+loss}} (const int top\+\_\+index, const Dtype value)
+\begin{DoxyCompactList}\small\item\em Sets the loss associated with a top blob at a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}\label{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_layer_a8952bff6bc4c2a96d8ea30d8ff65b198}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}{Min\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}{Max\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{Min\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}{Max\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}{Equal\+Num\+Bottom\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the layer requires an equal number of bottom and top blobs. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}{Auto\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Return whether \char`\"{}anonymous\char`\"{} top blobs are created automatically by the layer. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return whether to allow force\+\_\+backward for a given bottom blob index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}{param\+\_\+propagate\+\_\+down}} (const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Specifies whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}\label{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}} 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a9a6fcb843803ed556f0a69cc2864379b}{set\+\_\+param\+\_\+propagate\+\_\+down}} (const int param\+\_\+id, const bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}\label{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)=0
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}\label{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}\label{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)=0
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}\label{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}{Check\+Blob\+Counts}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}{Set\+Loss\+Weights}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}\label{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)=0
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}\label{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_af3a88d8fb290877b4c7eb37daa3499de}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}\label{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)=0
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}\label{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a6faee52af6250a38d1b879008257f5a7}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}{Check\+Blob\+Counts}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}{Set\+Loss\+Weights}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \mbox{\hyperlink{classcaffe_1_1_layer_a7ed12bb2df25c887e41d7ea9557fc701}{layer\+\_\+param\+\_\+}}
+\item 
+Phase \mbox{\hyperlink{classcaffe_1_1_layer_a1d04ad7f595a82a1c811f102d68b8a19}{phase\+\_\+}}
+\item 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_layer_a8d6998a5f8ca95990976021de743dd21}{blobs\+\_\+}}
+\item 
+vector$<$ bool $>$ \mbox{\hyperlink{classcaffe_1_1_layer_ab1db6c32fa71343dac868b07288eb45e}{param\+\_\+propagate\+\_\+down\+\_\+}}
+\item 
+vector$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_layer_a5fbf5ce7385b2da3d8edc7eec3822ac7}{loss\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Layer$<$ Dtype $>$}
+
+An interface for the units of computation which can be composed into a \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. 
+
+\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}s must implement a Forward function, in which they take their input (bottom) \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s (if any) and compute their output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s (if any). They may also implement a Backward function, in which they compute the error gradients with respect to their input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s, given the error gradients with their output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}s. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}\label{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Layer()}{Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+You should not implement your own constructor. Any set up code should go to \mbox{\hyperlink{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}{Set\+Up()}}, where the dimensions of the bottom blobs are provided to the layer. \mbox{\Hypertarget{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}\label{classcaffe_1_1_layer_a7b4e4ccea08c7b8b15acc6829d5735f6}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Layer@{Layer}}
+\index{Layer@{Layer}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Layer()}{Layer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+You should not implement your own constructor. Any set up code should go to \mbox{\hyperlink{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}{Set\+Up()}}, where the dimensions of the bottom blobs are provided to the layer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}\label{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether to allow force\+\_\+backward for a given bottom blob index. 
+
+If Allow\+Force\+Backward(i) == false, we will ignore the force\+\_\+backward setting and backpropagate to blob i only if it needs gradient information (as is done when force\+\_\+backward == false). 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a9c46167bc8b96b28196bc24a5515b531}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a9c46167bc8b96b28196bc24a5515b531}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a76dd3fde9f09cb9840f05ee035b5a2c5}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a76dd3fde9f09cb9840f05ee035b5a2c5}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_af0f16d5119ac6118b670c1966c38fd7d}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_af0f16d5119ac6118b670c1966c38fd7d}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}\label{classcaffe_1_1_layer_a1c0b2bffcd6d57e4bd49f820941badb6}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether to allow force\+\_\+backward for a given bottom blob index. 
+
+If Allow\+Force\+Backward(i) == false, we will ignore the force\+\_\+backward setting and backpropagate to blob i only if it needs gradient information (as is done when force\+\_\+backward == false). 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a9c46167bc8b96b28196bc24a5515b531}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a9c46167bc8b96b28196bc24a5515b531}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8d91610cc8b9615a1db4f07fe5590a37}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a76dd3fde9f09cb9840f05ee035b5a2c5}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a76dd3fde9f09cb9840f05ee035b5a2c5}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_af0f16d5119ac6118b670c1966c38fd7d}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_af0f16d5119ac6118b670c1966c38fd7d}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}\label{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Auto\+Top\+Blobs@{Auto\+Top\+Blobs}}
+\index{Auto\+Top\+Blobs@{Auto\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Auto\+Top\+Blobs()}{AutoTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Auto\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether \char`\"{}anonymous\char`\"{} top blobs are created automatically by the layer. 
+
+If this method returns true, \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Net\+::\+Init}} will create enough \char`\"{}anonymous\char`\"{} top blobs to fulfill the requirement specified by \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{Exact\+Num\+Top\+Blobs()}} or \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{Min\+Top\+Blobs()}}. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_loss_layer_ae98a9942cdb1c67e09d45cc2d876618e}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_loss_layer_ae98a9942cdb1c67e09d45cc2d876618e}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}\label{classcaffe_1_1_layer_a50130669e230a168d1f8fbbb8171f054}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Auto\+Top\+Blobs@{Auto\+Top\+Blobs}}
+\index{Auto\+Top\+Blobs@{Auto\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Auto\+Top\+Blobs()}{AutoTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Auto\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return whether \char`\"{}anonymous\char`\"{} top blobs are created automatically by the layer. 
+
+If this method returns true, \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Net\+::\+Init}} will create enough \char`\"{}anonymous\char`\"{} top blobs to fulfill the requirement specified by \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{Exact\+Num\+Top\+Blobs()}} or \mbox{\hyperlink{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}{Min\+Top\+Blobs()}}. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_loss_layer_ae98a9942cdb1c67e09d45cc2d876618e}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_loss_layer_ae98a9942cdb1c67e09d45cc2d876618e}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}\label{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Backward@{Backward}}
+\index{Backward@{Backward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Backward()}{Backward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Backward (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given the top blob error gradients, compute the bottom blob error gradients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & the output blobs, whose diff fields store the gradient of the error with respect to themselves \\
+\hline
+{\em propagate\+\_\+down} & a vector with equal length to bottom, with each index indicating whether to propagate the error gradients down to the bottom blob at the corresponding index \\
+\hline
+{\em bottom} & the input blobs, whose diff fields will store the gradient of the error with respect to themselves after Backward is run\\
+\hline
+\end{DoxyParams}
+The Backward wrapper calls the relevant device wrapper function (Backward\+\_\+cpu or Backward\+\_\+gpu) to compute the bottom blob diffs given the top blob diffs.
+
+Your layer should implement Backward\+\_\+cpu and (optionally) Backward\+\_\+gpu. \mbox{\Hypertarget{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}\label{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Backward@{Backward}}
+\index{Backward@{Backward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Backward()}{Backward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Backward (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given the top blob error gradients, compute the bottom blob error gradients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & the output blobs, whose diff fields store the gradient of the error with respect to themselves \\
+\hline
+{\em propagate\+\_\+down} & a vector with equal length to bottom, with each index indicating whether to propagate the error gradients down to the bottom blob at the corresponding index \\
+\hline
+{\em bottom} & the input blobs, whose diff fields will store the gradient of the error with respect to themselves after Backward is run\\
+\hline
+\end{DoxyParams}
+The Backward wrapper calls the relevant device wrapper function (Backward\+\_\+cpu or Backward\+\_\+gpu) to compute the bottom blob diffs given the top blob diffs.
+
+Your layer should implement Backward\+\_\+cpu and (optionally) Backward\+\_\+gpu. \mbox{\Hypertarget{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}\label{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Check\+Blob\+Counts@{Check\+Blob\+Counts}}
+\index{Check\+Blob\+Counts@{Check\+Blob\+Counts}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Check\+Blob\+Counts()}{CheckBlobCounts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Check\+Blob\+Counts (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Called by the parent \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}\textquotesingle{}s Set\+Up to check that the number of bottom and top Blobs provided as input match the expected numbers specified by the \{Exact\+Num,Min,Max\}\{Bottom,Top\}Blobs() functions. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}\label{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Check\+Blob\+Counts@{Check\+Blob\+Counts}}
+\index{Check\+Blob\+Counts@{Check\+Blob\+Counts}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Check\+Blob\+Counts()}{CheckBlobCounts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Check\+Blob\+Counts (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Called by the parent \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}\textquotesingle{}s Set\+Up to check that the number of bottom and top Blobs provided as input match the expected numbers specified by the \{Exact\+Num,Min,Max\}\{Bottom,Top\}Blobs() functions. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a55c8036130225fbc874a986bdf4b27e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}\label{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Equal\+Num\+Bottom\+Top\+Blobs@{Equal\+Num\+Bottom\+Top\+Blobs}}
+\index{Equal\+Num\+Bottom\+Top\+Blobs@{Equal\+Num\+Bottom\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Equal\+Num\+Bottom\+Top\+Blobs()}{EqualNumBottomTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Equal\+Num\+Bottom\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the layer requires an equal number of bottom and top blobs. 
+
+This method should be overridden to return true if your layer expects an equal number of bottom and top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ad8e839460bf52abe3df2008b99a1810d}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ad8e839460bf52abe3df2008b99a1810d}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}\label{classcaffe_1_1_layer_af452a938bc7596f9b5e9900c8dc4ab3d}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Equal\+Num\+Bottom\+Top\+Blobs@{Equal\+Num\+Bottom\+Top\+Blobs}}
+\index{Equal\+Num\+Bottom\+Top\+Blobs@{Equal\+Num\+Bottom\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Equal\+Num\+Bottom\+Top\+Blobs()}{EqualNumBottomTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Equal\+Num\+Bottom\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the layer requires an equal number of bottom and top blobs. 
+
+This method should be overridden to return true if your layer expects an equal number of bottom and top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ad8e839460bf52abe3df2008b99a1810d}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ad8e839460bf52abe3df2008b99a1810d}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}\label{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a087f5f5b0e6c50d98e7a7d04aa35f1b9}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a087f5f5b0e6c50d98e7a7d04aa35f1b9}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa03732f381764180748479c83b289869}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa03732f381764180748479c83b289869}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a5b87980f25eea544ebff916586c870e6}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a5b87980f25eea544ebff916586c870e6}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a786fb4163cd0a31a564100ce7e4b74b2}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_aa6f3ad6918e64ffa1828e821accf25e9}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a786fb4163cd0a31a564100ce7e4b74b2}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_aa6f3ad6918e64ffa1828e821accf25e9}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_afb0d3db8e4a18bec0e05d54d11453ef1}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_a92fb5561414d7e8b8845b0279b1ee847}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_afb0d3db8e4a18bec0e05d54d11453ef1}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_a92fb5561414d7e8b8845b0279b1ee847}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a4eb72974cea32c84acb6b8012a0d326b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a4eb72974cea32c84acb6b8012a0d326b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_ac982c8170a7f899366321412a7bb91d7}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_ac982c8170a7f899366321412a7bb91d7}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a32be44f9f361d29f05261bd174d92321}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a32be44f9f361d29f05261bd174d92321}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_a6776c86faf14e35ae7be9848c7012aa5}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_a6776c86faf14e35ae7be9848c7012aa5}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ac6386917437ef54003bb7f8c2618f5fe}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a0b0f583d8952d7cd45cbf4bae2a38548}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ac6386917437ef54003bb7f8c2618f5fe}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a0b0f583d8952d7cd45cbf4bae2a38548}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a73101a8ace6de2b179e36c13be17cb17}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a0634500a12e1d2299b7c8556976e4529}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a35772d667af49afe707c7b1db881c573}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ac4c1f2f0444a103727d793a6ae410e67}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a73101a8ace6de2b179e36c13be17cb17}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a0634500a12e1d2299b7c8556976e4529}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a35772d667af49afe707c7b1db881c573}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ac4c1f2f0444a103727d793a6ae410e67}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a4120d2fd610655c7ad3d846637564bc6}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a5afdeb6b448b2f7d0637afa554381500}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a0acd33d14dd208c5a439940c50c6d3d3}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ad97ea6043b01351e85b39b512ae0e489}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_abfc6e86b0b22c156ddc350168cd7757b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a0fcc7996823cba1a468e82b3f9058ff0}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a4120d2fd610655c7ad3d846637564bc6}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a5afdeb6b448b2f7d0637afa554381500}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a0acd33d14dd208c5a439940c50c6d3d3}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ad97ea6043b01351e85b39b512ae0e489}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_abfc6e86b0b22c156ddc350168cd7757b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a0fcc7996823cba1a468e82b3f9058ff0}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a07dc8b1c3bfa3a997dd86b4e53f54019}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a07dc8b1c3bfa3a997dd86b4e53f54019}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afd9b078a1bb48de9b91f3766edbbf058}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_afe44488dde78e6bcf6d4bdad97ee4986}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afd9b078a1bb48de9b91f3766edbbf058}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_afe44488dde78e6bcf6d4bdad97ee4986}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_a2b6fa99ededf0863d8bab4a7a46addae}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_ac7e0da0e543f134e04b00d8625132b71}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_a2b6fa99ededf0863d8bab4a7a46addae}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_ac7e0da0e543f134e04b00d8625132b71}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}\label{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a087f5f5b0e6c50d98e7a7d04aa35f1b9}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a087f5f5b0e6c50d98e7a7d04aa35f1b9}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa03732f381764180748479c83b289869}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa03732f381764180748479c83b289869}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a5b87980f25eea544ebff916586c870e6}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a5b87980f25eea544ebff916586c870e6}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a786fb4163cd0a31a564100ce7e4b74b2}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_aa6f3ad6918e64ffa1828e821accf25e9}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a786fb4163cd0a31a564100ce7e4b74b2}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_aa6f3ad6918e64ffa1828e821accf25e9}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_afb0d3db8e4a18bec0e05d54d11453ef1}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_a92fb5561414d7e8b8845b0279b1ee847}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_afb0d3db8e4a18bec0e05d54d11453ef1}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_a92fb5561414d7e8b8845b0279b1ee847}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a4eb72974cea32c84acb6b8012a0d326b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a4eb72974cea32c84acb6b8012a0d326b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_ac982c8170a7f899366321412a7bb91d7}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_ac982c8170a7f899366321412a7bb91d7}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a32be44f9f361d29f05261bd174d92321}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_acac806dbc6d3fa3dd7daae00caabd731}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a32be44f9f361d29f05261bd174d92321}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_a6776c86faf14e35ae7be9848c7012aa5}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_a6776c86faf14e35ae7be9848c7012aa5}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ac6386917437ef54003bb7f8c2618f5fe}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a0b0f583d8952d7cd45cbf4bae2a38548}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ac6386917437ef54003bb7f8c2618f5fe}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a0b0f583d8952d7cd45cbf4bae2a38548}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a73101a8ace6de2b179e36c13be17cb17}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a0634500a12e1d2299b7c8556976e4529}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a35772d667af49afe707c7b1db881c573}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ac4c1f2f0444a103727d793a6ae410e67}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a73101a8ace6de2b179e36c13be17cb17}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a0634500a12e1d2299b7c8556976e4529}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a35772d667af49afe707c7b1db881c573}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ac4c1f2f0444a103727d793a6ae410e67}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a4120d2fd610655c7ad3d846637564bc6}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a5afdeb6b448b2f7d0637afa554381500}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a0acd33d14dd208c5a439940c50c6d3d3}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ad97ea6043b01351e85b39b512ae0e489}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_abfc6e86b0b22c156ddc350168cd7757b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a0fcc7996823cba1a468e82b3f9058ff0}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a4120d2fd610655c7ad3d846637564bc6}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a5afdeb6b448b2f7d0637afa554381500}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a0acd33d14dd208c5a439940c50c6d3d3}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ad97ea6043b01351e85b39b512ae0e489}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_abfc6e86b0b22c156ddc350168cd7757b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a0fcc7996823cba1a468e82b3f9058ff0}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a07dc8b1c3bfa3a997dd86b4e53f54019}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a07dc8b1c3bfa3a997dd86b4e53f54019}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a8ff310ac37e1e79ce6ef8fbc95be0cd9}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afd9b078a1bb48de9b91f3766edbbf058}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_afe44488dde78e6bcf6d4bdad97ee4986}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afd9b078a1bb48de9b91f3766edbbf058}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_abb6c0e6acd2863baf47d6e6acda6f55f}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_afe44488dde78e6bcf6d4bdad97ee4986}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_a2b6fa99ededf0863d8bab4a7a46addae}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_ac7e0da0e543f134e04b00d8625132b71}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_a2b6fa99ededf0863d8bab4a7a46addae}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_ac7e0da0e543f134e04b00d8625132b71}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}\label{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a5f56fd304b6581697cbf309ebb8bc9b7}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a5f56fd304b6581697cbf309ebb8bc9b7}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aaf55e75f2296586b1fee0175e2d72fbb}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aaf55e75f2296586b1fee0175e2d72fbb}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab8575decdd0c5c42e24b9c3424f708ad}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab8575decdd0c5c42e24b9c3424f708ad}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a45e9c6e7b572b915be8731fcb6403695}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a45e9c6e7b572b915be8731fcb6403695}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeffb8fcfc522f7365c23b0e6ae5c232e}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeffb8fcfc522f7365c23b0e6ae5c232e}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_ad11b8da0a6217a0f9a63789b360b1c99}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_ad11b8da0a6217a0f9a63789b360b1c99}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_a7bd9264758f462b3392d2eedec8b1c99}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_a7bd9264758f462b3392d2eedec8b1c99}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a9552dc137a5bcbdd17bdb3321d678595}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac0ee88b119c38749c50e914521cdc148}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a9552dc137a5bcbdd17bdb3321d678595}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac0ee88b119c38749c50e914521cdc148}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_aa9182d46877b8514fca86e3588249567}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_aa9182d46877b8514fca86e3588249567}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a7e4a9aa634577308bc189adcf0ac22ed}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a09d5ccd980598cce0472b3bd66316c08}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a7e4a9aa634577308bc189adcf0ac22ed}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a09d5ccd980598cce0472b3bd66316c08}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_af02f4561fa25a979e523aae851bed39d}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ab2cf1f7dd41b801ed32471ec492d423c}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_af02f4561fa25a979e523aae851bed39d}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ab2cf1f7dd41b801ed32471ec492d423c}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7d5c537334359c2a83cce489fb534342}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a652d8a5b07b72938a81f50305c1a8ee1}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_aeb70ea5cec478f098259356690b01c9b}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a3318c2404c6072ba07178b48d39ef0f5}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a345f640e6c1d3e9ee929d706b68300e9}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7d5c537334359c2a83cce489fb534342}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a652d8a5b07b72938a81f50305c1a8ee1}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_aeb70ea5cec478f098259356690b01c9b}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a3318c2404c6072ba07178b48d39ef0f5}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a345f640e6c1d3e9ee929d706b68300e9}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a0f19a4cac8676927f9c83010957a2921}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a0f19a4cac8676927f9c83010957a2921}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_ae10d9ef135adf3cd25e86ce06188c814}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a6bc4748c20e0940e5367ed4d50f4a11b}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_ae10d9ef135adf3cd25e86ce06188c814}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a6bc4748c20e0940e5367ed4d50f4a11b}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a1e072cbda98dbc57001ce92432b045b8}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a1e072cbda98dbc57001ce92432b045b8}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1040cc3b4fb028d54f67a685513d745b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1040cc3b4fb028d54f67a685513d745b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}\label{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a5f56fd304b6581697cbf309ebb8bc9b7}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a5f56fd304b6581697cbf309ebb8bc9b7}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aaf55e75f2296586b1fee0175e2d72fbb}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aaf55e75f2296586b1fee0175e2d72fbb}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9035d000b2ce51a973f255a5eb2df8e3}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab8575decdd0c5c42e24b9c3424f708ad}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab8575decdd0c5c42e24b9c3424f708ad}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a45e9c6e7b572b915be8731fcb6403695}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a45e9c6e7b572b915be8731fcb6403695}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4cb9032f0942c0fef5f6c7094c7b2ab8}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa5d5ab714a14082f5343dc9c49025b23}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeffb8fcfc522f7365c23b0e6ae5c232e}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeffb8fcfc522f7365c23b0e6ae5c232e}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_ad11b8da0a6217a0f9a63789b360b1c99}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_ad11b8da0a6217a0f9a63789b360b1c99}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_a7bd9264758f462b3392d2eedec8b1c99}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_window_data_layer_a7bd9264758f462b3392d2eedec8b1c99}{caffe\+::\+Window\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a9552dc137a5bcbdd17bdb3321d678595}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac0ee88b119c38749c50e914521cdc148}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_aaf18bf4b77994475e8b55e5cefaa654a}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a9552dc137a5bcbdd17bdb3321d678595}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac0ee88b119c38749c50e914521cdc148}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_aa9182d46877b8514fca86e3588249567}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_image_data_layer_aa9182d46877b8514fca86e3588249567}{caffe\+::\+Image\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a7e4a9aa634577308bc189adcf0ac22ed}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a09d5ccd980598cce0472b3bd66316c08}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a7e4a9aa634577308bc189adcf0ac22ed}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a09d5ccd980598cce0472b3bd66316c08}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_af02f4561fa25a979e523aae851bed39d}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ab2cf1f7dd41b801ed32471ec492d423c}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_af02f4561fa25a979e523aae851bed39d}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ab2cf1f7dd41b801ed32471ec492d423c}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7d5c537334359c2a83cce489fb534342}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a652d8a5b07b72938a81f50305c1a8ee1}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_aeb70ea5cec478f098259356690b01c9b}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a3318c2404c6072ba07178b48d39ef0f5}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a345f640e6c1d3e9ee929d706b68300e9}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7d5c537334359c2a83cce489fb534342}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a60ae4a38cade1cc7f6111e51cabb441b}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a652d8a5b07b72938a81f50305c1a8ee1}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_aeb70ea5cec478f098259356690b01c9b}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a3318c2404c6072ba07178b48d39ef0f5}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a345f640e6c1d3e9ee929d706b68300e9}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a0f19a4cac8676927f9c83010957a2921}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a0f19a4cac8676927f9c83010957a2921}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_ae10d9ef135adf3cd25e86ce06188c814}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a6bc4748c20e0940e5367ed4d50f4a11b}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_ae10d9ef135adf3cd25e86ce06188c814}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a47ac5e7208e4b14ad1e4040a621dbfbc}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a6bc4748c20e0940e5367ed4d50f4a11b}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a1e072cbda98dbc57001ce92432b045b8}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a1e072cbda98dbc57001ce92432b045b8}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1040cc3b4fb028d54f67a685513d745b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1040cc3b4fb028d54f67a685513d745b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}\label{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Forward@{Forward}}
+\index{Forward@{Forward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Forward()}{Forward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Forward (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given the bottom blobs, compute the top blobs and the loss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the preshaped output blobs, whose data fields will store this layers\textquotesingle{} outputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total loss from the layer.
+\end{DoxyReturn}
+The Forward wrapper calls the relevant device wrapper function (Forward\+\_\+cpu or Forward\+\_\+gpu) to compute the top blob values given the bottom blobs. If the layer has any non-\/zero loss\+\_\+weights, the wrapper then computes and returns the loss.
+
+Your layer should implement Forward\+\_\+cpu and (optionally) Forward\+\_\+gpu. \mbox{\Hypertarget{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}\label{classcaffe_1_1_layer_ab57d272dabe8c709d2a785eebe72ca57}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Forward@{Forward}}
+\index{Forward@{Forward}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Forward()}{Forward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+Dtype \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Forward (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given the bottom blobs, compute the top blobs and the loss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the preshaped output blobs, whose data fields will store this layers\textquotesingle{} outputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The total loss from the layer.
+\end{DoxyReturn}
+The Forward wrapper calls the relevant device wrapper function (Forward\+\_\+cpu or Forward\+\_\+gpu) to compute the top blob values given the bottom blobs. If the layer has any non-\/zero loss\+\_\+weights, the wrapper then computes and returns the loss.
+
+Your layer should implement Forward\+\_\+cpu and (optionally) Forward\+\_\+gpu. \mbox{\Hypertarget{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}\label{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2a3985570178431a4cc3f9b9fd4378c2}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a772be3f4074c72b3cf9214bda3422402}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ae59c01de80f22c87c1dd2ef87c6e6a2f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_aa1535140dd4eb94557c3afc89076d56d}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_ac67af0cc1033db08d47a3f56aff5d600}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a259d8b26c05450339b33ad024f356b6a}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a01e75b47ce076569ed09e08618c5be7c}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_a943e67e7bb9c2362ec20ce44c777beac}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_a957623c05cb2289cd2ae9e9e93b48969}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a53069bd5efc4639de93a8111da772572}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a1251d1d407e8d15a83ba6807d013b97d}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a85e7207b664a4db8eb718f2075f44920}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aaf3f194d0e4936f7a657b61d7468d744}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_ae4e9910b4258f17531cfe0c2229a7857}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a04035cc9ca9be4b99aba41197b16f2e4}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_exp_layer_a45ec267bdfd48e8aa34490e146405b9e}{caffe\+::\+Exp\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_log_layer_a87e062000908b474ac4cda3b2f3c6f1e}{caffe\+::\+Log\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_exp_layer_ad482cfebeedd32e7b7d146106ece981a}{caffe\+::\+Exp\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_log_layer_aa73d4cdfc38059902ffa2258d58e1dd4}{caffe\+::\+Log\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a1f2447583c670d92ff6e2c8d53fb4dd9}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796}{caffe\+::\+Power\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a894a1fcb58e8f822f9d875e1acae560c}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_power_layer_a0adeb5a6bdf1e5e437eaae801236fecc}{caffe\+::\+Power\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4eec13bfbe23b1e3eb2bbc4652bd6952}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a9781f923f1ff0aad8549e0e93eebb941}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8e4537f7dd87a9cce60096e8ab04e843}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_ae3c263f882a7552fe9e88b2d2827cb29}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_aed2dea5250c86c46dd866fbb241dd9f6}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037}{caffe\+::\+Threshold\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a5bc321f94f7d13e938e31131fc55487b}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afb7ab27b33e5eaec6c50893f28748c14}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a4902e90735cf20735343705014b4176f}{caffe\+::\+Threshold\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_afcd473ff34b4035122ba9119fc67498c}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a7e7281a510b9d6713c3c79c6e50a199b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa6fc7c2e90be66f1c1f0683637c949da}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac7ae4b839d952b785b9911c258bd5b48}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a72276185eb4e5495de2d0e0d34bc8eda}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a479314172e8fbe1485f59537c1fba222}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a4fa3b333b55b43e28534905bec151e09}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_aa62a9554bf4fc3eb4db124da0d89fd85}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a2c9d072e5e641b247988f22be20520ea}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a59dcb04b78d55f666b69ff001c90caa7}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ad4858525eae95a2526b11e20f46d6c3f}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_aaace16d2beba7db887c7b59213268bc2}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ac4d6f34378681fa197546468b5aa6fd6}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aafe0aa825e019ea35225a8e493e4e919}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a1fecd89c503b59a952f80ff61d4253b3}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a45f559e3d3841e15b8bcb39ec061cfcb}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a5503c3dac40e2a92d8bfca77d0712dfb}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a43b495bfead8d18bf1d8eaf7bf91e3e4}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a02516b6e7b1b0d032e586785687bcabc}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_a26a302fd9629af812e7d0714db79bb53}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a4adc29913343ddec1813f3a899e449cc}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a58be7dd9b52c1a98a872300e5108e065}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a99db2601ec64ff20880641b6f6429947}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a92c1cdabdce4c92b9a4ee58e2ceb601e}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a7241f9c4dfba841bc76a93298a3d28ee}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a8bf93d8426b7053bd32de10cc6eb7207}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a31bdf9cf9a45105610a85cd82a96e0bf}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_a59443022ba473d248c63b5ab7a182826}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a35643c908323b6341101db342e4e78ee}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ae430286efdf685b7bd816b3faea10f27}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a5d832d4057a304791ecadd242f2c5a6e}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a17b30448f94f43b480c5c6393341109b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_aceca092b11940864ae7033a2c0cfa8cc}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_a422e1ef9e6c8b4574f7677bb125e234a}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_aa310fbe7d766ac96a1957aca6a3c4469}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_a1527055aae7f9b74a7a82f680957162c}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a0b00d820b4aeb2f95cfecf3173aaa795}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_af4fc13f4977f84a30af260096ffd55d2}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_aa39bdc6829d06c8cc501554ecd166513}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_ae5baf7b7552ff0113c174b0e77db5f4c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_ae5baf7b7552ff0113c174b0e77db5f4c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a1485ccdbd01513b89b29a79df7cda6ee}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a1485ccdbd01513b89b29a79df7cda6ee}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}\label{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_prefetching_data_layer_ad3b7914abaa6d46c148864c0e28204ad}{caffe\+::\+Base\+Prefetching\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a96cd04896d4b805fcaf36c2c6522ae10}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2a3985570178431a4cc3f9b9fd4378c2}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a772be3f4074c72b3cf9214bda3422402}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ae59c01de80f22c87c1dd2ef87c6e6a2f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_aa1535140dd4eb94557c3afc89076d56d}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_ac67af0cc1033db08d47a3f56aff5d600}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a259d8b26c05450339b33ad024f356b6a}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a01e75b47ce076569ed09e08618c5be7c}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_a943e67e7bb9c2362ec20ce44c777beac}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_contrastive_loss_layer_a957623c05cb2289cd2ae9e9e93b48969}{caffe\+::\+Contrastive\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a53069bd5efc4639de93a8111da772572}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a1251d1d407e8d15a83ba6807d013b97d}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a85e7207b664a4db8eb718f2075f44920}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a35bd01fae515cb064107c621a3c12820}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aaf3f194d0e4936f7a657b61d7468d744}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_ae4e9910b4258f17531cfe0c2229a7857}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a04035cc9ca9be4b99aba41197b16f2e4}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_exp_layer_a45ec267bdfd48e8aa34490e146405b9e}{caffe\+::\+Exp\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_log_layer_a87e062000908b474ac4cda3b2f3c6f1e}{caffe\+::\+Log\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_exp_layer_ad482cfebeedd32e7b7d146106ece981a}{caffe\+::\+Exp\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_log_layer_aa73d4cdfc38059902ffa2258d58e1dd4}{caffe\+::\+Log\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a1f2447583c670d92ff6e2c8d53fb4dd9}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_power_layer_a954ad3da9a5fd54665de1181b6165796}{caffe\+::\+Power\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a894a1fcb58e8f822f9d875e1acae560c}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_power_layer_a0adeb5a6bdf1e5e437eaae801236fecc}{caffe\+::\+Power\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a4eec13bfbe23b1e3eb2bbc4652bd6952}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a9781f923f1ff0aad8549e0e93eebb941}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a8e4537f7dd87a9cce60096e8ab04e843}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_ae3c263f882a7552fe9e88b2d2827cb29}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a4ef25e7d0cbe06404948d7e763bf0f84}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_aed2dea5250c86c46dd866fbb241dd9f6}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a14e3782a6bea7bba511f3d6f23344037}{caffe\+::\+Threshold\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_abs_val_layer_a5bc321f94f7d13e938e31131fc55487b}{caffe\+::\+Abs\+Val\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afb7ab27b33e5eaec6c50893f28748c14}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_threshold_layer_a4902e90735cf20735343705014b4176f}{caffe\+::\+Threshold\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_afcd473ff34b4035122ba9119fc67498c}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a7e7281a510b9d6713c3c79c6e50a199b}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a7028919adf87326b808a2c7b21e8e927}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_aa6fc7c2e90be66f1c1f0683637c949da}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_ac7ae4b839d952b785b9911c258bd5b48}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a72276185eb4e5495de2d0e0d34bc8eda}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a479314172e8fbe1485f59537c1fba222}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a4fa3b333b55b43e28534905bec151e09}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_aa62a9554bf4fc3eb4db124da0d89fd85}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a2c9d072e5e641b247988f22be20520ea}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a59dcb04b78d55f666b69ff001c90caa7}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_ad4858525eae95a2526b11e20f46d6c3f}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_aaace16d2beba7db887c7b59213268bc2}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_ac4d6f34378681fa197546468b5aa6fd6}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aafe0aa825e019ea35225a8e493e4e919}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_a1fecd89c503b59a952f80ff61d4253b3}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a45f559e3d3841e15b8bcb39ec061cfcb}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a5503c3dac40e2a92d8bfca77d0712dfb}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a43b495bfead8d18bf1d8eaf7bf91e3e4}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a02516b6e7b1b0d032e586785687bcabc}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_a26a302fd9629af812e7d0714db79bb53}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a4adc29913343ddec1813f3a899e449cc}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a58be7dd9b52c1a98a872300e5108e065}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a99db2601ec64ff20880641b6f6429947}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a92c1cdabdce4c92b9a4ee58e2ceb601e}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a7241f9c4dfba841bc76a93298a3d28ee}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a8bf93d8426b7053bd32de10cc6eb7207}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a31bdf9cf9a45105610a85cd82a96e0bf}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_a59443022ba473d248c63b5ab7a182826}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a35643c908323b6341101db342e4e78ee}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_ae430286efdf685b7bd816b3faea10f27}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a5d832d4057a304791ecadd242f2c5a6e}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a17b30448f94f43b480c5c6393341109b}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_aceca092b11940864ae7033a2c0cfa8cc}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_a422e1ef9e6c8b4574f7677bb125e234a}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_aa310fbe7d766ac96a1957aca6a3c4469}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_a1527055aae7f9b74a7a82f680957162c}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a0b00d820b4aeb2f95cfecf3173aaa795}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_af4fc13f4977f84a30af260096ffd55d2}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_aa39bdc6829d06c8cc501554ecd166513}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_ae5baf7b7552ff0113c174b0e77db5f4c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_ae5baf7b7552ff0113c174b0e77db5f4c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a1485ccdbd01513b89b29a79df7cda6ee}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_parameter_layer_a1485ccdbd01513b89b29a79df7cda6ee}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}\label{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}}
+\index{Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Bottom\+Blobs()}{MaxBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Max\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a9b2372959a16da1e80ae7a98b7689a4c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a9b2372959a16da1e80ae7a98b7689a4c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a7867d035776f78fe486ce633ec0520ad}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a7867d035776f78fe486ce633ec0520ad}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_abdb89e3bc940f999d1d4da83de90a97c}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_bias_layer_abdb89e3bc940f999d1d4da83de90a97c}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}\label{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}}
+\index{Max\+Bottom\+Blobs@{Max\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Bottom\+Blobs()}{MaxBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Max\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of bottom blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a9b2372959a16da1e80ae7a98b7689a4c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a9b2372959a16da1e80ae7a98b7689a4c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_a983e1ead91884f9d2049a3000254961c}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a7867d035776f78fe486ce633ec0520ad}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a7867d035776f78fe486ce633ec0520ad}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_abdb89e3bc940f999d1d4da83de90a97c}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_bias_layer_abdb89e3bc940f999d1d4da83de90a97c}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_af8bdc989053e0363ab032026b46de7c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}\label{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Max\+Top\+Blobs@{Max\+Top\+Blobs}}
+\index{Max\+Top\+Blobs@{Max\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Top\+Blobs()}{MaxTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Max\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a93019601c6256354fd4758da91d9311f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a93019601c6256354fd4758da91d9311f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a7591ae6d50dd7d96b91241b5b0368997}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a7591ae6d50dd7d96b91241b5b0368997}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a76539d04ef7252c12e932ea703f8246b}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a76539d04ef7252c12e932ea703f8246b}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_ac47e9f3bff3db9d7364f6c392427745c}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_data_layer_ac47e9f3bff3db9d7364f6c392427745c}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}\label{classcaffe_1_1_layer_ac6c03df0b6e40e776c94001e19994a2e}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Max\+Top\+Blobs@{Max\+Top\+Blobs}}
+\index{Max\+Top\+Blobs@{Max\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Max\+Top\+Blobs()}{MaxTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Max\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the maximum number of top blobs required by the layer, or -\/1 if no maximum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some maximum number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a93019601c6256354fd4758da91d9311f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a93019601c6256354fd4758da91d9311f}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a5a0b4c02fe76ae9087cd8b1b9edd9910}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a7591ae6d50dd7d96b91241b5b0368997}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a7591ae6d50dd7d96b91241b5b0368997}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a76539d04ef7252c12e932ea703f8246b}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_a76539d04ef7252c12e932ea703f8246b}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_ac47e9f3bff3db9d7364f6c392427745c}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_data_layer_ac47e9f3bff3db9d7364f6c392427745c}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}\label{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ad8a1ef702a695e379e5d0450369b4a0c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ad8a1ef702a695e379e5d0450369b4a0c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a12c10840f0fc3327854864a12054beb2}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a12c10840f0fc3327854864a12054beb2}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_ab75a2e05bbb1eb37bed5995288143f67}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_ab75a2e05bbb1eb37bed5995288143f67}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af4c97961e859653ef0fa21d796af0259}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af4c97961e859653ef0fa21d796af0259}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa3d861ed15f6e41c6257d6a10defa7eb}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a314de9eb00a296ffd3cf84120bd1601e}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa3d861ed15f6e41c6257d6a10defa7eb}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a314de9eb00a296ffd3cf84120bd1601e}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_af916fa4138f5d8761ec4490588eeccd1}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_silence_layer_af916fa4138f5d8761ec4490588eeccd1}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}\label{classcaffe_1_1_layer_aca3cb2bafaefda5d4760aaebd0b72def}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}}
+\index{Min\+Bottom\+Blobs@{Min\+Bottom\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Bottom\+Blobs()}{MinBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Min\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of bottom blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of bottom blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ad8a1ef702a695e379e5d0450369b4a0c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_ad8a1ef702a695e379e5d0450369b4a0c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a12c10840f0fc3327854864a12054beb2}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_ac31b705bc02d333ae768f7c2184fbfae}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a12c10840f0fc3327854864a12054beb2}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_ab75a2e05bbb1eb37bed5995288143f67}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_ab75a2e05bbb1eb37bed5995288143f67}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af4c97961e859653ef0fa21d796af0259}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a802079d89e0f007c15b39e0c1fb0d275}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af4c97961e859653ef0fa21d796af0259}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa3d861ed15f6e41c6257d6a10defa7eb}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a314de9eb00a296ffd3cf84120bd1601e}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa3d861ed15f6e41c6257d6a10defa7eb}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a314de9eb00a296ffd3cf84120bd1601e}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_af916fa4138f5d8761ec4490588eeccd1}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_silence_layer_af916fa4138f5d8761ec4490588eeccd1}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}\label{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a15c4916e5de27151eb745491d8d14d41}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a15c4916e5de27151eb745491d8d14d41}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a568dd59acff7a172fa614c88ac56aff7}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a568dd59acff7a172fa614c88ac56aff7}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a6833e081c29049b1392eb98fb4451697}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a6833e081c29049b1392eb98fb4451697}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a2a63e36dd6b39287981d0bee466975aa}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a5d0512129e9c2955dde297a2f15595d2}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a2a63e36dd6b39287981d0bee466975aa}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a5d0512129e9c2955dde297a2f15595d2}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af8c6eb9b1986e03dd14a907b5caa1324}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a2673c06234a234362c1e2592880567a1}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af8c6eb9b1986e03dd14a907b5caa1324}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a2673c06234a234362c1e2592880567a1}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_abb61ab67b2bd809c5633a2722b83feeb}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_abb61ab67b2bd809c5633a2722b83feeb}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ae4092cf1b48e18e5d82cd714ae6e8547}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ae4092cf1b48e18e5d82cd714ae6e8547}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_ab0c5a7504085a6699272cdcfa8611887}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_data_layer_ab0c5a7504085a6699272cdcfa8611887}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}\label{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Min\+Top\+Blobs@{Min\+Top\+Blobs}}
+\index{Min\+Top\+Blobs@{Min\+Top\+Blobs}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Min\+Top\+Blobs()}{MinTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Min\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the minimum number of top blobs required by the layer, or -\/1 if no minimum number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some minimum number of top blobs. 
+
+Reimplemented in \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a15c4916e5de27151eb745491d8d14d41}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a15c4916e5de27151eb745491d8d14d41}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a9969336702fb1bbf31750629fb38fb45}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a568dd59acff7a172fa614c88ac56aff7}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a568dd59acff7a172fa614c88ac56aff7}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a6833e081c29049b1392eb98fb4451697}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a6833e081c29049b1392eb98fb4451697}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a2a63e36dd6b39287981d0bee466975aa}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a5d0512129e9c2955dde297a2f15595d2}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_a2a63e36dd6b39287981d0bee466975aa}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a5d0512129e9c2955dde297a2f15595d2}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af8c6eb9b1986e03dd14a907b5caa1324}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a2673c06234a234362c1e2592880567a1}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_af8c6eb9b1986e03dd14a907b5caa1324}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_a2673c06234a234362c1e2592880567a1}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_abb61ab67b2bd809c5633a2722b83feeb}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_abb61ab67b2bd809c5633a2722b83feeb}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ae4092cf1b48e18e5d82cd714ae6e8547}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_ae4092cf1b48e18e5d82cd714ae6e8547}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a48dafac272f2f098798e3caa09afbabe}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_data_layer_ab0c5a7504085a6699272cdcfa8611887}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_data_layer_ab0c5a7504085a6699272cdcfa8611887}{caffe\+::\+Data\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_ab9e4c8d642e413948b131d851a8462a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}\label{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!param\+\_\+propagate\+\_\+down@{param\+\_\+propagate\+\_\+down}}
+\index{param\+\_\+propagate\+\_\+down@{param\+\_\+propagate\+\_\+down}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{param\+\_\+propagate\+\_\+down()}{param\_propagate\_down()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::param\+\_\+propagate\+\_\+down (\begin{DoxyParamCaption}\item[{const int}]{param\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specifies whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. 
+
+You can safely ignore false values and always compute gradients for all parameters, but possibly with wasteful computation. \mbox{\Hypertarget{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}\label{classcaffe_1_1_layer_a1a3708013b0231e71d725252e10ce6e3}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!param\+\_\+propagate\+\_\+down@{param\+\_\+propagate\+\_\+down}}
+\index{param\+\_\+propagate\+\_\+down@{param\+\_\+propagate\+\_\+down}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{param\+\_\+propagate\+\_\+down()}{param\_propagate\_down()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+bool \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::param\+\_\+propagate\+\_\+down (\begin{DoxyParamCaption}\item[{const int}]{param\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Specifies whether the layer should compute gradients w.\+r.\+t. a parameter at a particular index given by param\+\_\+id. 
+
+You can safely ignore false values and always compute gradients for all parameters, but possibly with wasteful computation. \mbox{\Hypertarget{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}\label{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a795bd455f4635e876de32323e9cee96d}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_aa6b2edc73f84705744f9f17ad2d014bb}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ad8f5d429254deaebe4ea5f14bfa0d4d0}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a83ed478450bc7f629499fed37f654c5c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa2903026b3886816270deb038a463759}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_a305423abeea4bd1652ff7e696aaba808}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_a4199eb0668451022f8da20ebca129eb3}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_multinomial_logistic_loss_layer_a979be47987712c02dfb57a88b2a69f11}{caffe\+::\+Multinomial\+Logistic\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_multinomial_logistic_loss_layer_afd5162d1fc8be1a4abdf1afaa96519f8}{caffe\+::\+Multinomial\+Logistic\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_ac9b915b132fb539ffdd610992c507974}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a1acd542fe8fe89d88db9050d048fc7d2}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab5cc20592aaa28fb2c41fabe842da3fc}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a9cbe90ea0130c31bd5b9419a1bbaa555}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_ab7f1b879898ffba67cf5035f6a56d8eb}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a291a2c548c28e7ab02ddac0cfd3cbdad}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a658393ef566ec585bf540a1b6f31a929}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a50ad2070e060093556d1fc12f31e33b1}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a923c7c14b470ff84a9b8ee4a93395b5d}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a93f66d83b510987fe37a42d14e6ff98a}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_aecf840a1202549b60742eb11a2f188ee}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_aa2b680fc1e754440c2babd150e09f2f6}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a1a42bc91c233a9f803482bff30163f36}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afaed17dc14251e627764334d54e55c4d}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_aa6597e54cd5fea5b5c7b67299b74a72c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aba6011a9cbb18e38a8596aa5dbb44723}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeafe805a68903bae9a7f2b98bf453e22}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afaed17dc14251e627764334d54e55c4d}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_aa6597e54cd5fea5b5c7b67299b74a72c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aea7d9f8a75896b5bff438c6cdc966b6b}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a40101bfc91fea909fdc9047c3618d07d}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a38b8924648ba4ab2933fe389fa608cad}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a38b8924648ba4ab2933fe389fa608cad}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_aa002dacb2f69d2b500227f938a957a81}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a1324e1bd42d84a6eb7e2c559d2da9ecc}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a5dd9938f40f479d6fd1de59becd09bdf}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_aff9bd5f76055189c5ec66f43faf17660}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a00ab608f300c4fa94d75b15ab9e0c599}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a195d2e437a70b0139411c1dd22b08120}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a3b459231a94176753d0cb1ae94bc942f}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a71fca33b7fb554973d6e7cc39affd8da}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a87b5836343017586d5aa928797c4b92a}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_ae72f2ea80339981bf925f0291f62d527}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_ac7c19a708d491f9fe161c78348ec794b}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a119c9e1965e219be1ccb719821d4542f}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a4c2028f829734a202263725d8aa41152}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_acc7cf7e2dea7e254717b13980fdf6c1a}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a0f6594ec41a0556e9fcfb9af0ae86c8a}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_ae72f2ea80339981bf925f0291f62d527}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_ab388111d4ccdbcf081030ccd2e258f69}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a18fcf2571b0c73b6dd828a7fc7caf5e6}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a4c2028f829734a202263725d8aa41152}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_acc7cf7e2dea7e254717b13980fdf6c1a}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_ad830b3c52fb34555e45cd172a8b27ed9}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7f69b6b19387959bf0926dde7a7922a4}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a17b4cb0842a154224bab9733e77e07b9}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_ade673aa44e466adbe3aa79531a7c7484}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a1c823624ec9286477db7caa5188152b8}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a5b85ce44e23b4f958a60ff2b2c43e61f}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_af9fa49d54abf1cb090cfc772eb4acc4d}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a3ba65e459c1bde4f772d545efb43a2f2}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7fac1505092f43372ed39a99a1405d4b}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a3f9e26946868f6249af1d4f57fc8259f}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_aea626ef6cdd51ca2ede31319daab2d1b}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a12915397170ea81ccc0bce177897d4ba}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ab071d750b8cef391e9fe0c67efaa4994}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_ac6fce397efbab95848f56be7b4f6a786}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_ab23015d8d27fccab684de17b7c6d4e28}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa215338f200c832081f2719a54bc5256}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_ac652e08deffb0eeb6c3113abb55eb641}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_af384650d31552ea10b1a030788cb52d8}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_ad8ab4e6541bc0954146d62781aeb1af8}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a3c7cbd500d3a15cfbdbf33479c4fb228}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a4e978965461dedcc2fbb905e4910c0b1}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_af210770b1c8bbce8fc34340ba94f9f75}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a2c87bff832b685db76a41cbc8539e7ce}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a1064977331e5bfcf5d75590d14986e1f}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_a48aafabe729bb3b22171cfdbda6e6073}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a756fd5ad3af07d019b5f2247f38b4496}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afcb6c5f28b45496eed1b0ea19705b763}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a503694b3161839de7c19d7d0af2cecc2}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a96a47a49a103e60a681f97eff7bf42f2}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a96a47a49a103e60a681f97eff7bf42f2}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_a593f5b8342f1b092633d2a1f7e4a6843}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1fe845a1597dbc119e922ee92032632b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}\label{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implemented in \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_a795bd455f4635e876de32323e9cee96d}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_unit_layer_aa6b2edc73f84705744f9f17ad2d014bb}{caffe\+::\+L\+S\+T\+M\+Unit\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_a2821b89b0f46a5e2ddaccb2708ab237b}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_with_loss_layer_ad8f5d429254deaebe4ea5f14bfa0d4d0}{caffe\+::\+Softmax\+With\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_a83ed478450bc7f629499fed37f654c5c}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_infogain_loss_layer_aa2903026b3886816270deb038a463759}{caffe\+::\+Infogain\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_a305423abeea4bd1652ff7e696aaba808}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_sigmoid_cross_entropy_loss_layer_a4199eb0668451022f8da20ebca129eb3}{caffe\+::\+Sigmoid\+Cross\+Entropy\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_multinomial_logistic_loss_layer_a979be47987712c02dfb57a88b2a69f11}{caffe\+::\+Multinomial\+Logistic\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_multinomial_logistic_loss_layer_afd5162d1fc8be1a4abdf1afaa96519f8}{caffe\+::\+Multinomial\+Logistic\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_ac9b915b132fb539ffdd610992c507974}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_a1acd542fe8fe89d88db9050d048fc7d2}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_norm_layer_ab5cc20592aaa28fb2c41fabe842da3fc}{caffe\+::\+Batch\+Norm\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_a9cbe90ea0130c31bd5b9419a1bbaa555}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer_ab7f1b879898ffba67cf5035f6a56d8eb}{caffe\+::\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a291a2c548c28e7ab02ddac0cfd3cbdad}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_arg_max_layer_a658393ef566ec585bf540a1b6f31a929}{caffe\+::\+Arg\+Max\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a50ad2070e060093556d1fc12f31e33b1}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_p_re_l_u_layer_a923c7c14b470ff84a9b8ee4a93395b5d}{caffe\+::\+P\+Re\+L\+U\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_a995afbac7e3adc0bfe157b0458656a9e}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a93f66d83b510987fe37a42d14e6ff98a}{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_swish_layer_aecf840a1202549b60742eb11a2f188ee}{caffe\+::\+Swish\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_aa2b680fc1e754440c2babd150e09f2f6}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_accuracy_layer_a1a42bc91c233a9f803482bff30163f36}{caffe\+::\+Accuracy\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afaed17dc14251e627764334d54e55c4d}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_aa6597e54cd5fea5b5c7b67299b74a72c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aba6011a9cbb18e38a8596aa5dbb44723}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_aeafe805a68903bae9a7f2b98bf453e22}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_data_layer_a2955d06a5e67609582fb293a0a37673f}{caffe\+::\+Base\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_output_layer_afaed17dc14251e627764334d54e55c4d}{caffe\+::\+H\+D\+F5\+Output\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_python_layer_aa6597e54cd5fea5b5c7b67299b74a72c}{caffe\+::\+Python\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_recurrent_layer_aea7d9f8a75896b5bff438c6cdc966b6b}{caffe\+::\+Recurrent\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_scale_layer_a40101bfc91fea909fdc9047c3618d07d}{caffe\+::\+Scale\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a38b8924648ba4ab2933fe389fa608cad}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_h_d_f5_data_layer_a38b8924648ba4ab2933fe389fa608cad}{caffe\+::\+H\+D\+F5\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_aa002dacb2f69d2b500227f938a957a81}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_loss_layer_a1324e1bd42d84a6eb7e2c559d2da9ecc}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_l_r_n_layer_a5dd9938f40f479d6fd1de59becd09bdf}{caffe\+::\+L\+R\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_aff9bd5f76055189c5ec66f43faf17660}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_bias_layer_a00ab608f300c4fa94d75b15ab9e0c599}{caffe\+::\+Bias\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a195d2e437a70b0139411c1dd22b08120}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a3b459231a94176753d0cb1ae94bc942f}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_crop_layer_a71fca33b7fb554973d6e7cc39affd8da}{caffe\+::\+Crop\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_flatten_layer_a87b5836343017586d5aa928797c4b92a}{caffe\+::\+Flatten\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_ae72f2ea80339981bf925f0291f62d527}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_ac7c19a708d491f9fe161c78348ec794b}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a119c9e1965e219be1ccb719821d4542f}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a4c2028f829734a202263725d8aa41152}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_acc7cf7e2dea7e254717b13980fdf6c1a}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a0f6594ec41a0556e9fcfb9af0ae86c8a}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_dummy_data_layer_ae72f2ea80339981bf925f0291f62d527}{caffe\+::\+Dummy\+Data\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_embed_layer_ab388111d4ccdbcf081030ccd2e258f69}{caffe\+::\+Embed\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_im2col_layer_a18fcf2571b0c73b6dd828a7fc7caf5e6}{caffe\+::\+Im2col\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_input_layer_a4c2028f829734a202263725d8aa41152}{caffe\+::\+Input\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_parameter_layer_acc7cf7e2dea7e254717b13980fdf6c1a}{caffe\+::\+Parameter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reduction_layer_ad830b3c52fb34555e45cd172a8b27ed9}{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7f69b6b19387959bf0926dde7a7922a4}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a17b4cb0842a154224bab9733e77e07b9}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_ade673aa44e466adbe3aa79531a7c7484}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a1c823624ec9286477db7caa5188152b8}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_a5b85ce44e23b4f958a60ff2b2c43e61f}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_af9fa49d54abf1cb090cfc772eb4acc4d}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_a3ba65e459c1bde4f772d545efb43a2f2}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_batch_reindex_layer_a7fac1505092f43372ed39a99a1405d4b}{caffe\+::\+Batch\+Reindex\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_eltwise_layer_a3f9e26946868f6249af1d4f57fc8259f}{caffe\+::\+Eltwise\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_filter_layer_aea626ef6cdd51ca2ede31319daab2d1b}{caffe\+::\+Filter\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_inner_product_layer_a12915397170ea81ccc0bce177897d4ba}{caffe\+::\+Inner\+Product\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_reshape_layer_ab071d750b8cef391e9fe0c67efaa4994}{caffe\+::\+Reshape\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_slice_layer_ac6fce397efbab95848f56be7b4f6a786}{caffe\+::\+Slice\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_s_p_p_layer_ab23015d8d27fccab684de17b7c6d4e28}{caffe\+::\+S\+P\+P\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_aa215338f200c832081f2719a54bc5256}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_ac652e08deffb0eeb6c3113abb55eb641}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_base_convolution_layer_af384650d31552ea10b1a030788cb52d8}{caffe\+::\+Base\+Convolution\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_pooling_layer_ad8ab4e6541bc0954146d62781aeb1af8}{caffe\+::\+Pooling\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_a3c7cbd500d3a15cfbdbf33479c4fb228}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a4e978965461dedcc2fbb905e4910c0b1}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_concat_layer_af210770b1c8bbce8fc34340ba94f9f75}{caffe\+::\+Concat\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a2c87bff832b685db76a41cbc8539e7ce}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_split_layer_a1064977331e5bfcf5d75590d14986e1f}{caffe\+::\+Split\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_a48aafabe729bb3b22171cfdbda6e6073}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a756fd5ad3af07d019b5f2247f38b4496}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_m_v_n_layer_afcb6c5f28b45496eed1b0ea19705b763}{caffe\+::\+M\+V\+N\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_softmax_layer_a503694b3161839de7c19d7d0af2cecc2}{caffe\+::\+Softmax\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a96a47a49a103e60a681f97eff7bf42f2}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_silence_layer_a96a47a49a103e60a681f97eff7bf42f2}{caffe\+::\+Silence\+Layer$<$ Dtype $>$}}, \mbox{\hyperlink{classcaffe_1_1_tile_layer_a593f5b8342f1b092633d2a1f7e4a6843}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}, and \mbox{\hyperlink{classcaffe_1_1_tile_layer_a1fe845a1597dbc119e922ee92032632b}{caffe\+::\+Tile\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}\label{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Set\+Loss\+Weights@{Set\+Loss\+Weights}}
+\index{Set\+Loss\+Weights@{Set\+Loss\+Weights}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Loss\+Weights()}{SetLossWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Set\+Loss\+Weights (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Called by Set\+Up to initialize the weights associated with any top blobs in the loss function. Store non-\/zero loss weights in the diff blob. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}\label{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Set\+Loss\+Weights@{Set\+Loss\+Weights}}
+\index{Set\+Loss\+Weights@{Set\+Loss\+Weights}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Loss\+Weights()}{SetLossWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Set\+Loss\+Weights (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Called by Set\+Up to initialize the weights associated with any top blobs in the loss function. Store non-\/zero loss weights in the diff blob. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a04eb2a3d1d59c64cd64c233217d5d6fc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}\label{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Up()}{SetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements common layer setup functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs \\
+\hline
+{\em top} & the allocated but unshaped output blobs, to be shaped by Reshape\\
+\hline
+\end{DoxyParams}
+Checks that the number of bottom and top blobs is correct. Calls Layer\+Set\+Up to do special layer setup for individual layer types, followed by Reshape to set up sizes of top blobs and internal buffers. Sets up the loss weight multiplier blobs for any non-\/zero loss weights. This method may not be overridden. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}\label{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Up()}{SetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements common layer setup functionality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs \\
+\hline
+{\em top} & the allocated but unshaped output blobs, to be shaped by Reshape\\
+\hline
+\end{DoxyParams}
+Checks that the number of bottom and top blobs is correct. Calls Layer\+Set\+Up to do special layer setup for individual layer types, followed by Reshape to set up sizes of top blobs and internal buffers. Sets up the loss weight multiplier blobs for any non-\/zero loss weights. This method may not be overridden. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_layer_a18d6bfdb535ab8e96a971dec4ae39a84_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_layer_a8d6998a5f8ca95990976021de743dd21}\label{classcaffe_1_1_layer_a8d6998a5f8ca95990976021de743dd21}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!blobs\+\_\+@{blobs\+\_\+}}
+\index{blobs\+\_\+@{blobs\+\_\+}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{blobs\+\_\+}{blobs\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::blobs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector that stores the learnable parameters as a set of blobs. \mbox{\Hypertarget{classcaffe_1_1_layer_a7ed12bb2df25c887e41d7ea9557fc701}\label{classcaffe_1_1_layer_a7ed12bb2df25c887e41d7ea9557fc701}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!layer\+\_\+param\+\_\+@{layer\+\_\+param\+\_\+}}
+\index{layer\+\_\+param\+\_\+@{layer\+\_\+param\+\_\+}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{layer\+\_\+param\+\_\+}{layer\_param\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::layer\+\_\+param\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The protobuf that stores the layer parameters \mbox{\Hypertarget{classcaffe_1_1_layer_a5fbf5ce7385b2da3d8edc7eec3822ac7}\label{classcaffe_1_1_layer_a5fbf5ce7385b2da3d8edc7eec3822ac7}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!loss\+\_\+@{loss\+\_\+}}
+\index{loss\+\_\+@{loss\+\_\+}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{loss\+\_\+}{loss\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::loss\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The vector that indicates whether each top blob has a non-\/zero weight in the objective function. \mbox{\Hypertarget{classcaffe_1_1_layer_ab1db6c32fa71343dac868b07288eb45e}\label{classcaffe_1_1_layer_ab1db6c32fa71343dac868b07288eb45e}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!param\+\_\+propagate\+\_\+down\+\_\+@{param\+\_\+propagate\+\_\+down\+\_\+}}
+\index{param\+\_\+propagate\+\_\+down\+\_\+@{param\+\_\+propagate\+\_\+down\+\_\+}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{param\+\_\+propagate\+\_\+down\+\_\+}{param\_propagate\_down\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ bool $>$ \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::param\+\_\+propagate\+\_\+down\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector indicating whether to compute the diff of each param blob. \mbox{\Hypertarget{classcaffe_1_1_layer_a1d04ad7f595a82a1c811f102d68b8a19}\label{classcaffe_1_1_layer_a1d04ad7f595a82a1c811f102d68b8a19}} 
+\index{caffe\+::\+Layer@{caffe\+::\+Layer}!phase\+\_\+@{phase\+\_\+}}
+\index{phase\+\_\+@{phase\+\_\+}!caffe\+::\+Layer@{caffe\+::\+Layer}}
+\subsubsection{\texorpdfstring{phase\+\_\+}{phase\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+Phase \mbox{\hyperlink{classcaffe_1_1_layer}{caffe\+::\+Layer}}$<$ Dtype $>$\+::phase\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The phase\+: T\+R\+A\+IN or T\+E\+ST 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layer.\+hpp\end{DoxyCompactItemize}

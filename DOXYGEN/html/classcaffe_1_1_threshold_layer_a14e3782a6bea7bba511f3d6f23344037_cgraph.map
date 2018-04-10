@@ -1,0 +1,3 @@
+<map id="caffe::ThresholdLayer::LayerSetUp" name="caffe::ThresholdLayer::LayerSetUp">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a481323a3e0972c682787f2137468c29f" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="201,13,369,39"/>
+</map>

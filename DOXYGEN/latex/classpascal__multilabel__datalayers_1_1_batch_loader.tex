@@ -1,0 +1,65 @@
+\hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader}{}\section{pascal\+\_\+multilabel\+\_\+datalayers.\+Batch\+Loader Class Reference}
+\label{classpascal__multilabel__datalayers_1_1_batch_loader}\index{pascal\+\_\+multilabel\+\_\+datalayers.\+Batch\+Loader@{pascal\+\_\+multilabel\+\_\+datalayers.\+Batch\+Loader}}
+
+
+Inheritance diagram for pascal\+\_\+multilabel\+\_\+datalayers.\+Batch\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classpascal__multilabel__datalayers_1_1_batch_loader__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_a900ed03309f9525f737cd33cb5ae0aa9}\label{classpascal__multilabel__datalayers_1_1_batch_loader_a900ed03309f9525f737cd33cb5ae0aa9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, params, result)
+\item 
+def \mbox{\hyperlink{classpascal__multilabel__datalayers_1_1_batch_loader_a58069173aff314092d015903b1f8c360}{load\+\_\+next\+\_\+image}} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_a54a4ec5cfef8bff834eca1761c9fd0ea}\label{classpascal__multilabel__datalayers_1_1_batch_loader_a54a4ec5cfef8bff834eca1761c9fd0ea}} 
+{\bfseries result}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_a38dd5bd47fb302836947f332af9c225d}\label{classpascal__multilabel__datalayers_1_1_batch_loader_a38dd5bd47fb302836947f332af9c225d}} 
+{\bfseries batch\+\_\+size}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_abbf4baa8ca512be4c335d70550a062b4}\label{classpascal__multilabel__datalayers_1_1_batch_loader_abbf4baa8ca512be4c335d70550a062b4}} 
+{\bfseries pascal\+\_\+root}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_a706a3a19c191054ec5ca7c1d38e66104}\label{classpascal__multilabel__datalayers_1_1_batch_loader_a706a3a19c191054ec5ca7c1d38e66104}} 
+{\bfseries im\+\_\+shape}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_aaef79e701ed6247ae8988d9aaa55708c}\label{classpascal__multilabel__datalayers_1_1_batch_loader_aaef79e701ed6247ae8988d9aaa55708c}} 
+{\bfseries indexlist}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_ab2599c26ac66da9865c27f121e73a9d5}\label{classpascal__multilabel__datalayers_1_1_batch_loader_ab2599c26ac66da9865c27f121e73a9d5}} 
+{\bfseries transformer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This class abstracts away the loading of images.
+Images can either be loaded singly, or in a batch. The latter is used for
+the asyncronous data layer to preload batches while other processing is
+performed.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_batch_loader_a58069173aff314092d015903b1f8c360}\label{classpascal__multilabel__datalayers_1_1_batch_loader_a58069173aff314092d015903b1f8c360}} 
+\index{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Batch\+Loader@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Batch\+Loader}!load\+\_\+next\+\_\+image@{load\+\_\+next\+\_\+image}}
+\index{load\+\_\+next\+\_\+image@{load\+\_\+next\+\_\+image}!pascal\+\_\+multilabel\+\_\+datalayers\+::\+Batch\+Loader@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Batch\+Loader}}
+\subsubsection{\texorpdfstring{load\+\_\+next\+\_\+image()}{load\_next\_image()}}
+{\footnotesize\ttfamily def pascal\+\_\+multilabel\+\_\+datalayers.\+Batch\+Loader.\+load\+\_\+next\+\_\+image (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the next image in a batch.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/pycaffe/layers/pascal\+\_\+multilabel\+\_\+datalayers.\+py\end{DoxyCompactItemize}

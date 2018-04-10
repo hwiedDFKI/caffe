@@ -1,0 +1,6 @@
+<map id="caffe::LossLayer::LayerSetUp" name="caffe::LossLayer::LayerSetUp">
+<area shape="rect" id="node2" href="$classcaffe_1_1_contrastive_loss_layer.html#a943e67e7bb9c2362ec20ce44c777beac" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="253,5,440,47"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_infogain_loss_layer.html#a772be3f4074c72b3cf9214bda3422402" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="264,71,429,112"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_sigmoid_cross_entropy_loss_layer.html#aa1535140dd4eb94557c3afc89076d56d" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="253,136,440,177"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_softmax_with_loss_layer.html#a96cd04896d4b805fcaf36c2c6522ae10" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="249,201,444,243"/>
+</map>

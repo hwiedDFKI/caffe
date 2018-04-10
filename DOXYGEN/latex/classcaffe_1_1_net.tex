@@ -1,0 +1,704 @@
+\hypertarget{classcaffe_1_1_net}{}\section{caffe\+:\+:Net$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_net}\index{caffe\+::\+Net$<$ Dtype $>$@{caffe\+::\+Net$<$ Dtype $>$}}
+
+
+Connects \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}s together into a directed acyclic graph (D\+AG) specified by a \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}}.  
+
+
+
+
+{\ttfamily \#include $<$net.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Net$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classcaffe_1_1_net__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5a5655a49c702c6c4a2f5bd7bf7adf12}\label{classcaffe_1_1_net_a5a5655a49c702c6c4a2f5bd7bf7adf12}} 
+{\bfseries Net} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ac42c11d2fa9546421d6c5cd7f83330b3}\label{classcaffe_1_1_net_ac42c11d2fa9546421d6c5cd7f83330b3}} 
+{\bfseries Net} (const string \&param\+\_\+file, Phase \mbox{\hyperlink{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}{phase}}, const int level=0, const vector$<$ string $>$ $\ast$stages=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}\label{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Init}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\begin{DoxyCompactList}\small\item\em Initialize a network with a \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}\label{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}{Forward}} (Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Run Forward and return the result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}\label{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}{Forward\+Prefilled}} (Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em D\+E\+P\+R\+E\+C\+A\+T\+ED; use \mbox{\hyperlink{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}{Forward()}} instead. \end{DoxyCompactList}\item 
+Dtype \mbox{\hyperlink{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}{Forward\+From\+To}} (int start, int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7da4abdebcea6a65ca61ef6afb61665f}\label{classcaffe_1_1_net_a7da4abdebcea6a65ca61ef6afb61665f}} 
+Dtype {\bfseries Forward\+From} (int start)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a9e78782abd9080626ad13daac3abf896}\label{classcaffe_1_1_net_a9e78782abd9080626ad13daac3abf896}} 
+Dtype {\bfseries Forward\+To} (int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}\label{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}{Forward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \&bottom, Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em D\+E\+P\+R\+E\+C\+A\+T\+ED; set input blobs then use \mbox{\hyperlink{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}{Forward()}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}\label{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}{Clear\+Param\+Diffs}} ()
+\begin{DoxyCompactList}\small\item\em Zeroes out the diffs of all net parameters. Should be run before Backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}{Backward}} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4cbe2e5f4bdde638fb16568b629526dd}\label{classcaffe_1_1_net_a4cbe2e5f4bdde638fb16568b629526dd}} 
+void {\bfseries Backward\+From\+To} (int start, int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a36843d26a781f42df9ac5852187df03b}\label{classcaffe_1_1_net_a36843d26a781f42df9ac5852187df03b}} 
+void {\bfseries Backward\+From} (int start)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1c2d3c2909120250cc29cc98401e39d8}\label{classcaffe_1_1_net_a1c2d3c2909120250cc29cc98401e39d8}} 
+void {\bfseries Backward\+To} (int end)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}{Reshape}} ()
+\begin{DoxyCompactList}\small\item\em Reshape all layers from bottom to top. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3ff72974f0f1ba2edc2cb0f76fd41b56}\label{classcaffe_1_1_net_a3ff72974f0f1ba2edc2cb0f76fd41b56}} 
+Dtype {\bfseries Forward\+Backward} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}\label{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the network weights based on the diff values computed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}{Share\+Weights}} ()
+\begin{DoxyCompactList}\small\item\em Shares weight data of owner blobs with shared blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}\label{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}{Share\+Trained\+Layers\+With}} (const \mbox{\hyperlink{classcaffe_1_1_net}{Net}} $\ast$other)
+\begin{DoxyCompactList}\small\item\em For an already initialized net, implicitly copies (i.\+e., using no additional memory) the pre-\/trained layers from another \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}\label{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}{Copy\+Trained\+Layers\+From}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\begin{DoxyCompactList}\small\item\em For an already initialized net, copies the pre-\/trained layers from another \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad5e222ad89011558cee681133e5c610b}\label{classcaffe_1_1_net_ad5e222ad89011558cee681133e5c610b}} 
+void {\bfseries Copy\+Trained\+Layers\+From} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad9bb09568db19316e9604eb8cbd15f6d}\label{classcaffe_1_1_net_ad9bb09568db19316e9604eb8cbd15f6d}} 
+void {\bfseries Copy\+Trained\+Layers\+From\+Binary\+Proto} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab84341fd27c8c573f00c517bea051c2b}\label{classcaffe_1_1_net_ab84341fd27c8c573f00c517bea051c2b}} 
+void {\bfseries Copy\+Trained\+Layers\+From\+H\+D\+F5} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}\label{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}{To\+Proto}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$param, bool write\+\_\+diff=false) const
+\begin{DoxyCompactList}\small\item\em Writes the net to a proto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}\label{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}{To\+H\+D\+F5}} (const string \&filename, bool write\+\_\+diff=false) const
+\begin{DoxyCompactList}\small\item\em Writes the net to an H\+D\+F5 file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}\label{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}} 
+const string \& \mbox{\hyperlink{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}{name}} () const
+\begin{DoxyCompactList}\small\item\em returns the network name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}\label{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}} 
+const vector$<$ string $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}{layer\+\_\+names}} () const
+\begin{DoxyCompactList}\small\item\em returns the layer names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}\label{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}} 
+const vector$<$ string $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}{blob\+\_\+names}} () const
+\begin{DoxyCompactList}\small\item\em returns the blob names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}\label{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}{blobs}} () const
+\begin{DoxyCompactList}\small\item\em returns the blobs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}\label{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}{layers}} () const
+\begin{DoxyCompactList}\small\item\em returns the layers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}\label{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}} 
+Phase \mbox{\hyperlink{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}{phase}} () const
+\begin{DoxyCompactList}\small\item\em returns the phase\+: T\+R\+A\+IN or T\+E\+ST \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}\label{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}} 
+const vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}{bottom\+\_\+vecs}} () const
+\begin{DoxyCompactList}\small\item\em returns the bottom vecs for each layer -- usually you won\textquotesingle{}t need this unless you do per-\/layer checks such as gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}\label{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}} 
+const vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}{top\+\_\+vecs}} () const
+\begin{DoxyCompactList}\small\item\em returns the top vecs for each layer -- usually you won\textquotesingle{}t need this unless you do per-\/layer checks such as gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}\label{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}} 
+const vector$<$ int $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}{top\+\_\+ids}} (int i) const
+\begin{DoxyCompactList}\small\item\em returns the ids of the top blobs of layer i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}\label{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}} 
+const vector$<$ int $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}{bottom\+\_\+ids}} (int i) const
+\begin{DoxyCompactList}\small\item\em returns the ids of the bottom blobs of layer i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_abe9a3629ee7436c85ea141e841d859f8}\label{classcaffe_1_1_net_abe9a3629ee7436c85ea141e841d859f8}} 
+const vector$<$ vector$<$ bool $>$ $>$ \& {\bfseries bottom\+\_\+need\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4c18612b7683788a4b7f40265a7a38e0}\label{classcaffe_1_1_net_a4c18612b7683788a4b7f40265a7a38e0}} 
+const vector$<$ Dtype $>$ \& {\bfseries blob\+\_\+loss\+\_\+weights} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a878f773481d3014b972cab5f65642e58}\label{classcaffe_1_1_net_a878f773481d3014b972cab5f65642e58}} 
+const vector$<$ bool $>$ \& {\bfseries layer\+\_\+need\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}\label{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}{params}} () const
+\begin{DoxyCompactList}\small\item\em returns the parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ababc9943a5f0f006cded03aeb727a314}\label{classcaffe_1_1_net_ababc9943a5f0f006cded03aeb727a314}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries learnable\+\_\+params} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}\label{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}} 
+const vector$<$ float $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}{params\+\_\+lr}} () const
+\begin{DoxyCompactList}\small\item\em returns the learnable parameter learning rate multipliers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae028e0f6241f6d9f8af19bd855cff8cb}\label{classcaffe_1_1_net_ae028e0f6241f6d9f8af19bd855cff8cb}} 
+const vector$<$ bool $>$ \& {\bfseries has\+\_\+params\+\_\+lr} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}\label{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}} 
+const vector$<$ float $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}{params\+\_\+weight\+\_\+decay}} () const
+\begin{DoxyCompactList}\small\item\em returns the learnable parameter decay multipliers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aca6119790acd1da41f25d8a2955db232}\label{classcaffe_1_1_net_aca6119790acd1da41f25d8a2955db232}} 
+const vector$<$ bool $>$ \& {\bfseries has\+\_\+params\+\_\+decay} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4bc40bc25f238f2c8f63d806762672ba}\label{classcaffe_1_1_net_a4bc40bc25f238f2c8f63d806762672ba}} 
+const map$<$ string, int $>$ \& {\bfseries param\+\_\+names\+\_\+index} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aae4c9fb34c016449eb77537efba6033b}\label{classcaffe_1_1_net_aae4c9fb34c016449eb77537efba6033b}} 
+const vector$<$ int $>$ \& {\bfseries param\+\_\+owners} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a80126ec711a7eb61dcb45dd93aaf3da4}\label{classcaffe_1_1_net_a80126ec711a7eb61dcb45dd93aaf3da4}} 
+const vector$<$ string $>$ \& {\bfseries param\+\_\+display\+\_\+names} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}\label{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}} 
+int \mbox{\hyperlink{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}{num\+\_\+inputs}} () const
+\begin{DoxyCompactList}\small\item\em Input and output blob numbers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a335522f32062225c472382dbb5aff176}\label{classcaffe_1_1_net_a335522f32062225c472382dbb5aff176}} 
+int {\bfseries num\+\_\+outputs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a986652086c495810e1558208e60fd3a6}\label{classcaffe_1_1_net_a986652086c495810e1558208e60fd3a6}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries input\+\_\+blobs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1ca04c0622bab2857e30c3e07ef85d9c}\label{classcaffe_1_1_net_a1ca04c0622bab2857e30c3e07ef85d9c}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries output\+\_\+blobs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a904ff62c3013aa9e2a02687c7d01871a}\label{classcaffe_1_1_net_a904ff62c3013aa9e2a02687c7d01871a}} 
+const vector$<$ int $>$ \& {\bfseries input\+\_\+blob\+\_\+indices} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7358f4e7ee8c689d83be22d31213fad8}\label{classcaffe_1_1_net_a7358f4e7ee8c689d83be22d31213fad8}} 
+const vector$<$ int $>$ \& {\bfseries output\+\_\+blob\+\_\+indices} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5e0397a88782627b93532800e825e42b}\label{classcaffe_1_1_net_a5e0397a88782627b93532800e825e42b}} 
+bool {\bfseries has\+\_\+blob} (const string \&blob\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a10fed2aead47dd28291d5edbb0385e4f}\label{classcaffe_1_1_net_a10fed2aead47dd28291d5edbb0385e4f}} 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ {\bfseries blob\+\_\+by\+\_\+name} (const string \&blob\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a86c0a37d300bcf100d18f40b3f50032d}\label{classcaffe_1_1_net_a86c0a37d300bcf100d18f40b3f50032d}} 
+bool {\bfseries has\+\_\+layer} (const string \&layer\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5be1bd7e4b47070ebe725b80016a7e96}\label{classcaffe_1_1_net_a5be1bd7e4b47070ebe725b80016a7e96}} 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ {\bfseries layer\+\_\+by\+\_\+name} (const string \&layer\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5b43ec32a7940703ecc3d0fa80bb2f91}\label{classcaffe_1_1_net_a5b43ec32a7940703ecc3d0fa80bb2f91}} 
+void {\bfseries set\+\_\+debug\+\_\+info} (const bool value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a29cac2b39bbfcf0891d34deecdb4f2a9}\label{classcaffe_1_1_net_a29cac2b39bbfcf0891d34deecdb4f2a9}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries before\+\_\+forward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab38efc0662826a18034817b484ea0b88}\label{classcaffe_1_1_net_ab38efc0662826a18034817b484ea0b88}} 
+void {\bfseries add\+\_\+before\+\_\+forward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a262da4bf0282c2e8615d3bd0b3582991}\label{classcaffe_1_1_net_a262da4bf0282c2e8615d3bd0b3582991}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries after\+\_\+forward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a27f0234629c0131b23c577713bb8209e}\label{classcaffe_1_1_net_a27f0234629c0131b23c577713bb8209e}} 
+void {\bfseries add\+\_\+after\+\_\+forward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a56eb610394b69214ff9e4d6672c307bb}\label{classcaffe_1_1_net_a56eb610394b69214ff9e4d6672c307bb}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries before\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aed8cfa1dd96bef7fc39c232623995687}\label{classcaffe_1_1_net_aed8cfa1dd96bef7fc39c232623995687}} 
+void {\bfseries add\+\_\+before\+\_\+backward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a331192ceb7cebfbe83177d00e98c67cc}\label{classcaffe_1_1_net_a331192ceb7cebfbe83177d00e98c67cc}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries after\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a29a94f00de415c11ee57b0985c255827}\label{classcaffe_1_1_net_a29a94f00de415c11ee57b0985c255827}} 
+void {\bfseries add\+\_\+after\+\_\+backward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5a5655a49c702c6c4a2f5bd7bf7adf12}\label{classcaffe_1_1_net_a5a5655a49c702c6c4a2f5bd7bf7adf12}} 
+{\bfseries Net} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ac42c11d2fa9546421d6c5cd7f83330b3}\label{classcaffe_1_1_net_ac42c11d2fa9546421d6c5cd7f83330b3}} 
+{\bfseries Net} (const string \&param\+\_\+file, Phase \mbox{\hyperlink{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}{phase}}, const int level=0, const vector$<$ string $>$ $\ast$stages=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}\label{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Init}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\begin{DoxyCompactList}\small\item\em Initialize a network with a \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_afe59477d530c9f9cfb6ca00e92af4664}\label{classcaffe_1_1_net_afe59477d530c9f9cfb6ca00e92af4664}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_afe59477d530c9f9cfb6ca00e92af4664}{Forward}} (Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Run Forward and return the result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}\label{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a12f8c6cf9f453cdbc9fa8149986303c6}{Forward\+Prefilled}} (Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em D\+E\+P\+R\+E\+C\+A\+T\+ED; use \mbox{\hyperlink{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}{Forward()}} instead. \end{DoxyCompactList}\item 
+Dtype \mbox{\hyperlink{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}{Forward\+From\+To}} (int start, int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7da4abdebcea6a65ca61ef6afb61665f}\label{classcaffe_1_1_net_a7da4abdebcea6a65ca61ef6afb61665f}} 
+Dtype {\bfseries Forward\+From} (int start)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a9e78782abd9080626ad13daac3abf896}\label{classcaffe_1_1_net_a9e78782abd9080626ad13daac3abf896}} 
+Dtype {\bfseries Forward\+To} (int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}\label{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ac78806e7aa069439622de4177323c46c}{Forward}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \&bottom, Dtype $\ast$loss=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em D\+E\+P\+R\+E\+C\+A\+T\+ED; set input blobs then use \mbox{\hyperlink{classcaffe_1_1_net_a6f6cf9d40637f7576828d856bb1b1826}{Forward()}} instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}\label{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3d251c397f812a6d8e162db3a82bb198}{Clear\+Param\+Diffs}} ()
+\begin{DoxyCompactList}\small\item\em Zeroes out the diffs of all net parameters. Should be run before Backward. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}{Backward}} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4cbe2e5f4bdde638fb16568b629526dd}\label{classcaffe_1_1_net_a4cbe2e5f4bdde638fb16568b629526dd}} 
+void {\bfseries Backward\+From\+To} (int start, int end)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a36843d26a781f42df9ac5852187df03b}\label{classcaffe_1_1_net_a36843d26a781f42df9ac5852187df03b}} 
+void {\bfseries Backward\+From} (int start)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1c2d3c2909120250cc29cc98401e39d8}\label{classcaffe_1_1_net_a1c2d3c2909120250cc29cc98401e39d8}} 
+void {\bfseries Backward\+To} (int end)
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}{Reshape}} ()
+\begin{DoxyCompactList}\small\item\em Reshape all layers from bottom to top. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3ff72974f0f1ba2edc2cb0f76fd41b56}\label{classcaffe_1_1_net_a3ff72974f0f1ba2edc2cb0f76fd41b56}} 
+Dtype {\bfseries Forward\+Backward} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}\label{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a8a2544cefc59d6cbe1bf634f5d5be1c5}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the network weights based on the diff values computed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}{Share\+Weights}} ()
+\begin{DoxyCompactList}\small\item\em Shares weight data of owner blobs with shared blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}\label{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3661ca5f30bf8e731cb54cfc3c320023}{Share\+Trained\+Layers\+With}} (const \mbox{\hyperlink{classcaffe_1_1_net}{Net}} $\ast$other)
+\begin{DoxyCompactList}\small\item\em For an already initialized net, implicitly copies (i.\+e., using no additional memory) the pre-\/trained layers from another \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}\label{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a4ac2b69748470f54d530bc5dfa05b9c3}{Copy\+Trained\+Layers\+From}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param)
+\begin{DoxyCompactList}\small\item\em For an already initialized net, copies the pre-\/trained layers from another \mbox{\hyperlink{classcaffe_1_1_net}{Net}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad5e222ad89011558cee681133e5c610b}\label{classcaffe_1_1_net_ad5e222ad89011558cee681133e5c610b}} 
+void {\bfseries Copy\+Trained\+Layers\+From} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad9bb09568db19316e9604eb8cbd15f6d}\label{classcaffe_1_1_net_ad9bb09568db19316e9604eb8cbd15f6d}} 
+void {\bfseries Copy\+Trained\+Layers\+From\+Binary\+Proto} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab84341fd27c8c573f00c517bea051c2b}\label{classcaffe_1_1_net_ab84341fd27c8c573f00c517bea051c2b}} 
+void {\bfseries Copy\+Trained\+Layers\+From\+H\+D\+F5} (const string trained\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}\label{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a6ce42e3be6f7b495fe2fea85db2e99f8}{To\+Proto}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$param, bool write\+\_\+diff=false) const
+\begin{DoxyCompactList}\small\item\em Writes the net to a proto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}\label{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_ad3ac317bbc872bc6ed48d19f4d986ecc}{To\+H\+D\+F5}} (const string \&filename, bool write\+\_\+diff=false) const
+\begin{DoxyCompactList}\small\item\em Writes the net to an H\+D\+F5 file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}\label{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}} 
+const string \& \mbox{\hyperlink{classcaffe_1_1_net_a521c084f91eefc041bd53f30f1cc1097}{name}} () const
+\begin{DoxyCompactList}\small\item\em returns the network name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}\label{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}} 
+const vector$<$ string $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_aa550ba424fc7b90f2ccbbaa175c1ec18}{layer\+\_\+names}} () const
+\begin{DoxyCompactList}\small\item\em returns the layer names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}\label{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}} 
+const vector$<$ string $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_aeaf1e942f1552b9c48bd9e834ede20e6}{blob\+\_\+names}} () const
+\begin{DoxyCompactList}\small\item\em returns the blob names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}\label{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ab64573aa9187fb7540825d9338807a79}{blobs}} () const
+\begin{DoxyCompactList}\small\item\em returns the blobs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}\label{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a174e8bb96b67f423f8c405dac2334a5a}{layers}} () const
+\begin{DoxyCompactList}\small\item\em returns the layers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}\label{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}} 
+Phase \mbox{\hyperlink{classcaffe_1_1_net_a9418aee447ff6e847fd1a5e7be3d7a44}{phase}} () const
+\begin{DoxyCompactList}\small\item\em returns the phase\+: T\+R\+A\+IN or T\+E\+ST \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}\label{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}} 
+const vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a25c25c31ddf7a78c7dfded318798764c}{bottom\+\_\+vecs}} () const
+\begin{DoxyCompactList}\small\item\em returns the bottom vecs for each layer -- usually you won\textquotesingle{}t need this unless you do per-\/layer checks such as gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}\label{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}} 
+const vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ad9aace0b6b268d391101f0ce31be9fd1}{top\+\_\+vecs}} () const
+\begin{DoxyCompactList}\small\item\em returns the top vecs for each layer -- usually you won\textquotesingle{}t need this unless you do per-\/layer checks such as gradients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}\label{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}} 
+const vector$<$ int $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a8e42b5eba7886385d2d4b6f457314968}{top\+\_\+ids}} (int i) const
+\begin{DoxyCompactList}\small\item\em returns the ids of the top blobs of layer i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}\label{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}} 
+const vector$<$ int $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a7ccd2bf8a1684171b7d7603cf20c0251}{bottom\+\_\+ids}} (int i) const
+\begin{DoxyCompactList}\small\item\em returns the ids of the bottom blobs of layer i \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_abe9a3629ee7436c85ea141e841d859f8}\label{classcaffe_1_1_net_abe9a3629ee7436c85ea141e841d859f8}} 
+const vector$<$ vector$<$ bool $>$ $>$ \& {\bfseries bottom\+\_\+need\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4c18612b7683788a4b7f40265a7a38e0}\label{classcaffe_1_1_net_a4c18612b7683788a4b7f40265a7a38e0}} 
+const vector$<$ Dtype $>$ \& {\bfseries blob\+\_\+loss\+\_\+weights} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a878f773481d3014b972cab5f65642e58}\label{classcaffe_1_1_net_a878f773481d3014b972cab5f65642e58}} 
+const vector$<$ bool $>$ \& {\bfseries layer\+\_\+need\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}\label{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}} 
+const vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a4df30bbef7db3a6069d4ab3d9238cb40}{params}} () const
+\begin{DoxyCompactList}\small\item\em returns the parameters \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ababc9943a5f0f006cded03aeb727a314}\label{classcaffe_1_1_net_ababc9943a5f0f006cded03aeb727a314}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries learnable\+\_\+params} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}\label{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}} 
+const vector$<$ float $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_ae902a7a461c0a693ba1f0d4186ef8e42}{params\+\_\+lr}} () const
+\begin{DoxyCompactList}\small\item\em returns the learnable parameter learning rate multipliers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae028e0f6241f6d9f8af19bd855cff8cb}\label{classcaffe_1_1_net_ae028e0f6241f6d9f8af19bd855cff8cb}} 
+const vector$<$ bool $>$ \& {\bfseries has\+\_\+params\+\_\+lr} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}\label{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}} 
+const vector$<$ float $>$ \& \mbox{\hyperlink{classcaffe_1_1_net_a1bc1091f0033a8b6c321f1b50c931996}{params\+\_\+weight\+\_\+decay}} () const
+\begin{DoxyCompactList}\small\item\em returns the learnable parameter decay multipliers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aca6119790acd1da41f25d8a2955db232}\label{classcaffe_1_1_net_aca6119790acd1da41f25d8a2955db232}} 
+const vector$<$ bool $>$ \& {\bfseries has\+\_\+params\+\_\+decay} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4bc40bc25f238f2c8f63d806762672ba}\label{classcaffe_1_1_net_a4bc40bc25f238f2c8f63d806762672ba}} 
+const map$<$ string, int $>$ \& {\bfseries param\+\_\+names\+\_\+index} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aae4c9fb34c016449eb77537efba6033b}\label{classcaffe_1_1_net_aae4c9fb34c016449eb77537efba6033b}} 
+const vector$<$ int $>$ \& {\bfseries param\+\_\+owners} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a80126ec711a7eb61dcb45dd93aaf3da4}\label{classcaffe_1_1_net_a80126ec711a7eb61dcb45dd93aaf3da4}} 
+const vector$<$ string $>$ \& {\bfseries param\+\_\+display\+\_\+names} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}\label{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}} 
+int \mbox{\hyperlink{classcaffe_1_1_net_a6b04ab79ff08386d5a6fd167fd7696a3}{num\+\_\+inputs}} () const
+\begin{DoxyCompactList}\small\item\em Input and output blob numbers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a335522f32062225c472382dbb5aff176}\label{classcaffe_1_1_net_a335522f32062225c472382dbb5aff176}} 
+int {\bfseries num\+\_\+outputs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a986652086c495810e1558208e60fd3a6}\label{classcaffe_1_1_net_a986652086c495810e1558208e60fd3a6}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries input\+\_\+blobs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1ca04c0622bab2857e30c3e07ef85d9c}\label{classcaffe_1_1_net_a1ca04c0622bab2857e30c3e07ef85d9c}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ \& {\bfseries output\+\_\+blobs} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a904ff62c3013aa9e2a02687c7d01871a}\label{classcaffe_1_1_net_a904ff62c3013aa9e2a02687c7d01871a}} 
+const vector$<$ int $>$ \& {\bfseries input\+\_\+blob\+\_\+indices} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7358f4e7ee8c689d83be22d31213fad8}\label{classcaffe_1_1_net_a7358f4e7ee8c689d83be22d31213fad8}} 
+const vector$<$ int $>$ \& {\bfseries output\+\_\+blob\+\_\+indices} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5e0397a88782627b93532800e825e42b}\label{classcaffe_1_1_net_a5e0397a88782627b93532800e825e42b}} 
+bool {\bfseries has\+\_\+blob} (const string \&blob\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a45d1cbc534a33d390894d7daafbafe7b}\label{classcaffe_1_1_net_a45d1cbc534a33d390894d7daafbafe7b}} 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ {\bfseries blob\+\_\+by\+\_\+name} (const string \&blob\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a86c0a37d300bcf100d18f40b3f50032d}\label{classcaffe_1_1_net_a86c0a37d300bcf100d18f40b3f50032d}} 
+bool {\bfseries has\+\_\+layer} (const string \&layer\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a0d20d608b694fc333c4042df26ccf5ca}\label{classcaffe_1_1_net_a0d20d608b694fc333c4042df26ccf5ca}} 
+const shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ {\bfseries layer\+\_\+by\+\_\+name} (const string \&layer\+\_\+name) const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5b43ec32a7940703ecc3d0fa80bb2f91}\label{classcaffe_1_1_net_a5b43ec32a7940703ecc3d0fa80bb2f91}} 
+void {\bfseries set\+\_\+debug\+\_\+info} (const bool value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a29cac2b39bbfcf0891d34deecdb4f2a9}\label{classcaffe_1_1_net_a29cac2b39bbfcf0891d34deecdb4f2a9}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries before\+\_\+forward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ab38efc0662826a18034817b484ea0b88}\label{classcaffe_1_1_net_ab38efc0662826a18034817b484ea0b88}} 
+void {\bfseries add\+\_\+before\+\_\+forward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a262da4bf0282c2e8615d3bd0b3582991}\label{classcaffe_1_1_net_a262da4bf0282c2e8615d3bd0b3582991}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries after\+\_\+forward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a27f0234629c0131b23c577713bb8209e}\label{classcaffe_1_1_net_a27f0234629c0131b23c577713bb8209e}} 
+void {\bfseries add\+\_\+after\+\_\+forward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a56eb610394b69214ff9e4d6672c307bb}\label{classcaffe_1_1_net_a56eb610394b69214ff9e4d6672c307bb}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries before\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aed8cfa1dd96bef7fc39c232623995687}\label{classcaffe_1_1_net_aed8cfa1dd96bef7fc39c232623995687}} 
+void {\bfseries add\+\_\+before\+\_\+backward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a331192ceb7cebfbe83177d00e98c67cc}\label{classcaffe_1_1_net_a331192ceb7cebfbe83177d00e98c67cc}} 
+const vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ \& {\bfseries after\+\_\+backward} () const
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a29a94f00de415c11ee57b0985c255827}\label{classcaffe_1_1_net_a29a94f00de415c11ee57b0985c255827}} 
+void {\bfseries add\+\_\+after\+\_\+backward} (\mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a4a38a77b5f01ba4754e6007b9f1214f8}\label{classcaffe_1_1_net_a4a38a77b5f01ba4754e6007b9f1214f8}} 
+static void \mbox{\hyperlink{classcaffe_1_1_net_a4a38a77b5f01ba4754e6007b9f1214f8}{Filter\+Net}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$param\+\_\+filtered)
+\begin{DoxyCompactList}\small\item\em Remove layers that the user specified should be excluded given the current phase, level, and stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a54e8c43fe3a0cd9bbbcfdefd2b1603d2}\label{classcaffe_1_1_net_a54e8c43fe3a0cd9bbbcfdefd2b1603d2}} 
+static bool \mbox{\hyperlink{classcaffe_1_1_net_a54e8c43fe3a0cd9bbbcfdefd2b1603d2}{State\+Meets\+Rule}} (const \mbox{\hyperlink{classcaffe_1_1_net_state}{Net\+State}} \&state, const \mbox{\hyperlink{classcaffe_1_1_net_state_rule}{Net\+State\+Rule}} \&rule, const string \&layer\+\_\+name)
+\begin{DoxyCompactList}\small\item\em return whether \mbox{\hyperlink{classcaffe_1_1_net_state}{Net\+State}} state meets \mbox{\hyperlink{classcaffe_1_1_net_state_rule}{Net\+State\+Rule}} rule \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_abdfb8549b95d178841e5012759042943}\label{classcaffe_1_1_net_abdfb8549b95d178841e5012759042943}} 
+static void \mbox{\hyperlink{classcaffe_1_1_net_abdfb8549b95d178841e5012759042943}{Filter\+Net}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$param\+\_\+filtered)
+\begin{DoxyCompactList}\small\item\em Remove layers that the user specified should be excluded given the current phase, level, and stage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae46e9be7aee32f16bcfcc8639afdd949}\label{classcaffe_1_1_net_ae46e9be7aee32f16bcfcc8639afdd949}} 
+static bool \mbox{\hyperlink{classcaffe_1_1_net_ae46e9be7aee32f16bcfcc8639afdd949}{State\+Meets\+Rule}} (const \mbox{\hyperlink{classcaffe_1_1_net_state}{Net\+State}} \&state, const \mbox{\hyperlink{classcaffe_1_1_net_state_rule}{Net\+State\+Rule}} \&rule, const string \&layer\+\_\+name)
+\begin{DoxyCompactList}\small\item\em return whether \mbox{\hyperlink{classcaffe_1_1_net_state}{Net\+State}} state meets \mbox{\hyperlink{classcaffe_1_1_net_state_rule}{Net\+State\+Rule}} rule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}\label{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}{Append\+Top}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int top\+\_\+id, set$<$ string $>$ $\ast$available\+\_\+blobs, map$<$ string, int $>$ $\ast$blob\+\_\+name\+\_\+to\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em Append a new top blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}\label{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}} 
+int \mbox{\hyperlink{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}{Append\+Bottom}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int bottom\+\_\+id, set$<$ string $>$ $\ast$available\+\_\+blobs, map$<$ string, int $>$ $\ast$blob\+\_\+name\+\_\+to\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em Append a new bottom blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}\label{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}{Append\+Param}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Append a new parameter blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}\label{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}{Forward\+Debug\+Info}} (const int layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Forward. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}\label{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}{Backward\+Debug\+Info}} (const int layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Backward. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}\label{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}{Update\+Debug\+Info}} (const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3d52b2d075fa543e687cf61ba035a488}\label{classcaffe_1_1_net_a3d52b2d075fa543e687cf61ba035a488}} 
+{\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN} (\mbox{\hyperlink{classcaffe_1_1_net}{Net}})
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}\label{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3aab736bc72b29c84dc3ee765ee453c4}{Append\+Top}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int top\+\_\+id, set$<$ string $>$ $\ast$available\+\_\+blobs, map$<$ string, int $>$ $\ast$blob\+\_\+name\+\_\+to\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em Append a new top blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}\label{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}} 
+int \mbox{\hyperlink{classcaffe_1_1_net_a6ef3482f4e882e437c81affa77d91f32}{Append\+Bottom}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int bottom\+\_\+id, set$<$ string $>$ $\ast$available\+\_\+blobs, map$<$ string, int $>$ $\ast$blob\+\_\+name\+\_\+to\+\_\+idx)
+\begin{DoxyCompactList}\small\item\em Append a new bottom blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}\label{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a1fce7e829c10750543f3a79819d49393}{Append\+Param}} (const \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} \&param, const int layer\+\_\+id, const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Append a new parameter blob to the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}\label{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a3751d6095c3d4f4384c52ad80bbd0d88}{Forward\+Debug\+Info}} (const int layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Forward. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}\label{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a0ddec52928f0488e1b1136a0d72db0a1}{Backward\+Debug\+Info}} (const int layer\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Backward. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}\label{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}} 
+void \mbox{\hyperlink{classcaffe_1_1_net_a93a439c92c9218f1dfff16f76d617faa}{Update\+Debug\+Info}} (const int param\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Helper for displaying debug info in Update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a3d52b2d075fa543e687cf61ba035a488}\label{classcaffe_1_1_net_a3d52b2d075fa543e687cf61ba035a488}} 
+{\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+A\+S\+S\+I\+GN} (\mbox{\hyperlink{classcaffe_1_1_net}{Net}})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aef7021f31e355ab8f8991755125f6b2b}\label{classcaffe_1_1_net_aef7021f31e355ab8f8991755125f6b2b}} 
+string \mbox{\hyperlink{classcaffe_1_1_net_aef7021f31e355ab8f8991755125f6b2b}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The network name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1fe921a602b4f96602702a13ad605693}\label{classcaffe_1_1_net_a1fe921a602b4f96602702a13ad605693}} 
+Phase \mbox{\hyperlink{classcaffe_1_1_net_a1fe921a602b4f96602702a13ad605693}{phase\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The phase\+: T\+R\+A\+IN or T\+E\+ST. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8b4d825830d27aeb5ba907d9ddae05c5}\label{classcaffe_1_1_net_a8b4d825830d27aeb5ba907d9ddae05c5}} 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net_a8b4d825830d27aeb5ba907d9ddae05c5}{layers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Individual layers in the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aa8095da35fcec5221f41ba1736b18a81}\label{classcaffe_1_1_net_aa8095da35fcec5221f41ba1736b18a81}} 
+vector$<$ string $>$ {\bfseries layer\+\_\+names\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a494fc3c7c7bb0292fe185131d2a0f65f}\label{classcaffe_1_1_net_a494fc3c7c7bb0292fe185131d2a0f65f}} 
+map$<$ string, int $>$ {\bfseries layer\+\_\+names\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7453bb63d82b05e991f9efefc5c9f25e}\label{classcaffe_1_1_net_a7453bb63d82b05e991f9efefc5c9f25e}} 
+vector$<$ bool $>$ {\bfseries layer\+\_\+need\+\_\+backward\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_af567603bdcbadf89cde413b9042640b9}\label{classcaffe_1_1_net_af567603bdcbadf89cde413b9042640b9}} 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net_af567603bdcbadf89cde413b9042640b9}{blobs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the blobs storing intermediate results between the layer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a366809dc61f712030378d5e12129f900}\label{classcaffe_1_1_net_a366809dc61f712030378d5e12129f900}} 
+vector$<$ string $>$ {\bfseries blob\+\_\+names\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a6922802906a50145321ff8325678c4f9}\label{classcaffe_1_1_net_a6922802906a50145321ff8325678c4f9}} 
+map$<$ string, int $>$ {\bfseries blob\+\_\+names\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a97af59a53882317321a7e1bed5efc427}\label{classcaffe_1_1_net_a97af59a53882317321a7e1bed5efc427}} 
+vector$<$ bool $>$ {\bfseries blob\+\_\+need\+\_\+backward\+\_\+}
+\item 
+vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net_a0fbce4484a2ead09eba35d8e2b18bb41}{bottom\+\_\+vecs\+\_\+}}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_abcafd35a856fe5148f72b4ab05deee54}\label{classcaffe_1_1_net_abcafd35a856fe5148f72b4ab05deee54}} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries bottom\+\_\+id\+\_\+vecs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a60466f78076207b4cd57635b5dfc2d6f}\label{classcaffe_1_1_net_a60466f78076207b4cd57635b5dfc2d6f}} 
+vector$<$ vector$<$ bool $>$ $>$ {\bfseries bottom\+\_\+need\+\_\+backward\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_af5a7616220a862fab571267532ee847e}\label{classcaffe_1_1_net_af5a7616220a862fab571267532ee847e}} 
+vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net_af5a7616220a862fab571267532ee847e}{top\+\_\+vecs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em top\+\_\+vecs stores the vectors containing the output for each layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a239dfb2bc855ebcd3a47e58001b06c77}\label{classcaffe_1_1_net_a239dfb2bc855ebcd3a47e58001b06c77}} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries top\+\_\+id\+\_\+vecs\+\_\+}
+\item 
+vector$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_net_a617731b68e56a18f7904d7d2322e6309}{blob\+\_\+loss\+\_\+weights\+\_\+}}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aee87985beae57a80bb7530f9d907b4f8}\label{classcaffe_1_1_net_aee87985beae57a80bb7530f9d907b4f8}} 
+vector$<$ vector$<$ int $>$ $>$ {\bfseries param\+\_\+id\+\_\+vecs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7d2eacec33c8b1d9effb02b4327f65d5}\label{classcaffe_1_1_net_a7d2eacec33c8b1d9effb02b4327f65d5}} 
+vector$<$ int $>$ {\bfseries param\+\_\+owners\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a0a4b357f75f3266654804fcde207dd5d}\label{classcaffe_1_1_net_a0a4b357f75f3266654804fcde207dd5d}} 
+vector$<$ string $>$ {\bfseries param\+\_\+display\+\_\+names\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a35da4eea28ecfebaff61bdf650fe21f9}\label{classcaffe_1_1_net_a35da4eea28ecfebaff61bdf650fe21f9}} 
+vector$<$ pair$<$ int, int $>$ $>$ {\bfseries param\+\_\+layer\+\_\+indices\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ac6b2e96d68deb383c4f90acaf486501c}\label{classcaffe_1_1_net_ac6b2e96d68deb383c4f90acaf486501c}} 
+map$<$ string, int $>$ {\bfseries param\+\_\+names\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_abfd9d33aba24ec6e415542710dadf644}\label{classcaffe_1_1_net_abfd9d33aba24ec6e415542710dadf644}} 
+vector$<$ int $>$ \mbox{\hyperlink{classcaffe_1_1_net_abfd9d33aba24ec6e415542710dadf644}{net\+\_\+input\+\_\+blob\+\_\+indices\+\_\+}}
+\begin{DoxyCompactList}\small\item\em blob indices for the input and the output of the net \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a8a61083308ff6bd21cd9e3d7be85f8d5}\label{classcaffe_1_1_net_a8a61083308ff6bd21cd9e3d7be85f8d5}} 
+vector$<$ int $>$ {\bfseries net\+\_\+output\+\_\+blob\+\_\+indices\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a7c5d2ffa75f94fdbcfe0c23702cb07d9}\label{classcaffe_1_1_net_a7c5d2ffa75f94fdbcfe0c23702cb07d9}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ {\bfseries net\+\_\+input\+\_\+blobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ae04230234bb0fd59a463dc483aabd6df}\label{classcaffe_1_1_net_ae04230234bb0fd59a463dc483aabd6df}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ {\bfseries net\+\_\+output\+\_\+blobs\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_afc25e8c4df3fbc823938119982a37188}\label{classcaffe_1_1_net_afc25e8c4df3fbc823938119982a37188}} 
+vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net_afc25e8c4df3fbc823938119982a37188}{params\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The parameters in the network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a61bc01473c3b9e934bdfb895f2d5b61b}\label{classcaffe_1_1_net_a61bc01473c3b9e934bdfb895f2d5b61b}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ {\bfseries learnable\+\_\+params\+\_\+}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{classcaffe_1_1_net_afcc09ba945873fe3ced73e9cdbec2118}{learnable\+\_\+param\+\_\+ids\+\_\+}}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1657b3f51d30a7746950830570da2881}\label{classcaffe_1_1_net_a1657b3f51d30a7746950830570da2881}} 
+vector$<$ float $>$ \mbox{\hyperlink{classcaffe_1_1_net_a1657b3f51d30a7746950830570da2881}{params\+\_\+lr\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the learning rate multipliers for learnable\+\_\+params\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_adfc8b073bbbd68bd409810c0b51c2fac}\label{classcaffe_1_1_net_adfc8b073bbbd68bd409810c0b51c2fac}} 
+vector$<$ bool $>$ {\bfseries has\+\_\+params\+\_\+lr\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a9be26aefe41723aaaae0d3f2d8f7931c}\label{classcaffe_1_1_net_a9be26aefe41723aaaae0d3f2d8f7931c}} 
+vector$<$ float $>$ \mbox{\hyperlink{classcaffe_1_1_net_a9be26aefe41723aaaae0d3f2d8f7931c}{params\+\_\+weight\+\_\+decay\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the weight decay multipliers for learnable\+\_\+params\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a49badecd06c709d5240e9893f8734873}\label{classcaffe_1_1_net_a49badecd06c709d5240e9893f8734873}} 
+vector$<$ bool $>$ {\bfseries has\+\_\+params\+\_\+decay\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a84349f399faa4246f8395e63c9334d56}\label{classcaffe_1_1_net_a84349f399faa4246f8395e63c9334d56}} 
+size\+\_\+t \mbox{\hyperlink{classcaffe_1_1_net_a84349f399faa4246f8395e63c9334d56}{memory\+\_\+used\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The bytes of memory used by this net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_addc4e5501070ede24155d4c1bf9928a2}\label{classcaffe_1_1_net_addc4e5501070ede24155d4c1bf9928a2}} 
+bool \mbox{\hyperlink{classcaffe_1_1_net_addc4e5501070ede24155d4c1bf9928a2}{debug\+\_\+info\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether to compute and display debug info for the net. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_aedcffae6c61ee788a21215d5f131131c}\label{classcaffe_1_1_net_aedcffae6c61ee788a21215d5f131131c}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ {\bfseries before\+\_\+forward\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a5ca2ef3cd0b6c2923e6ab653fc87f7d5}\label{classcaffe_1_1_net_a5ca2ef3cd0b6c2923e6ab653fc87f7d5}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ {\bfseries after\+\_\+forward\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_a1338ad46167974dbdc7333ca40615d09}\label{classcaffe_1_1_net_a1338ad46167974dbdc7333ca40615d09}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ {\bfseries before\+\_\+backward\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_net_ad98628cfcbf90ed9093b42b61ba19ec8}\label{classcaffe_1_1_net_ad98628cfcbf90ed9093b42b61ba19ec8}} 
+vector$<$ \mbox{\hyperlink{classcaffe_1_1_net_1_1_callback}{Callback}} $\ast$ $>$ {\bfseries after\+\_\+backward\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Net$<$ Dtype $>$}
+
+Connects \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}s together into a directed acyclic graph (D\+AG) specified by a \mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}}. 
+
+T\+O\+D\+O(dox)\+: more thorough description. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}\label{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Backward@{Backward}}
+\index{Backward@{Backward}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Backward()}{Backward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The network backward should take no input and output, since it solely computes the gradient w.\+r.\+t the parameters, and the data has already been provided during the forward pass. \mbox{\Hypertarget{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}\label{classcaffe_1_1_net_a7a1a6d17347106dd1284b1b6d28cb4e9}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Backward@{Backward}}
+\index{Backward@{Backward}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Backward()}{Backward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Backward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The network backward should take no input and output, since it solely computes the gradient w.\+r.\+t the parameters, and the data has already been provided during the forward pass. \mbox{\Hypertarget{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}\label{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Forward\+From\+To@{Forward\+From\+To}}
+\index{Forward\+From\+To@{Forward\+From\+To}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Forward\+From\+To()}{ForwardFromTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+Dtype \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Forward\+From\+To (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+The From and To variants of Forward and Backward operate on the (topological) ordering by which the net is specified. For general D\+AG networks, note that (1) computing from one layer to another might entail extra computation on unrelated branches, and (2) computation starting in the middle may be incorrect if all of the layers of a fan-\/in are not included. \mbox{\Hypertarget{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}\label{classcaffe_1_1_net_ae5354c03371d4cb7b18988561790e676}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Forward\+From\+To@{Forward\+From\+To}}
+\index{Forward\+From\+To@{Forward\+From\+To}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Forward\+From\+To()}{ForwardFromTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+Dtype \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Forward\+From\+To (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+The From and To variants of Forward and Backward operate on the (topological) ordering by which the net is specified. For general D\+AG networks, note that (1) computing from one layer to another might entail extra computation on unrelated branches, and (2) computation starting in the middle may be incorrect if all of the layers of a fan-\/in are not included. \mbox{\Hypertarget{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}\label{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reshape all layers from bottom to top. 
+
+This is useful to propagate changes to layer sizes without running a forward pass, e.\+g. to compute output feature size. \mbox{\Hypertarget{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}\label{classcaffe_1_1_net_a8417af82aa83be45d39aab735bdead1d}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reshape all layers from bottom to top. 
+
+This is useful to propagate changes to layer sizes without running a forward pass, e.\+g. to compute output feature size. \mbox{\Hypertarget{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}\label{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Share\+Weights@{Share\+Weights}}
+\index{Share\+Weights@{Share\+Weights}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Share\+Weights()}{ShareWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Share\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shares weight data of owner blobs with shared blobs. 
+
+Note\+: this is called by \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Net\+::\+Init}}, and thus should normally not be called manually. \mbox{\Hypertarget{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}\label{classcaffe_1_1_net_a4850fdb3eea1b04c97642546c0dcccf7}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!Share\+Weights@{Share\+Weights}}
+\index{Share\+Weights@{Share\+Weights}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{Share\+Weights()}{ShareWeights()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::Share\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shares weight data of owner blobs with shared blobs. 
+
+Note\+: this is called by \mbox{\hyperlink{classcaffe_1_1_net_ae9fcfaabc89165d6c0cb4b14b4c6b584}{Net\+::\+Init}}, and thus should normally not be called manually. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_net_a617731b68e56a18f7904d7d2322e6309}\label{classcaffe_1_1_net_a617731b68e56a18f7904d7d2322e6309}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!blob\+\_\+loss\+\_\+weights\+\_\+@{blob\+\_\+loss\+\_\+weights\+\_\+}}
+\index{blob\+\_\+loss\+\_\+weights\+\_\+@{blob\+\_\+loss\+\_\+weights\+\_\+}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{blob\+\_\+loss\+\_\+weights\+\_\+}{blob\_loss\_weights\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::blob\+\_\+loss\+\_\+weights\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of weight in the loss (or objective) function of each net blob, indexed by blob\+\_\+id. \mbox{\Hypertarget{classcaffe_1_1_net_a0fbce4484a2ead09eba35d8e2b18bb41}\label{classcaffe_1_1_net_a0fbce4484a2ead09eba35d8e2b18bb41}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!bottom\+\_\+vecs\+\_\+@{bottom\+\_\+vecs\+\_\+}}
+\index{bottom\+\_\+vecs\+\_\+@{bottom\+\_\+vecs\+\_\+}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{bottom\+\_\+vecs\+\_\+}{bottom\_vecs\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$ $>$ $>$ \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::bottom\+\_\+vecs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+bottom\+\_\+vecs stores the vectors containing the input for each layer. They don\textquotesingle{}t actually host the blobs (blobs\+\_\+ does), so we simply store pointers. \mbox{\Hypertarget{classcaffe_1_1_net_afcc09ba945873fe3ced73e9cdbec2118}\label{classcaffe_1_1_net_afcc09ba945873fe3ced73e9cdbec2118}} 
+\index{caffe\+::\+Net@{caffe\+::\+Net}!learnable\+\_\+param\+\_\+ids\+\_\+@{learnable\+\_\+param\+\_\+ids\+\_\+}}
+\index{learnable\+\_\+param\+\_\+ids\+\_\+@{learnable\+\_\+param\+\_\+ids\+\_\+}!caffe\+::\+Net@{caffe\+::\+Net}}
+\subsubsection{\texorpdfstring{learnable\+\_\+param\+\_\+ids\+\_\+}{learnable\_param\_ids\_}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+vector$<$ int $>$ \mbox{\hyperlink{classcaffe_1_1_net}{caffe\+::\+Net}}$<$ Dtype $>$\+::learnable\+\_\+param\+\_\+ids\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The mapping from params\+\_\+ -\/$>$ learnable\+\_\+params\+\_\+\+: we have learnable\+\_\+param\+\_\+ids\+\_\+.\+size() == params\+\_\+.\+size(), and learnable\+\_\+params\+\_\+\mbox{[}learnable\+\_\+param\+\_\+ids\+\_\+\mbox{[}i\mbox{]}\mbox{]} == params\+\_\+\mbox{[}i\mbox{]}.get() if and only if params\+\_\+\mbox{[}i\mbox{]} is an \char`\"{}owner\char`\"{}; otherwise, params\+\_\+\mbox{[}i\mbox{]} is a sharer and learnable\+\_\+params\+\_\+\mbox{[}learnable\+\_\+param\+\_\+ids\+\_\+\mbox{[}i\mbox{]}\mbox{]} gives its owner. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/net.\+hpp\item 
+src/caffe/net.\+cpp\end{DoxyCompactItemize}

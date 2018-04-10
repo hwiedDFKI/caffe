@@ -1,0 +1,33 @@
+\subsection*{Issues}
+
+Specific Caffe design and development issues, bugs, and feature requests are maintained by Git\+Hub Issues.
+
+{\itshape Please do not post usage, installation, or modeling questions, or other requests for help to Issues.} Use the \href{https://groups.google.com/forum/#!forum/caffe-users}{\tt caffe-\/users list} instead. This helps developers maintain a clear, uncluttered, and efficient view of the state of Caffe.
+
+When reporting a bug, it\textquotesingle{}s most helpful to provide the following information, where applicable\+:
+
+
+\begin{DoxyItemize}
+\item What steps reproduce the bug?
+\item Can you reproduce the bug using the latest \href{https://github.com/BVLC/caffe/tree/master}{\tt master}, compiled with the {\ttfamily D\+E\+B\+UG} make option?
+\item What hardware and operating system/distribution are you running?
+\item If the bug is a crash, provide the backtrace (usually printed by Caffe; always obtainable with {\ttfamily gdb}).
+\end{DoxyItemize}
+
+Try to give your issue a title that is succinct and specific. The devs will rename issues as needed to keep track of them.
+
+\subsection*{Pull Requests}
+
+Caffe welcomes all contributions.
+
+See the \href{http://caffe.berkeleyvision.org/development.html}{\tt contributing guide} for details.
+
+Briefly\+: read commit by commit, a PR should tell a clean, compelling story of {\itshape one} improvement to Caffe. In particular\+:
+
+
+\begin{DoxyItemize}
+\item A PR should do one clear thing that obviously improves Caffe, and nothing more. Making many smaller P\+Rs is better than making one large PR; review effort is superlinear in the amount of code involved.
+\item Similarly, each commit should be a small, atomic change representing one step in development. P\+Rs should be made of many commits where appropriate.
+\item Please do rewrite PR history to be clean rather than chronological. Within-\/\+PR bugfixes, style cleanups, reversions, etc. should be squashed and should not appear in merged PR history.
+\item Anything nonobvious from the code should be explained in comments, commit messages, or the PR description, as appropriate. 
+\end{DoxyItemize}

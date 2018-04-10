@@ -1,0 +1,8 @@
+<map id="caffe::InternalThread" name="caffe::InternalThread">
+<area shape="rect" id="node2" href="$classcaffe_1_1_base_prefetching_data_layer.html" title="caffe::BasePrefetchingData\lLayer\&lt; Dtype \&gt;" alt="" coords="196,57,379,98"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_test_thread_a.html" title="caffe::TestThreadA" alt="" coords="220,123,355,149"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_test_thread_b.html" title="caffe::TestThreadB" alt="" coords="220,173,355,200"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_data_layer.html" title="caffe::DataLayer\&lt; Dtype \&gt;" alt="" coords="427,5,605,32"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_image_data_layer.html" title="Provides data to the Net from image files. " alt="" coords="439,57,593,98"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_window_data_layer.html" title="Provides data to the Net from windows of images files, specified by a window data file..." alt="" coords="433,122,599,163"/>
+</map>

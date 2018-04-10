@@ -1,0 +1,152 @@
+\hypertarget{namespaceparse__log}{}\section{parse\+\_\+log Namespace Reference}
+\label{namespaceparse__log}\index{parse\+\_\+log@{parse\+\_\+log}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceparse__log_ac340d5a4faf6c29869b3702916e3f237}{parse\+\_\+log}} (path\+\_\+to\+\_\+log)
+\item 
+def \mbox{\hyperlink{namespaceparse__log_a140116e322b21ebd36d194b65a5612fb}{parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output}} (regex\+\_\+obj, row, row\+\_\+dict\+\_\+list, line, iteration, seconds, learning\+\_\+rate)
+\item 
+def \mbox{\hyperlink{namespaceparse__log_a407b810ae0d4a92efe08385f7de5eabb}{fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate}} (dict\+\_\+list)
+\item 
+def \mbox{\hyperlink{namespaceparse__log_a6541ec62fedcd2928543ff22ec4401b3}{save\+\_\+csv\+\_\+files}} (logfile\+\_\+path, output\+\_\+dir, train\+\_\+dict\+\_\+list, test\+\_\+dict\+\_\+list, delimiter=\textquotesingle{}, verbose=False)
+\item 
+def \mbox{\hyperlink{namespaceparse__log_a485ed97888fccc67e8067cb51ce03db4}{write\+\_\+csv}} (output\+\_\+filename, dict\+\_\+list, delimiter, verbose=False)
+\item 
+\mbox{\Hypertarget{namespaceparse__log_a2db1ba247c658a76a2b26481d6d27c62}\label{namespaceparse__log_a2db1ba247c658a76a2b26481d6d27c62}} 
+def {\bfseries parse\+\_\+args} ()
+\item 
+\mbox{\Hypertarget{namespaceparse__log_ada5ddccd0e1bc3f33fd58f2fbee4ed8f}\label{namespaceparse__log_ada5ddccd0e1bc3f33fd58f2fbee4ed8f}} 
+def {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Parse training log
+
+Evolved from parse_log.sh
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceparse__log_a407b810ae0d4a92efe08385f7de5eabb}\label{namespaceparse__log_a407b810ae0d4a92efe08385f7de5eabb}} 
+\index{parse\+\_\+log@{parse\+\_\+log}!fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate@{fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate}}
+\index{fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate@{fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate}!parse\+\_\+log@{parse\+\_\+log}}
+\subsubsection{\texorpdfstring{fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate()}{fix\_initial\_nan\_learning\_rate()}}
+{\footnotesize\ttfamily def parse\+\_\+log.\+fix\+\_\+initial\+\_\+nan\+\_\+learning\+\_\+rate (\begin{DoxyParamCaption}\item[{}]{dict\+\_\+list }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Correct initial value of learning rate
+
+Learning rate is normally not printed until after the initial test and
+training step, which means the initial testing and training rows have
+LearningRate = NaN. Fix this by copying over the LearningRate from the
+second row, if it exists.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceparse__log_a407b810ae0d4a92efe08385f7de5eabb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{namespaceparse__log_a407b810ae0d4a92efe08385f7de5eabb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceparse__log_a140116e322b21ebd36d194b65a5612fb}\label{namespaceparse__log_a140116e322b21ebd36d194b65a5612fb}} 
+\index{parse\+\_\+log@{parse\+\_\+log}!parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output@{parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output}}
+\index{parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output@{parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output}!parse\+\_\+log@{parse\+\_\+log}}
+\subsubsection{\texorpdfstring{parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output()}{parse\_line\_for\_net\_output()}}
+{\footnotesize\ttfamily def parse\+\_\+log.\+parse\+\_\+line\+\_\+for\+\_\+net\+\_\+output (\begin{DoxyParamCaption}\item[{}]{regex\+\_\+obj,  }\item[{}]{row,  }\item[{}]{row\+\_\+dict\+\_\+list,  }\item[{}]{line,  }\item[{}]{iteration,  }\item[{}]{seconds,  }\item[{}]{learning\+\_\+rate }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse a single line for training or test output
+
+Returns a a tuple with (row_dict_list, row)
+row: may be either a new row or an augmented version of the current row
+row_dict_list: may be either the current row_dict_list or an augmented
+version of the current row_dict_list
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{namespaceparse__log_a140116e322b21ebd36d194b65a5612fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceparse__log_ac340d5a4faf6c29869b3702916e3f237}\label{namespaceparse__log_ac340d5a4faf6c29869b3702916e3f237}} 
+\index{parse\+\_\+log@{parse\+\_\+log}!parse\+\_\+log@{parse\+\_\+log}}
+\index{parse\+\_\+log@{parse\+\_\+log}!parse\+\_\+log@{parse\+\_\+log}}
+\subsubsection{\texorpdfstring{parse\+\_\+log()}{parse\_log()}}
+{\footnotesize\ttfamily def parse\+\_\+log.\+parse\+\_\+log (\begin{DoxyParamCaption}\item[{}]{path\+\_\+to\+\_\+log }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Parse log file
+Returns (train_dict_list, test_dict_list)
+
+train_dict_list and test_dict_list are lists of dicts that define the table
+rows
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceparse__log_ac340d5a4faf6c29869b3702916e3f237_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceparse__log_a6541ec62fedcd2928543ff22ec4401b3}\label{namespaceparse__log_a6541ec62fedcd2928543ff22ec4401b3}} 
+\index{parse\+\_\+log@{parse\+\_\+log}!save\+\_\+csv\+\_\+files@{save\+\_\+csv\+\_\+files}}
+\index{save\+\_\+csv\+\_\+files@{save\+\_\+csv\+\_\+files}!parse\+\_\+log@{parse\+\_\+log}}
+\subsubsection{\texorpdfstring{save\+\_\+csv\+\_\+files()}{save\_csv\_files()}}
+{\footnotesize\ttfamily def parse\+\_\+log.\+save\+\_\+csv\+\_\+files (\begin{DoxyParamCaption}\item[{}]{logfile\+\_\+path,  }\item[{}]{output\+\_\+dir,  }\item[{}]{train\+\_\+dict\+\_\+list,  }\item[{}]{test\+\_\+dict\+\_\+list,  }\item[{}]{delimiter = {\ttfamily \textquotesingle{}},  }\item[{}]{verbose = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save CSV files to output_dir
+
+If the input log file is, e.g., caffe.INFO, the names will be
+caffe.INFO.train and caffe.INFO.test
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{namespaceparse__log_a6541ec62fedcd2928543ff22ec4401b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceparse__log_a6541ec62fedcd2928543ff22ec4401b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceparse__log_a485ed97888fccc67e8067cb51ce03db4}\label{namespaceparse__log_a485ed97888fccc67e8067cb51ce03db4}} 
+\index{parse\+\_\+log@{parse\+\_\+log}!write\+\_\+csv@{write\+\_\+csv}}
+\index{write\+\_\+csv@{write\+\_\+csv}!parse\+\_\+log@{parse\+\_\+log}}
+\subsubsection{\texorpdfstring{write\+\_\+csv()}{write\_csv()}}
+{\footnotesize\ttfamily def parse\+\_\+log.\+write\+\_\+csv (\begin{DoxyParamCaption}\item[{}]{output\+\_\+filename,  }\item[{}]{dict\+\_\+list,  }\item[{}]{delimiter,  }\item[{}]{verbose = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Write a CSV file
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{namespaceparse__log_a485ed97888fccc67e8067cb51ce03db4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceparse__log_a485ed97888fccc67e8067cb51ce03db4_icgraph}
+\end{center}
+\end{figure}

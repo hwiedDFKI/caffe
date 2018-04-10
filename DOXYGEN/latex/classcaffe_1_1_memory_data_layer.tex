@@ -1,0 +1,217 @@
+\hypertarget{classcaffe_1_1_memory_data_layer}{}\section{caffe\+:\+:Memory\+Data\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_memory_data_layer}\index{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$@{caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}}
+
+
+Provides data to the \mbox{\hyperlink{classcaffe_1_1_net}{Net}} from memory.  
+
+
+
+
+{\ttfamily \#include $<$memory\+\_\+data\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Memory\+Data\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classcaffe_1_1_memory_data_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a9bf012786068bfe846694af129a6736f}\label{classcaffe_1_1_memory_data_layer_a9bf012786068bfe846694af129a6736f}} 
+{\bfseries Memory\+Data\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_aad493595bd8ac4cedba283c1850539b2}\label{classcaffe_1_1_memory_data_layer_aad493595bd8ac4cedba283c1850539b2}} 
+virtual void {\bfseries Data\+Layer\+Set\+Up} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}\label{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a5d7c633d066570d2b040ccabda9d9f60}\label{classcaffe_1_1_memory_data_layer_a5d7c633d066570d2b040ccabda9d9f60}} 
+virtual void {\bfseries Add\+Datum\+Vector} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_datum}{Datum}} $>$ \&datum\+\_\+vector)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_aeaa745c4fe3a957b973bf94dca6a5f2b}\label{classcaffe_1_1_memory_data_layer_aeaa745c4fe3a957b973bf94dca6a5f2b}} 
+void {\bfseries Reset} (Dtype $\ast$data, Dtype $\ast$label, int n)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a07bc96b979032d11a0bf00fad6a3f1ff}\label{classcaffe_1_1_memory_data_layer_a07bc96b979032d11a0bf00fad6a3f1ff}} 
+void {\bfseries set\+\_\+batch\+\_\+size} (int new\+\_\+size)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a06bfb6d06f61db11699a6b3ce7b1ee53}\label{classcaffe_1_1_memory_data_layer_a06bfb6d06f61db11699a6b3ce7b1ee53}} 
+int {\bfseries batch\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_aeeed090aee729e61426525c6a62f79a2}\label{classcaffe_1_1_memory_data_layer_aeeed090aee729e61426525c6a62f79a2}} 
+int {\bfseries channels} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a13775655bc0563ec85f124604ebb945f}\label{classcaffe_1_1_memory_data_layer_a13775655bc0563ec85f124604ebb945f}} 
+int {\bfseries height} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a2c8b2f60895130d3ebfdc775724b5503}\label{classcaffe_1_1_memory_data_layer_a2c8b2f60895130d3ebfdc775724b5503}} 
+int {\bfseries width} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a9bf012786068bfe846694af129a6736f}\label{classcaffe_1_1_memory_data_layer_a9bf012786068bfe846694af129a6736f}} 
+{\bfseries Memory\+Data\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a3ee96cf337f51bb9a62e7721fd2b54da}\label{classcaffe_1_1_memory_data_layer_a3ee96cf337f51bb9a62e7721fd2b54da}} 
+virtual void {\bfseries Data\+Layer\+Set\+Up} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}\label{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a374835f9df814ef78e3f4a4d640f0d35}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_acb40a0aae033ba50115edc42db3d08fe}\label{classcaffe_1_1_memory_data_layer_acb40a0aae033ba50115edc42db3d08fe}} 
+virtual void {\bfseries Add\+Datum\+Vector} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_datum}{Datum}} $>$ \&datum\+\_\+vector)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_aeaa745c4fe3a957b973bf94dca6a5f2b}\label{classcaffe_1_1_memory_data_layer_aeaa745c4fe3a957b973bf94dca6a5f2b}} 
+void {\bfseries Reset} (Dtype $\ast$data, Dtype $\ast$label, int n)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a07bc96b979032d11a0bf00fad6a3f1ff}\label{classcaffe_1_1_memory_data_layer_a07bc96b979032d11a0bf00fad6a3f1ff}} 
+void {\bfseries set\+\_\+batch\+\_\+size} (int new\+\_\+size)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a06bfb6d06f61db11699a6b3ce7b1ee53}\label{classcaffe_1_1_memory_data_layer_a06bfb6d06f61db11699a6b3ce7b1ee53}} 
+int {\bfseries batch\+\_\+size} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_aeeed090aee729e61426525c6a62f79a2}\label{classcaffe_1_1_memory_data_layer_aeeed090aee729e61426525c6a62f79a2}} 
+int {\bfseries channels} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a13775655bc0563ec85f124604ebb945f}\label{classcaffe_1_1_memory_data_layer_a13775655bc0563ec85f124604ebb945f}} 
+int {\bfseries height} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a2c8b2f60895130d3ebfdc775724b5503}\label{classcaffe_1_1_memory_data_layer_a2c8b2f60895130d3ebfdc775724b5503}} 
+int {\bfseries width} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a4a573b91dfe4e83cce4bc311355e9af3}\label{classcaffe_1_1_memory_data_layer_a4a573b91dfe4e83cce4bc311355e9af3}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_a4a573b91dfe4e83cce4bc311355e9af3}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_afe157d4c4f334223b0db542fe5006ca1}\label{classcaffe_1_1_memory_data_layer_afe157d4c4f334223b0db542fe5006ca1}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_memory_data_layer_afe157d4c4f334223b0db542fe5006ca1}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a94335b05660c950a4ba711342daff276}\label{classcaffe_1_1_memory_data_layer_a94335b05660c950a4ba711342daff276}} 
+int {\bfseries batch\+\_\+size\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_af42ca28f0d1768bdfc679347c3812643}\label{classcaffe_1_1_memory_data_layer_af42ca28f0d1768bdfc679347c3812643}} 
+int {\bfseries channels\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a815208a6cb35c6712d43ff8b32bcecb9}\label{classcaffe_1_1_memory_data_layer_a815208a6cb35c6712d43ff8b32bcecb9}} 
+int {\bfseries height\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_afd655a82e4016d543366d694720a786a}\label{classcaffe_1_1_memory_data_layer_afd655a82e4016d543366d694720a786a}} 
+int {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a9c083d81e848814b5f47c950a4d64df8}\label{classcaffe_1_1_memory_data_layer_a9c083d81e848814b5f47c950a4d64df8}} 
+int {\bfseries size\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a1b272df6f72b32fc7e533b0043dd1566}\label{classcaffe_1_1_memory_data_layer_a1b272df6f72b32fc7e533b0043dd1566}} 
+Dtype $\ast$ {\bfseries data\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a5dadd68dd6188a95591abf5253cd75a2}\label{classcaffe_1_1_memory_data_layer_a5dadd68dd6188a95591abf5253cd75a2}} 
+Dtype $\ast$ {\bfseries labels\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a303b19a435878a94ede0c8e1fb26f2a1}\label{classcaffe_1_1_memory_data_layer_a303b19a435878a94ede0c8e1fb26f2a1}} 
+int {\bfseries n\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a6a4867d3666f144f6fdd804a186d789c}\label{classcaffe_1_1_memory_data_layer_a6a4867d3666f144f6fdd804a186d789c}} 
+size\+\_\+t {\bfseries pos\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_ac485c92f590012caefc4eedb3447e1ae}\label{classcaffe_1_1_memory_data_layer_ac485c92f590012caefc4eedb3447e1ae}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries added\+\_\+data\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_ab946de44a602183cf28ff1f2770b0aed}\label{classcaffe_1_1_memory_data_layer_ab946de44a602183cf28ff1f2770b0aed}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries added\+\_\+label\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a853f5cc1091152cac0ef6cbf57ac253a}\label{classcaffe_1_1_memory_data_layer_a853f5cc1091152cac0ef6cbf57ac253a}} 
+bool {\bfseries has\+\_\+new\+\_\+data\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Memory\+Data\+Layer$<$ Dtype $>$}
+
+Provides data to the \mbox{\hyperlink{classcaffe_1_1_net}{Net}} from memory. 
+
+T\+O\+D\+O(dox)\+: thorough documentation for Forward and proto params. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}\label{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}} 
+\index{caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer}{caffe\+::\+Memory\+Data\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}\label{classcaffe_1_1_memory_data_layer_a05a867526de7e0c6ec4851a97f52a47b}} 
+\index{caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer}{caffe\+::\+Memory\+Data\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}\label{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}} 
+\index{caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer}{caffe\+::\+Memory\+Data\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}\label{classcaffe_1_1_memory_data_layer_af714b4cbc022be1592ad26c300b63ae4}} 
+\index{caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Memory\+Data\+Layer@{caffe\+::\+Memory\+Data\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_memory_data_layer}{caffe\+::\+Memory\+Data\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/memory\+\_\+data\+\_\+layer.\+hpp\item 
+src/caffe/layers/memory\+\_\+data\+\_\+layer.\+cpp\end{DoxyCompactItemize}

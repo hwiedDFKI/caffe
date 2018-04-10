@@ -1,0 +1,4 @@
+<map id="caffe::InfogainLossLayer::Reshape" name="caffe::InfogainLossLayer::Reshape">
+<area shape="rect" id="node2" href="$classcaffe_1_1_loss_layer.html#abf00412194f5413ea9468ee44b0d986f" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="219,5,397,32"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_blob.html#ad0e0a9a4f49478e89161c6afe4e341a0" title="Deprecated; use Reshape(const vector&lt;int&gt;&amp; shape). " alt="" coords="235,56,381,83"/>
+</map>

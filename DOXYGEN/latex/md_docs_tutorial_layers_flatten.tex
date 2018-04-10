@@ -1,0 +1,25 @@
+
+
+ \subsection*{title\+: Flatten Layer }
+
+\section*{Flatten Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Flatten}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1FlattenLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/flatten_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/flatten\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/flatten_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/flatten\+\_\+layer.cpp}}
+\end{DoxyItemize}
+
+The {\ttfamily Flatten} layer is a utility layer that flattens an input of shape {\ttfamily n $\ast$ c $\ast$ h $\ast$ w} to a simple vector output of shape {\ttfamily n $\ast$ (c$\ast$h$\ast$w)}.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Flatten\+Parameter flatten\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Flatten\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

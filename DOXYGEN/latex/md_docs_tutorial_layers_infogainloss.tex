@@ -1,0 +1,27 @@
+
+
+ \subsection*{title\+: Infogain Loss Layer }
+
+\section*{Infogain Loss Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Infogain\+Loss}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1InfogainLossLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/infogain_loss_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/infogain\+\_\+loss\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/infogain_loss_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/infogain\+\_\+loss\+\_\+layer.cpp}}
+\end{DoxyItemize}
+
+A generalization of \href{multinomiallogisticloss.html}{\tt Multinomial\+Logistic\+Loss\+Layer} that takes an \char`\"{}information gain\char`\"{} (infogain) matrix specifying the \char`\"{}value\char`\"{} of all label pairs.
+
+Equivalent to the \href{multinomiallogisticloss.html}{\tt Multinomial\+Logistic\+Loss\+Layer} if the infogain matrix is the identity.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Parameter infogain\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Infogain\+Loss\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

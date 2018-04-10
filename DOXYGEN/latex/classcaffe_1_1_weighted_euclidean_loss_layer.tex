@@ -1,0 +1,336 @@
+\hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer}{}\section{caffe\+:\+:Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_weighted_euclidean_loss_layer}\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}}
+
+
+Computes weighted Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N w_n \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks.  
+
+
+
+
+{\ttfamily \#include $<$weighted\+\_\+euclidean\+\_\+loss\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classcaffe_1_1_weighted_euclidean_loss_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_aa2c9f118a064b055a2f887c43f24bab4}\label{classcaffe_1_1_weighted_euclidean_loss_layer_aa2c9f118a064b055a2f887c43f24bab4}} 
+{\bfseries Weighted\+Euclidean\+Loss\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_aa2c9f118a064b055a2f887c43f24bab4}\label{classcaffe_1_1_weighted_euclidean_loss_layer_aa2c9f118a064b055a2f887c43f24bab4}} 
+{\bfseries Weighted\+Euclidean\+Loss\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_ac9b915b132fb539ffdd610992c507974}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a3c470122857ae006730dadf26a015b79}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}{Allow\+Force\+Backward}} (const int bottom\+\_\+index) const
+\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_afec8ba4fe31b4b9581d58e9a829195aa}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes the Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a03cab5c47d405a3ee513cc94b238e367}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the Weighted Euclidean error gradient w.\+r.\+t. the inputs. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_adbd3351b9d5de823aa6f222051bfacd7}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Computes the Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer_a322d61242f92d0ea8fb95d2c6391dccb}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Computes the Weighted Euclidean error gradient w.\+r.\+t. the inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a8e722d18dc86b1bc0dfc5cda2e6ead67}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a8e722d18dc86b1bc0dfc5cda2e6ead67}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries diff\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_ae464fcf329795c905bba72da35a6826f}\label{classcaffe_1_1_weighted_euclidean_loss_layer_ae464fcf329795c905bba72da35a6826f}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries sqrt\+\_\+weight\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a93f21c599a2d4b11160f1deb6b506a09}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a93f21c599a2d4b11160f1deb6b506a09}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries sqrt\+\_\+weight\+\_\+diff\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a461ec3882fbd6adb2f6feeb465f34b10}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a461ec3882fbd6adb2f6feeb465f34b10}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ {\bfseries temp\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Weighted\+Euclidean\+Loss\+Layer$<$ Dtype $>$}
+
+Computes weighted Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N w_n \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 3)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ \hat{y} \in [-\infty, +\infty]$
+\item $ (N \times C \times H \times W) $ the targets $ y \in [-\infty, +\infty]$
+\item $ (N \times C \times H \times W) $ the weights $ w \in [0, +\infty] $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ the computed Euclidean loss\+: $ E = \frac{1}{2n} \sum\limits_{n=1}^N \w_n \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+This can be used for least-\/squares regression tasks with different weights for different labels. An \mbox{\hyperlink{classcaffe_1_1_inner_product_layer}{Inner\+Product\+Layer}} input to a \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer}{Euclidean\+Loss\+Layer}} exactly formulates a linear least squares regression problem. With non-\/zero weight decay the problem becomes one of ridge regression -- see src/caffe/test/test\+\_\+sgd\+\_\+solver.\+cpp for a concrete example wherein we check that the gradients computed for a \mbox{\hyperlink{classcaffe_1_1_net}{Net}} with exactly this structure match hand-\/computed gradient formulas for ridge regression.
+
+(Note\+: \mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}}, and S\+GD in general, is certainly {\bfseries not} the best way to solve linear least squares problems! We use it only as an instructive example.) 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Unlike most loss layers, in the \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer}{Euclidean\+Loss\+Layer}} we can backpropagate to both inputs -- override to return true and always allow force\+\_\+backward. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a6b996834a2a27bb8d2d9b48873b6cd65}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Allow\+Force\+Backward@{Allow\+Force\+Backward}}
+\index{Allow\+Force\+Backward@{Allow\+Force\+Backward}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Allow\+Force\+Backward()}{AllowForceBackward()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual bool \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Allow\+Force\+Backward (\begin{DoxyParamCaption}\item[{const int}]{bottom\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Unlike most loss layers, in the \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer}{Euclidean\+Loss\+Layer}} we can backpropagate to both inputs -- override to return true and always allow force\+\_\+backward. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_a36d35155bfe0de53a79c517f33759612}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a03cab5c47d405a3ee513cc94b238e367}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a03cab5c47d405a3ee513cc94b238e367}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the Weighted Euclidean error gradient w.\+r.\+t. the inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ This \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\textquotesingle{}s diff will simply contain the loss\+\_\+weight$\ast$ $ \lambda $, as $ \lambda $ is the coefficient of this layer\textquotesingle{}s output $\ell_i$ in the overall \mbox{\hyperlink{classcaffe_1_1_net}{Net}} loss $ E = \lambda_i \ell_i + \mbox{other loss terms}$; hence $ \frac{\partial E}{\partial \ell_i} = \lambda_i $. ($\ast$\+Assuming that this top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} is not used as a bottom (input) by any other layer of the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.) 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $\hat{y}$; Backward fills their diff with gradients $ \frac{\partial E}{\partial \hat{y}} = \frac{1}{n} \sum\limits_{n=1}^N w_n (\hat{y}_n - y_n) $ if propagate\+\_\+down\mbox{[}0\mbox{]}
+\item $ (N \times C \times H \times W) $ the targets $y$; Backward fills their diff with gradients $ \frac{\partial E}{\partial y} = \frac{1}{n} \sum\limits_{n=1}^N w_n (y_n - \hat{y}_n) $ if propagate\+\_\+down\mbox{[}1\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a322d61242f92d0ea8fb95d2c6391dccb}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a322d61242f92d0ea8fb95d2c6391dccb}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Backward\+\_\+cpu@{Backward\+\_\+cpu}}
+\index{Backward\+\_\+cpu@{Backward\+\_\+cpu}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Backward\+\_\+cpu()}{Backward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Backward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top,  }\item[{const vector$<$ bool $>$ \&}]{propagate\+\_\+down,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the Weighted Euclidean error gradient w.\+r.\+t. the inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1), providing the error gradient with respect to the outputs
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ This \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\textquotesingle{}s diff will simply contain the loss\+\_\+weight$\ast$ $ \lambda $, as $ \lambda $ is the coefficient of this layer\textquotesingle{}s output $\ell_i$ in the overall \mbox{\hyperlink{classcaffe_1_1_net}{Net}} loss $ E = \lambda_i \ell_i + \mbox{other loss terms}$; hence $ \frac{\partial E}{\partial \ell_i} = \lambda_i $. ($\ast$\+Assuming that this top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} is not used as a bottom (input) by any other layer of the \mbox{\hyperlink{classcaffe_1_1_net}{Net}}.) 
+\end{DoxyEnumerate}\\
+\hline
+{\em propagate\+\_\+down} & see \mbox{\hyperlink{classcaffe_1_1_layer_a183d343f5183a4762307f2c5e6ed1e12}{Layer\+::\+Backward}}. \\
+\hline
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $\hat{y}$; Backward fills their diff with gradients $ \frac{\partial E}{\partial \hat{y}} = \frac{1}{n} \sum\limits_{n=1}^N w_n (\hat{y}_n - y_n) $ if propagate\+\_\+down\mbox{[}0\mbox{]}
+\item $ (N \times C \times H \times W) $ the targets $y$; Backward fills their diff with gradients $ \frac{\partial E}{\partial y} = \frac{1}{n} \sum\limits_{n=1}^N w_n (y_n - \hat{y}_n) $ if propagate\+\_\+down\mbox{[}1\mbox{]} 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a75c9b2a321dc713e0eaef530d02dc37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a2ac1ab6f657c6531dee37f80a971bbd9}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_af1620064baefb711e2c767bdc92b6fb1}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_afec8ba4fe31b4b9581d58e9a829195aa}\label{classcaffe_1_1_weighted_euclidean_loss_layer_afec8ba4fe31b4b9581d58e9a829195aa}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ \hat{y} \in [-\infty, +\infty]$
+\item $ (N \times C \times H \times W) $ the targets $ y \in [-\infty, +\infty]$ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ the computed Euclidean loss\+: $ E = \frac{1}{2n} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+This can be used for least-\/squares regression tasks. An \mbox{\hyperlink{classcaffe_1_1_inner_product_layer}{Inner\+Product\+Layer}} input to a \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer}{Euclidean\+Loss\+Layer}} exactly formulates a linear least squares regression problem. With non-\/zero weight decay the problem becomes one of ridge regression -- see src/caffe/test/test\+\_\+gradient\+\_\+based\+\_\+solver.\+cpp for a concrete example wherein we check that the gradients computed for a \mbox{\hyperlink{classcaffe_1_1_net}{Net}} with exactly this structure match hand-\/computed gradient formulas for ridge regression.
+
+(Note\+: \mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}}, and S\+GD in general, is certainly {\bfseries not} the best way to solve linear least squares problems! We use it only as an instructive example.) 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_adbd3351b9d5de823aa6f222051bfacd7}\label{classcaffe_1_1_weighted_euclidean_loss_layer_adbd3351b9d5de823aa6f222051bfacd7}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Computes the Euclidean (L2) loss $ E = \frac{1}{2N} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $ for real-\/valued regression tasks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 2)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the predictions $ \hat{y} \in [-\infty, +\infty]$
+\item $ (N \times C \times H \times W) $ the targets $ y \in [-\infty, +\infty]$ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (1 \times 1 \times 1 \times 1) $ the computed Euclidean loss\+: $ E = \frac{1}{2n} \sum\limits_{n=1}^N \left| \left| \hat{y}_n - y_n \right| \right|_2^2 $
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+This can be used for least-\/squares regression tasks. An \mbox{\hyperlink{classcaffe_1_1_inner_product_layer}{Inner\+Product\+Layer}} input to a \mbox{\hyperlink{classcaffe_1_1_euclidean_loss_layer}{Euclidean\+Loss\+Layer}} exactly formulates a linear least squares regression problem. With non-\/zero weight decay the problem becomes one of ridge regression -- see src/caffe/test/test\+\_\+gradient\+\_\+based\+\_\+solver.\+cpp for a concrete example wherein we check that the gradients computed for a \mbox{\hyperlink{classcaffe_1_1_net}{Net}} with exactly this structure match hand-\/computed gradient formulas for ridge regression.
+
+(Note\+: \mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}}, and S\+GD in general, is certainly {\bfseries not} the best way to solve linear least squares problems! We use it only as an instructive example.) 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20}\label{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_weighted_euclidean_loss_layer_a98e3de49ab49d66b8e3ebfe3aa4fbe20_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_weighted_euclidean_loss_layer_ac9b915b132fb539ffdd610992c507974}\label{classcaffe_1_1_weighted_euclidean_loss_layer_ac9b915b132fb539ffdd610992c507974}} 
+\index{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Weighted\+Euclidean\+Loss\+Layer@{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_weighted_euclidean_loss_layer}{caffe\+::\+Weighted\+Euclidean\+Loss\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_loss_layer_abf00412194f5413ea9468ee44b0d986f}{caffe\+::\+Loss\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/weighted\+\_\+euclidean\+\_\+loss\+\_\+layer.\+hpp\item 
+src/caffe/layers/weighted\+\_\+euclidean\+\_\+loss\+\_\+layer.\+cpp\end{DoxyCompactItemize}

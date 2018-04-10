@@ -1,0 +1,36 @@
+
+
+ \subsection*{title\+: Memory Data Layer }
+
+\section*{Memory Data Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Memory\+Data}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1MemoryDataLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/memory_data_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/memory\+\_\+data\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/memory_data_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/memory\+\_\+data\+\_\+layer.cpp}}
+\end{DoxyItemize}
+
+The memory data layer reads data directly from memory, without copying it. In order to use it, one must call {\ttfamily Memory\+Data\+Layer\+::\+Reset} (from C++) or {\ttfamily Net.\+set\+\_\+input\+\_\+arrays} (from Python) in order to specify a source of contiguous data (as 4D row major array), which is read one batch-\/sized chunk at a time.
+
+\section*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Memory\+Data\+Parameter memory\+\_\+data\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Memory\+Data\+Parameter.\+txt \%\} \{\% endhighlight \%\}
+
+
+\begin{DoxyItemize}
+\item Parameters
+\begin{DoxyItemize}
+\item Required
+\begin{DoxyItemize}
+\item {\ttfamily batch\+\_\+size}, {\ttfamily channels}, {\ttfamily height}, {\ttfamily width}\+: specify the size of input chunks to read from memory 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}

@@ -1,0 +1,32 @@
+
+
+ \subsection*{title\+: Python Layer }
+
+\section*{Python Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Python}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1PythonLayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/python_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/python\+\_\+layer.hpp}}
+\end{DoxyItemize}
+
+The Python layer allows users to add customized layers without modifying the Caffe core code.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Python\+Parameter python\+\_\+param})
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Python\+Parameter.\+txt \%\} \{\% endhighlight \%\}
+
+\subsection*{Examples and tutorials}
+
+
+\begin{DoxyItemize}
+\item Simple Euclidean loss example $\ast$$\ast$ \href{https://github.com/BVLC/caffe/blob/master/examples/pycaffe/layers/pyloss.py}{\tt Python code} $\ast$$\ast$ \href{https://github.com/BVLC/caffe/blob/master/examples/pycaffe/linreg.prototxt}{\tt Prototxt}
+\item \href{https://github.com/NVIDIA/DIGITS/tree/master/examples/python-layer}{\tt Tutorial for writing Python layers with D\+I\+G\+I\+TS} 
+\end{DoxyItemize}

@@ -1,0 +1,5 @@
+<map id="caffe::RecurrentLayer&lt; Dtype &gt;" name="caffe::RecurrentLayer&lt; Dtype &gt;">
+<area shape="rect" id="node3" href="$classcaffe_1_1_l_s_t_m_layer.html" title="Processes sequential inputs using a &quot;Long Short&#45;Term Memory&quot; (LSTM) [1] style recurrent neural networ..." alt="" coords="5,169,191,196"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_r_n_n_layer.html" title="Processes time&#45;varying inputs using a simple recurrent neural network (RNN). Implemented as a network..." alt="" coords="215,169,395,196"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="125,5,276,32"/>
+</map>

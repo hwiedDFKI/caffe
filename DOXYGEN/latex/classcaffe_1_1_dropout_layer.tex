@@ -1,0 +1,297 @@
+\hypertarget{classcaffe_1_1_dropout_layer}{}\section{caffe\+:\+:Dropout\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_dropout_layer}\index{caffe\+::\+Dropout\+Layer$<$ Dtype $>$@{caffe\+::\+Dropout\+Layer$<$ Dtype $>$}}
+
+
+During training only, sets a random portion of $x$ to 0, adjusting the rest of the vector magnitude accordingly.  
+
+
+
+
+{\ttfamily \#include $<$dropout\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Dropout\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_dropout_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}{Dropout\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}\label{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}{Dropout\+Layer}} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aaf3f194d0e4936f7a657b61d7468d744}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a93f66d83b510987fe37a42d14e6ff98a}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}\label{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a95456634a033d94c23ef0db3679ccbc9}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_af3d3f94306230950edf514e0fbb8f710}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}\label{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_dropout_layer_af3d3f94306230950edf514e0fbb8f710}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_afd94f3c55768f4847956c01bce88f9c1}\label{classcaffe_1_1_dropout_layer_afd94f3c55768f4847956c01bce88f9c1}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_afd94f3c55768f4847956c01bce88f9c1}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}\label{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_dropout_layer_afd94f3c55768f4847956c01bce88f9c1}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a91f6a1b9c2c36f93935320400768c436}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}\label{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aec676b1d329ed969ea71b32d595e6201}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_dropout_layer_af3d3f94306230950edf514e0fbb8f710}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_aa7304acf7f8984e9d7ea55c45cbb0ebe}\label{classcaffe_1_1_dropout_layer_aa7304acf7f8984e9d7ea55c45cbb0ebe}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_aa7304acf7f8984e9d7ea55c45cbb0ebe}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}\label{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a018a322f4e9e2604d9d55d9c85512600}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_dropout_layer_afd94f3c55768f4847956c01bce88f9c1}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a10b5b699a7c34c7b71a64e3fd49f887a}\label{classcaffe_1_1_dropout_layer_a10b5b699a7c34c7b71a64e3fd49f887a}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ unsigned int $>$ \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a10b5b699a7c34c7b71a64e3fd49f887a}{rand\+\_\+vec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em when divided by U\+I\+N\+T\+\_\+\+M\+AX, the randomly generated values $u\sim U(0,1)$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a8e9d88e6128a97101c27ce8a11158ca6}\label{classcaffe_1_1_dropout_layer_a8e9d88e6128a97101c27ce8a11158ca6}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_dropout_layer_a8e9d88e6128a97101c27ce8a11158ca6}{threshold\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the probability $ p $ of dropping any input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_ac8702c053de0fea389f5a0ded8cdc544}\label{classcaffe_1_1_dropout_layer_ac8702c053de0fea389f5a0ded8cdc544}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_dropout_layer_ac8702c053de0fea389f5a0ded8cdc544}{scale\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the scale for undropped inputs at train time $ 1 / (1 - p) $ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_ae8ba2b98a7bc12643eec8ad72a66be21}\label{classcaffe_1_1_dropout_layer_ae8ba2b98a7bc12643eec8ad72a66be21}} 
+unsigned int {\bfseries uint\+\_\+thres\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Dropout\+Layer$<$ Dtype $>$}
+
+During training only, sets a random portion of $x$ to 0, adjusting the rest of the vector magnitude accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs $ y = |x| $ 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}\label{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Dropout\+Layer@{Dropout\+Layer}}
+\index{Dropout\+Layer@{Dropout\+Layer}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Dropout\+Layer()}{DropoutLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_dropout_layer}{Dropout\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_dropout_parameter}{Dropout\+Parameter}} dropout\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{Dropout\+Layer}} options\+:
+\begin{DoxyItemize}
+\item dropout\+\_\+ratio ({\bfseries optional}, default 0.\+5). Sets the probability $ p $ that any given unit is dropped. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}\label{classcaffe_1_1_dropout_layer_a24cbddd4699b102a9555d3b8013c16d0}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Dropout\+Layer@{Dropout\+Layer}}
+\index{Dropout\+Layer@{Dropout\+Layer}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Dropout\+Layer()}{DropoutLayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+\mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::\mbox{\hyperlink{classcaffe_1_1_dropout_layer}{Dropout\+Layer}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & provides \mbox{\hyperlink{classcaffe_1_1_dropout_parameter}{Dropout\+Parameter}} dropout\+\_\+param, with \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{Dropout\+Layer}} options\+:
+\begin{DoxyItemize}
+\item dropout\+\_\+ratio ({\bfseries optional}, default 0.\+5). Sets the probability $ p $ that any given unit is dropped. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a91f6a1b9c2c36f93935320400768c436}\label{classcaffe_1_1_dropout_layer_a91f6a1b9c2c36f93935320400768c436}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs. At training time, we have $ y_{\mbox{train}} = \left\{ \begin{array}{ll} \frac{x}{1 - p} & \mbox{if } u > p \\ 0 & \mbox{otherwise} \end{array} \right. $, where $ u \sim U(0, 1)$ is generated independently for each input at each iteration. At test time, we simply have $ y_{\mbox{test}} = \mathbb{E}[y_{\mbox{train}}] = x $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_af3d3f94306230950edf514e0fbb8f710}\label{classcaffe_1_1_dropout_layer_af3d3f94306230950edf514e0fbb8f710}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Forward\+\_\+cpu@{Forward\+\_\+cpu}}
+\index{Forward\+\_\+cpu@{Forward\+\_\+cpu}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Forward\+\_\+cpu()}{Forward\_cpu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Forward\+\_\+cpu (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the inputs $ x $ 
+\end{DoxyEnumerate}\\
+\hline
+{\em top} & output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} vector (length 1)
+\begin{DoxyEnumerate}
+\item $ (N \times C \times H \times W) $ the computed outputs. At training time, we have $ y_{\mbox{train}} = \left\{ \begin{array}{ll} \frac{x}{1 - p} & \mbox{if } u > p \\ 0 & \mbox{otherwise} \end{array} \right. $, where $ u \sim U(0, 1)$ is generated independently for each input at each iteration. At test time, we simply have $ y_{\mbox{test}} = \mathbb{E}[y_{\mbox{train}}] = x $. 
+\end{DoxyEnumerate}\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a576ac6a60b1e99fe383831f52a6cea77}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_aaf3f194d0e4936f7a657b61d7468d744}\label{classcaffe_1_1_dropout_layer_aaf3f194d0e4936f7a657b61d7468d744}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167}\label{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classcaffe_1_1_dropout_layer_addcfd0822c1c5e3591bc7001a034b167_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a93f66d83b510987fe37a42d14e6ff98a}\label{classcaffe_1_1_dropout_layer_a93f66d83b510987fe37a42d14e6ff98a}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505}\label{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505}} 
+\index{caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Dropout\+Layer@{caffe\+::\+Dropout\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_dropout_layer}{caffe\+::\+Dropout\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_neuron_layer_a6d0facf4a5e6f459cf1cb8b28d945790}{caffe\+::\+Neuron\+Layer$<$ Dtype $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classcaffe_1_1_dropout_layer_a8ddbd583b7430f228506954910935505_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/dropout\+\_\+layer.\+hpp\item 
+src/caffe/layers/dropout\+\_\+layer.\+cpp\end{DoxyCompactItemize}

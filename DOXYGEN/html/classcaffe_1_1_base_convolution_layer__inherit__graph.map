@@ -1,0 +1,5 @@
+<map id="caffe::BaseConvolutionLayer&lt; Dtype &gt;" name="caffe::BaseConvolutionLayer&lt; Dtype &gt;">
+<area shape="rect" id="node3" href="$classcaffe_1_1_convolution_layer.html" title="Convolves the input image with a bank of learned filters, and (optionally) adds biases. " alt="" coords="5,169,165,211"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_deconvolution_layer.html" title="Convolve the input with a bank of learned filters, and (optionally) add biases, treating filters and ..." alt="" coords="190,169,365,211"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="106,5,257,32"/>
+</map>

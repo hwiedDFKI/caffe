@@ -1,0 +1,15 @@
+<map id="caffe::Layer::SetUp" name="caffe::Layer::SetUp">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a55c8036130225fbc874a986bdf4b27e2" title="caffe::Layer::CheckBlobCounts" alt="" coords="189,231,395,258"/>
+<area shape="rect" id="node11" href="$classcaffe_1_1_layer.html#a481323a3e0972c682787f2137468c29f" title="Does layer&#45;specific setup: your layer should implement this function as well as Reshape. " alt="" coords="208,301,376,327"/>
+<area shape="rect" id="node12" href="$classcaffe_1_1_layer.html#a7fe981e8af8d93d587acf2a952be563d" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="217,351,367,378"/>
+<area shape="rect" id="node13" href="$classcaffe_1_1_layer.html#a04eb2a3d1d59c64cd64c233217d5d6fc" title="caffe::Layer::SetLossWeights" alt="" coords="195,439,389,466"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html#a8e5ee0494d85f5f55fc4396537cbc60f" title="Returns the exact number of bottom blobs required by the layer, or &#45;1 if no exact number is required..." alt="" coords="443,5,645,47"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_layer.html#a8952bff6bc4c2a96d8ea30d8ff65b198" title="Returns the layer type. " alt="" coords="482,71,606,98"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_layer.html#aca3cb2bafaefda5d4760aaebd0b72def" title="Returns the minimum number of bottom blobs required by the layer, or &#45;1 if no minimum number is requi..." alt="" coords="447,122,641,149"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_layer.html#af8bdc989053e0363ab032026b46de7c3" title="Returns the maximum number of bottom blobs required by the layer, or &#45;1 if no maximum number is requi..." alt="" coords="445,173,643,199"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_layer.html#a64e2ca72c719e4b2f1f9216ccfb0d37f" title="Returns the exact number of top blobs required by the layer, or &#45;1 if no exact number is required..." alt="" coords="453,224,635,265"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_layer.html#ab9e4c8d642e413948b131d851a8462a4" title="Returns the minimum number of top blobs required by the layer, or &#45;1 if no minimum number is required..." alt="" coords="457,290,631,317"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_layer.html#ac6c03df0b6e40e776c94001e19994a2e" title="Returns the maximum number of top blobs required by the layer, or &#45;1 if no maximum number is required..." alt="" coords="455,341,633,367"/>
+<area shape="rect" id="node10" href="$classcaffe_1_1_layer.html#af452a938bc7596f9b5e9900c8dc4ab3d" title="Returns true if the layer requires an equal number of bottom and top blobs. " alt="" coords="443,392,645,433"/>
+<area shape="rect" id="node14" href="$classcaffe_1_1_layer.html#a899b09f4b91ada8545b3a43ee91e0d69" title="Sets the loss associated with a top blob at a given index. " alt="" coords="470,458,618,485"/>
+</map>

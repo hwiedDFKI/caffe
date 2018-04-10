@@ -1,0 +1,92 @@
+\hypertarget{classcaffe_1_1_l_s_t_m_layer}{}\section{caffe\+:\+:L\+S\+T\+M\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_l_s_t_m_layer}\index{caffe\+::\+L\+S\+T\+M\+Layer$<$ Dtype $>$@{caffe\+::\+L\+S\+T\+M\+Layer$<$ Dtype $>$}}
+
+
+Processes sequential inputs using a \char`\"{}\+Long Short-\/\+Term Memory\char`\"{} (L\+S\+TM) \mbox{[}1\mbox{]} style recurrent neural network (R\+NN). Implemented by unrolling the L\+S\+TM computation through time.  
+
+
+
+
+{\ttfamily \#include $<$lstm\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:L\+S\+T\+M\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classcaffe_1_1_l_s_t_m_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_abcf1a46aef1f25b7a78d13dc7e34f13b}\label{classcaffe_1_1_l_s_t_m_layer_abcf1a46aef1f25b7a78d13dc7e34f13b}} 
+{\bfseries L\+S\+T\+M\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}\label{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_abcf1a46aef1f25b7a78d13dc7e34f13b}\label{classcaffe_1_1_l_s_t_m_layer_abcf1a46aef1f25b7a78d13dc7e34f13b}} 
+{\bfseries L\+S\+T\+M\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}\label{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a971791d82dee1ec9cdd0625ee1579e22}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a66285fd55798aa17b8d5d0b7f30f8346}\label{classcaffe_1_1_l_s_t_m_layer_a66285fd55798aa17b8d5d0b7f30f8346}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a66285fd55798aa17b8d5d0b7f30f8346}{Fill\+Unrolled\+Net}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$net\+\_\+param) const
+\begin{DoxyCompactList}\small\item\em Fills net\+\_\+param with the recurrent network architecture. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a03c6f191bd5a314981514b9bbd3ce450}\label{classcaffe_1_1_l_s_t_m_layer_a03c6f191bd5a314981514b9bbd3ce450}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a03c6f191bd5a314981514b9bbd3ce450}{Recurrent\+Input\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the 0th timestep recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a1ea6a5c2801b1463604bc67c4dbf1df1}\label{classcaffe_1_1_l_s_t_m_layer_a1ea6a5c2801b1463604bc67c4dbf1df1}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a1ea6a5c2801b1463604bc67c4dbf1df1}{Recurrent\+Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the Tth timestep recurrent output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_ab3978704db58d6f2a43d3cfccec9853b}\label{classcaffe_1_1_l_s_t_m_layer_ab3978704db58d6f2a43d3cfccec9853b}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_ab3978704db58d6f2a43d3cfccec9853b}{Recurrent\+Input\+Shapes}} (vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob_shape}{Blob\+Shape}} $>$ $\ast$shapes) const
+\begin{DoxyCompactList}\small\item\em Fills shapes with the shapes of the recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a86acb620f5a10c6caa2661398e0b4f5a}\label{classcaffe_1_1_l_s_t_m_layer_a86acb620f5a10c6caa2661398e0b4f5a}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a86acb620f5a10c6caa2661398e0b4f5a}{Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the output blobs, concatenated across all timesteps. Should return a name for each top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_ad366d5d814f1c77355d51e83a0eb72f0}\label{classcaffe_1_1_l_s_t_m_layer_ad366d5d814f1c77355d51e83a0eb72f0}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_ad366d5d814f1c77355d51e83a0eb72f0}{Fill\+Unrolled\+Net}} (\mbox{\hyperlink{classcaffe_1_1_net_parameter}{Net\+Parameter}} $\ast$net\+\_\+param) const
+\begin{DoxyCompactList}\small\item\em Fills net\+\_\+param with the recurrent network architecture. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_af6727ebb2afc6a8ba17433600f2c1327}\label{classcaffe_1_1_l_s_t_m_layer_af6727ebb2afc6a8ba17433600f2c1327}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_af6727ebb2afc6a8ba17433600f2c1327}{Recurrent\+Input\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the 0th timestep recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a8cdfff877abf6604e07b46bac7c8767f}\label{classcaffe_1_1_l_s_t_m_layer_a8cdfff877abf6604e07b46bac7c8767f}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a8cdfff877abf6604e07b46bac7c8767f}{Recurrent\+Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the Tth timestep recurrent output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_ab86ed71632077cfa6ab758a35fe94453}\label{classcaffe_1_1_l_s_t_m_layer_ab86ed71632077cfa6ab758a35fe94453}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_ab86ed71632077cfa6ab758a35fe94453}{Recurrent\+Input\+Shapes}} (vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob_shape}{Blob\+Shape}} $>$ $\ast$shapes) const
+\begin{DoxyCompactList}\small\item\em Fills shapes with the shapes of the recurrent input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}\&s. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_l_s_t_m_layer_a51f73c86adfb8eface5aa9dce3d8ba66}\label{classcaffe_1_1_l_s_t_m_layer_a51f73c86adfb8eface5aa9dce3d8ba66}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer_a51f73c86adfb8eface5aa9dce3d8ba66}{Output\+Blob\+Names}} (vector$<$ string $>$ $\ast$names) const
+\begin{DoxyCompactList}\small\item\em Fills names with the names of the output blobs, concatenated across all timesteps. Should return a name for each top \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}. Subclasses should define this -- see \mbox{\hyperlink{classcaffe_1_1_r_n_n_layer}{R\+N\+N\+Layer}} and \mbox{\hyperlink{classcaffe_1_1_l_s_t_m_layer}{L\+S\+T\+M\+Layer}} for examples. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+L\+S\+T\+M\+Layer$<$ Dtype $>$}
+
+Processes sequential inputs using a \char`\"{}\+Long Short-\/\+Term Memory\char`\"{} (L\+S\+TM) \mbox{[}1\mbox{]} style recurrent neural network (R\+NN). Implemented by unrolling the L\+S\+TM computation through time. 
+
+The specific architecture used in this implementation is as described in \char`\"{}\+Learning to Execute\char`\"{} \mbox{[}2\mbox{]}, reproduced below\+: i\+\_\+t \+:= \mbox{[} W\+\_\+\{hi\} $\ast$ h\+\_\+\{t-\/1\} + W\+\_\+\{xi\} $\ast$ x\+\_\+t + b\+\_\+i \mbox{]} f\+\_\+t \+:= \mbox{[} W\+\_\+\{hf\} $\ast$ h\+\_\+\{t-\/1\} + W\+\_\+\{xf\} $\ast$ x\+\_\+t + b\+\_\+f \mbox{]} o\+\_\+t \+:= \mbox{[} W\+\_\+\{ho\} $\ast$ h\+\_\+\{t-\/1\} + W\+\_\+\{xo\} $\ast$ x\+\_\+t + b\+\_\+o \mbox{]} g\+\_\+t \+:= \mbox{[} W\+\_\+\{hg\} $\ast$ h\+\_\+\{t-\/1\} + W\+\_\+\{xg\} $\ast$ x\+\_\+t + b\+\_\+g \mbox{]} c\+\_\+t \+:= (f\+\_\+t .$\ast$ c\+\_\+\{t-\/1\}) + (i\+\_\+t .$\ast$ g\+\_\+t) h\+\_\+t \+:= o\+\_\+t .$\ast$ \mbox{[}c\+\_\+t\mbox{]} In the implementation, the i, f, o, and g computations are performed as a single inner product.
+
+Notably, this implementation lacks the \char`\"{}diagonal\char`\"{} gates, as used in the L\+S\+TM architectures described by Alex Graves \mbox{[}3\mbox{]} and others.
+
+\mbox{[}1\mbox{]} Hochreiter, Sepp, and Schmidhuber, Jürgen. \char`\"{}\+Long short-\/term memory.\char`\"{} Neural Computation 9, no. 8 (1997)\+: 1735-\/1780.
+
+\mbox{[}2\mbox{]} Zaremba, Wojciech, and Sutskever, Ilya. \char`\"{}\+Learning to execute.\char`\"{} ar\+Xiv preprint ar\+Xiv\+:1410.\+4615 (2014).
+
+\mbox{[}3\mbox{]} Graves, Alex. \char`\"{}\+Generating sequences with recurrent neural networks.\char`\"{} ar\+Xiv preprint ar\+Xiv\+:1308.\+0850 (2013). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/lstm\+\_\+layer.\+hpp\item 
+src/caffe/layers/lstm\+\_\+layer.\+cpp\end{DoxyCompactItemize}

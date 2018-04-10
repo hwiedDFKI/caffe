@@ -1,0 +1,5 @@
+<map id="caffe::GPUMathFunctionsTest&lt; Dtype &gt;" name="caffe::GPUMathFunctionsTest&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_math_functions_test.html" title="caffe::MathFunctionsTest\l\&lt; GPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="18,169,193,211"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; GPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="18,80,193,121"/>
+<area shape="rect" id="node4" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="58,5,153,32"/>
+</map>

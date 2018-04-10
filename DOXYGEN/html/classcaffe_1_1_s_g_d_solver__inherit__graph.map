@@ -1,0 +1,8 @@
+<map id="caffe::SGDSolver&lt; Dtype &gt;" name="caffe::SGDSolver&lt; Dtype &gt;">
+<area shape="rect" id="node3" href="$classcaffe_1_1_ada_delta_solver.html" title="caffe::AdaDeltaSolver\l\&lt; Dtype \&gt;" alt="" coords="441,5,592,47"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_ada_grad_solver.html" title="caffe::AdaGradSolver\l\&lt; Dtype \&gt;" alt="" coords="443,71,590,112"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_adam_solver.html" title="AdamSolver, an algorithm for first&#45;order gradient&#45;based optimization of stochastic objective function..." alt="" coords="447,136,586,177"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_nesterov_solver.html" title="caffe::NesterovSolver\l\&lt; Dtype \&gt;" alt="" coords="442,201,591,243"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_r_m_s_prop_solver.html" title="caffe::RMSPropSolver\l\&lt; Dtype \&gt;" alt="" coords="440,267,593,308"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_solver.html" title="An interface for classes that perform optimization on Nets. " alt="" coords="5,143,160,170"/>
+</map>

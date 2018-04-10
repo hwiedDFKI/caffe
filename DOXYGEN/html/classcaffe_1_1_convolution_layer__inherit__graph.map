@@ -1,0 +1,4 @@
+<map id="caffe::ConvolutionLayer&lt; Dtype &gt;" name="caffe::ConvolutionLayer&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_base_convolution_layer.html" title="Abstract base class that factors out the BLAS code common to ConvolutionLayer and DeconvolutionLayer..." alt="" coords="5,80,196,121"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="25,5,176,32"/>
+</map>

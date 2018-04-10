@@ -1,0 +1,84 @@
+\hypertarget{classcaffe_1_1_internal_thread}{}\section{caffe\+:\+:Internal\+Thread Class Reference}
+\label{classcaffe_1_1_internal_thread}\index{caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}}
+
+
+{\ttfamily \#include $<$internal\+\_\+thread.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Internal\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcaffe_1_1_internal_thread__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}{Start\+Internal\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}{Stop\+Internal\+Thread}} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_aff6725ab240da9bd0d4c0e7183ce0cf2}\label{classcaffe_1_1_internal_thread_aff6725ab240da9bd0d4c0e7183ce0cf2}} 
+bool {\bfseries is\+\_\+started} () const
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}{Start\+Internal\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}{Stop\+Internal\+Thread}} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_aff6725ab240da9bd0d4c0e7183ce0cf2}\label{classcaffe_1_1_internal_thread_aff6725ab240da9bd0d4c0e7183ce0cf2}} 
+bool {\bfseries is\+\_\+started} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_a40b9506bc2985fdc189cff4fa680880b}\label{classcaffe_1_1_internal_thread_a40b9506bc2985fdc189cff4fa680880b}} 
+virtual void {\bfseries Internal\+Thread\+Entry} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_a16fd45781962d8f59556b9323f11a397}\label{classcaffe_1_1_internal_thread_a16fd45781962d8f59556b9323f11a397}} 
+bool {\bfseries must\+\_\+stop} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_a40b9506bc2985fdc189cff4fa680880b}\label{classcaffe_1_1_internal_thread_a40b9506bc2985fdc189cff4fa680880b}} 
+virtual void {\bfseries Internal\+Thread\+Entry} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_a16fd45781962d8f59556b9323f11a397}\label{classcaffe_1_1_internal_thread_a16fd45781962d8f59556b9323f11a397}} 
+bool {\bfseries must\+\_\+stop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual class encapsulate boost\+::thread for use in base class The child class will acquire the ability to run a single thread, by reimplementing the virtual function Internal\+Thread\+Entry. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}\label{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}} 
+\index{caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}!Start\+Internal\+Thread@{Start\+Internal\+Thread}}
+\index{Start\+Internal\+Thread@{Start\+Internal\+Thread}!caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}}
+\subsubsection{\texorpdfstring{Start\+Internal\+Thread()}{StartInternalThread()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void caffe\+::\+Internal\+Thread\+::\+Start\+Internal\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}}\textquotesingle{}s thread local state will be initialized using the current thread values, e.\+g. device id, solver index etc. The random seed is initialized using caffe\+\_\+rng\+\_\+rand. \mbox{\Hypertarget{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}\label{classcaffe_1_1_internal_thread_acffc1d9bc9e78f4146ba2d16f593fca7}} 
+\index{caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}!Start\+Internal\+Thread@{Start\+Internal\+Thread}}
+\index{Start\+Internal\+Thread@{Start\+Internal\+Thread}!caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}}
+\subsubsection{\texorpdfstring{Start\+Internal\+Thread()}{StartInternalThread()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void caffe\+::\+Internal\+Thread\+::\+Start\+Internal\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classcaffe_1_1_caffe}{Caffe}}\textquotesingle{}s thread local state will be initialized using the current thread values, e.\+g. device id, solver index etc. The random seed is initialized using caffe\+\_\+rng\+\_\+rand. \mbox{\Hypertarget{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}\label{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}} 
+\index{caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}!Stop\+Internal\+Thread@{Stop\+Internal\+Thread}}
+\index{Stop\+Internal\+Thread@{Stop\+Internal\+Thread}!caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}}
+\subsubsection{\texorpdfstring{Stop\+Internal\+Thread()}{StopInternalThread()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void caffe\+::\+Internal\+Thread\+::\+Stop\+Internal\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Will not return until the internal thread has exited. \mbox{\Hypertarget{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}\label{classcaffe_1_1_internal_thread_ac72d8e2a23dbbe5203d5003dd67af73e}} 
+\index{caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}!Stop\+Internal\+Thread@{Stop\+Internal\+Thread}}
+\index{Stop\+Internal\+Thread@{Stop\+Internal\+Thread}!caffe\+::\+Internal\+Thread@{caffe\+::\+Internal\+Thread}}
+\subsubsection{\texorpdfstring{Stop\+Internal\+Thread()}{StopInternalThread()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void caffe\+::\+Internal\+Thread\+::\+Stop\+Internal\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Will not return until the internal thread has exited. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/internal\+\_\+thread.\+hpp\item 
+src/caffe/internal\+\_\+thread.\+cpp\end{DoxyCompactItemize}

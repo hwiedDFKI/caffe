@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['random',['Random',['../classtesting_1_1internal_1_1_random.html',1,'testing::internal']]],
+  ['randomnumbergeneratortest',['RandomNumberGeneratorTest',['../classcaffe_1_1_random_number_generator_test.html',1,'caffe']]],
+  ['rangegenerator',['RangeGenerator',['../classtesting_1_1internal_1_1_range_generator.html',1,'testing::internal']]],
+  ['re',['RE',['../classtesting_1_1internal_1_1_r_e.html',1,'testing::internal']]],
+  ['recurrentlayer',['RecurrentLayer',['../classcaffe_1_1_recurrent_layer.html',1,'caffe']]],
+  ['recurrentparameter',['RecurrentParameter',['../classcaffe_1_1_recurrent_parameter.html',1,'caffe']]],
+  ['reductionlayer',['ReductionLayer',['../classcaffe_1_1_reduction_layer.html',1,'caffe']]],
+  ['reductionlayertest',['ReductionLayerTest',['../classcaffe_1_1_reduction_layer_test.html',1,'caffe']]],
+  ['reductionparameter',['ReductionParameter',['../classcaffe_1_1_reduction_parameter.html',1,'caffe']]],
+  ['relulayer',['ReLULayer',['../classcaffe_1_1_re_l_u_layer.html',1,'caffe']]],
+  ['reluparameter',['ReLUParameter',['../classcaffe_1_1_re_l_u_parameter.html',1,'caffe']]],
+  ['removeconst',['RemoveConst',['../structtesting_1_1internal_1_1_remove_const.html',1,'testing::internal']]],
+  ['removeconst_3c_20const_20t_20_3e',['RemoveConst&lt; const T &gt;',['../structtesting_1_1internal_1_1_remove_const_3_01const_01_t_01_4.html',1,'testing::internal']]],
+  ['removereference',['RemoveReference',['../structtesting_1_1internal_1_1_remove_reference.html',1,'testing::internal']]],
+  ['removereference_3c_20t_20_26_20_3e',['RemoveReference&lt; T &amp; &gt;',['../structtesting_1_1internal_1_1_remove_reference_3_01_t_01_6_01_4.html',1,'testing::internal']]],
+  ['reshapelayer',['ReshapeLayer',['../classcaffe_1_1_reshape_layer.html',1,'caffe']]],
+  ['reshapelayertest',['ReshapeLayerTest',['../classcaffe_1_1_reshape_layer_test.html',1,'caffe']]],
+  ['reshapeparameter',['ReshapeParameter',['../classcaffe_1_1_reshape_parameter.html',1,'caffe']]],
+  ['resizecropimagesmapper',['ResizeCropImagesMapper',['../classresize__and__crop__images_1_1_resize_crop_images_mapper.html',1,'resize_and_crop_images']]],
+  ['rmspropsolver',['RMSPropSolver',['../classcaffe_1_1_r_m_s_prop_solver.html',1,'caffe']]],
+  ['rmspropsolvertest',['RMSPropSolverTest',['../classcaffe_1_1_r_m_s_prop_solver_test.html',1,'caffe']]],
+  ['rng',['RNG',['../classcaffe_1_1_caffe_1_1_r_n_g.html',1,'caffe::Caffe']]],
+  ['rnnlayer',['RNNLayer',['../classcaffe_1_1_r_n_n_layer.html',1,'caffe']]],
+  ['rnnlayertest',['RNNLayerTest',['../classcaffe_1_1_r_n_n_layer_test.html',1,'caffe']]]
+];

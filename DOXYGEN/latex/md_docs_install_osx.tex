@@ -1,0 +1,117 @@
+
+
+ \subsection*{title\+: \char`\"{}\+Installation\+: O\+S X\char`\"{} }
+
+\section*{OS X Installation}
+
+We highly recommend using the \href{http://brew.sh/}{\tt Homebrew} package manager. Ideally you could start from a clean {\ttfamily /usr/local} to avoid conflicts. In the following, we assume that you\textquotesingle{}re using Anaconda Python and Homebrew.
+
+{\bfseries C\+U\+DA}\+: Install via the N\+V\+I\+D\+IA package that includes both C\+U\+DA and the bundled driver. {\bfseries C\+U\+DA 7 is strongly suggested.} Older C\+U\+DA require {\ttfamily libstdc++} while clang++ is the default compiler and {\ttfamily libc++} the default standard library on OS X 10.\+9+. This disagreement makes it necessary to change the compilation settings for each of the dependencies. This is prone to error.
+
+{\bfseries Library Path}\+: We find that everything compiles successfully if {\ttfamily \$\+L\+D\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH} is not set at all, and {\ttfamily \$\+D\+Y\+L\+D\+\_\+\+F\+A\+L\+L\+B\+A\+C\+K\+\_\+\+L\+I\+B\+R\+A\+R\+Y\+\_\+\+P\+A\+TH} is set to provide C\+U\+DA, Python, and other relevant libraries (e.\+g. {\ttfamily /usr/local/cuda/lib\+:\$\+H\+O\+ME/anaconda/lib\+:/usr/local/lib\+:/usr/lib}). In other {\ttfamily E\+NV} settings, things may not work as expected.
+
+{\bfseries General dependencies} \begin{DoxyVerb}brew install -vd snappy leveldb gflags glog szip lmdb
+# need the homebrew science source for OpenCV and hdf5
+brew tap homebrew/science
+brew install hdf5 opencv
+\end{DoxyVerb}
+
+
+If using Anaconda Python, a modification to the Open\+CV formula might be needed Do {\ttfamily brew edit opencv} and change the lines that look like the two lines below to exactly the two lines below. \begin{DoxyVerb}  -DPYTHON_LIBRARY=#{py_prefix}/lib/libpython2.7.dylib
+  -DPYTHON_INCLUDE_DIR=#{py_prefix}/include/python2.7
+\end{DoxyVerb}
+
+
+If using Anaconda Python, H\+D\+F5 is bundled and the {\ttfamily hdf5} formula can be skipped.
+
+{\bfseries Remaining dependencies, with / without Python} \begin{DoxyVerb}# with Python pycaffe needs dependencies built from source
+brew install --build-from-source --with-python -vd protobuf
+brew install --build-from-source -vd boost boost-python
+# without Python the usual installation suffices
+brew install protobuf boost
+\end{DoxyVerb}
+
+
+{\bfseries B\+L\+AS}\+: already installed as the \href{https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man7/Accelerate.7.html}{\tt Accelerate / vec\+Lib Framework}. Open\+B\+L\+AS and M\+KL are alternatives for faster C\+PU computation.
+
+{\bfseries Python} (optional)\+: Anaconda is the preferred Python. If you decide against it, please use Homebrew. Check that Caffe and dependencies are linking against the same, desired Python.
+
+Continue with \href{installation.html#compilation}{\tt compilation}.
+
+\subsection*{libstdc++ installation}
+
+This route is not for the faint of heart. For OS X 10.\+10 and 10.\+9 you should install C\+U\+DA 7 and follow the instructions above. If that is not an option, take a deep breath and carry on.
+
+In OS X 10.\+9+, clang++ is the default C++ compiler and uses {\ttfamily libc++} as the standard library. However, N\+V\+I\+D\+IA C\+U\+DA (even version 6.\+0) currently links only with {\ttfamily libstdc++}. This makes it necessary to change the compilation settings for each of the dependencies.
+
+We do this by modifying the Homebrew formulae before installing any packages. Make sure that Homebrew doesn\textquotesingle{}t install any software dependencies in the background; all packages must be linked to {\ttfamily libstdc++}.
+
+The prerequisite Homebrew formulae are \begin{DoxyVerb}boost snappy leveldb protobuf gflags glog szip lmdb homebrew/science/opencv
+\end{DoxyVerb}
+
+
+For each of these formulas, {\ttfamily brew edit F\+O\+R\+M\+U\+LA}, and add the E\+NV definitions as shown\+: \begin{DoxyVerb}  def install
+      # ADD THE FOLLOWING:
+      ENV.append "CXXFLAGS", "-stdlib=libstdc++"
+      ENV.append "CFLAGS", "-stdlib=libstdc++"
+      ENV.append "LDFLAGS", "-stdlib=libstdc++ -lstdc++"
+      # The following is necessary because libtool likes to strip LDFLAGS:
+      ENV["CXX"] = "/usr/bin/clang++ -stdlib=libstdc++"
+      ...
+\end{DoxyVerb}
+
+
+To edit the formulae in turn, run \begin{DoxyVerb}for x in snappy leveldb protobuf gflags glog szip boost boost-python lmdb homebrew/science/opencv; do brew edit $x; done
+\end{DoxyVerb}
+
+
+After this, run \begin{DoxyVerb}for x in snappy leveldb gflags glog szip lmdb homebrew/science/opencv; do brew uninstall $x; brew install --build-from-source -vd $x; done
+brew uninstall protobuf; brew install --build-from-source --with-python -vd protobuf
+brew install --build-from-source -vd boost boost-python
+\end{DoxyVerb}
+
+
+If this is not done exactly right then linking errors will trouble you.
+
+{\bfseries Homebrew versioning} that Homebrew maintains itself as a separate git repository and making the above {\ttfamily brew edit F\+O\+R\+M\+U\+LA} changes will change files in your local copy of homebrew\textquotesingle{}s master branch. By default, this will prevent you from updating Homebrew using {\ttfamily brew update}, as you will get an error message like the following\+: \begin{DoxyVerb}$ brew update
+error: Your local changes to the following files would be overwritten by merge:
+  Library/Formula/lmdb.rb
+Please, commit your changes or stash them before you can merge.
+Aborting
+Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
+\end{DoxyVerb}
+
+
+One solution is to commit your changes to a separate Homebrew branch, run {\ttfamily brew update}, and rebase your changes onto the updated master. You\textquotesingle{}ll have to do this both for the main Homebrew repository in {\ttfamily /usr/local/} and the Homebrew science repository that contains Open\+CV in {\ttfamily /usr/local/\+Library/\+Taps/homebrew/homebrew-\/science}, as follows\+: \begin{DoxyVerb}cd /usr/local
+git checkout -b caffe
+git add .
+git commit -m "Update Caffe dependencies to use libstdc++"
+cd /usr/local/Library/Taps/homebrew/homebrew-science
+git checkout -b caffe
+git add .
+git commit -m "Update Caffe dependencies"
+\end{DoxyVerb}
+
+
+Then, whenever you want to update homebrew, switch back to the master branches, do the update, rebase the caffe branches onto master and fix any conflicts\+: \begin{DoxyVerb}# Switch batch to homebrew master branches
+cd /usr/local
+git checkout master
+cd /usr/local/Library/Taps/homebrew/homebrew-science
+git checkout master
+
+# Update homebrew; hopefully this works without errors!
+brew update
+
+# Switch back to the caffe branches with the formulae that you modified earlier
+cd /usr/local
+git rebase master caffe
+# Fix any merge conflicts and commit to caffe branch
+cd /usr/local/Library/Taps/homebrew/homebrew-science
+git rebase master caffe
+# Fix any merge conflicts and commit to caffe branch
+
+# Done!
+\end{DoxyVerb}
+
+
+At this point, you should be running the latest Homebrew packages and your Caffe-\/related modifications will remain in place. 

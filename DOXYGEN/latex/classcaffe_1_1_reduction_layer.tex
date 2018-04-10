@@ -1,0 +1,265 @@
+\hypertarget{classcaffe_1_1_reduction_layer}{}\section{caffe\+:\+:Reduction\+Layer$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_reduction_layer}\index{caffe\+::\+Reduction\+Layer$<$ Dtype $>$@{caffe\+::\+Reduction\+Layer$<$ Dtype $>$}}
+
+
+Compute \char`\"{}reductions\char`\"{} -- operations that return a scalar output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} for an input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} of arbitrary size, such as the sum, absolute sum, and sum of squares.  
+
+
+
+
+{\ttfamily \#include $<$reduction\+\_\+layer.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Reduction\+Layer$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classcaffe_1_1_reduction_layer__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aefb1d51cf2b4ce4248d9614267191e4d}\label{classcaffe_1_1_reduction_layer_aefb1d51cf2b4ce4248d9614267191e4d}} 
+{\bfseries Reduction\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aafe0aa825e019ea35225a8e493e4e919}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a0f6594ec41a0556e9fcfb9af0ae86c8a}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}\label{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aefb1d51cf2b4ce4248d9614267191e4d}\label{classcaffe_1_1_reduction_layer_aefb1d51cf2b4ce4248d9614267191e4d}} 
+{\bfseries Reduction\+Layer} (const \mbox{\hyperlink{classcaffe_1_1_layer_parameter}{Layer\+Parameter}} \&param)
+\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a5503c3dac40e2a92d8bfca77d0712dfb}{Layer\+Set\+Up}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_ad830b3c52fb34555e45cd172a8b27ed9}{Reshape}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}\label{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}} 
+virtual const char $\ast$ \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aafc754e45877961380a214e5410033ed}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layer type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}{Exact\+Num\+Bottom\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}{Exact\+Num\+Top\+Blobs}} () const
+\begin{DoxyCompactList}\small\item\em Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aa378b271b6082975ae9037f4c530fb7e}\label{classcaffe_1_1_reduction_layer_aa378b271b6082975ae9037f4c530fb7e}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aa378b271b6082975ae9037f4c530fb7e}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}\label{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aa378b271b6082975ae9037f4c530fb7e}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aeff33bdb244f2e93eef7ba78b795db45}\label{classcaffe_1_1_reduction_layer_aeff33bdb244f2e93eef7ba78b795db45}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aeff33bdb244f2e93eef7ba78b795db45}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}\label{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aeff33bdb244f2e93eef7ba78b795db45}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a4803fb6724c7b1db4b4fc93c3230c995}\label{classcaffe_1_1_reduction_layer_a4803fb6724c7b1db4b4fc93c3230c995}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a4803fb6724c7b1db4b4fc93c3230c995}{Forward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the layer output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}\label{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a54f77eed7da1f4ccf5a10e05efaa7198}{Forward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the layer output. Fall back to \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aa378b271b6082975ae9037f4c530fb7e}{Forward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a33ae76b4c5d03d0027edee02099e8521}\label{classcaffe_1_1_reduction_layer_a33ae76b4c5d03d0027edee02099e8521}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a33ae76b4c5d03d0027edee02099e8521}{Backward\+\_\+cpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the C\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}\label{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}} 
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aca954f31af8b853bce619eef3f3027e8}{Backward\+\_\+gpu}} (const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, const vector$<$ bool $>$ \&propagate\+\_\+down, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom)
+\begin{DoxyCompactList}\small\item\em Using the G\+PU device, compute the gradients for any parameters and for the bottom blobs if propagate\+\_\+down is true. Fall back to \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aeff33bdb244f2e93eef7ba78b795db45}{Backward\+\_\+cpu()}} if unavailable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aa65f46eaf24eca2948592bcb9e127346}\label{classcaffe_1_1_reduction_layer_aa65f46eaf24eca2948592bcb9e127346}} 
+Reduction\+Parameter\+\_\+\+Reduction\+Op \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aa65f46eaf24eca2948592bcb9e127346}{op\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the reduction operation performed by the layer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a7aeb19ec25f01d4df995ba2122fbfeb3}\label{classcaffe_1_1_reduction_layer_a7aeb19ec25f01d4df995ba2122fbfeb3}} 
+Dtype \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a7aeb19ec25f01d4df995ba2122fbfeb3}{coeff\+\_\+}}
+\begin{DoxyCompactList}\small\item\em a scalar coefficient applied to all outputs \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_ac42612a3e9d6fadcb2a57041595033bf}\label{classcaffe_1_1_reduction_layer_ac42612a3e9d6fadcb2a57041595033bf}} 
+int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_ac42612a3e9d6fadcb2a57041595033bf}{axis\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the index of the first input axis to reduce \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a7c336b1554118959a13cecfd9701998e}\label{classcaffe_1_1_reduction_layer_a7c336b1554118959a13cecfd9701998e}} 
+int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a7c336b1554118959a13cecfd9701998e}{num\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the number of reductions performed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a5d0cdd8ca00e6bbd425a51bef2214a7e}\label{classcaffe_1_1_reduction_layer_a5d0cdd8ca00e6bbd425a51bef2214a7e}} 
+int \mbox{\hyperlink{classcaffe_1_1_reduction_layer_a5d0cdd8ca00e6bbd425a51bef2214a7e}{dim\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the input size of each reduction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aaba23d98bb1d7b9aad5ec3f4d4195d82}\label{classcaffe_1_1_reduction_layer_aaba23d98bb1d7b9aad5ec3f4d4195d82}} 
+\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ \mbox{\hyperlink{classcaffe_1_1_reduction_layer_aaba23d98bb1d7b9aad5ec3f4d4195d82}{sum\+\_\+multiplier\+\_\+}}
+\begin{DoxyCompactList}\small\item\em a helper \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} used for summation (op\+\_\+ == S\+UM) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Reduction\+Layer$<$ Dtype $>$}
+
+Compute \char`\"{}reductions\char`\"{} -- operations that return a scalar output \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} for an input \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} of arbitrary size, such as the sum, absolute sum, and sum of squares. 
+
+T\+O\+D\+O(dox)\+: thorough documentation for Forward, Backward, and proto params. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}\label{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}\label{classcaffe_1_1_reduction_layer_a64694af2e56723590072cac88bf825c7}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}}
+\index{Exact\+Num\+Bottom\+Blobs@{Exact\+Num\+Bottom\+Blobs}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Bottom\+Blobs()}{ExactNumBottomBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Bottom\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of bottom blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of bottom blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a8e5ee0494d85f5f55fc4396537cbc60f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}\label{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}\label{classcaffe_1_1_reduction_layer_a14224774af732030c5f1c8a3d79e1fc3}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}}
+\index{Exact\+Num\+Top\+Blobs@{Exact\+Num\+Top\+Blobs}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Exact\+Num\+Top\+Blobs()}{ExactNumTopBlobs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual int \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Exact\+Num\+Top\+Blobs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the exact number of top blobs required by the layer, or -\/1 if no exact number is required. 
+
+This method should be overridden to return a non-\/negative value if your layer expects some exact number of top blobs. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a64e2ca72c719e4b2f1f9216ccfb0d37f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_aafe0aa825e019ea35225a8e493e4e919}\label{classcaffe_1_1_reduction_layer_aafe0aa825e019ea35225a8e493e4e919}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a5503c3dac40e2a92d8bfca77d0712dfb}\label{classcaffe_1_1_reduction_layer_a5503c3dac40e2a92d8bfca77d0712dfb}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Layer\+Set\+Up@{Layer\+Set\+Up}}
+\index{Layer\+Set\+Up@{Layer\+Set\+Up}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Layer\+Set\+Up()}{LayerSetUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Layer\+Set\+Up (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Does layer-\/specific setup\+: your layer should implement this function as well as Reshape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the preshaped input blobs, whose data fields store the input data for this layer \\
+\hline
+{\em top} & the allocated but unshaped output blobs\\
+\hline
+\end{DoxyParams}
+This method should do one-\/time layer specific setup. This includes reading and processing relevent parameters from the {\ttfamily layer\+\_\+param\+\_\+}. Setting up the shapes of top blobs and internal buffers should be done in {\ttfamily Reshape}, which will be called before the forward pass to adjust the top blob sizes. 
+
+Reimplemented from \mbox{\hyperlink{classcaffe_1_1_layer_a481323a3e0972c682787f2137468c29f}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_a0f6594ec41a0556e9fcfb9af0ae86c8a}\label{classcaffe_1_1_reduction_layer_a0f6594ec41a0556e9fcfb9af0ae86c8a}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype $>$ \\
+void \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+\mbox{\Hypertarget{classcaffe_1_1_reduction_layer_ad830b3c52fb34555e45cd172a8b27ed9}\label{classcaffe_1_1_reduction_layer_ad830b3c52fb34555e45cd172a8b27ed9}} 
+\index{caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}!Reshape@{Reshape}}
+\index{Reshape@{Reshape}!caffe\+::\+Reduction\+Layer@{caffe\+::\+Reduction\+Layer}}
+\subsubsection{\texorpdfstring{Reshape()}{Reshape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Dtype$>$ \\
+virtual void \mbox{\hyperlink{classcaffe_1_1_reduction_layer}{caffe\+::\+Reduction\+Layer}}$<$ Dtype $>$\+::Reshape (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{bottom,  }\item[{const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&}]{top }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bottom} & the input blobs, with the requested input shapes \\
+\hline
+{\em top} & the top blobs, which should be reshaped as needed\\
+\hline
+\end{DoxyParams}
+This method should reshape top blobs as needed according to the shapes of the bottom (input) blobs, as well as reshaping any internal buffers and making any other necessary adjustments so that the layer can accommodate the bottom blobs. 
+
+Implements \mbox{\hyperlink{classcaffe_1_1_layer_a7fe981e8af8d93d587acf2a952be563d}{caffe\+::\+Layer$<$ Dtype $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/layers/reduction\+\_\+layer.\+hpp\item 
+src/caffe/layers/reduction\+\_\+layer.\+cpp\end{DoxyCompactItemize}

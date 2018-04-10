@@ -1,0 +1,19 @@
+
+
+ name\+: B\+A\+I\+R/\+B\+V\+LC Alex\+Net Model caffemodel\+: bvlc\+\_\+alexnet.\+caffemodel caffemodel\+\_\+url\+: \href{http://dl.caffe.berkeleyvision.org/bvlc_alexnet.caffemodel}{\tt http\+://dl.\+caffe.\+berkeleyvision.\+org/bvlc\+\_\+alexnet.\+caffemodel} license\+: unrestricted sha1\+: 9116a64c0fbe4459d18f4bb6b56d647b63920377 \subsection*{caffe\+\_\+commit\+: 709dc15af4a06bebda027c1eb2b3f3e3375d5077 }
+
+This model is a replication of the model described in the \href{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks}{\tt Alex\+Net} publication.
+
+Differences\+:
+\begin{DoxyItemize}
+\item not training with the relighting data-\/augmentation;
+\item initializing non-\/zero biases to 0.\+1 instead of 1 (found necessary for training, as initialization to 1 gave flat loss).
+\end{DoxyItemize}
+
+The bundled model is the iteration 360,000 snapshot. The best validation performance during training was iteration 358,000 with validation accuracy 57.\+258\% and loss 1.\+83948. This model obtains a top-\/1 accuracy 57.\+1\% and a top-\/5 accuracy 80.\+2\% on the validation set, using just the center crop. (Using the average of 10 crops, (4 + 1 center) $\ast$ 2 mirror, should obtain a bit higher accuracy.)
+
+This model was trained by Evan Shelhamer 
+
+\subsection*{License}
+
+This model is released for unrestricted use. 

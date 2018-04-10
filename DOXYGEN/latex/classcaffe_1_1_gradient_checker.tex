@@ -1,0 +1,73 @@
+\hypertarget{classcaffe_1_1_gradient_checker}{}\section{caffe\+:\+:Gradient\+Checker$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_gradient_checker}\index{caffe\+::\+Gradient\+Checker$<$ Dtype $>$@{caffe\+::\+Gradient\+Checker$<$ Dtype $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a3669e5cf7ba11ee6858f628f7409fbdc}\label{classcaffe_1_1_gradient_checker_a3669e5cf7ba11ee6858f628f7409fbdc}} 
+{\bfseries Gradient\+Checker} (const Dtype stepsize, const Dtype threshold, const unsigned int seed=1701, const Dtype kink=0., const Dtype kink\+\_\+range=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_adaf5d466ad7e96ec277e7a98ec8b8e68}\label{classcaffe_1_1_gradient_checker_adaf5d466ad7e96ec277e7a98ec8b8e68}} 
+void {\bfseries Check\+Gradient} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_ae485f015c92c3617e8ed2344ca95c347}\label{classcaffe_1_1_gradient_checker_ae485f015c92c3617e8ed2344ca95c347}} 
+void {\bfseries Check\+Gradient\+Exhaustive} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a0f54fe63f95aa3d1687219097332278b}\label{classcaffe_1_1_gradient_checker_a0f54fe63f95aa3d1687219097332278b}} 
+void {\bfseries Check\+Gradient\+Eltwise} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a660be629d07b8cfdfccd4a29991f3111}\label{classcaffe_1_1_gradient_checker_a660be629d07b8cfdfccd4a29991f3111}} 
+void {\bfseries Check\+Gradient\+Single} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom, int top\+\_\+id, int top\+\_\+data\+\_\+id, bool element\+\_\+wise=false)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a85a3cbe2fffcb63364c18599e8ba0749}\label{classcaffe_1_1_gradient_checker_a85a3cbe2fffcb63364c18599e8ba0749}} 
+void {\bfseries Check\+Gradient\+Net} (const \mbox{\hyperlink{classcaffe_1_1_net}{Net}}$<$ Dtype $>$ \&net, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&input)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a3669e5cf7ba11ee6858f628f7409fbdc}\label{classcaffe_1_1_gradient_checker_a3669e5cf7ba11ee6858f628f7409fbdc}} 
+{\bfseries Gradient\+Checker} (const Dtype stepsize, const Dtype threshold, const unsigned int seed=1701, const Dtype kink=0., const Dtype kink\+\_\+range=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_adaf5d466ad7e96ec277e7a98ec8b8e68}\label{classcaffe_1_1_gradient_checker_adaf5d466ad7e96ec277e7a98ec8b8e68}} 
+void {\bfseries Check\+Gradient} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_ae485f015c92c3617e8ed2344ca95c347}\label{classcaffe_1_1_gradient_checker_ae485f015c92c3617e8ed2344ca95c347}} 
+void {\bfseries Check\+Gradient\+Exhaustive} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a0f54fe63f95aa3d1687219097332278b}\label{classcaffe_1_1_gradient_checker_a0f54fe63f95aa3d1687219097332278b}} 
+void {\bfseries Check\+Gradient\+Eltwise} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a660be629d07b8cfdfccd4a29991f3111}\label{classcaffe_1_1_gradient_checker_a660be629d07b8cfdfccd4a29991f3111}} 
+void {\bfseries Check\+Gradient\+Single} (\mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ $\ast$layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&bottom, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int check\+\_\+bottom, int top\+\_\+id, int top\+\_\+data\+\_\+id, bool element\+\_\+wise=false)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a85a3cbe2fffcb63364c18599e8ba0749}\label{classcaffe_1_1_gradient_checker_a85a3cbe2fffcb63364c18599e8ba0749}} 
+void {\bfseries Check\+Gradient\+Net} (const \mbox{\hyperlink{classcaffe_1_1_net}{Net}}$<$ Dtype $>$ \&net, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&input)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a04199dae2a47d62982eaf240d38b785b}\label{classcaffe_1_1_gradient_checker_a04199dae2a47d62982eaf240d38b785b}} 
+Dtype {\bfseries Get\+Obj\+And\+Gradient} (const \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ \&layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int top\+\_\+id=-\/1, int top\+\_\+data\+\_\+id=-\/1)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a04199dae2a47d62982eaf240d38b785b}\label{classcaffe_1_1_gradient_checker_a04199dae2a47d62982eaf240d38b785b}} 
+Dtype {\bfseries Get\+Obj\+And\+Gradient} (const \mbox{\hyperlink{classcaffe_1_1_layer}{Layer}}$<$ Dtype $>$ \&layer, const vector$<$ \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$$>$ \&top, int top\+\_\+id=-\/1, int top\+\_\+data\+\_\+id=-\/1)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_aaa427369839646baa465b09ead4ba5e7}\label{classcaffe_1_1_gradient_checker_aaa427369839646baa465b09ead4ba5e7}} 
+Dtype {\bfseries stepsize\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a2488c7b9f076c4578ba47cea46f8e947}\label{classcaffe_1_1_gradient_checker_a2488c7b9f076c4578ba47cea46f8e947}} 
+Dtype {\bfseries threshold\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a2b5ddbc782ecee24eacf4e567e4bd954}\label{classcaffe_1_1_gradient_checker_a2b5ddbc782ecee24eacf4e567e4bd954}} 
+unsigned int {\bfseries seed\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_af6511d07455bbacdd61e79c33c13fbc9}\label{classcaffe_1_1_gradient_checker_af6511d07455bbacdd61e79c33c13fbc9}} 
+Dtype {\bfseries kink\+\_\+}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_gradient_checker_a827262b9c3ebcc0f20f9d135541a6c49}\label{classcaffe_1_1_gradient_checker_a827262b9c3ebcc0f20f9d135541a6c49}} 
+Dtype {\bfseries kink\+\_\+range\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/test/test\+\_\+gradient\+\_\+check\+\_\+util.\+hpp\end{DoxyCompactItemize}

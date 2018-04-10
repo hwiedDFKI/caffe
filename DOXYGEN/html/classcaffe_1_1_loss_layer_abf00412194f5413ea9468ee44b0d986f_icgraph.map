@@ -1,0 +1,8 @@
+<map id="caffe::LossLayer::Reshape" name="caffe::LossLayer::Reshape">
+<area shape="rect" id="node2" href="$classcaffe_1_1_euclidean_loss_layer.html#a9cbe90ea0130c31bd5b9419a1bbaa555" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="241,5,417,47"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_infogain_loss_layer.html#a83ed478450bc7f629499fed37f654c5c" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="247,71,412,112"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_multinomial_logistic_loss_layer.html#a979be47987712c02dfb57a88b2a69f11" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="244,136,415,177"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_sigmoid_cross_entropy_loss_layer.html#a305423abeea4bd1652ff7e696aaba808" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="236,201,423,243"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_softmax_with_loss_layer.html#a2821b89b0f46a5e2ddaccb2708ab237b" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="232,267,427,308"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_weighted_euclidean_loss_layer.html#a98e3de49ab49d66b8e3ebfe3aa4fbe20" title="Adjust the shapes of top blobs and internal buffers to accommodate the shapes of the bottom blobs..." alt="" coords="244,332,415,373"/>
+</map>

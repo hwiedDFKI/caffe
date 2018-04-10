@@ -1,0 +1,10 @@
+<map id="caffe.detector.Detector.detect_selective_search" name="caffe.detector.Detector.detect_selective_search">
+<area shape="rect" id="node2" href="$classcaffe_1_1detector_1_1_detector.html#a7ddd403050bacd8fcccc62705f2405ff" title="caffe.detector.Detector.detect\l_windows" alt="" coords="249,159,445,200"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1detector_1_1_detector.html#af71bb7e173a228c2e1577b9125310216" title="caffe.detector.Detector.crop" alt="" coords="493,166,679,193"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_blob_proto_vector.html#a694d1824b54ba70a058610f8354caeaa" title="caffe::BlobProtoVector\l::blobs" alt="" coords="733,5,887,47"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_layer_parameter.html#ac982d4bf5e68ed793fec3eeff8dc1d37" title="caffe::LayerParameter\l::blobs" alt="" coords="735,71,885,112"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_v1_layer_parameter.html#a64f6344aa65b556a86e16a2eae3c21bb" title="caffe::V1LayerParameter\l::blobs" alt="" coords="727,136,893,177"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_v0_layer_parameter.html#aeeec3e72160ee10de4c1bbd77144c9b3" title="caffe::V0LayerParameter\l::blobs" alt="" coords="727,201,893,243"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_layer.html#aaf4524ce8641a30a8a4784aee1b2b4c8" title="Returns the vector of learnable parameter blobs. " alt="" coords="745,267,875,294"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_net.html#ab64573aa9187fb7540825d9338807a79" title="returns the blobs " alt="" coords="751,318,869,345"/>
+</map>

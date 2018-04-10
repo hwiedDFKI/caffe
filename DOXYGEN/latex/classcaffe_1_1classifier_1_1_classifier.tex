@@ -1,0 +1,115 @@
+\hypertarget{classcaffe_1_1classifier_1_1_classifier}{}\section{caffe.\+classifier.\+Classifier Class Reference}
+\label{classcaffe_1_1classifier_1_1_classifier}\index{caffe.\+classifier.\+Classifier@{caffe.\+classifier.\+Classifier}}
+
+
+Inheritance diagram for caffe.\+classifier.\+Classifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classcaffe_1_1classifier_1_1_classifier__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_afba50ceb2062164b5bb1f88fa6ede7c6}\label{classcaffe_1_1classifier_1_1_classifier_afba50ceb2062164b5bb1f88fa6ede7c6}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+file, pretrained\+\_\+file, image\+\_\+dims=None, mean=None, input\+\_\+scale=None, raw\+\_\+scale=None, channel\+\_\+swap=None)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}{predict}} (self, inputs, oversample=True)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_afba50ceb2062164b5bb1f88fa6ede7c6}\label{classcaffe_1_1classifier_1_1_classifier_afba50ceb2062164b5bb1f88fa6ede7c6}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+file, pretrained\+\_\+file, image\+\_\+dims=None, mean=None, input\+\_\+scale=None, raw\+\_\+scale=None, channel\+\_\+swap=None)
+\item 
+def \mbox{\hyperlink{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}{predict}} (self, inputs, oversample=True)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_a44a169043638bbf48513fd17dce4f4b6}\label{classcaffe_1_1classifier_1_1_classifier_a44a169043638bbf48513fd17dce4f4b6}} 
+{\bfseries transformer}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_a298c47f5b8863db1b3fc06ee3ed0b7ac}\label{classcaffe_1_1classifier_1_1_classifier_a298c47f5b8863db1b3fc06ee3ed0b7ac}} 
+{\bfseries crop\+\_\+dims}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_a5e4d8e8e29e3ad083875dfca03c48ba7}\label{classcaffe_1_1classifier_1_1_classifier_a5e4d8e8e29e3ad083875dfca03c48ba7}} 
+{\bfseries image\+\_\+dims}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Classifier extends Net for image class prediction
+by scaling, center cropping, or oversampling.
+
+Parameters
+----------
+image_dims : dimensions to scale input for cropping/sampling.
+    Default is to scale to net input size for whole-image crop.
+mean, input_scale, raw_scale, channel_swap: params for
+    preprocessing options.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}\label{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}} 
+\index{caffe\+::classifier\+::\+Classifier@{caffe\+::classifier\+::\+Classifier}!predict@{predict}}
+\index{predict@{predict}!caffe\+::classifier\+::\+Classifier@{caffe\+::classifier\+::\+Classifier}}
+\subsubsection{\texorpdfstring{predict()}{predict()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def caffe.\+classifier.\+Classifier.\+predict (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{inputs,  }\item[{}]{oversample = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Predict classification probabilities of inputs.
+
+Parameters
+----------
+inputs : iterable of (H x W x K) input ndarrays.
+oversample : boolean
+    average predictions across center, corners, and mirrors
+    when True (default). Center-only prediction when False.
+
+Returns
+-------
+predictions: (N x C) ndarray of class probabilities for N images and C
+    classes.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}\label{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d}} 
+\index{caffe\+::classifier\+::\+Classifier@{caffe\+::classifier\+::\+Classifier}!predict@{predict}}
+\index{predict@{predict}!caffe\+::classifier\+::\+Classifier@{caffe\+::classifier\+::\+Classifier}}
+\subsubsection{\texorpdfstring{predict()}{predict()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def caffe.\+classifier.\+Classifier.\+predict (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{inputs,  }\item[{}]{oversample = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Predict classification probabilities of inputs.
+
+Parameters
+----------
+inputs : iterable of (H x W x K) input ndarrays.
+oversample : boolean
+    average predictions across center, corners, and mirrors
+    when True (default). Center-only prediction when False.
+
+Returns
+-------
+predictions: (N x C) ndarray of class probabilities for N images and C
+    classes.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classcaffe_1_1classifier_1_1_classifier_a8d1d898b351cc84cd9f12ce10401312d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/python/caffe/classifier.\+py\end{DoxyCompactItemize}

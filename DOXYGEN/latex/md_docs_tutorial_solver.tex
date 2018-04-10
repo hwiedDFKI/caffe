@@ -1,0 +1,119 @@
+
+
+ \subsection*{title\+: Solver / Model Optimization }
+
+\section*{Solver}
+
+The solver orchestrates model optimization by coordinating the network\textquotesingle{}s forward inference and backward gradients to form parameter updates that attempt to improve the loss. The responsibilities of learning are divided between the Solver for overseeing the optimization and generating parameter updates and the Net for yielding loss and gradients.
+
+The Caffe solvers are\+:
+
+
+\begin{DoxyItemize}
+\item Stochastic Gradient Descent ({\ttfamily type\+: \char`\"{}\+S\+G\+D\char`\"{}}),
+\item Ada\+Delta ({\ttfamily type\+: \char`\"{}\+Ada\+Delta\char`\"{}}),
+\item Adaptive Gradient ({\ttfamily type\+: \char`\"{}\+Ada\+Grad\char`\"{}}),
+\item Adam ({\ttfamily type\+: \char`\"{}\+Adam\char`\"{}}),
+\item Nesterov\textquotesingle{}s Accelerated Gradient ({\ttfamily type\+: \char`\"{}\+Nesterov\char`\"{}}) and
+\item R\+M\+Sprop ({\ttfamily type\+: \char`\"{}\+R\+M\+S\+Prop\char`\"{}})
+\end{DoxyItemize}
+
+The solver
+
+
+\begin{DoxyEnumerate}
+\item scaffolds the optimization bookkeeping and creates the training network for learning and test network(s) for evaluation.
+\item iteratively optimizes by calling forward / backward and updating parameters
+\item (periodically) evaluates the test networks
+\item snapshots the model and solver state throughout the optimization
+\end{DoxyEnumerate}
+
+where each iteration
+
+
+\begin{DoxyEnumerate}
+\item calls network forward to compute the output and loss
+\item calls network backward to compute the gradients
+\item incorporates the gradients into parameter updates according to the solver method
+\item updates the solver state according to learning rate, history, and method
+\end{DoxyEnumerate}
+
+to take the weights all the way from initialization to learned model.
+
+Like Caffe models, Caffe solvers run in C\+PU / G\+PU modes.
+
+\subsection*{Methods}
+
+The solver methods address the general optimization problem of loss minimization. For dataset \$\$D\$\$, the optimization objective is the average loss over all \$\$$\vert$\+D$\vert$\$\$ data instances throughout the dataset
+
+\$\$\+L(\+W) = \{1\}\{$\vert$\+D$\vert$\} $^\wedge$\{$\vert$\+D$\vert$\} f\+\_\+W(X$^\wedge$\{(i)\}) +  r(\+W)\$\$
+
+where \$\$f\+\_\+W(X$^\wedge$\{(i)\})\$\$ is the loss on data instance \$\$X$^\wedge$\{(i)\}\$\$ and \$\$r(\+W)\$\$ is a regularization term with weight \$\$\$\$. \$\$$\vert$\+D$\vert$\$\$ can be very large, so in practice, in each solver iteration we use a stochastic approximation of this objective, drawing a mini-\/batch of \$\$N $<$$<$ $\vert$\+D$\vert$\$\$ instances\+:
+
+\$\$\+L(\+W)  \{1\}\{N\} $^\wedge$N f\+\_\+W(X$^\wedge$\{(i)\}) +  r(\+W)\$\$
+
+The model computes \$\$f\+\_\+W\$\$ in the forward pass and the gradient \$\$ f\+\_\+W\$\$ in the backward pass.
+
+The parameter update \$\$ W\$\$ is formed by the solver from the error gradient \$\$ f\+\_\+W\$\$, the regularization gradient \$\$ r(\+W)\$\$, and other particulars to each method.
+
+\subsubsection*{S\+GD}
+
+{\bfseries Stochastic gradient descent} ({\ttfamily type\+: \char`\"{}\+S\+G\+D\char`\"{}}) updates the weights \$\$ W \$\$ by a linear combination of the negative gradient \$\$  L(\+W) \$\$ and the previous weight update \$\$ V\+\_\+t \$\$. The {\bfseries learning rate} \$\$  \$\$ is the weight of the negative gradient. The {\bfseries momentum} \$\$  \$\$ is the weight of the previous update.
+
+Formally, we have the following formulas to compute the update value \$\$ V\+\_\+\{t+1\} \$\$ and the updated weights \$\$ W\+\_\+\{t+1\} \$\$ at iteration \$\$ t+1 \$\$, given the previous weight update \$\$ V\+\_\+t \$\$ and current weights \$\$ W\+\_\+t \$\$\+:
+
+\$\$ V\+\_\+\{t+1\} =  V\+\_\+t -\/   L(\+W\+\_\+t) \$\$
+
+\$\$ W\+\_\+\{t+1\} = W\+\_\+t + V\+\_\+\{t+1\} \$\$
+
+The learning \char`\"{}hyperparameters\char`\"{} (\$\$\$\$ and \$\$\$\$) might require a bit of tuning for best results. If you\textquotesingle{}re not sure where to start, take a look at the \char`\"{}\+Rules of thumb\char`\"{} below, and for further information you might refer to Leon Bottou\textquotesingle{}s \href{http://research.microsoft.com/pubs/192769/tricks-2012.pdf}{\tt Stochastic Gradient Descent Tricks} \mbox{[}1\mbox{]}.
+
+\mbox{[}1\mbox{]} L. Bottou. \href{http://research.microsoft.com/pubs/192769/tricks-2012.pdf}{\tt Stochastic Gradient Descent Tricks}. {\itshape Neural Networks\+: Tricks of the Trade}\+: Springer, 2012.
+
+\paragraph*{Rules of thumb for setting the learning rate \$\$  \$\$ and momentum \$\$  \$\$}
+
+A good strategy for deep learning with S\+GD is to initialize the learning rate \$\$  \$\$ to a value around \$\$   0.\+01 = 10$^\wedge$\{-\/2\} \$\$, and dropping it by a constant factor (e.\+g., 10) throughout training when the loss begins to reach an apparent \char`\"{}plateau\char`\"{}, repeating this several times. Generally, you probably want to use a momentum \$\$  = 0.\+9 \$\$ or similar value. By smoothing the weight updates across iterations, momentum tends to make deep learning with S\+GD both stabler and faster.
+
+This was the strategy used by Krizhevsky et al. \mbox{[}1\mbox{]} in their famously winning C\+NN entry to the I\+L\+S\+V\+R\+C-\/2012 competition, and Caffe makes this strategy easy to implement in a {\ttfamily Solver\+Parameter}, as in our reproduction of \mbox{[}1\mbox{]} at {\ttfamily ./examples/imagenet/alexnet\+\_\+solver.prototxt}.
+
+To use a learning rate policy like this, you can put the following lines somewhere in your solver prototxt file\+: \begin{DoxyVerb}base_lr: 0.01     # begin training at a learning rate of 0.01 = 1e-2
+
+lr_policy: "step" # learning rate policy: drop the learning rate in "steps"
+                  # by a factor of gamma every stepsize iterations
+
+gamma: 0.1        # drop the learning rate by a factor of 10
+                  # (i.e., multiply it by a factor of gamma = 0.1)
+
+stepsize: 100000  # drop the learning rate every 100K iterations
+
+max_iter: 350000  # train for 350K iterations total
+
+momentum: 0.9
+\end{DoxyVerb}
+
+
+Under the above settings, we\textquotesingle{}ll always use {\ttfamily momentum} \$\$  = 0.\+9 \$\$. We\textquotesingle{}ll begin training at a {\ttfamily base\+\_\+lr} of \$\$  = 0.\+01 = 10$^\wedge$\{-\/2\} \$\$ for the first 100,000 iterations, then multiply the learning rate by {\ttfamily gamma} (\$\$  \$\$) and train at \$\$ \textquotesingle{} =   = (0.\+01) (0.\+1) = 0.\+001 = 10$^\wedge$\{-\/3\} \$\$ for iterations 100\+K-\/200K, then at \$\$ \textquotesingle{}\textquotesingle{} = 10$^\wedge$\{-\/4\} \$\$ for iterations 200\+K-\/300K, and finally train until iteration 350K (since we have {\ttfamily max\+\_\+iter\+: 350000}) at \$\$ \textquotesingle{}\textquotesingle{}\textquotesingle{} = 10$^\wedge$\{-\/5\} \$\$.
+
+Note that the momentum setting \$\$  \$\$ effectively multiplies the size of your updates by a factor of \$\$ \{1\}\{1 -\/ \} \$\$ after many iterations of training, so if you increase \$\$  \$\$, it may be a good idea to {\bfseries decrease} \$\$  \$\$ accordingly (and vice versa).
+
+For example, with \$\$  = 0.\+9 \$\$, we have an effective update size multiplier of \$\$ \{1\}\{1 -\/ 0.\+9\} = 10 \$\$. If we increased the momentum to \$\$  = 0.\+99 \$\$, we\textquotesingle{}ve increased our update size multiplier to 100, so we should drop \$\$  \$\$ ({\ttfamily base\+\_\+lr}) by a factor of 10.
+
+Note also that the above settings are merely guidelines, and they\textquotesingle{}re definitely not guaranteed to be optimal (or even work at all!) in every situation. If learning diverges (e.\+g., you start to see very large or {\ttfamily NaN} or {\ttfamily inf} loss values or outputs), try dropping the {\ttfamily base\+\_\+lr} (e.\+g., {\ttfamily base\+\_\+lr\+: 0.\+001}) and re-\/training, repeating this until you find a {\ttfamily base\+\_\+lr} value that works.
+
+\mbox{[}1\mbox{]} A. Krizhevsky, I. Sutskever, and G. Hinton. \href{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}{\tt Image\+Net Classification with Deep Convolutional Neural Networks}. {\itshape Advances in Neural Information Processing Systems}, 2012.
+
+\subsubsection*{Ada\+Delta}
+
+The {\bfseries Ada\+Delta} ({\ttfamily type\+: \char`\"{}\+Ada\+Delta\char`\"{}}) method (M. Zeiler \mbox{[}1\mbox{]}) is a \char`\"{}robust learning rate method\char`\"{}. It is a gradient-\/based optimization method (like S\+GD). The update formulas are
+
+\$\$ \{align\} (v\+\_\+t)\+\_\+i \&= \{\{R\+MS\}((v\+\_\+\{t-\/1\})\+\_\+i)\}\{\{R\+MS\}(  L(\+W\+\_\+t) )\+\_\+\{i\}\} (  L(W\+\_\+\{t\textquotesingle{}\}) )\+\_\+i \textbackslash{} \{R\+MS\}(  L(\+W\+\_\+t) )\+\_\+\{i\} \&= \{E\mbox{[}g$^\wedge$2\mbox{]} + \} \textbackslash{} E\mbox{[}g$^\wedge$2\mbox{]}\+\_\+t \&= \{E\mbox{[}g$^\wedge$2\mbox{]}\+\_\+\{t-\/1\} \} + (1-\/)g\+\_\+\{t\}$^\wedge$2 \{align\} \$\$
+
+and
+
+\$\$ (W\+\_\+\{t+1\})\+\_\+i = (W\+\_\+t)\+\_\+i -\/  (v\+\_\+t)\+\_\+i. \$\$
+
+\mbox{[}1\mbox{]} M. Zeiler \href{http://arxiv.org/pdf/1212.5701.pdf}{\tt A\+D\+A\+D\+E\+L\+T\+A\+: AN A\+D\+A\+P\+T\+I\+VE L\+E\+A\+R\+N\+I\+NG R\+A\+TE M\+E\+T\+H\+OD}. {\itshape ar\+Xiv preprint}, 2012.
+
+\subsubsection*{Ada\+Grad}
+
+The {\bfseries adaptive gradient} ({\ttfamily type\+: \char`\"{}\+Ada\+Grad\char`\"{}}) method (Duchi et al. \mbox{[}1\mbox{]}) is a gradient-\/based optimization method (like S\+GD) that attempts to \char`\"{}find needles in haystacks in the form of very predictive but rarely seen features,\char`\"{} in Duchi et al.\textquotesingle{}s words. Given the update information from all previous iterations \$\$ (  L(\+W) )\+\_\+\{t\textquotesingle{}\} \$\$ for \$\$ t\textquotesingle{}  1, 2, ..., t 

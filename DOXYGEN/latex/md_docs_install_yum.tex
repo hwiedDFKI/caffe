@@ -1,0 +1,46 @@
+
+
+ \subsection*{title\+: \char`\"{}\+Installation\+: R\+H\+E\+L / Fedora / Cent\+O\+S\char`\"{} }
+
+\section*{R\+H\+EL / Fedora / Cent\+OS Installation}
+
+{\bfseries General dependencies} \begin{DoxyVerb}sudo yum install protobuf-devel leveldb-devel snappy-devel opencv-devel boost-devel hdf5-devel
+\end{DoxyVerb}
+
+
+{\bfseries Remaining dependencies, recent OS} \begin{DoxyVerb}sudo yum install gflags-devel glog-devel lmdb-devel
+\end{DoxyVerb}
+
+
+{\bfseries Remaining dependencies, if not found} \begin{DoxyVerb}# glog
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-glog/glog-0.3.3.tar.gz
+tar zxvf glog-0.3.3.tar.gz
+cd glog-0.3.3
+./configure
+make && make install
+# gflags
+wget https://github.com/schuhschuh/gflags/archive/master.zip
+unzip master.zip
+cd gflags-master
+mkdir build && cd build
+export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
+make && make install
+# lmdb
+git clone https://github.com/LMDB/lmdb
+cd lmdb/libraries/liblmdb
+make && make install
+\end{DoxyVerb}
+
+
+Note that glog does not compile with the most recent gflags version (2.\+1), so before that is resolved you will need to build with glog first.
+
+{\bfseries C\+U\+DA}\+: Install via the N\+V\+I\+D\+IA package instead of {\ttfamily yum} to be certain of the library and driver versions. Install the library and latest driver separately; the driver bundled with the library is usually out-\/of-\/date.
+\begin{DoxyItemize}
+\item Cent\+O\+S/\+R\+H\+E\+L/\+Fedora\+:
+\end{DoxyItemize}
+
+{\bfseries B\+L\+AS}\+: install A\+T\+L\+AS by {\ttfamily sudo yum install atlas-\/devel} or install Open\+B\+L\+AS or M\+KL for better C\+PU performance. For the Makefile build, uncomment and set {\ttfamily B\+L\+A\+S\+\_\+\+L\+IB} accordingly as A\+T\+L\+AS is usually installed under {\ttfamily /usr/lib\mbox{[}64\mbox{]}/atlas}).
+
+{\bfseries Python} (optional)\+: if you use the default Python you will need to {\ttfamily sudo yum install} the {\ttfamily python-\/devel} package to have the Python headers for building the pycaffe wrapper.
+
+Continue with \href{installation.html#compilation}{\tt compilation}. 

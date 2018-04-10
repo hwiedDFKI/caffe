@@ -1,0 +1,16 @@
+<map id="caffe::NeuronLayer&lt; Dtype &gt;" name="caffe::NeuronLayer&lt; Dtype &gt;">
+<area shape="rect" id="node3" href="$classcaffe_1_1_abs_val_layer.html" title="Computes . " alt="" coords="411,5,544,47"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_b_n_l_l_layer.html" title="Computes &#160;if ; &#160;otherwise. " alt="" coords="386,71,569,98"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_dropout_layer.html" title="During training only, sets a random portion of &#160;to 0, adjusting the rest of the vector magnitude acco..." alt="" coords="409,123,546,164"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_e_l_u_layer.html" title="Exponential Linear Unit non&#45;linearity . &#160;&#160;" alt="" coords="389,189,565,215"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_exp_layer.html" title="Computes , as specified by the scale , shift , and base . " alt="" coords="391,239,564,266"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_log_layer.html" title="Computes , as specified by the scale , shift , and base . " alt="" coords="392,290,563,317"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_power_layer.html" title="Computes , as specified by the scale , shift , and power . " alt="" coords="409,341,545,383"/>
+<area shape="rect" id="node10" href="$classcaffe_1_1_p_re_l_u_layer.html" title="Parameterized Rectified Linear Unit non&#45;linearity . The differences from ReLULayer are 1) negative sl..." alt="" coords="406,407,549,448"/>
+<area shape="rect" id="node11" href="$classcaffe_1_1_re_l_u_layer.html" title="Rectified Linear Unit non&#45;linearity . The simple max is fast to compute, and the function does not sa..." alt="" coords="385,473,569,499"/>
+<area shape="rect" id="node12" href="$classcaffe_1_1_sigmoid_layer.html" title="Sigmoid function non&#45;linearity , a classic choice in neural networks. " alt="" coords="408,524,547,565"/>
+<area shape="rect" id="node13" href="$classcaffe_1_1_swish_layer.html" title="Swish non&#45;linearity . A novel activation function that tends to work better than ReLU [1]..." alt="" coords="410,589,545,631"/>
+<area shape="rect" id="node14" href="$classcaffe_1_1_tan_h_layer.html" title="TanH hyperbolic tangent non&#45;linearity , popular in auto&#45;encoders. " alt="" coords="386,655,569,682"/>
+<area shape="rect" id="node15" href="$classcaffe_1_1_threshold_layer.html" title="Tests whether the input exceeds a threshold: outputs 1 for inputs above threshold; 0 otherwise..." alt="" coords="403,707,551,748"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="5,349,156,375"/>
+</map>

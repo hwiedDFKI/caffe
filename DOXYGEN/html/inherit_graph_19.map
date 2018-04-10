@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classcaffe_1_1_filler.html" title="Fills a Blob with constant or randomly&#45;generated data. " alt="" coords="5,209,152,235"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_bilinear_filler.html" title="Fills a Blob with coefficients for bilinear interpolation. " alt="" coords="224,5,355,47"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_constant_filler.html" title="Fills a Blob with constant values . " alt="" coords="219,71,359,112"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_gaussian_filler.html" title="Fills a Blob with Gaussian&#45;distributed values . " alt="" coords="218,136,361,177"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_m_s_r_a_filler.html" title="Fills a Blob with values &#160;where &#160;is set inversely proportional to number of incoming nodes..." alt="" coords="222,201,357,243"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_positive_unitball_filler.html" title="Fills a Blob with values &#160;such that . " alt="" coords="200,267,379,308"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_uniform_filler.html" title="Fills a Blob with uniformly distributed values . " alt="" coords="223,332,356,373"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_xavier_filler.html" title="Fills a Blob with values &#160;where &#160;is set inversely proportional to number of incoming nodes..." alt="" coords="227,397,351,439"/>
+</map>

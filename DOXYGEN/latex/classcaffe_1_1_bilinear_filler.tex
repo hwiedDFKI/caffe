@@ -1,0 +1,68 @@
+\hypertarget{classcaffe_1_1_bilinear_filler}{}\section{caffe\+:\+:Bilinear\+Filler$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_bilinear_filler}\index{caffe\+::\+Bilinear\+Filler$<$ Dtype $>$@{caffe\+::\+Bilinear\+Filler$<$ Dtype $>$}}
+
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with coefficients for bilinear interpolation.  
+
+
+
+
+{\ttfamily \#include $<$filler.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Bilinear\+Filler$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classcaffe_1_1_bilinear_filler__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_bilinear_filler_a5052dabfcc0ba4d5e1514d4e397e21b4}\label{classcaffe_1_1_bilinear_filler_a5052dabfcc0ba4d5e1514d4e397e21b4}} 
+{\bfseries Bilinear\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_bilinear_filler_a53ddc6c22c21476b9411463b3317418a}\label{classcaffe_1_1_bilinear_filler_a53ddc6c22c21476b9411463b3317418a}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_bilinear_filler_a5052dabfcc0ba4d5e1514d4e397e21b4}\label{classcaffe_1_1_bilinear_filler_a5052dabfcc0ba4d5e1514d4e397e21b4}} 
+{\bfseries Bilinear\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_bilinear_filler_a53ddc6c22c21476b9411463b3317418a}\label{classcaffe_1_1_bilinear_filler_a53ddc6c22c21476b9411463b3317418a}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Bilinear\+Filler$<$ Dtype $>$}
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with coefficients for bilinear interpolation. 
+
+A common use case is with the \mbox{\hyperlink{classcaffe_1_1_deconvolution_layer}{Deconvolution\+Layer}} acting as upsampling. You can upsample a feature map with shape of (B, C, H, W) by any integer factor using the following proto. 
+\begin{DoxyCode}
+layer \{
+  name: \textcolor{stringliteral}{"upsample"}, type: \textcolor{stringliteral}{"Deconvolution"}
+  bottom: \textcolor{stringliteral}{"\{\{bottom\_name\}\}"} top: \textcolor{stringliteral}{"\{\{top\_name\}\}"}
+  convolution\_param \{
+    kernel\_size: \{\{2 * factor - factor \% 2\}\} stride: \{\{factor\}\}
+    num\_output: \{\{C\}\} group: \{\{C\}\}
+    pad: \{\{ceil((factor - 1) / 2.)\}\}
+    weight\_filler: \{ type: \textcolor{stringliteral}{"bilinear"} \} bias\_term: \textcolor{keyword}{false}
+  \}
+  param \{ lr\_mult: 0 decay\_mult: 0 \}
+\}
+\end{DoxyCode}
+ Please use this by replacing {\ttfamily \{\{\}\}} with your values. By specifying {\ttfamily num\+\_\+output\+: \{\{C\}\} group\+: \{\{C\}\}}, it behaves as channel-\/wise convolution. The filter shape of this deconvolution layer will be (C, 1, K, K) where K is {\ttfamily kernel\+\_\+size}, and this filler will set a (K, K) interpolation kernel for every channel of the filter identically. The resulting shape of the top feature map will be (B, C, factor $\ast$ H, factor $\ast$ W). Note that the learning rate and the weight decay are set to 0 in order to keep coefficient values of bilinear interpolation unchanged during training. If you apply this to an image, this operation is equivalent to the following call in Python with Scikit.\+Image. 
+\begin{DoxyCode}
+out = skimage.transform.rescale(img, factor, mode=\textcolor{stringliteral}{'constant'}, cval=0)
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/filler.\+hpp\end{DoxyCompactItemize}

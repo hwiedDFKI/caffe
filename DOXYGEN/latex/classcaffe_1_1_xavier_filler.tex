@@ -1,0 +1,54 @@
+\hypertarget{classcaffe_1_1_xavier_filler}{}\section{caffe\+:\+:Xavier\+Filler$<$ Dtype $>$ Class Template Reference}
+\label{classcaffe_1_1_xavier_filler}\index{caffe\+::\+Xavier\+Filler$<$ Dtype $>$@{caffe\+::\+Xavier\+Filler$<$ Dtype $>$}}
+
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values $ x \sim U(-a, +a) $ where $ a $ is set inversely proportional to number of incoming nodes, outgoing nodes, or their average.  
+
+
+
+
+{\ttfamily \#include $<$filler.\+hpp$>$}
+
+
+
+Inheritance diagram for caffe\+:\+:Xavier\+Filler$<$ Dtype $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classcaffe_1_1_xavier_filler__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_xavier_filler_a4145fb1bb9e5c543a07da69ae3b2eec6}\label{classcaffe_1_1_xavier_filler_a4145fb1bb9e5c543a07da69ae3b2eec6}} 
+{\bfseries Xavier\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_xavier_filler_af61c37b2a24ebc70c9e7d2d3d703d2c8}\label{classcaffe_1_1_xavier_filler_af61c37b2a24ebc70c9e7d2d3d703d2c8}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_xavier_filler_a4145fb1bb9e5c543a07da69ae3b2eec6}\label{classcaffe_1_1_xavier_filler_a4145fb1bb9e5c543a07da69ae3b2eec6}} 
+{\bfseries Xavier\+Filler} (const \mbox{\hyperlink{classcaffe_1_1_filler_parameter}{Filler\+Parameter}} \&param)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_xavier_filler_af61c37b2a24ebc70c9e7d2d3d703d2c8}\label{classcaffe_1_1_xavier_filler_af61c37b2a24ebc70c9e7d2d3d703d2c8}} 
+virtual void {\bfseries Fill} (\mbox{\hyperlink{classcaffe_1_1_blob}{Blob}}$<$ Dtype $>$ $\ast$blob)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Dtype$>$\newline
+class caffe\+::\+Xavier\+Filler$<$ Dtype $>$}
+
+Fills a \mbox{\hyperlink{classcaffe_1_1_blob}{Blob}} with values $ x \sim U(-a, +a) $ where $ a $ is set inversely proportional to number of incoming nodes, outgoing nodes, or their average. 
+
+A \mbox{\hyperlink{classcaffe_1_1_filler}{Filler}} based on the paper \mbox{[}Bengio and Glorot 2010\mbox{]}\+: Understanding the difficulty of training deep feedforward neuralnetworks.
+
+It fills the incoming matrix by randomly sampling uniform data from \mbox{[}-\/scale, scale\mbox{]} where scale = sqrt(3 / n) where n is the fan\+\_\+in, fan\+\_\+out, or their average, depending on the variance\+\_\+norm option. You should make sure the input blob has shape (num, a, b, c) where a $\ast$ b $\ast$ c = fan\+\_\+in and num $\ast$ b $\ast$ c = fan\+\_\+out. Note that this is currently not the case for inner product layers.
+
+T\+O\+D\+O(dox)\+: make notation in above comment consistent with rest \& use La\+TeX. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/filler.\+hpp\end{DoxyCompactItemize}

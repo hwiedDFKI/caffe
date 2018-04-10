@@ -1,0 +1,167 @@
+
+
+ \subsection*{title\+: Installation }
+
+\section*{Installation}
+
+Prior to installing, have a glance through this guide and take note of the details for your platform. We install and run Caffe on Ubuntu 16.\+04–12.04, OS X 10.\+11–10.8, and through Docker and A\+WS. The official Makefile and {\ttfamily Makefile.\+config} build are complemented by a \href{#cmake-build}{\tt community C\+Make build}.
+
+{\bfseries Step-\/by-\/step Instructions}\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/BVLC/caffe/tree/master/docker}{\tt Docker setup} {\itshape out-\/of-\/the-\/box brewing}
+\item \href{install_apt.html}{\tt Ubuntu installation} {\itshape the standard platform}
+\item \href{install_apt_debian.html}{\tt Debian installation} {\itshape install caffe with a single command}
+\item \href{install_osx.html}{\tt OS X installation}
+\item \href{install_yum.html}{\tt R\+H\+EL / Cent\+OS / Fedora installation}
+\item \href{https://github.com/BVLC/caffe/tree/windows}{\tt Windows} {\itshape see the Windows branch led by Guillaume Dumont}
+\item \href{https://github.com/BVLC/caffe/tree/opencl}{\tt Open\+CL} {\itshape see the Open\+CL branch led by Fabian Tschopp}
+\item \href{https://aws.amazon.com/marketplace/pp/B01M0AXXQB}{\tt A\+WS A\+MI} {\itshape official deep learning amazon machine image from A\+WS}
+\end{DoxyItemize}
+
+{\bfseries Overview}\+:
+
+
+\begin{DoxyItemize}
+\item \href{#prerequisites}{\tt Prerequisites}
+\item \href{#compilation}{\tt Compilation}
+\item \href{#hardware}{\tt Hardware}
+\end{DoxyItemize}
+
+When updating Caffe, it\textquotesingle{}s best to {\ttfamily make clean} before re-\/compiling.
+
+\subsection*{Prerequisites}
+
+Caffe has several dependencies\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://developer.nvidia.com/cuda-zone}{\tt C\+U\+DA} is required for G\+PU mode.
+\begin{DoxyItemize}
+\item library version 7+ and the latest driver version are recommended, but 6.$\ast$ is fine too
+\item 5.\+5, and 5.\+0 are compatible but considered legacy
+\end{DoxyItemize}
+\item \href{http://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms}{\tt B\+L\+AS} via A\+T\+L\+AS, M\+KL, or Open\+B\+L\+AS.
+\item \href{http://www.boost.org/}{\tt Boost} $>$= 1.\+55
+\item {\ttfamily protobuf}, {\ttfamily glog}, {\ttfamily gflags}, {\ttfamily hdf5}
+\end{DoxyItemize}
+
+Optional dependencies\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://opencv.org/}{\tt Open\+CV} $>$= 2.\+4 including 3.\+0
+\item IO libraries\+: {\ttfamily lmdb}, {\ttfamily leveldb} (note\+: leveldb requires {\ttfamily snappy})
+\item cu\+D\+NN for G\+PU acceleration (v7)
+\end{DoxyItemize}
+
+Pycaffe and Matcaffe interfaces have their own natural needs.
+
+
+\begin{DoxyItemize}
+\item For Python Caffe\+: {\ttfamily Python 2.\+7} or {\ttfamily Python 3.\+3+}, {\ttfamily numpy ($>$= 1.\+7)}, boost-\/provided {\ttfamily boost.\+python}
+\item For M\+A\+T\+L\+AB Caffe\+: M\+A\+T\+L\+AB with the {\ttfamily mex} compiler.
+\end{DoxyItemize}
+
+{\bfseries cu\+D\+NN Caffe}\+: for fastest operation Caffe is accelerated by drop-\/in integration of \href{https://developer.nvidia.com/cudnn}{\tt N\+V\+I\+D\+IA cu\+D\+NN}. To speed up your Caffe models, install cu\+D\+NN then uncomment the {\ttfamily U\+S\+E\+\_\+\+C\+U\+D\+NN \+:= 1} flag in {\ttfamily Makefile.\+config} when installing Caffe. Acceleration is automatic. The current version is cu\+D\+NN v7; older versions are supported in older Caffe.
+
+{\bfseries C\+P\+U-\/only Caffe}\+: for cold-\/brewed C\+P\+U-\/only Caffe uncomment the {\ttfamily C\+P\+U\+\_\+\+O\+N\+LY \+:= 1} flag in {\ttfamily Makefile.\+config} to configure and build Caffe without C\+U\+DA. This is helpful for cloud or cluster deployment.
+
+\subsubsection*{C\+U\+DA and B\+L\+AS}
+
+Caffe requires the C\+U\+DA {\ttfamily nvcc} compiler to compile its G\+PU code and C\+U\+DA driver for G\+PU operation. To install C\+U\+DA, go to the \href{https://developer.nvidia.com/cuda-downloads}{\tt N\+V\+I\+D\+IA C\+U\+DA website} and follow installation instructions there. Install the library and the latest standalone driver separately; the driver bundled with the library is usually out-\/of-\/date. {\bfseries Warning!} The 331.$\ast$ C\+U\+DA driver series has a critical performance issue\+: do not use it.
+
+For best performance, Caffe can be accelerated by \href{https://developer.nvidia.com/cudnn}{\tt N\+V\+I\+D\+IA cu\+D\+NN}. Register for free at the cu\+D\+NN site, install it, then continue with these installation instructions. To compile with cu\+D\+NN set the {\ttfamily U\+S\+E\+\_\+\+C\+U\+D\+NN \+:= 1} flag set in your {\ttfamily Makefile.\+config}.
+
+Caffe requires B\+L\+AS as the backend of its matrix and vector computations. There are several implementations of this library. The choice is yours\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://math-atlas.sourceforge.net/}{\tt A\+T\+L\+AS}\+: free, open source, and so the default for Caffe.
+\item \href{http://software.intel.com/en-us/intel-mkl}{\tt Intel M\+KL}\+: commercial and optimized for Intel C\+P\+Us, with \href{https://registrationcenter.intel.com/en/forms/?productid=2558}{\tt free} licenses.
+\begin{DoxyEnumerate}
+\item Install M\+KL.
+\item Set up M\+KL environment (Details\+: \href{https://software.intel.com/en-us/node/528499}{\tt Linux}, \href{https://software.intel.com/en-us/node/528659}{\tt OS X}). Example\+: {\itshape source /opt/intel/mkl/bin/mklvars.sh intel64}
+\item Set {\ttfamily B\+L\+AS \+:= mkl} in {\ttfamily Makefile.\+config}
+\end{DoxyEnumerate}
+\item \href{http://www.openblas.net/}{\tt Open\+B\+L\+AS}\+: free and open source; this optimized and parallel B\+L\+AS could require more effort to install, although it might offer a speedup.
+\begin{DoxyEnumerate}
+\item Install Open\+B\+L\+AS
+\item Set {\ttfamily B\+L\+AS \+:= open} in {\ttfamily Makefile.\+config}
+\end{DoxyEnumerate}
+\end{DoxyItemize}
+
+\subsubsection*{Python and/or M\+A\+T\+L\+AB Caffe (optional)}
+
+\paragraph*{Python}
+
+The main requirements are {\ttfamily numpy} and {\ttfamily boost.\+python} (provided by boost). {\ttfamily pandas} is useful too and needed for some examples.
+
+You can install the dependencies with \begin{DoxyVerb}pip install -r requirements.txt
+\end{DoxyVerb}
+
+
+but we suggest first installing the \href{https://store.continuum.io/cshop/anaconda/}{\tt Anaconda} Python distribution, which provides most of the necessary packages, as well as the {\ttfamily hdf5} library dependency.
+
+To import the {\ttfamily caffe} Python module after completing the installation, add the module directory to your {\ttfamily \$\+P\+Y\+T\+H\+O\+N\+P\+A\+TH} by {\ttfamily export P\+Y\+T\+H\+O\+N\+P\+A\+TH=/path/to/caffe/python\+:\$\+P\+Y\+T\+H\+O\+N\+P\+A\+TH} or the like. You should not import the module in the {\ttfamily caffe/python/caffe} directory!
+
+{\itshape Caffe\textquotesingle{}s Python interface works with Python 2.\+7. Python 3.\+3+ should work out of the box without protobuf support. For protobuf support please install protobuf 3.\+0 alpha (\href{https://developers.google.com/protocol-buffers/}{\tt https\+://developers.\+google.\+com/protocol-\/buffers/}). Earlier Pythons are your own adventure.}
+
+\paragraph*{M\+A\+T\+L\+AB}
+
+Install M\+A\+T\+L\+AB, and make sure that its {\ttfamily mex} is in your {\ttfamily \$\+P\+A\+TH}.
+
+{\itshape Caffe\textquotesingle{}s M\+A\+T\+L\+AB interface works with versions 2015a, 2014a/b, 2013a/b, and 2012b.}
+
+\subsection*{Compilation}
+
+Caffe can be compiled with either Make or C\+Make. Make is officially supported while C\+Make is supported by the community.
+
+\subsubsection*{Compilation with Make}
+
+Configure the build by copying and modifying the example {\ttfamily Makefile.\+config} for your setup. The defaults should work, but uncomment the relevant lines if using Anaconda Python. \begin{DoxyVerb}cp Makefile.config.example Makefile.config
+# Adjust Makefile.config (for example, if using Anaconda Python, or if cuDNN is desired)
+make all
+make test
+make runtest
+\end{DoxyVerb}
+
+
+
+\begin{DoxyItemize}
+\item For C\+PU \& G\+PU accelerated Caffe, no changes are needed.
+\item For cu\+D\+NN acceleration using N\+V\+I\+D\+IA\textquotesingle{}s proprietary cu\+D\+NN software, uncomment the {\ttfamily U\+S\+E\+\_\+\+C\+U\+D\+NN \+:= 1} switch in {\ttfamily Makefile.\+config}. cu\+D\+NN is sometimes but not always faster than Caffe\textquotesingle{}s G\+PU acceleration.
+\item For C\+P\+U-\/only Caffe, uncomment {\ttfamily C\+P\+U\+\_\+\+O\+N\+LY \+:= 1} in {\ttfamily Makefile.\+config}.
+\end{DoxyItemize}
+
+To compile the Python and M\+A\+T\+L\+AB wrappers do {\ttfamily make pycaffe} and {\ttfamily make matcaffe} respectively. Be sure to set your M\+A\+T\+L\+AB and Python paths in {\ttfamily Makefile.\+config} first!
+
+{\bfseries Distribution}\+: run {\ttfamily make distribute} to create a {\ttfamily distribute} directory with all the Caffe headers, compiled libraries, binaries, etc. needed for distribution to other machines.
+
+{\bfseries Speed}\+: for a faster build, compile in parallel by doing {\ttfamily make all -\/j8} where 8 is the number of parallel threads for compilation (a good choice for the number of threads is the number of cores in your machine).
+
+Now that you have installed Caffe, check out the \href{gathered/examples/mnist.html}{\tt M\+N\+I\+ST tutorial} and the \href{gathered/examples/imagenet.html}{\tt reference Image\+Net model tutorial}.
+
+\subsubsection*{C\+Make Build}
+
+In lieu of manually editing {\ttfamily Makefile.\+config} to configure the build, Caffe offers an unofficial C\+Make build thanks to , , and other members of the community. It requires C\+Make version $>$= 2.\+8.\+7. The basic steps are as follows\+: \begin{DoxyVerb}mkdir build
+cd build
+cmake ..
+make all
+make install
+make runtest
+\end{DoxyVerb}
+
+
+See \href{https://github.com/BVLC/caffe/pull/1667}{\tt PR \#1667} for options and details.
+
+\subsection*{Hardware}
+
+{\bfseries Laboratory Tested Hardware}\+: Berkeley Vision runs Caffe with Titan Xs, K80s, G\+TX 980s, K40s, K20s, Titans, and G\+TX 770s including models at Image\+Net/\+I\+L\+S\+V\+RC scale. We have not encountered any trouble in-\/house with devices with C\+U\+DA capability $>$= 3.\+0. All reported hardware issues thus-\/far have been due to G\+PU configuration, overheating, and the like.
+
+{\bfseries C\+U\+DA compute capability}\+: devices with compute capability $<$= 2.\+0 may have to reduce C\+U\+DA thread numbers and batch sizes due to hardware constraints. Brew with caution; we recommend compute capability $>$= 3.\+0.
+
+Once installed, check your times against our \href{performance_hardware.html}{\tt reference performance numbers} to make sure everything is configured properly.
+
+Ask hardware questions on the \href{https://groups.google.com/forum/#!forum/caffe-users}{\tt caffe-\/users group}. 

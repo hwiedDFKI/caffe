@@ -1,0 +1,5 @@
+<map id="caffe.draw.get_layer_lr_mult" name="caffe.draw.get_layer_lr_mult">
+<area shape="rect" id="node2" href="$namespacecaffe_1_1draw.html#a1ab4383ec4e16ed4e8f0e027c25c682a" title="caffe.draw.get_layer\l_label" alt="" coords="193,5,333,47"/>
+<area shape="rect" id="node3" href="$namespacecaffe_1_1draw.html#a679642bc8af6fb5382480cfad0c27111" title="caffe.draw.get_pydot\l_graph" alt="" coords="381,5,525,47"/>
+<area shape="rect" id="node4" href="$namespacecaffe_1_1draw.html#af1c2f41e9d66bae6814590e8c59f64c6" title="caffe.draw.draw_net" alt="" coords="573,13,713,39"/>
+</map>

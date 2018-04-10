@@ -1,0 +1,72 @@
+\hypertarget{classtools_1_1_simple_transformer}{}\section{tools.\+Simple\+Transformer Class Reference}
+\label{classtools_1_1_simple_transformer}\index{tools.\+Simple\+Transformer@{tools.\+Simple\+Transformer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtools_1_1_simple_transformer_a2ebdc63cf6a92875a2a9c4ecb550017c}\label{classtools_1_1_simple_transformer_a2ebdc63cf6a92875a2a9c4ecb550017c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, mean=\mbox{[}128)
+\item 
+def \mbox{\hyperlink{classtools_1_1_simple_transformer_aead272a9fd6ba1398955cbdc0c4b1b6b}{set\+\_\+mean}} (self, mean)
+\item 
+def \mbox{\hyperlink{classtools_1_1_simple_transformer_aa9c52f50225c54f742e4af030db54630}{set\+\_\+scale}} (self, scale)
+\item 
+def \mbox{\hyperlink{classtools_1_1_simple_transformer_a9920c328a11bfe98e652c44cbe3ff004}{preprocess}} (self, im)
+\item 
+def \mbox{\hyperlink{classtools_1_1_simple_transformer_a4dbb3492196b4aaced34297f32e82155}{deprocess}} (self, im)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtools_1_1_simple_transformer_a47e9709e30e76e1d0d8bb94b54e7751c}\label{classtools_1_1_simple_transformer_a47e9709e30e76e1d0d8bb94b54e7751c}} 
+{\bfseries mean}
+\item 
+\mbox{\Hypertarget{classtools_1_1_simple_transformer_ae9fb6225da38bbad470668734e0ea524}\label{classtools_1_1_simple_transformer_ae9fb6225da38bbad470668734e0ea524}} 
+{\bfseries scale}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}SimpleTransformer is a simple class for preprocessing and deprocessing
+images for caffe.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classtools_1_1_simple_transformer_a4dbb3492196b4aaced34297f32e82155}\label{classtools_1_1_simple_transformer_a4dbb3492196b4aaced34297f32e82155}} 
+\index{tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}!deprocess@{deprocess}}
+\index{deprocess@{deprocess}!tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}}
+\subsubsection{\texorpdfstring{deprocess()}{deprocess()}}
+{\footnotesize\ttfamily def tools.\+Simple\+Transformer.\+deprocess (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{im }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}inverse of preprocess()
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classtools_1_1_simple_transformer_a9920c328a11bfe98e652c44cbe3ff004}\label{classtools_1_1_simple_transformer_a9920c328a11bfe98e652c44cbe3ff004}} 
+\index{tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}}
+\subsubsection{\texorpdfstring{preprocess()}{preprocess()}}
+{\footnotesize\ttfamily def tools.\+Simple\+Transformer.\+preprocess (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{im }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}preprocess() emulate the pre-processing occurring in the vgg16 caffe
+prototxt.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classtools_1_1_simple_transformer_aead272a9fd6ba1398955cbdc0c4b1b6b}\label{classtools_1_1_simple_transformer_aead272a9fd6ba1398955cbdc0c4b1b6b}} 
+\index{tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}!set\+\_\+mean@{set\+\_\+mean}}
+\index{set\+\_\+mean@{set\+\_\+mean}!tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}}
+\subsubsection{\texorpdfstring{set\+\_\+mean()}{set\_mean()}}
+{\footnotesize\ttfamily def tools.\+Simple\+Transformer.\+set\+\_\+mean (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mean }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the mean to subtract for centering the data.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classtools_1_1_simple_transformer_aa9c52f50225c54f742e4af030db54630}\label{classtools_1_1_simple_transformer_aa9c52f50225c54f742e4af030db54630}} 
+\index{tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}!set\+\_\+scale@{set\+\_\+scale}}
+\index{set\+\_\+scale@{set\+\_\+scale}!tools\+::\+Simple\+Transformer@{tools\+::\+Simple\+Transformer}}
+\subsubsection{\texorpdfstring{set\+\_\+scale()}{set\_scale()}}
+{\footnotesize\ttfamily def tools.\+Simple\+Transformer.\+set\+\_\+scale (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{scale }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the data scaling.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/pycaffe/tools.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="caffe::RNNLayer&lt; Dtype &gt;" name="caffe::RNNLayer&lt; Dtype &gt;">
+<area shape="rect" id="node2" href="$classcaffe_1_1_recurrent_layer.html" title="An abstract class for implementing recurrent behavior inside of an unrolled network. This Layer type cannot be instantiated – instead, you should use one of its implementations which defines the recurrent architecture, such as RNNLayer or LSTMLayer. " alt="" coords="21,80,169,121"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html" title="An interface for the units of computation which can be composed into a Net. " alt="" coords="20,5,171,32"/>
+</map>

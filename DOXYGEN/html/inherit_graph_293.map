@@ -1,0 +1,100 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classtesting_1_1_test.html" title="testing::Test" alt="" coords="67,1905,161,1931"/>
+<area shape="rect" id="node2" href="$classcaffe_1_1_bilinear_filler_test.html" title="caffe::BilinearFillerTest\l\&lt; Dtype \&gt;" alt="" coords="300,1204,456,1245"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_blob_simple_test.html" title="caffe::BlobSimpleTest\l\&lt; Dtype \&gt;" alt="" coords="303,1269,453,1311"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_common_test.html" title="caffe::CommonTest" alt="" coords="309,1335,447,1362"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_constant_filler_test.html" title="caffe::ConstantFillerTest\l\&lt; Dtype \&gt;" alt="" coords="295,1387,461,1428"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_filter_net_test.html" title="caffe::FilterNetTest" alt="" coords="311,1453,445,1479"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_gaussian_filler_test.html" title="caffe::GaussianFillerTest\l\&lt; Dtype \&gt;" alt="" coords="294,1504,462,1545"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_gemm_test.html" title="caffe::GemmTest\&lt; TypeParam \&gt;" alt="" coords="271,1570,485,1597"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_internal_thread_test.html" title="caffe::InternalThreadTest" alt="" coords="294,1621,462,1647"/>
+<area shape="rect" id="node10" href="$classcaffe_1_1_m_s_r_a_filler_test.html" title="caffe::MSRAFillerTest\l\&lt; Dtype \&gt;" alt="" coords="302,1672,454,1713"/>
+<area shape="rect" id="node11" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; TypeParam \&gt;" alt="" coords="301,1737,455,1779"/>
+<area shape="rect" id="node68" href="$classcaffe_1_1_net_upgrade_test.html" title="caffe::NetUpgradeTest" alt="" coords="301,1803,455,1830"/>
+<area shape="rect" id="node69" href="$classcaffe_1_1_padding_layer_upgrade_test.html" title="caffe::PaddingLayerUpgradeTest" alt="" coords="271,1854,485,1881"/>
+<area shape="rect" id="node70" href="$classcaffe_1_1_platform_test.html" title="caffe::PlatformTest" alt="" coords="311,1905,445,1931"/>
+<area shape="rect" id="node71" href="$classcaffe_1_1_positive_unitball_filler_test.html" title="caffe::PositiveUnitballFiller\lTest\&lt; Dtype \&gt;" alt="" coords="289,1956,467,1997"/>
+<area shape="rect" id="node72" href="$classcaffe_1_1_proto_test.html" title="caffe::ProtoTest" alt="" coords="320,2022,436,2049"/>
+<area shape="rect" id="node73" href="$classcaffe_1_1_random_number_generator_test.html" title="caffe::RandomNumberGenerator\lTest\&lt; Dtype \&gt;" alt="" coords="273,2073,483,2115"/>
+<area shape="rect" id="node74" href="$classcaffe_1_1_solver_type_upgrade_test.html" title="caffe::SolverTypeUpgradeTest" alt="" coords="278,2139,478,2166"/>
+<area shape="rect" id="node75" href="$classcaffe_1_1_split_layer_insertion_test.html" title="caffe::SplitLayerInsertionTest" alt="" coords="281,2190,475,2217"/>
+<area shape="rect" id="node76" href="$classcaffe_1_1_synced_memory_test.html" title="caffe::SyncedMemoryTest" alt="" coords="290,2241,466,2267"/>
+<area shape="rect" id="node77" href="$classcaffe_1_1_uniform_filler_test.html" title="caffe::UniformFillerTest\l\&lt; Dtype \&gt;" alt="" coords="299,2292,457,2333"/>
+<area shape="rect" id="node78" href="$classcaffe_1_1_xavier_filler_test.html" title="caffe::XavierFillerTest\l\&lt; Dtype \&gt;" alt="" coords="303,2357,453,2399"/>
+<area shape="rect" id="node79" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; CPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="291,3291,465,3332"/>
+<area shape="rect" id="node88" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; CPUDevice\&lt; TypeParam \&gt; \&gt;" alt="" coords="275,3428,481,3469"/>
+<area shape="rect" id="node91" href="$classcaffe_1_1_multi_device_test.html" title="caffe::MultiDeviceTest\l\&lt; GPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="291,3533,465,3575"/>
+<area shape="rect" id="node97" href="$classtesting_1_1_test_with_param.html" title="testing::TestWithParam\&lt; T \&gt;" alt="" coords="282,3599,474,3626"/>
+<area shape="rect" id="node12" href="$classcaffe_1_1_accuracy_layer_test.html" title="caffe::AccuracyLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="547,5,719,47"/>
+<area shape="rect" id="node13" href="$classcaffe_1_1_batch_norm_layer_test.html" title="caffe::BatchNormLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="541,71,724,112"/>
+<area shape="rect" id="node14" href="$classcaffe_1_1_batch_reindex_layer_test.html" title="caffe::BatchReindexLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="546,136,719,177"/>
+<area shape="rect" id="node15" href="$classcaffe_1_1_benchmark_test.html" title="caffe::BenchmarkTest\l\&lt; TypeParam \&gt;" alt="" coords="557,201,708,243"/>
+<area shape="rect" id="node16" href="$classcaffe_1_1_bias_layer_test.html" title="caffe::BiasLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="561,267,704,308"/>
+<area shape="rect" id="node17" href="$classcaffe_1_1_blob_math_test.html" title="caffe::BlobMathTest\l\&lt; TypeParam \&gt;" alt="" coords="563,332,703,373"/>
+<area shape="rect" id="node18" href="$classcaffe_1_1_concat_layer_test.html" title="caffe::ConcatLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="553,397,712,439"/>
+<area shape="rect" id="node19" href="$classcaffe_1_1_contrastive_loss_layer_test.html" title="caffe::ContrastiveLossLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="539,463,726,504"/>
+<area shape="rect" id="node20" href="$classcaffe_1_1_convolution_layer_test.html" title="caffe::ConvolutionLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="539,528,726,569"/>
+<area shape="rect" id="node21" href="$classcaffe_1_1_crop_layer_test.html" title="caffe::CropLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="560,593,705,635"/>
+<area shape="rect" id="node22" href="$classcaffe_1_1_deconvolution_layer_test.html" title="caffe::DeconvolutionLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="545,659,720,700"/>
+<area shape="rect" id="node23" href="$classcaffe_1_1_eltwise_layer_test.html" title="caffe::EltwiseLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="553,724,713,765"/>
+<area shape="rect" id="node24" href="$classcaffe_1_1_embed_layer_test.html" title="caffe::EmbedLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="553,789,712,831"/>
+<area shape="rect" id="node25" href="$classcaffe_1_1_euclidean_loss_layer_test.html" title="caffe::EuclideanLossLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="545,855,721,896"/>
+<area shape="rect" id="node26" href="$classcaffe_1_1_filter_layer_test.html" title="caffe::FilterLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="559,920,706,961"/>
+<area shape="rect" id="node27" href="$classcaffe_1_1_flatten_layer_test.html" title="caffe::FlattenLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="554,985,711,1027"/>
+<area shape="rect" id="node28" href="$classcaffe_1_1_gradient_based_solver_test.html" title="caffe::GradientBasedSolver\lTest\&lt; TypeParam \&gt;" alt="" coords="541,1051,724,1092"/>
+<area shape="rect" id="node35" href="$classcaffe_1_1_h_d_f5_data_layer_test.html" title="caffe::HDF5DataLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="543,1116,723,1157"/>
+<area shape="rect" id="node36" href="$classcaffe_1_1_h_d_f5_output_layer_test.html" title="caffe::HDF5OutputLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="537,1181,728,1223"/>
+<area shape="rect" id="node37" href="$classcaffe_1_1_hinge_loss_layer_test.html" title="caffe::HingeLossLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="543,1247,722,1288"/>
+<area shape="rect" id="node38" href="$classcaffe_1_1_im2col_layer_test.html" title="caffe::Im2colLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="555,1312,711,1353"/>
+<area shape="rect" id="node39" href="$classcaffe_1_1_infogain_loss_layer_test.html" title="caffe::InfogainLossLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="550,1377,715,1419"/>
+<area shape="rect" id="node40" href="$classcaffe_1_1_inner_product_layer_test.html" title="caffe::InnerProductLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="550,1443,715,1484"/>
+<area shape="rect" id="node41" href="$classcaffe_1_1_layer_factory_test.html" title="caffe::LayerFactoryTest\l\&lt; TypeParam \&gt;" alt="" coords="552,1508,713,1549"/>
+<area shape="rect" id="node42" href="$classcaffe_1_1_l_r_n_layer_test.html" title="caffe::LRNLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="561,1573,705,1615"/>
+<area shape="rect" id="node43" href="$classcaffe_1_1_l_s_t_m_layer_test.html" title="caffe::LSTMLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="557,1639,709,1680"/>
+<area shape="rect" id="node44" href="$classcaffe_1_1_math_functions_test.html" title="caffe::MathFunctionsTest\l\&lt; TypeParam \&gt;" alt="" coords="547,1704,718,1745"/>
+<area shape="rect" id="node45" href="$classcaffe_1_1_max_pooling_dropout_test.html" title="caffe::MaxPoolingDropout\lTest\&lt; TypeParam \&gt;" alt="" coords="546,1769,719,1811"/>
+<area shape="rect" id="node46" href="$classcaffe_1_1_memory_data_layer_test.html" title="caffe::MemoryDataLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="537,1835,729,1876"/>
+<area shape="rect" id="node47" href="$classcaffe_1_1_m_v_n_layer_test.html" title="caffe::MVNLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="559,1900,706,1941"/>
+<area shape="rect" id="node48" href="$classcaffe_1_1_net_test.html" title="caffe::NetTest\&lt; TypeParam \&gt;" alt="" coords="534,1966,731,1993"/>
+<area shape="rect" id="node49" href="$classcaffe_1_1_neuron_layer_test.html" title="caffe::NeuronLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="553,2017,712,2059"/>
+<area shape="rect" id="node50" href="$classcaffe_1_1_pooling_layer_test.html" title="caffe::PoolingLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="553,2083,713,2124"/>
+<area shape="rect" id="node51" href="$classcaffe_1_1_power_layer_test.html" title="caffe::PowerLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="555,2148,710,2189"/>
+<area shape="rect" id="node52" href="$classcaffe_1_1_reduction_layer_test.html" title="caffe::ReductionLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="545,2213,721,2255"/>
+<area shape="rect" id="node53" href="$classcaffe_1_1_reshape_layer_test.html" title="caffe::ReshapeLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="548,2279,717,2320"/>
+<area shape="rect" id="node54" href="$classcaffe_1_1_r_n_n_layer_test.html" title="caffe::RNNLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="559,2344,706,2385"/>
+<area shape="rect" id="node55" href="$classcaffe_1_1_scale_layer_test.html" title="caffe::ScaleLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="557,2409,708,2451"/>
+<area shape="rect" id="node56" href="$classcaffe_1_1_sigmoid_cross_entropy_loss_layer_test.html" title="caffe::SigmoidCrossEntropy\lLossLayerTest\&lt; TypeParam \&gt;" alt="" coords="533,2475,732,2516"/>
+<area shape="rect" id="node57" href="$classcaffe_1_1_slice_layer_test.html" title="caffe::SliceLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="559,2540,706,2581"/>
+<area shape="rect" id="node58" href="$classcaffe_1_1_softmax_layer_test.html" title="caffe::SoftmaxLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="549,2605,716,2647"/>
+<area shape="rect" id="node59" href="$classcaffe_1_1_softmax_with_loss_layer_test.html" title="caffe::SoftmaxWithLossLayer\lTest\&lt; TypeParam \&gt;" alt="" coords="535,2671,730,2712"/>
+<area shape="rect" id="node60" href="$classcaffe_1_1_solver_factory_test.html" title="caffe::SolverFactoryTest\l\&lt; TypeParam \&gt;" alt="" coords="549,2736,716,2777"/>
+<area shape="rect" id="node61" href="$classcaffe_1_1_solver_test.html" title="caffe::SolverTest\&lt;\l TypeParam \&gt;" alt="" coords="567,2801,698,2843"/>
+<area shape="rect" id="node62" href="$classcaffe_1_1_split_layer_test.html" title="caffe::SplitLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="561,2867,704,2908"/>
+<area shape="rect" id="node63" href="$classcaffe_1_1_s_p_p_layer_test.html" title="caffe::SPPLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="561,2932,705,2973"/>
+<area shape="rect" id="node64" href="$classcaffe_1_1_stochastic_pooling_layer_test.html" title="caffe::StochasticPooling\lLayerTest\&lt; TypeParam \&gt;" alt="" coords="547,2997,718,3039"/>
+<area shape="rect" id="node65" href="$classcaffe_1_1_tan_h_layer_test.html" title="caffe::TanHLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="558,3063,707,3104"/>
+<area shape="rect" id="node66" href="$classcaffe_1_1_threshold_layer_test.html" title="caffe::ThresholdLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="545,3128,720,3169"/>
+<area shape="rect" id="node67" href="$classcaffe_1_1_tile_layer_test.html" title="caffe::TileLayerTest\l\&lt; TypeParam \&gt;" alt="" coords="563,3193,702,3235"/>
+<area shape="rect" id="node29" href="$classcaffe_1_1_ada_delta_solver_test.html" title="caffe::AdaDeltaSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="792,888,968,929"/>
+<area shape="rect" id="node30" href="$classcaffe_1_1_ada_grad_solver_test.html" title="caffe::AdaGradSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="793,953,967,995"/>
+<area shape="rect" id="node31" href="$classcaffe_1_1_adam_solver_test.html" title="caffe::AdamSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="802,1019,958,1060"/>
+<area shape="rect" id="node32" href="$classcaffe_1_1_nesterov_solver_test.html" title="caffe::NesterovSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="793,1084,967,1125"/>
+<area shape="rect" id="node33" href="$classcaffe_1_1_r_m_s_prop_solver_test.html" title="caffe::RMSPropSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="791,1149,969,1191"/>
+<area shape="rect" id="node34" href="$classcaffe_1_1_s_g_d_solver_test.html" title="caffe::SGDSolverTest\l\&lt; TypeParam \&gt;" alt="" coords="805,1215,955,1256"/>
+<area shape="rect" id="node80" href="$classcaffe_1_1_c_p_u_device_test.html" title="caffe::CPUDeviceTest\l\&lt; Dtype \&gt;" alt="" coords="555,3259,710,3300"/>
+<area shape="rect" id="node84" href="$classcaffe_1_1_math_functions_test.html" title="caffe::MathFunctionsTest\l\&lt; CPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="545,3324,720,3365"/>
+<area shape="rect" id="node86" href="$classcaffe_1_1_stochastic_pooling_layer_test.html" title="caffe::StochasticPooling\lLayerTest\&lt; CPUDevice\&lt;\l Dtype \&gt; \&gt;" alt="" coords="547,3389,718,3445"/>
+<area shape="rect" id="node81" href="$classcaffe_1_1_arg_max_layer_test.html" title="caffe::ArgMaxLayerTest\l\&lt; Dtype \&gt;" alt="" coords="799,3132,961,3173"/>
+<area shape="rect" id="node82" href="$classcaffe_1_1_dummy_data_layer_test.html" title="caffe::DummyDataLayerTest\l\&lt; Dtype \&gt;" alt="" coords="785,3197,975,3239"/>
+<area shape="rect" id="node83" href="$classcaffe_1_1_multinomial_logistic_loss_layer_test.html" title="caffe::MultinomialLogistic\lLossLayerTest\&lt; Dtype \&gt;" alt="" coords="795,3263,965,3304"/>
+<area shape="rect" id="node85" href="$classcaffe_1_1_c_p_u_math_functions_test.html" title="caffe::CPUMathFunctionsTest\l\&lt; Dtype \&gt;" alt="" coords="780,3328,980,3369"/>
+<area shape="rect" id="node87" href="$classcaffe_1_1_c_p_u_stochastic_pooling_layer_test.html" title="caffe::CPUStochasticPooling\lLayerTest\&lt; Dtype \&gt;" alt="" coords="783,3396,977,3437"/>
+<area shape="rect" id="node89" href="$classcaffe_1_1_c_p_u_device_test.html" title="caffe::CPUDeviceTest\l\&lt; TypeParam \&gt;" alt="" coords="555,3468,710,3509"/>
+<area shape="rect" id="node90" href="$classcaffe_1_1_weighted_euclidean_loss_layer_test.html" title="caffe::WeightedEuclidean\lLossLayerTest\&lt; TypeParam \&gt;" alt="" coords="781,3468,979,3509"/>
+<area shape="rect" id="node92" href="$classcaffe_1_1_g_p_u_device_test.html" title="caffe::GPUDeviceTest\l\&lt; Dtype \&gt;" alt="" coords="555,3533,710,3575"/>
+<area shape="rect" id="node93" href="$classcaffe_1_1_math_functions_test.html" title="caffe::MathFunctionsTest\l\&lt; GPUDevice\&lt; Dtype \&gt; \&gt;" alt="" coords="545,3599,720,3640"/>
+<area shape="rect" id="node95" href="$classcaffe_1_1_stochastic_pooling_layer_test.html" title="caffe::StochasticPooling\lLayerTest\&lt; GPUDevice\&lt;\l Dtype \&gt; \&gt;" alt="" coords="547,3663,718,3719"/>
+<area shape="rect" id="node94" href="$classcaffe_1_1_g_p_u_math_functions_test.html" title="caffe::GPUMathFunctionsTest\l\&lt; Dtype \&gt;" alt="" coords="780,3599,980,3640"/>
+<area shape="rect" id="node96" href="$classcaffe_1_1_g_p_u_stochastic_pooling_layer_test.html" title="caffe::GPUStochasticPooling\lLayerTest\&lt; Dtype \&gt;" alt="" coords="783,3671,977,3712"/>
+<area shape="rect" id="node98" href="$classtesting_1_1_with_param_interface.html" title="testing::WithParamInterface\&lt; T \&gt;" alt="" coords="5,3599,223,3626"/>
+</map>

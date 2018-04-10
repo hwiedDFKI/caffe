@@ -1,0 +1,162 @@
+\hypertarget{classcpp__lint_1_1___nesting_state}{}\section{cpp\+\_\+lint.\+\_\+\+Nesting\+State Class Reference}
+\label{classcpp__lint_1_1___nesting_state}\index{cpp\+\_\+lint.\+\_\+\+Nesting\+State@{cpp\+\_\+lint.\+\_\+\+Nesting\+State}}
+
+
+Inheritance diagram for cpp\+\_\+lint.\+\_\+\+Nesting\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classcpp__lint_1_1___nesting_state__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a7ca0090ee1749af80736a47e0d4c85e5}\label{classcpp__lint_1_1___nesting_state_a7ca0090ee1749af80736a47e0d4c85e5}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_a19f7e1db39b5e5bcdac60560dfaaf895}{Seen\+Open\+Brace}} (self)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_a8add51b250bd6004e4bb25669d274c3f}{In\+Namespace\+Body}} (self)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_a078812aa9c30a2f75bb93214fa8ee4f2}{Update\+Preprocessor}} (self, line)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_a8ffa3f80c9867b44c7c6d28ed88ffe1e}{Update}} (self, filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_a19adbe5a4b2f7baef867ee9385bf29af}{Innermost\+Class}} (self)
+\item 
+def \mbox{\hyperlink{classcpp__lint_1_1___nesting_state_acacead3c8a88971753e46ac7a054e98f}{Check\+Completed\+Blocks}} (self, filename, error)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a616d83d8f9736ced48818a12d256bf82}\label{classcpp__lint_1_1___nesting_state_a616d83d8f9736ced48818a12d256bf82}} 
+{\bfseries stack}
+\item 
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a901e56e3cc366e59cfe405f255be4ded}\label{classcpp__lint_1_1___nesting_state_a901e56e3cc366e59cfe405f255be4ded}} 
+{\bfseries pp\+\_\+stack}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Holds states related to parsing braces.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_acacead3c8a88971753e46ac7a054e98f}\label{classcpp__lint_1_1___nesting_state_acacead3c8a88971753e46ac7a054e98f}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!Check\+Completed\+Blocks@{Check\+Completed\+Blocks}}
+\index{Check\+Completed\+Blocks@{Check\+Completed\+Blocks}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{Check\+Completed\+Blocks()}{CheckCompletedBlocks()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+Check\+Completed\+Blocks (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks that all classes and namespaces have been completely parsed.
+
+Call this when all lines in a file have been processed.
+Args:
+  filename: The name of the current file.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a8add51b250bd6004e4bb25669d274c3f}\label{classcpp__lint_1_1___nesting_state_a8add51b250bd6004e4bb25669d274c3f}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!In\+Namespace\+Body@{In\+Namespace\+Body}}
+\index{In\+Namespace\+Body@{In\+Namespace\+Body}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{In\+Namespace\+Body()}{InNamespaceBody()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+In\+Namespace\+Body (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if we are currently one level inside a namespace body.
+
+Returns:
+  True if top of the stack is a namespace block, False otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a19adbe5a4b2f7baef867ee9385bf29af}\label{classcpp__lint_1_1___nesting_state_a19adbe5a4b2f7baef867ee9385bf29af}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!Innermost\+Class@{Innermost\+Class}}
+\index{Innermost\+Class@{Innermost\+Class}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{Innermost\+Class()}{InnermostClass()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+Innermost\+Class (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get class info on the top of the stack.
+
+Returns:
+  A _ClassInfo object if we are inside a class, or None otherwise.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a19f7e1db39b5e5bcdac60560dfaaf895}\label{classcpp__lint_1_1___nesting_state_a19f7e1db39b5e5bcdac60560dfaaf895}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!Seen\+Open\+Brace@{Seen\+Open\+Brace}}
+\index{Seen\+Open\+Brace@{Seen\+Open\+Brace}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{Seen\+Open\+Brace()}{SeenOpenBrace()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+Seen\+Open\+Brace (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check if we have seen the opening brace for the innermost block.
+
+Returns:
+  True if we have seen the opening brace, False if the innermost
+  block is still expecting an opening brace.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcpp__lint_1_1___nesting_state_a19f7e1db39b5e5bcdac60560dfaaf895_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a8ffa3f80c9867b44c7c6d28ed88ffe1e}\label{classcpp__lint_1_1___nesting_state_a8ffa3f80c9867b44c7c6d28ed88ffe1e}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!Update@{Update}}
+\index{Update@{Update}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+Update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{filename,  }\item[{}]{clean\+\_\+lines,  }\item[{}]{linenum,  }\item[{}]{error }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update nesting state with current line.
+
+Args:
+  filename: The name of the current file.
+  clean_lines: A CleansedLines instance containing the file.
+  linenum: The number of the line to check.
+  error: The function to call with any errors found.
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcpp__lint_1_1___nesting_state_a8ffa3f80c9867b44c7c6d28ed88ffe1e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcpp__lint_1_1___nesting_state_a078812aa9c30a2f75bb93214fa8ee4f2}\label{classcpp__lint_1_1___nesting_state_a078812aa9c30a2f75bb93214fa8ee4f2}} 
+\index{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}!Update\+Preprocessor@{Update\+Preprocessor}}
+\index{Update\+Preprocessor@{Update\+Preprocessor}!cpp\+\_\+lint\+::\+\_\+\+Nesting\+State@{cpp\+\_\+lint\+::\+\_\+\+Nesting\+State}}
+\subsubsection{\texorpdfstring{Update\+Preprocessor()}{UpdatePreprocessor()}}
+{\footnotesize\ttfamily def cpp\+\_\+lint.\+\_\+\+Nesting\+State.\+Update\+Preprocessor (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{line }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update preprocessor stack.
+
+We need to handle preprocessors due to classes like this:
+  #ifdef SWIG
+  struct ResultDetailsPageElementExtensionPoint {
+  #else
+  struct ResultDetailsPageElementExtensionPoint : public Extension {
+  #endif
+
+We make the following assumptions (good enough for most files):
+- Preprocessor condition evaluates to true from #if up to first
+  #else/#elif/#endif.
+
+- Preprocessor condition evaluates to false from #else/#elif up
+  to #endif.  We still perform lint checks on these lines, but
+  these do not affect nesting stack.
+
+Args:
+  line: current line to check.
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcpp__lint_1_1___nesting_state_a078812aa9c30a2f75bb93214fa8ee4f2_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+scripts/cpp\+\_\+lint.\+py\end{DoxyCompactItemize}

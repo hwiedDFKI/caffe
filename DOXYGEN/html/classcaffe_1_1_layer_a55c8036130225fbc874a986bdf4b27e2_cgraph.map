@@ -1,0 +1,10 @@
+<map id="caffe::Layer::CheckBlobCounts" name="caffe::Layer::CheckBlobCounts">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a8e5ee0494d85f5f55fc4396537cbc60f" title="Returns the exact number of bottom blobs required by the layer, or &#45;1 if no exact number is required..." alt="" coords="259,5,461,47"/>
+<area shape="rect" id="node3" href="$classcaffe_1_1_layer.html#a8952bff6bc4c2a96d8ea30d8ff65b198" title="Returns the layer type. " alt="" coords="298,71,422,98"/>
+<area shape="rect" id="node4" href="$classcaffe_1_1_layer.html#aca3cb2bafaefda5d4760aaebd0b72def" title="Returns the minimum number of bottom blobs required by the layer, or &#45;1 if no minimum number is requi..." alt="" coords="263,122,457,149"/>
+<area shape="rect" id="node5" href="$classcaffe_1_1_layer.html#af8bdc989053e0363ab032026b46de7c3" title="Returns the maximum number of bottom blobs required by the layer, or &#45;1 if no maximum number is requi..." alt="" coords="261,173,459,199"/>
+<area shape="rect" id="node6" href="$classcaffe_1_1_layer.html#a64e2ca72c719e4b2f1f9216ccfb0d37f" title="Returns the exact number of top blobs required by the layer, or &#45;1 if no exact number is required..." alt="" coords="269,224,451,265"/>
+<area shape="rect" id="node7" href="$classcaffe_1_1_layer.html#ab9e4c8d642e413948b131d851a8462a4" title="Returns the minimum number of top blobs required by the layer, or &#45;1 if no minimum number is required..." alt="" coords="273,290,447,317"/>
+<area shape="rect" id="node8" href="$classcaffe_1_1_layer.html#ac6c03df0b6e40e776c94001e19994a2e" title="Returns the maximum number of top blobs required by the layer, or &#45;1 if no maximum number is required..." alt="" coords="271,341,449,367"/>
+<area shape="rect" id="node9" href="$classcaffe_1_1_layer.html#af452a938bc7596f9b5e9900c8dc4ab3d" title="Returns true if the layer requires an equal number of bottom and top blobs. " alt="" coords="259,392,461,433"/>
+</map>

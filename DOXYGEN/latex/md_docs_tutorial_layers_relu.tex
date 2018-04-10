@@ -1,0 +1,40 @@
+
+
+ \subsection*{title\+: Re\+LU / Rectified-\/\+Linear and Leaky-\/\+Re\+LU Layer }
+
+\section*{Re\+LU / Rectified-\/\+Linear and Leaky-\/\+Re\+LU Layer}
+
+
+\begin{DoxyItemize}
+\item Layer type\+: {\ttfamily Re\+LU}
+\item \href{http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1ReLULayer.html}{\tt Doxygen Documentation}
+\item Header\+: \href{https://github.com/BVLC/caffe/blob/master/include/caffe/layers/relu_layer.hpp}{\tt {\ttfamily ./include/caffe/layers/relu\+\_\+layer.hpp}}
+\item C\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/relu_layer.cpp}{\tt {\ttfamily ./src/caffe/layers/relu\+\_\+layer.cpp}}
+\item C\+U\+DA G\+PU implementation\+: \href{https://github.com/BVLC/caffe/blob/master/src/caffe/layers/relu_layer.cu}{\tt {\ttfamily ./src/caffe/layers/relu\+\_\+layer.cu}}
+\item Sample (as seen in \href{https://github.com/BVLC/caffe/blob/master/models/bvlc_reference_caffenet/train_val.prototxt}{\tt {\ttfamily ./models/bvlc\+\_\+reference\+\_\+caffenet/train\+\_\+val.prototxt}}) \begin{DoxyVerb}layer {
+  name: "relu1"
+  type: "ReLU"
+  bottom: "conv1"
+  top: "conv1"
+}
+\end{DoxyVerb}
+
+\end{DoxyItemize}
+
+Given an input value x, The {\ttfamily Re\+LU} layer computes the output as x if x $>$ 0 and negative\+\_\+slope $\ast$ x if x $<$= 0. When the negative slope parameter is not set, it is equivalent to the standard Re\+LU function of taking max(x, 0). It also supports in-\/place computation, meaning that the bottom and the top blob could be the same to preserve memory consumption.
+
+\subsection*{Parameters}
+
+
+\begin{DoxyItemize}
+\item Parameters ({\ttfamily Re\+L\+U\+Parameter relu\+\_\+param})
+\begin{DoxyItemize}
+\item Optional
+\begin{DoxyItemize}
+\item {\ttfamily negative\+\_\+slope} \mbox{[}default 0\mbox{]}\+: specifies whether to leak the negative part by multiplying it with the slope value rather than setting it to 0.
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item From \href{https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto}{\tt {\ttfamily ./src/caffe/proto/caffe.proto}}\+:
+\end{DoxyItemize}
+
+\{\% highlight Protobuf \%\} \{\% include proto/\+Re\+L\+U\+Parameter.\+txt \%\} \{\% endhighlight \%\} 

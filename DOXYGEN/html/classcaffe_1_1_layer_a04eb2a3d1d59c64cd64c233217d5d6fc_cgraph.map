@@ -1,0 +1,3 @@
+<map id="caffe::Layer::SetLossWeights" name="caffe::Layer::SetLossWeights">
+<area shape="rect" id="node2" href="$classcaffe_1_1_layer.html#a899b09f4b91ada8545b3a43ee91e0d69" title="Sets the loss associated with a top blob at a given index. " alt="" coords="248,5,396,32"/>
+</map>

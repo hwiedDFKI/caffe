@@ -1,0 +1,67 @@
+\hypertarget{classapp_1_1_imagenet_classifier}{}\section{app.\+Imagenet\+Classifier Class Reference}
+\label{classapp_1_1_imagenet_classifier}\index{app.\+Imagenet\+Classifier@{app.\+Imagenet\+Classifier}}
+
+
+Inheritance diagram for app.\+Imagenet\+Classifier\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classapp_1_1_imagenet_classifier__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_a54fb02edce46e5e13f55961b75d8a4d1}\label{classapp_1_1_imagenet_classifier_a54fb02edce46e5e13f55961b75d8a4d1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, model\+\_\+def\+\_\+file, pretrained\+\_\+model\+\_\+file, mean\+\_\+file, raw\+\_\+scale, class\+\_\+labels\+\_\+file, bet\+\_\+file, image\+\_\+dim, gpu\+\_\+mode)
+\item 
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_a10d32fdc35f2f1b37e6c32d0235141ee}\label{classapp_1_1_imagenet_classifier_a10d32fdc35f2f1b37e6c32d0235141ee}} 
+def {\bfseries classify\+\_\+image} (self, image)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_a15a7618c9c758c575703416e1acf1589}\label{classapp_1_1_imagenet_classifier_a15a7618c9c758c575703416e1acf1589}} 
+{\bfseries net}
+\item 
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_affe8267f89f61172db9c7b0d6c6fc9a0}\label{classapp_1_1_imagenet_classifier_affe8267f89f61172db9c7b0d6c6fc9a0}} 
+{\bfseries labels}
+\item 
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_ad72b5eea30fd21f40a1e7d43189c45b3}\label{classapp_1_1_imagenet_classifier_ad72b5eea30fd21f40a1e7d43189c45b3}} 
+{\bfseries bet}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary {\bfseries default\+\_\+args}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classapp_1_1_imagenet_classifier_a7eca03d176ed400d03caafed6a5d4184}\label{classapp_1_1_imagenet_classifier_a7eca03d176ed400d03caafed6a5d4184}} 
+\index{app\+::\+Imagenet\+Classifier@{app\+::\+Imagenet\+Classifier}!default\+\_\+args@{default\+\_\+args}}
+\index{default\+\_\+args@{default\+\_\+args}!app\+::\+Imagenet\+Classifier@{app\+::\+Imagenet\+Classifier}}
+\subsubsection{\texorpdfstring{default\+\_\+args}{default\_args}}
+{\footnotesize\ttfamily dictionary app.\+Imagenet\+Classifier.\+default\+\_\+args\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=  \{
+        \textcolor{stringliteral}{'model\_def\_file'}: (
+            \textcolor{stringliteral}{'\{\}/models/bvlc\_reference\_caffenet/deploy.prototxt'}.format(REPO\_DIRNAME)),
+        \textcolor{stringliteral}{'pretrained\_model\_file'}: (
+            \textcolor{stringliteral}{'\{\}/models/bvlc\_reference\_caffenet/bvlc\_reference\_caffenet.caffemodel'}.format(REPO\_DIRNAME)),
+        \textcolor{stringliteral}{'mean\_file'}: (
+            \textcolor{stringliteral}{'\{\}/python/caffe/imagenet/ilsvrc\_2012\_mean.npy'}.format(REPO\_DIRNAME)),
+        \textcolor{stringliteral}{'class\_labels\_file'}: (
+            \textcolor{stringliteral}{'\{\}/data/ilsvrc12/synset\_words.txt'}.format(REPO\_DIRNAME)),
+        \textcolor{stringliteral}{'bet\_file'}: (
+            \textcolor{stringliteral}{'\{\}/data/ilsvrc12/imagenet.bet.pickle'}.format(REPO\_DIRNAME)),
+    \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/web\+\_\+demo/app.\+py\end{DoxyCompactItemize}

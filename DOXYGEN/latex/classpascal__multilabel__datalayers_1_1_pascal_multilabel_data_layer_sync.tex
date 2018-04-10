@@ -1,0 +1,76 @@
+\hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync}{}\section{pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync Class Reference}
+\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync}\index{pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync}}
+
+
+Inheritance diagram for pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_ad59e2548e57842d92e33df480f0973fd}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_ad59e2548e57842d92e33df480f0973fd}} 
+def {\bfseries setup} (self, bottom, top)
+\item 
+def \mbox{\hyperlink{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a503c3a39b8b45f9cf0c04bf30d9040da}{forward}} (self, bottom, top)
+\item 
+def \mbox{\hyperlink{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a07b5a24aa7fda972baf00e01ca4e1767}{reshape}} (self, bottom, top)
+\item 
+def \mbox{\hyperlink{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a6699de191eb1b3a6b4f5cb6f60ea5250}{backward}} (self, top, propagate\+\_\+down, bottom)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a9f26ea9adbd952856d13f183a851e1a8}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a9f26ea9adbd952856d13f183a851e1a8}} 
+{\bfseries top\+\_\+names}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a2a35ef29588fcf7eda8724cd7e6f1d46}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a2a35ef29588fcf7eda8724cd7e6f1d46}} 
+{\bfseries batch\+\_\+size}
+\item 
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a70d775ca734257e4a8c3717e802f8ddd}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a70d775ca734257e4a8c3717e802f8ddd}} 
+{\bfseries batch\+\_\+loader}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This is a simple synchronous datalayer for training a multilabel model on
+PASCAL.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a6699de191eb1b3a6b4f5cb6f60ea5250}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a6699de191eb1b3a6b4f5cb6f60ea5250}} 
+\index{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}!backward@{backward}}
+\index{backward@{backward}!pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}}
+\subsubsection{\texorpdfstring{backward()}{backward()}}
+{\footnotesize\ttfamily def pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync.\+backward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{top,  }\item[{}]{propagate\+\_\+down,  }\item[{}]{bottom }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}These layers does not back propagate
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a503c3a39b8b45f9cf0c04bf30d9040da}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a503c3a39b8b45f9cf0c04bf30d9040da}} 
+\index{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}!forward@{forward}}
+\index{forward@{forward}!pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}}
+\subsubsection{\texorpdfstring{forward()}{forward()}}
+{\footnotesize\ttfamily def pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync.\+forward (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bottom,  }\item[{}]{top }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load data.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a07b5a24aa7fda972baf00e01ca4e1767}\label{classpascal__multilabel__datalayers_1_1_pascal_multilabel_data_layer_sync_a07b5a24aa7fda972baf00e01ca4e1767}} 
+\index{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}!reshape@{reshape}}
+\index{reshape@{reshape}!pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync@{pascal\+\_\+multilabel\+\_\+datalayers\+::\+Pascal\+Multilabel\+Data\+Layer\+Sync}}
+\subsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily def pascal\+\_\+multilabel\+\_\+datalayers.\+Pascal\+Multilabel\+Data\+Layer\+Sync.\+reshape (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bottom,  }\item[{}]{top }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}There is no need to reshape the data, since the input is of fixed size
+(rows and columns)
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+examples/pycaffe/layers/pascal\+\_\+multilabel\+\_\+datalayers.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\hypertarget{classcaffe_1_1_synced_memory}{}\section{caffe\+:\+:Synced\+Memory Class Reference}
+\label{classcaffe_1_1_synced_memory}\index{caffe\+::\+Synced\+Memory@{caffe\+::\+Synced\+Memory}}
+
+
+Manages memory allocation and synchronization between the host (C\+PU) and device (G\+PU).  
+
+
+
+
+{\ttfamily \#include $<$syncedmem.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_aa9d505f04322f6e521a57b8fc51dfba1}\label{classcaffe_1_1_synced_memory_aa9d505f04322f6e521a57b8fc51dfba1}} 
+enum {\bfseries Synced\+Head} \{ \newline
+{\bfseries U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+C\+PU}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+G\+PU}, 
+{\bfseries S\+Y\+N\+C\+ED}, 
+\newline
+{\bfseries U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+C\+PU}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+G\+PU}, 
+{\bfseries S\+Y\+N\+C\+ED}
+ \}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_aa9d505f04322f6e521a57b8fc51dfba1}\label{classcaffe_1_1_synced_memory_aa9d505f04322f6e521a57b8fc51dfba1}} 
+enum {\bfseries Synced\+Head} \{ \newline
+{\bfseries U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+C\+PU}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+G\+PU}, 
+{\bfseries S\+Y\+N\+C\+ED}, 
+\newline
+{\bfseries U\+N\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ED}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+C\+PU}, 
+{\bfseries H\+E\+A\+D\+\_\+\+A\+T\+\_\+\+G\+PU}, 
+{\bfseries S\+Y\+N\+C\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a858ddd33252ddfd6e8bb2dc59ab7691b}\label{classcaffe_1_1_synced_memory_a858ddd33252ddfd6e8bb2dc59ab7691b}} 
+{\bfseries Synced\+Memory} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a5ffa0255e243f223e1af064fb7322ae4}\label{classcaffe_1_1_synced_memory_a5ffa0255e243f223e1af064fb7322ae4}} 
+const void $\ast$ {\bfseries cpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a4118cdf888d8663c4f88c037ce3e3b8e}\label{classcaffe_1_1_synced_memory_a4118cdf888d8663c4f88c037ce3e3b8e}} 
+void {\bfseries set\+\_\+cpu\+\_\+data} (void $\ast$data)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_acf04d9fabcde73902bdad08672696933}\label{classcaffe_1_1_synced_memory_acf04d9fabcde73902bdad08672696933}} 
+const void $\ast$ {\bfseries gpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a9d3831fe6c03370890d76dc8a82f4ca1}\label{classcaffe_1_1_synced_memory_a9d3831fe6c03370890d76dc8a82f4ca1}} 
+void {\bfseries set\+\_\+gpu\+\_\+data} (void $\ast$data)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_ab32cd46d7f0cf524d79e4ba7da7449dd}\label{classcaffe_1_1_synced_memory_ab32cd46d7f0cf524d79e4ba7da7449dd}} 
+void $\ast$ {\bfseries mutable\+\_\+cpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_ab6ca4faa7233c8ac2319acb72ba0441e}\label{classcaffe_1_1_synced_memory_ab6ca4faa7233c8ac2319acb72ba0441e}} 
+void $\ast$ {\bfseries mutable\+\_\+gpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_abd3e8f08d0186d3460fcce1378a2dc4c}\label{classcaffe_1_1_synced_memory_abd3e8f08d0186d3460fcce1378a2dc4c}} 
+Synced\+Head {\bfseries head} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_ae181c18b137d62de33bc91501aabb841}\label{classcaffe_1_1_synced_memory_ae181c18b137d62de33bc91501aabb841}} 
+size\+\_\+t {\bfseries size} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a16308ac4986b99fb62303c4f4c1d118b}\label{classcaffe_1_1_synced_memory_a16308ac4986b99fb62303c4f4c1d118b}} 
+void {\bfseries async\+\_\+gpu\+\_\+push} (const cuda\+Stream\+\_\+t \&stream)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a858ddd33252ddfd6e8bb2dc59ab7691b}\label{classcaffe_1_1_synced_memory_a858ddd33252ddfd6e8bb2dc59ab7691b}} 
+{\bfseries Synced\+Memory} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a3ab3c836c1d118efd357b7a42ec53a91}\label{classcaffe_1_1_synced_memory_a3ab3c836c1d118efd357b7a42ec53a91}} 
+const void $\ast$ {\bfseries cpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a4118cdf888d8663c4f88c037ce3e3b8e}\label{classcaffe_1_1_synced_memory_a4118cdf888d8663c4f88c037ce3e3b8e}} 
+void {\bfseries set\+\_\+cpu\+\_\+data} (void $\ast$data)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a078df87b8bbbd8032f920f40ae79e561}\label{classcaffe_1_1_synced_memory_a078df87b8bbbd8032f920f40ae79e561}} 
+const void $\ast$ {\bfseries gpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a9d3831fe6c03370890d76dc8a82f4ca1}\label{classcaffe_1_1_synced_memory_a9d3831fe6c03370890d76dc8a82f4ca1}} 
+void {\bfseries set\+\_\+gpu\+\_\+data} (void $\ast$data)
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a494df0c6dc52ff9509aad48bd7fb6665}\label{classcaffe_1_1_synced_memory_a494df0c6dc52ff9509aad48bd7fb6665}} 
+void $\ast$ {\bfseries mutable\+\_\+cpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_ab411a39b9e9dac1a0355a1f5f389e7a2}\label{classcaffe_1_1_synced_memory_ab411a39b9e9dac1a0355a1f5f389e7a2}} 
+void $\ast$ {\bfseries mutable\+\_\+gpu\+\_\+data} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_abd3e8f08d0186d3460fcce1378a2dc4c}\label{classcaffe_1_1_synced_memory_abd3e8f08d0186d3460fcce1378a2dc4c}} 
+Synced\+Head {\bfseries head} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_ae181c18b137d62de33bc91501aabb841}\label{classcaffe_1_1_synced_memory_ae181c18b137d62de33bc91501aabb841}} 
+size\+\_\+t {\bfseries size} ()
+\item 
+\mbox{\Hypertarget{classcaffe_1_1_synced_memory_a16308ac4986b99fb62303c4f4c1d118b}\label{classcaffe_1_1_synced_memory_a16308ac4986b99fb62303c4f4c1d118b}} 
+void {\bfseries async\+\_\+gpu\+\_\+push} (const cuda\+Stream\+\_\+t \&stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages memory allocation and synchronization between the host (C\+PU) and device (G\+PU). 
+
+T\+O\+D\+O(dox)\+: more thorough description. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/install/include/caffe/syncedmem.\+hpp\item 
+src/caffe/syncedmem.\+cpp\end{DoxyCompactItemize}

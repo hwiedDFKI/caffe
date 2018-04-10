@@ -1,0 +1,99 @@
+\hypertarget{namespaceassemble__data}{}\section{assemble\+\_\+data Namespace Reference}
+\label{namespaceassemble__data}\index{assemble\+\_\+data@{assemble\+\_\+data}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a5daa2e1e853de5f778f0e21cddf484be}\label{namespaceassemble__data_a5daa2e1e853de5f778f0e21cddf484be}} 
+def {\bfseries download\+\_\+image} (args\+\_\+tuple)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a0b79c574760a55664c73cb48c078d9ae}\label{namespaceassemble__data_a0b79c574760a55664c73cb48c078d9ae}} 
+string {\bfseries M\+I\+S\+S\+I\+N\+G\+\_\+\+I\+M\+A\+G\+E\+\_\+\+S\+H\+A1} = \textquotesingle{}6a92790b1c2a301c6e7ddef645dca1f53ea97ac2\textquotesingle{}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a1eaa1b583a232b9a72fea879bbc1b569}\label{namespaceassemble__data_a1eaa1b583a232b9a72fea879bbc1b569}} 
+{\bfseries example\+\_\+dirname} = os.\+path.\+abspath(os.\+path.\+dirname(\+\_\+\+\_\+file\+\_\+\+\_\+))
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ae884a5ec30f0ea8674d2e768ac6bc08e}\label{namespaceassemble__data_ae884a5ec30f0ea8674d2e768ac6bc08e}} 
+{\bfseries caffe\+\_\+dirname} = os.\+path.\+abspath(os.\+path.\+join(example\+\_\+dirname, \textquotesingle{}../..\textquotesingle{}))
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a4ea05cb0f6a6d66e0ce5ab6db605095a}\label{namespaceassemble__data_a4ea05cb0f6a6d66e0ce5ab6db605095a}} 
+{\bfseries training\+\_\+dirname} = os.\+path.\+join(caffe\+\_\+dirname, \textquotesingle{}data/flickr\+\_\+style\textquotesingle{})
+\item 
+{\bfseries parser}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a09e6ee1d6cd68b0f391c3ec27cdee435}\label{namespaceassemble__data_a09e6ee1d6cd68b0f391c3ec27cdee435}} 
+{\bfseries type}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a0c992fe09795e66e40de9d74971bccf7}\label{namespaceassemble__data_a0c992fe09795e66e40de9d74971bccf7}} 
+{\bfseries int}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a1052a9fce4b4b025be99057ced31073d}\label{namespaceassemble__data_a1052a9fce4b4b025be99057ced31073d}} 
+{\bfseries default}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a061452d16e584b24cb92862900b106dd}\label{namespaceassemble__data_a061452d16e584b24cb92862900b106dd}} 
+{\bfseries help}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a616f9d922977d382ee30365256035f99}\label{namespaceassemble__data_a616f9d922977d382ee30365256035f99}} 
+{\bfseries args} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ae0b018aaebace53e2a3f0d690caae629}\label{namespaceassemble__data_ae0b018aaebace53e2a3f0d690caae629}} 
+{\bfseries csv\+\_\+filename} = os.\+path.\+join(example\+\_\+dirname, \textquotesingle{}flickr\+\_\+style.\+csv.\+gz\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_aec48585d01bcb27587d66b11b4ac0d71}\label{namespaceassemble__data_aec48585d01bcb27587d66b11b4ac0d71}} 
+{\bfseries df} = pd.\+read\+\_\+csv(csv\+\_\+filename, index\+\_\+col=0, compression=\textquotesingle{}gzip\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_aa6e1c0865884b9670128a682e1ccd291}\label{namespaceassemble__data_aa6e1c0865884b9670128a682e1ccd291}} 
+{\bfseries images\+\_\+dirname} = os.\+path.\+join(training\+\_\+dirname, \textquotesingle{}images\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ae02bbd3fa190370b591b0da5f7daac9d}\label{namespaceassemble__data_ae02bbd3fa190370b591b0da5f7daac9d}} 
+{\bfseries num\+\_\+workers} = args.\+workers
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ac3d3c53ec94f56564da6bbc477c19016}\label{namespaceassemble__data_ac3d3c53ec94f56564da6bbc477c19016}} 
+{\bfseries pool} = multiprocessing.\+Pool(processes=num\+\_\+workers)
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ad820ce6ec73dc0bbc0ec65c2b1c10a7a}\label{namespaceassemble__data_ad820ce6ec73dc0bbc0ec65c2b1c10a7a}} 
+{\bfseries map\+\_\+args} = zip(df\mbox{[}\textquotesingle{}image\+\_\+url\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}image\+\_\+filename\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_a8b01c0eac5a9289a23a4923c30a28abd}\label{namespaceassemble__data_a8b01c0eac5a9289a23a4923c30a28abd}} 
+{\bfseries results} = pool.\+map(download\+\_\+image, map\+\_\+args)
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_abf32fbb4d7f53386c30ac9a615eeb292}\label{namespaceassemble__data_abf32fbb4d7f53386c30ac9a615eeb292}} 
+{\bfseries split\+\_\+df} = df\mbox{[}df\mbox{[}\textquotesingle{}\+\_\+split\textquotesingle{}\mbox{]} == split\mbox{]}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ad37951b4d9abbf60141b6ea736c30064}\label{namespaceassemble__data_ad37951b4d9abbf60141b6ea736c30064}} 
+{\bfseries filename} = os.\+path.\+join(training\+\_\+dirname, \textquotesingle{}\{\}.txt\textquotesingle{}.format(split))
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_abc934db5a387c23246a7531631d15253}\label{namespaceassemble__data_abc934db5a387c23246a7531631d15253}} 
+{\bfseries sep}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ae06f7754ea2e5969c9c97876d714bc35}\label{namespaceassemble__data_ae06f7754ea2e5969c9c97876d714bc35}} 
+{\bfseries header}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_acf1b7b4caeba0f99047aa81c58db3916}\label{namespaceassemble__data_acf1b7b4caeba0f99047aa81c58db3916}} 
+{\bfseries None}
+\item 
+\mbox{\Hypertarget{namespaceassemble__data_ad2bfd3db7aa8e84ef69382d9e4dd69b9}\label{namespaceassemble__data_ad2bfd3db7aa8e84ef69382d9e4dd69b9}} 
+{\bfseries index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Form a subset of the Flickr Style data, download images to dirname, and write
+Caffe ImagesDataLayer training file.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceassemble__data_aa6514f87207a8dcad5471683c5e7eeaf}\label{namespaceassemble__data_aa6514f87207a8dcad5471683c5e7eeaf}} 
+\index{assemble\+\_\+data@{assemble\+\_\+data}!parser@{parser}}
+\index{parser@{parser}!assemble\+\_\+data@{assemble\+\_\+data}}
+\subsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily assemble\+\_\+data.\+parser}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  argparse.ArgumentParser(
+2         description=\textcolor{stringliteral}{'Download a subset of Flickr Style to a directory'})
+\end{DoxyCode}
